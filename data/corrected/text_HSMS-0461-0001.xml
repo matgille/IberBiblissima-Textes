@@ -9476,11 +9476,10 @@
         </body>
         <back>
             <div type="colophon">
-                <p><div type="chapitre" n="48">
-                        <head><hi rend="rubrique"><foreign xml:lang="lat">Deo
-                                        gra<ex>ia</ex>s</foreign></hi></head>
-                        <p/>
-                    </div></p>
+                <p>
+                    <hi rend="rubrique"><foreign xml:lang="lat">Deo
+                                gra<ex>ia</ex>s</foreign></hi>
+                </p>
             </div>
         </back>
     </text>
