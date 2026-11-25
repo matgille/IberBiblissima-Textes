@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0327-0001">
+  <title>Libro de las confesiones III</title>
+  <dublinCore>
+    <dc:creator>PérezMartín</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0327-0001" filepath="./text_HSMS-0327-0001.xml">
+      <title>Libro de las confesiones III</title>
+      <description>PérezMartín. (1316). Libro de las confesiones III.</description>
+    </resource>
+  </members>
+</collection>

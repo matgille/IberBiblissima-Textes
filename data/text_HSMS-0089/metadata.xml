@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0089">
+  <title>Libro de Alexandre</title>
+  <dublinCore>
+    <dc:creator>de ChâtillonGautier</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0089" filepath="./text_HSMS-0089.xml">
+      <title>Libro de Alexandre</title>
+      <description>de ChâtillonGautier. (). .</description>
+    </resource>
+  </members>
+</collection>

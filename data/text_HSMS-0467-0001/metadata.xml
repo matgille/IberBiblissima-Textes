@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0467-0001">
+  <title>Vida de la Madre Juana Inés de la Cruz</title>
+  <dublinCore>
+    <dc:creator>Calleja Diego S.J.</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0467-0001" filepath="./text_HSMS-0467-0001.xml">
+      <title>Vida de la Madre Juana Inés de la Cruz</title>
+      <description>Calleja Diego S.J.. (1663 - 1725). Vida de la Madre Juana Inés de la Cruz.</description>
+    </resource>
+  </members>
+</collection>

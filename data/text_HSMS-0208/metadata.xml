@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0208">
+  <title>Siete partidas</title>
+  <dublinCore>
+    <dc:creator>Alfonso X el Sabio</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0208" filepath="./text_HSMS-0208.xml">
+      <title>Siete partidas</title>
+      <description>Alfonso X el Sabio. (1256-06-23 - 1265-08-28). Siete partidas.</description>
+    </resource>
+  </members>
+</collection>

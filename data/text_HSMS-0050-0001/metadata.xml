@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0050-0001">
+  <title>Vidal Mayor</title>
+  <dublinCore>
+    <dc:creator>de Canellas Vidal</dc:creator>
+    <dc:language>nav-arg-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0050-0001" filepath="./text_HSMS-0050-0001.xml">
+      <title>Vidal Mayor</title>
+      <description>de Canellas Vidal. (1247). Vidal Mayor.</description>
+    </resource>
+  </members>
+</collection>

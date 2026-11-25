@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0339-0002">
+  <title>Carta a Enrique IV sobre don Álvaro de Luna</title>
+  <dublinCore>
+    <dc:creator>Juan II</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0339-0002" filepath="./text_HSMS-0339-0002.xml">
+      <title>Carta a Enrique IV sobre don Álvaro de Luna</title>
+      <description>Juan II. (1454-04-05). Carta a Enrique IV sobre don Álvaro de Luna.</description>
+    </resource>
+  </members>
+</collection>

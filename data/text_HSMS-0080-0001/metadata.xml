@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0080-0001">
+  <title>Espéculo</title>
+  <dublinCore>
+    <dc:creator>Alfonso X el Sabio</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0080-0001" filepath="./text_HSMS-0080-0001.xml">
+      <title>Espéculo</title>
+      <description>Alfonso X el Sabio. (1253-12 ad quem). Espéculo.</description>
+    </resource>
+  </members>
+</collection>

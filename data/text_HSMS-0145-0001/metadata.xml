@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0145-0001">
+  <title>Fuero de Briviesca</title>
+  <dublinCore>
+    <dc:creator>Branca</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0145-0001" filepath="./text_HSMS-0145-0001.xml">
+      <title>Fuero de Briviesca</title>
+      <description>Branca. (1313-01-16). Fuero de Briviesca.</description>
+    </resource>
+  </members>
+</collection>

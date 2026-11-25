@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0446-0003">
+  <title>Lucidario</title>
+  <dublinCore>
+    <dc:creator>identificarSense</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0446-0003" filepath="./text_HSMS-0446-0003.xml">
+      <title>Lucidario</title>
+      <description>identificarSense. (1293 ca. - 1293 ca.). Lucidario.</description>
+    </resource>
+  </members>
+</collection>

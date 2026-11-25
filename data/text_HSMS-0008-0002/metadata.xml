@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0008-0002">
+  <title>Las virtudes del romero</title>
+  <dublinCore>
+    <dc:creator>de VilanovaArnau</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0008-0002" filepath="./text_HSMS-0008-0002.xml">
+      <title>Las virtudes del romero</title>
+      <description>de VilanovaArnau. (1260 - 1311). Las virtudes del romero.</description>
+    </resource>
+  </members>
+</collection>

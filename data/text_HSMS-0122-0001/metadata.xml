@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0122-0001">
+  <title>Claros varones de Castilla</title>
+  <dublinCore>
+    <dc:creator>de PulgarFernando</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0122-0001" filepath="./text_HSMS-0122-0001.xml">
+      <title>Claros varones de Castilla</title>
+      <description>de PulgarFernando. (1483 a quo- 1486-12-24 ad quem). Claros varones de Castilla.</description>
+    </resource>
+  </members>
+</collection>

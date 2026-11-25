@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0122-0002-00034">
+  <title>Fernando del Pulgar, Cartas</title>
+  <dublinCore>
+    <dc:creator>de PulgarFernando</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0122-0002-00034" filepath="./text_HSMS-0122-0002-00034.xml">
+      <title>Fernando del Pulgar, Cartas</title>
+      <description>de PulgarFernando. (1483 a quo- 1486-12-24 ad quem). Fernando del Pulgar, Letras.</description>
+    </resource>
+  </members>
+</collection>

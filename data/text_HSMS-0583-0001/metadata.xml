@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0583-0001">
+  <title>Tratado muy útil y provechoso en reprobación de los juegos</title>
+  <dublinCore>
+    <dc:creator>del Castillo de VillasanteDiego</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0583-0001" filepath="./text_HSMS-0583-0001.xml">
+      <title>Tratado muy útil y provechoso en reprobación de los juegos</title>
+      <description>del Castillo de VillasanteDiego. (1528-04-28 ad quem). Tratado muy útil y provechoso en reprobación de los juegos.</description>
+    </resource>
+  </members>
+</collection>

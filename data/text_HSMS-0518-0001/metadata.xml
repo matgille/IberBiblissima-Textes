@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0518-0001">
+  <title>Instrucción y regimiento de guerra</title>
+  <dublinCore>
+    <dc:creator>MontesDiego</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0518-0001" filepath="./text_HSMS-0518-0001.xml">
+      <title>Instrucción y regimiento de guerra</title>
+      <description>MontesDiego. (1537-10-31 ad quem). Instrucción y regimiento de guerra.</description>
+    </resource>
+  </members>
+</collection>

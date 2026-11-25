@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0379-0002">
+  <title>Ley sobre las muertes accidentales</title>
+  <dublinCore>
+    <dc:creator>Thibault II</dc:creator>
+    <dc:language>nav-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0379-0002" filepath="./text_HSMS-0379-0002.xml">
+      <title>Ley sobre las muertes accidentales</title>
+      <description>Thibault II. (1269-07-02). Ley sobre las muertes accidentales.</description>
+    </resource>
+  </members>
+</collection>

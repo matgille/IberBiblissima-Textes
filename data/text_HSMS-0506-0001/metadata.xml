@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0506-0001">
+  <title>Ordenanzas de buen gobierno de la villa de Valladolid</title>
+  <dublinCore>
+    <dc:creator>Carlos I</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0506-0001" filepath="./text_HSMS-0506-0001.xml">
+      <title>Ordenanzas de buen gobierno de la villa de Valladolid</title>
+      <description>Carlos I. (1549-07-20). Ordenanzas de buen gobierno de la villa de Valladolid.</description>
+    </resource>
+  </members>
+</collection>

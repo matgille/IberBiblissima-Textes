@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0537-0001">
+  <title>Relación de la jornada de Cíbola: version XML-TEI</title>
+  <dublinCore>
+    <dc:creator>de Castañeda de Nájera Pedro</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0537-0001" filepath="./text_HSMS-0537-0001.xml">
+      <title>Relación de la jornada de Cíbola: version XML-TEI</title>
+      <description>de Castañeda de Nájera Pedro. (1542 - 1543). Relación de la jornada de Cíbola.</description>
+    </resource>
+  </members>
+</collection>

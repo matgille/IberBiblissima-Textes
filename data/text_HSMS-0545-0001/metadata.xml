@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0545-0001">
+  <title>Relación verdadera de la jornada de Omagua y Dorado</title>
+  <dublinCore>
+    <dc:creator>Vázquez; Pedrarias de AlmestoFrancisco</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0545-0001" filepath="./text_HSMS-0545-0001.xml">
+      <title>Relación verdadera de la jornada de Omagua y Dorado</title>
+      <description>Vázquez; Pedrarias de AlmestoFrancisco. (1561-10-26 a quo). Relación verdadera de la jornada de Omagua y Dorado.</description>
+    </resource>
+  </members>
+</collection>

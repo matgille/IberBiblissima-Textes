@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0088-0001">
+  <title>Lanzarote del Lago, libros 2 y 3</title>
+  <dublinCore>
+    <dc:creator>Anonymous</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0088-0001" filepath="./text_HSMS-0088-0001.xml">
+      <title>Lanzarote del Lago, libros 2 y 3</title>
+      <description>Anonymous. (1414-10-24 ad quem). Lanzarote del Lago, libros 2 y 3.</description>
+    </resource>
+  </members>
+</collection>

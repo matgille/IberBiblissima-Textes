@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0007-0001">
+  <title>Fuero de Béjar</title>
+  <dublinCore>
+    <dc:creator>Sancho IV el Bravo</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+    <dc:language>leo-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0007-0001" filepath="./text_HSMS-0007-0001.xml">
+      <title>Fuero de Béjar</title>
+      <description>Sancho IV el Bravo. (1284-04-04 - 1295-04-25). Fuero de Béjar.</description>
+    </resource>
+  </members>
+</collection>

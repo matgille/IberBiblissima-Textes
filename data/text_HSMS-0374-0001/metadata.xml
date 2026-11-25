@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0374-0001">
+  <title>Fuero general de Navarra, versión B</title>
+  <dublinCore>
+    <dc:creator>Desconegut</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0374-0001" filepath="./text_HSMS-0374-0001.xml">
+      <title>Fuero general de Navarra, versión B</title>
+      <description>Desconegut. (1250). Fuero general de Navarra, versión B.</description>
+    </resource>
+  </members>
+</collection>

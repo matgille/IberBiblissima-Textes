@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0536-0002">
+  <title>Apelación de Francisco Vázquez de Coronado</title>
+  <dublinCore>
+    <dc:creator>Vázquez de CoronadoFrancisco</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0536-0002" filepath="./text_HSMS-0536-0002.xml">
+      <title>Apelación de Francisco Vázquez de Coronado</title>
+      <description>Vázquez de CoronadoFrancisco. (1544-09-16). Apelación de Francisco Vázquez de Coronado.</description>
+    </resource>
+  </members>
+</collection>

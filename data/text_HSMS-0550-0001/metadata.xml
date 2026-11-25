@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0550-0001">
+  <title>Primer viaje de Cristóbal Colón</title>
+  <dublinCore>
+    <dc:creator>de las CasasBartolomé</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0550-0001" filepath="./text_HSMS-0550-0001.xml">
+      <title>Primer viaje de Cristóbal Colón</title>
+      <description>de las CasasBartolomé. (1492-08-03 - 1493-03-15). Primer viaje de Cristóbal Colón.</description>
+    </resource>
+  </members>
+</collection>

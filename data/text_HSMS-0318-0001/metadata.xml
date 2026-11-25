@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0318-0001">
+  <title>Linajes de España - Libro de los blasones de reyes y grandes señores</title>
+  <dublinCore>
+    <dc:creator>de CastillaAlfonso</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0318-0001" filepath="./text_HSMS-0318-0001.xml">
+      <title>Linajes de España - Libro de los blasones de reyes y grandes señores</title>
+      <description>de CastillaAlfonso. (1496 a quo- 1504 ad quem). Linajes de España - Libro de los blasones de reyes y grandes señores.</description>
+    </resource>
+  </members>
+</collection>

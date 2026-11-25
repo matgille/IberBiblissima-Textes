@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0595-0001">
+  <title>Ejecutoria de hidalguía de Alonso de Montalbán</title>
+  <dublinCore>
+    <dc:creator>Felipe II</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0595-0001" filepath="./text_HSMS-0595-0001.xml">
+      <title>Ejecutoria de hidalguía de Alonso de Montalbán</title>
+      <description>Felipe II. (1589-06-17 ad quem). Ejecutoria de hidalguía de Alonso de Montalbán.</description>
+    </resource>
+  </members>
+</collection>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0200-0006">
+  <title>A Nuestra Señora de Guadalupe yendo a ella en romería</title>
+  <dublinCore>
+    <dc:creator>López de MendozaÍñigo</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0200-0006" filepath="./text_HSMS-0200-0006.xml">
+      <title>A Nuestra Señora de Guadalupe yendo a ella en romería</title>
+      <description>López de MendozaÍñigo. (1458-03-25 ad quem). A Nuestra Señora de Guadalupe yendo a ella en romería.</description>
+    </resource>
+  </members>
+</collection>

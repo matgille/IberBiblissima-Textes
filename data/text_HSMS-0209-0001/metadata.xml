@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0209-0001">
+  <title>Fuero juzgo</title>
+  <dublinCore>
+    <dc:creator>Desconhecido</dc:creator>
+    <dc:language>leo-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0209-0001" filepath="./text_HSMS-0209-0001.xml">
+      <title>Fuero juzgo</title>
+      <description>Desconhecido. (1260 ca. - 1260 ca.). Fuero juzgo.</description>
+    </resource>
+  </members>
+</collection>

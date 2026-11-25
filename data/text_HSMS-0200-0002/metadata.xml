@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collection xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dc="http://purl.org/dc/terms/" identifier="text_HSMS-0200-0002">
+  <title>Doctrinal de privados</title>
+  <dublinCore>
+    <dc:creator>López de MendozaÍñigo</dc:creator>
+    <dc:language>osp-x-med</dc:language>
+  </dublinCore>
+  <members>
+    <resource identifier="text_HSMS-0200-0002" filepath="./text_HSMS-0200-0002.xml">
+      <title>Doctrinal de privados</title>
+      <description>López de MendozaÍñigo. (1453-06-02 a quo). Doctrinal de privados.</description>
+    </resource>
+  </members>
+</collection>
