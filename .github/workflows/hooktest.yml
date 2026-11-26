@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+# Droit d'écriture pour pousser le README et les stats
+permissions:
+  contents: write
+
 jobs:
   hooktest:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
 
       # Génère le README (racine) et stats/ avant le test
       - name: Generate README and corpus stats
-        run: python scripts/create_readme.py data
+        run: python scripts/tei_stats.py data
 
       - name: Install HookTest
         run: |
@@ -26,8 +30,9 @@ jobs:
       - name: Run HookTest
         run: hooktest collection.xml -v verbose
 
-      # Commit et push du README et des stats
+      # Commit et push, même si HookTest échoue
       - name: Commit README and stats
+        if: always() && github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
