@@ -1906,16 +1906,6 @@
                </elementSpec>
                <elementSpec ident="citeStructure" mode="change">
                   <attList>
-                     <attDef ident="unit" mode="change">
-                        <valList mode="add" type="closed">
-                           <valItem ident="livre"/>
-                           <valItem ident="chapitre"/>
-                           <valItem ident="colonne"/>
-                           <valItem ident="ligne"/>
-                           <valItem ident="page"/>
-                           <valItem ident="section"/>
-                        </valList>
-                     </attDef>
                      <attDef ident="ana" mode="delete"/>
                      <attDef ident="facs" mode="delete"/>
                      <attDef ident="corresp" mode="delete"/>
@@ -2323,6 +2313,9 @@
                            </valItem>
                            <valItem ident="livre">
                               <desc>La division est un livre.</desc>
+                           </valItem>
+                           <valItem ident="texte">
+                              <desc>La division est le corps du texte.</desc>
                            </valItem>
                            <valItem ident="partie">
                               <desc>La division est une partie.</desc>
