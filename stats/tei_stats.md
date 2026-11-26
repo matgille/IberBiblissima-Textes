@@ -20,15 +20,15 @@ Dossier analysé : `data`
 | Oeuvres originales | 55 | 12213 | 5 837 763 |
 | **Total** | **64** | **14494** | **6 800 876** |
 
-## Manuscrits / non manuscrits
+## Manuscrits / imprimés
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
-| Non manuscrits | 11 | 1826 | 1 265 464 |
+| Imprimés | 11 | 1826 | 1 265 464 |
 | Manuscrits | 53 | 12668 | 5 535 412 |
 | **Total** | **64** | **14494** | **6 800 876** |
 
-## Catégorisation formelle (1re classe du `catRef`)
+## Catégorisation formelle
 
 ### Vue regroupée (classes de plus de 4 textes, sinon « autre »)
 
@@ -46,7 +46,7 @@ Dossier analysé : `data`
 | prose | 57 | 14141 | 6 695 203 |
 | **Total** | **64** | **14494** | **6 800 876** |
 
-## Genre (3e classe du `catRef`)
+## Sous-genre
 
 ### Vue regroupée (classes de plus de 4 textes, sinon « autre »)
 
@@ -160,107 +160,86 @@ Dossier analysé : `data`
 
 ## Classification des oeuvres par genre
 
-### cientifica (11)
-
-- Arte nuevo para criar seda
-- Cirugía *(traduction)*
-- Instrucción y regimiento de guerra
-- Las virtudes del romero
-- Libro de Vegecio de la caballería y del arte de las
-                    batallas
-- Libro de Vegecio de la caballería y del arte de las
-                    batallas *(traduction)*
-- Libro del tesoro *(traduction)*
-- Lucidario
-- Macer herbolario *(traduction)*
-- Strategematon - Arte de caballería *(traduction)*
-- Árbol de batallas *(traduction)*
-
-### clerecia (1)
-
-- Libro de Alexandre *(traduction)*
-
-### comedia (1)
-
-- Farsa o cuasi comedia 2
-
-### culta (5)
+### Oeuvres originales (55)
 
 - A Nuestra Señora de Guadalupe yendo a ella en
                     romería
-- Coplas hechas al ilustre rey don Alfonso de
-                    Portugal
-- Decir que hizo Diego de Burgos, secretario del marqués de
-                    Santillana, al Rey de Portugal
-- Doctrinal de privados
-- Los gozos de Nuestra Señora
-
-### ficcion (5)
-
-- Crónica de Flores y Blancaflor
-- Cárcel de amor
-- Grisel y Mirabella
-- Lanzarote del Lago, libros 2 y 3
-- Teseida / Historia de las amazonas *(traduction)*
-
-### historica (16)
-
 - Abreviación del Halconero
 - Apelación de Francisco Vázquez de Coronado
+- Arte nuevo para criar seda
 - Carta a don Álvaro de Luna
 - Carta a Enrique IV sobre don Álvaro de Luna
 - Carta a la condesa doña Juana Pimentel y el conde don
                     Juan, mujer e hijo de don Álvaro de Luna
 - Claros varones de Castilla
-- Fernando del Pulgar, Cartas
-- General estoria 1
-- Grant crónica de Espanya I
-- Historia de las Indias del Nuovo Mondo
-- Primer viaje de Cristóbal Colón
-- Probanza de méritos de Vicente de Zaldívar
-- Relación de la jornada de Cíbola: version XML-TEI
-- Relación verdadera de la jornada de Omagua y
-                    Dorado
-- Residencia de Francisco Vázquez de Coronado
-- Tercer viaje de Cristóbal Colón
-
-### juridica (22)
-
+- Coplas hechas al ilustre rey don Alfonso de
+                    Portugal
+- Crónica de Flores y Blancaflor
+- Cárcel de amor
+- Decir que hizo Diego de Burgos, secretario del marqués de
+                    Santillana, al Rey de Portugal
+- Doctrinal de privados
 - Ejecutoria de hidalguía de Alonso de Montalbán
 - Ejecutoria de hidalguía de Johan Garcia y la
                     Puente
 - Espéculo
+- Farsa o cuasi comedia 2
+- Fernando del Pulgar, Cartas
 - Fuero de Alba de Tormes
 - Fuero de Alcalá de Henares
-- Fuero de Alcaraz *(traduction)*
 - Fuero de Briviesca
 - Fuero de Béjar
 - Fuero general de Navarra, versión A
 - Fuero general de Navarra, versión B
 - Fuero juzgo
 - Fuero real
+- General estoria 1
+- Grant crónica de Espanya I
+- Grisel y Mirabella
+- Historia de las Indias del Nuovo Mondo
+- Instrucción y regimiento de guerra
+- Lanzarote del Lago, libros 2 y 3
+- Las virtudes del romero
 - Ley sobre las muertes accidentales
 - Leyes del estilo
 - Libro de las confesiones II
 - Libro de las confesiones III
 - Libro de los fueros de Castilla
+- Libro de Vegecio de la caballería y del arte de las
+                    batallas
 - Linajes de España - Libro de los blasones de reyes y
                     grandes señores
+- Los gozos de Nuestra Señora
+- Lucidario
 - Ordenamiento de las tafurerías
 - Ordenanzas de buen gobierno de la villa de
                     Valladolid
+- Primer viaje de Cristóbal Colón
+- Probanza de méritos de Vicente de Zaldívar
+- Relación de la jornada de Cíbola: version XML-TEI
+- Relación verdadera de la jornada de Omagua y
+                    Dorado
+- Residencia de Francisco Vázquez de Coronado
 - Siete partidas
-- Vidal Mayor
-
-### religiosa (2)
-
+- Tercer viaje de Cristóbal Colón
+- Tragicomedia de Calisto y Melibea
 - Tratado muy útil y provechoso en reprobación de los
                     juegos
 - Vida de la Madre Juana Inés de la Cruz
+- Vidal Mayor
 
-### tragedia (1)
+### Traductions (9)
 
-- Tragicomedia de Calisto y Melibea
+- Cirugía *(traduction)*
+- Fuero de Alcaraz *(traduction)*
+- Libro de Alexandre *(traduction)*
+- Libro de Vegecio de la caballería y del arte de las
+                    batallas *(traduction)*
+- Libro del tesoro *(traduction)*
+- Macer herbolario *(traduction)*
+- Strategematon - Arte de caballería *(traduction)*
+- Teseida / Historia de las amazonas *(traduction)*
+- Árbol de batallas *(traduction)*
 
 ## Classification des oeuvres: traductions et originales
 
