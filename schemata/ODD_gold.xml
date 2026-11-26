@@ -1194,7 +1194,7 @@
                </classSpec>
                <!--Checking module core-->
                <moduleRef key="core"
-                  include="p foreign hi quote sic corr choice reg emph orig gap add del name date list item ptr head note pb lb cb monogr author editor respStmt resp title imprint publisher pubPlace bibl biblStruct l lg sp speaker stage"/>
+                  include="p foreign hi quote unclear abbr sic corr choice reg emph orig gap add del name date list item ptr head note pb lb cb monogr author editor respStmt resp title imprint publisher pubPlace bibl biblStruct l lg sp speaker stage"/>
                <elementSpec ident="p" mode="change">
                   <attList>
                      <attDef ident="ana" mode="delete"/>
