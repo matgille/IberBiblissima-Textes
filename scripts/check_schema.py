@@ -75,7 +75,7 @@ def main():
     invalides = 0
     erreurs = 0
 
-    for fichier in iterer_fichiers(dossier, skip_metadata):
+    for fichier in iterer_fichiers(dossier, skip_metadata=True):
         total += 1
         try:
             doc = etree.parse(str(fichier))
