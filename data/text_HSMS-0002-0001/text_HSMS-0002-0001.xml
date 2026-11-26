@@ -1,4 +1,4 @@
-<?xml-model href="/home/mgl/Bureau/Travail/projets/Biblissima-Text/Transform/schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -6,7 +6,10 @@
                 <title>Fuero de Alcalá de Henares</title>
                 <respStmt>
                     <resp>Transcrit par</resp>
-                    <name><surname>Morrás</surname><forename>María</forename></name>
+                    <name>
+                        <surname>Morrás</surname>
+                        <forename>María</forename>
+                    </name>
                 </respStmt>
                 <respStmt>
                     <resp>Textes édités et rassemblés par </resp>
@@ -89,10 +92,11 @@
                 <bibl ana="#frbr.work" type="work">
                     <title>Fuero de Alcalá de Henares</title>
                     <author
-                        corresp="https://database.factgrid.de/entity/Q1080579"
-                            ><surname>de
-                            Sauvetat</surname><forename>Raimundo</forename></author><date
-                        when="1135">1135</date>
+                        corresp="https://database.factgrid.de/entity/Q1080579">
+                        <surname>de Sauvetat</surname>
+                        <forename>Raimundo</forename>
+                    </author>
+                    <date when="1135">1135</date>
                     <idno type="HSMS-WORK">HSMS-0002-0001</idno>
                     <idno type="beta-texid">4411</idno>
                     <idno type="factgrid-id"
@@ -202,14 +206,12 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
                 <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure
+                    match="/TEI/text/body/div[@type='text']/div[@type='chapitre']"
+                    use="@n" unit="chapter"> </citeStructure>
             </refsDecl>
             <classDecl>
                 <taxonomy>
@@ -285,7 +287,8 @@
                 <pb n="1r"/>
                 <cb type="single-column"/>
                 <lb break="yes"/>
-                <p><foreign xml:lang="lat"><hi rend="initiale" n="10">I<figure
+                <p>
+                    <foreign xml:lang="lat"><hi rend="initiale" n="10">I<figure
                                 type="miniature"/></hi>N n<ex>omi</ex>ne patris
                         &amp; indiuidue trini<lb break="no"/>tatis.
                             pat<ex>er</ex> &amp; filius &amp; sp<ex>iritu</ex>s
@@ -320,18 +323,24 @@
                         />succenssor ei<ex>us</ex>. archiep<ex>iscopus</ex>. <hi
                             rend="initiale" n="1">D</hi>o<ex>n</ex> Rodrigo
                         simenez. <lb break="yes"/>octorgo &amp;
-                        confirmo.</foreign></p>
+                        confirmo.</foreign>
+                </p>
             </div>
         </front>
         <body>
             <div type="livre">
                 <p>
-                    <lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >ç<ex>i</ex>nq<ex>ue</ex>nta &amp; dos
-                            fojas</add></seg>
+                    <lb break="yes"/>
+                    <seg ana="#glose">
+                        <add hand="#other">ç<ex>i</ex>nq<ex>ue</ex>nta &amp; dos
+                            fojas</add>
+                    </seg>
                     <pb n="1v"/>
-                    <cb type="single-column"/><lb break="yes"/><seg ana="#glose"
-                            ><add hand="#other">1</add></seg>
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <seg ana="#glose">
+                        <add hand="#other">1</add>
+                    </seg>
                 </p>
                 <div type="chapitre" n="1">
                     <p><hi rend="initiale" n="2">D</hi>einde abeat el<choice>
@@ -341,8 +350,9 @@
                         />ceio abead foro &amp; sos derectos. </p>
                 </div>
                 <div type="chapitre" n="2">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e +<lb
-                                break="yes"/>dalcala o<choice>
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e +<lb break="yes"
+                            />dalcala o<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>d<ex>e</ex> so t<ex>e</ex>rmino
@@ -398,7 +408,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="3">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> morte domne dema<choice>
                                 <corr><ex>n</ex></corr>
                                 <sic/>
@@ -439,7 +450,8 @@
                         saludenle. </p>
                 </div>
                 <div type="chapitre" n="4">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> desfiare .a. v.
                                 o<ex>mne</ex>s. +<lb break="yes"/>p<ex>er</ex>
                             morte. </hi>
@@ -483,7 +495,8 @@
                         xij. &amp; saludenlos. </p>
                 </div>
                 <div type="chapitre" n="5">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ista +<lb break="yes"/>firma haberit a
                             firmar. firme co<ex>n</ex> .iij<hi
                                 rend="superscript">es</hi>. </hi>
@@ -506,7 +519,8 @@
                         oios. </p>
                 </div>
                 <div type="chapitre" n="6">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi>en sopiere q<ex>ue</ex>
                             so parie<ex>n</ex>t +<lb break="yes"/>mato &amp;
                             delexare </hi>
@@ -563,7 +577,8 @@
                             octorgare<ex>n</ex> los maes. </p>
                 </div>
                 <div type="chapitre" n="7">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> desafiar q<ex>u</ex><hi
                                 rend="superscript">i</hi>siere. de<lb break="no"
                             />safie dia de domi<ex>n</ex>go en co<ex>n</ex>ceio.
@@ -610,7 +625,8 @@
                             break="yes"/>por y chaya. </p>
                 </div>
                 <div type="chapitre" n="8">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> uiniere en<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -643,8 +659,11 @@
                             rend="superscript">os</hi>. bezinos. </p>
                 </div>
                 <div type="chapitre" n="9">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >9</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">9</add>
+                        </seg>
                         <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> casa chemare a<choice>
                                 <corr> </corr>
@@ -695,7 +714,8 @@
                         &amp; pierda lo que ouiere. </p>
                 </div>
                 <div type="chapitre" n="10">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> m<ex>u</ex>l<ex>ie</ex>r forzare. o +<lb
                                 break="yes"/>metiere son<choice>
                                 <corr> </corr>
@@ -781,7 +801,8 @@
                             break="yes"/>nada. </p>
                 </div>
                 <div type="chapitre" n="11">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> aq<ex>u</ex><hi rend="superscript"
                                 >a</hi> suzia u<ex>er</ex>tiere ad
                             alt<ex>r</ex>o sobre so corpo.</hi>
@@ -821,7 +842,8 @@
                         <lb break="yes"/>.vi. bezinos. </p>
                 </div>
                 <div type="chapitre" n="12">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> metiere la cabeza ad otro so
                                 aq<ex>u</ex><hi rend="superscript">a</hi></hi>
                     </head>
@@ -855,7 +877,8 @@
                         .vi. bezinos. </p>
                 </div>
                 <div type="chapitre" n="13">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> a otro +<lb
                                 break="yes"/>estemare so cabelo. o so besti-do +
                                 <lb break="yes"/>
@@ -881,7 +904,8 @@
                             co<ex>n</ex> .vi. bezinos. </p>
                 </div>
                 <div type="chapitre" n="14">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> so enemigo matare &amp; des-pues +<lb
                                 break="yes"/>q<ex>ue</ex> fore morto. </hi>
                     </head>
@@ -901,7 +925,8 @@
                         .xij. bezinos. </p>
                 </div>
                 <div type="chapitre" n="15">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> o<ex>mn</ex>e sot<ex>er</ex>rare uiuo si
                                 no<ex>n</ex> mu-riere +<lb break="yes"/>&amp;
                             sil firmare<ex>n</ex>. </hi>
@@ -924,9 +949,13 @@
                             co<ex>n</ex> .vi. bezinos. </p>
                 </div>
                 <div type="chapitre" n="16">
-                    <head><pb n="5r"/>
-                        <cb type="single-column"/><lb break="yes"/><seg
-                            ana="#glose"><add hand="#other">16</add></seg>
+                    <head>
+                        <pb n="5r"/>
+                        <cb type="single-column"/>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">16</add>
+                        </seg>
                         <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala o de so
                                 t<ex>er</ex>mino +<lb break="yes"
                                 />q<ex>u</ex><hi rend="superscript">i</hi>
@@ -986,7 +1015,8 @@
                         </choice>rabida so t<ex>er</ex>cio. </p>
                 </div>
                 <div type="chapitre" n="17">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e de alcala
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e de alcala
                                 q<ex>ue</ex> fore morto +<lb break="yes"/>in
                             uolta. </hi>
                     </head>
@@ -1052,7 +1082,8 @@
                             break="no"/>plen &amp; saludelos. </p>
                 </div>
                 <div type="chapitre" n="18">
-                    <head><hi rend="rubrique">Todo fijo enpare<choice>
+                    <head>
+                        <hi rend="rubrique">Todo fijo enpare<choice>
                                 <corr><ex>n</ex></corr>
                                 <sic/>
                             </choice>tado. o sobrino +<lb break="yes"/>o todos
@@ -1078,10 +1109,10 @@
                         </choice>sete<lb break="no"/>no &amp; partanse del. </p>
                 </div>
                 <div type="chapitre" n="19">
-                    <head><hi rend="rubrique">El q<ex>u</ex><hi
-                                rend="superscript">i</hi> fore sacado por
-                            enemigo. +<lb break="yes"/>por foro denle. ix. dias.
-                        </hi>
+                    <head>
+                        <hi rend="rubrique">El q<ex>u</ex><hi rend="superscript"
+                                >i</hi> fore sacado por enemigo. +<lb
+                                break="yes"/>por foro denle. ix. dias. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >19</add></seg>
@@ -1115,7 +1146,8 @@
                         </choice>seteno. </p>
                 </div>
                 <div type="chapitre" n="20">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> furtare bezino. a bezino.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -1155,7 +1187,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="21">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> en<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -1197,7 +1230,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="22">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi>en sin +<lb break="yes"/>bezino pendrare
                             peche .Lx<hi rend="superscript">a</hi>.
                                 sol<ex>do</ex>s </hi>
@@ -1264,7 +1298,8 @@
                         fo so fiel. </p>
                 </div>
                 <div type="chapitre" n="23">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala +<lb
                                 break="yes"/>o de so t<ex>er</ex>mino.
                                 q<ex>u</ex><hi rend="superscript">i</hi> matare
                             a so fijo a no<ex>n</ex>
@@ -1293,7 +1328,8 @@
                         <lb break="yes"/>mala uoluntad. </p>
                 </div>
                 <div type="chapitre" n="24">
-                    <head><hi rend="rubrique">Si el marido q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Si el marido q<ex>u</ex><hi
                                 rend="superscript">i</hi>siere exir dela +<lb
                                 break="yes"/>uila. p<ex>er</ex> cueta. </hi>
                     </head>
@@ -1322,7 +1358,8 @@
                         </choice>ninguno om<ex>n</ex>e. </p>
                 </div>
                 <div type="chapitre" n="25">
-                    <head><hi rend="rubrique">Baro<ex>n</ex> q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Baro<ex>n</ex> q<ex>u</ex><hi
                                 rend="superscript">i</hi> prisere ad otro +<lb
                                 break="yes"/>ala<choice>
                                 <corr> </corr>
@@ -1345,7 +1382,8 @@
                         </choice>sua barba. </p>
                 </div>
                 <div type="chapitre" n="26">
-                    <head><hi rend="rubrique">A o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">A o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> el<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -1380,7 +1418,8 @@
                         p<ex>er</ex>diere. </p>
                 </div>
                 <div type="chapitre" n="27">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> dema<ex>n</ex>dare ad
                             otro bezi-no +<lb break="yes"/>de alcala
                                 q<ex>ue</ex>l </hi>
@@ -1489,8 +1528,9 @@
                         </choice>seteno. </p>
                 </div>
                 <div type="chapitre" n="28">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de
-                            so t<ex>er</ex>mino. a<choice>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de so
+                                t<ex>er</ex>mino. a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>q<ex>u</ex><hi rend="superscript"
@@ -1521,7 +1561,8 @@
                         rayz por ensos dias. </p>
                 </div>
                 <div type="chapitre" n="29">
-                    <head><hi rend="rubrique">OR<choice>
+                    <head>
+                        <hi rend="rubrique">OR<choice>
                                 <sic>a</sic>
                                 <corr/>
                             </choice>fanos a<choice>
@@ -1611,7 +1652,8 @@
                             break="yes"/>calona. </p>
                 </div>
                 <div type="chapitre" n="30">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e dalcala
                                 q<ex>ue</ex> asos filios desare
                             h<ex>er</ex>edad.</hi>
                     </head>
@@ -1629,7 +1671,8 @@
                             p<ex>re</ex>stel. </p>
                 </div>
                 <div type="chapitre" n="31">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> touiere +<lb
                                 break="yes"/>h<ex>er</ex>edad .i. anno &amp; .i.
                             dia. </hi>
@@ -1656,11 +1699,11 @@
                         elo. </p>
                 </div>
                 <div type="chapitre" n="32">
-                    <head><hi rend="rubrique">Todo +<lb break="yes"
-                                />om<ex>n</ex>e de alcala <lb break="yes"
-                                />q<ex>u</ex><hi rend="superscript">i</hi>
-                            entrare + <lb break="yes"/>h<ex>er</ex>edad de.
-                        </hi>
+                    <head>
+                        <hi rend="rubrique">Todo +<lb break="yes"/>om<ex>n</ex>e
+                            de alcala <lb break="yes"/>q<ex>u</ex><hi
+                                rend="superscript">i</hi> entrare + <lb
+                                break="yes"/>h<ex>er</ex>edad de. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >32</add></seg>
@@ -1683,9 +1726,10 @@
                         dupplo. </p>
                 </div>
                 <div type="chapitre" n="33">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e +<lb
-                                break="yes"/>q<ex>u</ex><hi rend="superscript"
-                                >i</hi> fore catiuo. o fore in romeria. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e +<lb break="yes"
+                                />q<ex>u</ex><hi rend="superscript">i</hi> fore
+                            catiuo. o fore in romeria. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >33</add></seg>
@@ -1702,7 +1746,8 @@
                         h<ex>er</ex>editate por anno. e dia. </p>
                 </div>
                 <div type="chapitre" n="34">
-                    <head><hi rend="rubrique"><lb break="yes"/>Alcaldes +<lb
+                    <head>
+                        <hi rend="rubrique"><lb break="yes"/>Alcaldes +<lb
                                 break="yes"/>et fiadores &amp; iudez
                                 sea<ex>n</ex> anales. </hi>
                     </head>
@@ -1723,7 +1768,8 @@
                         iudicio. ni a so plecto. </p>
                 </div>
                 <div type="chapitre" n="35">
-                    <head><hi rend="rubrique">Ninguno +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Ninguno +<lb break="yes"
                                 />om<ex>n</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> uendiere sua
                                 h<ex>er</ex>edad tanto. </hi>
@@ -1751,7 +1797,8 @@
                         </choice>aueR. </p>
                 </div>
                 <div type="chapitre" n="36">
-                    <head><hi rend="rubrique">Todo clerigo q<ex>ue</ex> fuere
+                    <head>
+                        <hi rend="rubrique">Todo clerigo q<ex>ue</ex> fuere
                             en</hi>
                     </head>
                     <p><pb n="9v"/>
@@ -1771,7 +1818,8 @@
                         alos senores. </p>
                 </div>
                 <div type="chapitre" n="37">
-                    <head><hi rend="rubrique">Alcalde. o iudez. o fiadores</hi>
+                    <head>
+                        <hi rend="rubrique">Alcalde. o iudez. o fiadores</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                     >n<ex>ot</ex><hi rend="superscript">a</hi>
@@ -1797,7 +1845,8 @@
                             no<ex>n</ex> aian amor ninguno. </p>
                 </div>
                 <div type="chapitre" n="38">
-                    <head><hi rend="rubrique">Iudez +<lb break="yes"/>uaia in<choice>
+                    <head>
+                        <hi rend="rubrique">Iudez +<lb break="yes"/>uaia in<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>fonsado &amp; leue. </hi>
@@ -1814,8 +1863,11 @@
                             >es</hi>. bestias. de co<ex>n</ex>ceio. </p>
                 </div>
                 <div type="chapitre" n="39">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >39</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">39</add>
+                        </seg>
                         <hi rend="rubrique">⅋ los medios alcaldes &amp; los +<lb
                                 break="yes"/>medios fiado-<choice>
                                 <corr>res</corr>
@@ -1847,7 +1899,8 @@
                                 hand="#other">40</add></seg> Todo caualero </p>
                 </div>
                 <div type="chapitre" n="40">
-                    <head><hi rend="rubrique">Todo caualero q<ex>ue</ex> en<choice>
+                    <head>
+                        <hi rend="rubrique">Todo caualero q<ex>ue</ex> en<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>bila morare.</hi>
@@ -1863,9 +1916,10 @@
                         &amp; escuse sos duennos </p>
                 </div>
                 <div type="chapitre" n="41">
-                    <head><hi rend="rubrique">Todo colazo <lb break="yes"
-                            />estando co<ex>n</ex> so amo &amp; alguno rencura
-                            ouiere del &amp;</hi>
+                    <head>
+                        <hi rend="rubrique">Todo colazo <lb break="yes"/>estando
+                                co<ex>n</ex> so amo &amp; alguno rencura ouiere
+                            del &amp;</hi>
                     </head>
                     <p><pb n="10r"/>
                         <cb type="single-column"/><lb break="yes"/><seg
@@ -1877,8 +1931,9 @@
                         responda p<ex>er</ex> el. </p>
                 </div>
                 <div type="chapitre" n="42">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de
-                            so +<lb break="yes"/>t<ex>er</ex>mino.
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de so
+                                +<lb break="yes"/>t<ex>er</ex>mino.
                                 q<ex>u</ex><hi rend="superscript">i</hi> reptare
                             alos. </hi>
                     </head>
@@ -1900,7 +1955,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="43">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> reptare ad alcaldes
                                 q<ex>ue</ex> fiziere<ex>n</ex> en.</hi>
                     </head>
@@ -1915,7 +1971,8 @@
                         diga <lb break="yes"/>que uertad iuro. </p>
                 </div>
                 <div type="chapitre" n="44">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e a<choice>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>q<ex>u</ex><hi rend="superscript">i</hi>n
@@ -1944,8 +2001,9 @@
                     </p>
                 </div>
                 <div type="chapitre" n="45">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de
-                            so t<ex>er</ex>mi-no +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de so
+                                t<ex>er</ex>mi-no +<lb break="yes"
                                 />q<ex>u</ex><hi rend="superscript">i</hi>
                                 h<ex>er</ex>edare auer. de padre. </hi>
                     </head>
@@ -1967,16 +2025,23 @@
                         />da &amp; sino<ex>n</ex> aiunctare non responda. </p>
                 </div>
                 <div type="chapitre" n="46">
-                    <head><seg ana="#glose"><add hand="#other">46</add></seg>
+                    <head>
+                        <seg ana="#glose">
+                            <add hand="#other">46</add>
+                        </seg>
                         <hi rend="rubrique">Todo om<ex>n</ex><lb break="yes"/>de
                             alcala. o de so t<ex>er</ex>mino. q<ex>u</ex><hi
                                 rend="superscript">i</hi> ouiere caualo.
                                 q<ex>ue</ex> +<lb break="yes"/>uala .xv. M<hi
                                 rend="superscript">or</hi><ex>auidis</ex>
-                        </hi><lb break="yes"/><seg ana="#glose"><add
-                                hand="#other">no<ex>t</ex><hi rend="superscript"
-                                    >a</hi> d<ex>e</ex>l q<ex>ue</ex>
-                                <lb break="yes"/>tiene cauallo</add></seg>
+                        </hi>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">no<ex>t</ex><hi
+                                    rend="superscript">a</hi> d<ex>e</ex>l
+                                    q<ex>ue</ex>
+                                <lb break="yes"/>tiene cauallo</add>
+                        </seg>
                     </head>
                     <p><hi rend="initiale" n="2">T</hi>odo <lb break="yes"
                             />om<ex>n</ex>e de alcala. o de so t<ex>er</ex>mino.
@@ -2002,7 +2067,8 @@
                         el caualo. excuse pecha &amp; no<ex>n</ex> peche. </p>
                 </div>
                 <div type="chapitre" n="47">
-                    <head><hi rend="rubrique">A todo +<lb break="yes"/>caualero
+                    <head>
+                        <hi rend="rubrique">A todo +<lb break="yes"/>caualero
                                 q<ex>ue</ex> el caualo. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -2012,8 +2078,11 @@
                             no<ex>n</ex> peche. </p>
                 </div>
                 <div type="chapitre" n="48">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >48</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">48</add>
+                        </seg>
                         <hi rend="rubrique">El caualero q<ex>ue</ex> so caualo
                                 be<ex>n</ex>-diere. +<lb break="yes"/>
                         </hi>
@@ -2033,9 +2102,13 @@
                             >i</hi>to de pecha. </p>
                 </div>
                 <div type="chapitre" n="49">
-                    <head><pb n="11r"/>
-                        <cb type="single-column"/><lb break="yes"/><seg
-                            ana="#glose"><add hand="#other">49</add></seg>
+                    <head>
+                        <pb n="11r"/>
+                        <cb type="single-column"/>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">49</add>
+                        </seg>
                         <hi rend="rubrique">Todo om<ex>n</ex>e dalcala
                                 q<ex>u</ex><hi rend="superscript">i</hi> fore
                             bezino. +<lb break="yes"/>&amp; touiere casa
@@ -2074,8 +2147,9 @@
                         </choice>uila moran. </p>
                 </div>
                 <div type="chapitre" n="50">
-                    <head><hi rend="rubrique">El a-portelado +<lb break="yes"
-                            />que su casa no<ex>n</ex> touiere + <lb break="yes"
+                    <head>
+                        <hi rend="rubrique">El a-portelado +<lb break="yes"/>que
+                            su casa no<ex>n</ex> touiere + <lb break="yes"
                             />poblada. cada domi<ex>n</ex>go. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -2089,7 +2163,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="51">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e q<ex>ue</ex>
                             morare en uila los +<lb break="yes"/>iij<hi
                                 rend="superscript">es</hi>. meses. </hi>
                     </head>
@@ -2107,7 +2182,8 @@
                         </choice>bila pechen las pechas. </p>
                 </div>
                 <div type="chapitre" n="52">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e qui +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e qui +<lb
                                 break="yes"/>a otro desafiare. n<ex>on</ex> por
                         </hi>
                     </head>
@@ -2133,9 +2209,13 @@
                         fiadores. </p>
                 </div>
                 <div type="chapitre" n="53">
-                    <head><pb n="11v"/>
-                        <cb type="single-column"/><lb break="yes"/><seg
-                            ana="#glose"><add hand="#other">53</add></seg>
+                    <head>
+                        <pb n="11v"/>
+                        <cb type="single-column"/>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">53</add>
+                        </seg>
                         <hi rend="rubrique">ET si apelido uiniere ala.</hi>
                     </head>
                     <p><hi rend="initiale" n="2">E</hi>T si apelido uiniere <lb
@@ -2174,7 +2254,8 @@
                         </choice>lo odio. </p>
                 </div>
                 <div type="chapitre" n="54">
-                    <head><hi rend="rubrique">Mozo q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Mozo q<ex>u</ex><hi
                                 rend="superscript">i</hi> no<ex>n</ex> ouiere
                             .xiiij. annos.</hi>
                     </head>
@@ -2191,7 +2272,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="55">
-                    <head><hi rend="rubrique">Filio sino<ex>n</ex> ouiere .viij.
+                    <head>
+                        <hi rend="rubrique">Filio sino<ex>n</ex> ouiere .viij.
                                 +<lb break="yes"/>annos. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -2214,7 +2296,8 @@
                         </choice>lo touiere. </p>
                 </div>
                 <div type="chapitre" n="56">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> +<lb break="yes"
                             />testigo fore fecho. </hi>
                     </head>
@@ -2246,7 +2329,8 @@
                             >i</hi>siere. </p>
                 </div>
                 <div type="chapitre" n="57">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e de alcala ode
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e de alcala ode
                                 +<lb break="yes"/>t<ex>er</ex>mino
                                 q<ex>u</ex><hi rend="superscript">i</hi> mo-lino
                             + <lb break="yes"/>
@@ -2319,9 +2403,10 @@
                         </choice>lo a menos. </p>
                 </div>
                 <div type="chapitre" n="58">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e +<lb
-                                break="yes"/>dalcala q<ex>u</ex><hi
-                                rend="superscript">i</hi> ouiere molino. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e +<lb break="yes"
+                            />dalcala q<ex>u</ex><hi rend="superscript">i</hi>
+                            ouiere molino. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >moljno</add></seg>
@@ -2355,8 +2440,10 @@
                 </div>
                 <div type="chapitre" n="59">
                     <head>
-                        <lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >59</add></seg>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">59</add>
+                        </seg>
                         <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> p<ex>re</ex>sa furgare. o entrare. +<lb
                                 break="yes"/>a<choice>
@@ -2391,8 +2478,9 @@
                         </choice>ala p<ex>re</ex>sa. </p>
                 </div>
                 <div type="chapitre" n="60">
-                    <head><hi rend="rubrique">⅋ ningu<ex>n</ex>no +<lb
-                                break="yes"/>o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">⅋ ningu<ex>n</ex>no +<lb break="yes"
+                                />o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> h<ex>er</ex>edero
                             fuere en<choice>
                                 <corr> </corr>
@@ -2451,7 +2539,8 @@
                         </choice>sea creido. </p>
                 </div>
                 <div type="chapitre" n="61">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> entrare exido dela
                                 +<lb break="yes"/>uila. o de aldeas. o carrera.
                         </hi>
@@ -2511,7 +2600,8 @@
                         del. </p>
                 </div>
                 <div type="chapitre" n="62">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> uendiere +<lb
                                 break="yes"/>h<ex>er</ex>edad ad o<ex>mn</ex>e
                             de fuera de </hi>
@@ -2550,7 +2640,8 @@
                         exidos. </p>
                 </div>
                 <div type="chapitre" n="63">
-                    <head><hi rend="rubrique">In fonsado +<lb break="yes"/>real.
+                    <head>
+                        <hi rend="rubrique">In fonsado +<lb break="yes"/>real.
                             uaya dueno desu casa. o filio barra-ga<ex>n</ex>. +
                                 <lb break="yes"/>
                         </hi>
@@ -2570,7 +2661,8 @@
                         &amp; q<ex>ue</ex>l tenga ensu casa &amp; aia edad. </p>
                 </div>
                 <div type="chapitre" n="64">
-                    <head><hi rend="rubrique">Null<ex>us</ex> +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Null<ex>us</ex> +<lb break="yes"
                                 />om<ex>n</ex>e no<ex>n</ex> embie so colazo en<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -2589,7 +2681,8 @@
                         grado. </p>
                 </div>
                 <div type="chapitre" n="65">
-                    <head><hi rend="rubrique">Null<ex>us</ex> homo de senor
+                    <head>
+                        <hi rend="rubrique">Null<ex>us</ex> homo de senor
                                 no<ex>n</ex> pose +<lb break="yes"/>in casa de
                             caualero. </hi>
                     </head>
@@ -2610,7 +2703,8 @@
                             break="yes"/>de tierra. </p>
                 </div>
                 <div type="chapitre" n="66">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> derompiere casa. o molino. o
                                 caba<ex>n</ex>na.</hi>
                     </head>
@@ -2651,7 +2745,8 @@
                         </choice>otro salues co<ex>n</ex> .vi. bezinos. </p>
                 </div>
                 <div type="chapitre" n="67">
-                    <head><hi rend="rubrique">M<ex>u</ex>l<ex>ie</ex>r maridada
+                    <head>
+                        <hi rend="rubrique">M<ex>u</ex>l<ex>ie</ex>r maridada
                                 +<lb break="yes"/>de alcala. o de so
                                 t<ex>er</ex>mino. </hi>
                     </head>
@@ -2669,7 +2764,8 @@
                         </choice>fiadura. </p>
                 </div>
                 <div type="chapitre" n="68">
-                    <head><hi rend="rubrique">Toda bona de mueble. o de<choice>
+                    <head>
+                        <hi rend="rubrique">Toda bona de mueble. o de<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>rayz.</hi>
@@ -2685,7 +2781,8 @@
                             break="yes"/>medio lo partan </p>
                 </div>
                 <div type="chapitre" n="69">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala.
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala.
                                 q<ex>u</ex><hi rend="superscript">i</hi>
                                 o<ex>mn</ex>e matare.</hi>
                     </head>
@@ -2719,7 +2816,8 @@
                         enemigo. </p>
                 </div>
                 <div type="chapitre" n="70">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala ode so
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala ode so
                                 t<ex>er</ex>mino +<lb break="yes"
                                 />q<ex>u</ex><hi rend="superscript">i</hi> fore
                             orfano. </hi>
@@ -2767,7 +2865,8 @@
                             />co<ex>n</ex> co<ex>n</ex>seio dalcaldes sea. </p>
                 </div>
                 <div type="chapitre" n="71">
-                    <head><hi rend="rubrique">Ningu<ex>n</ex>na
+                    <head>
+                        <hi rend="rubrique">Ningu<ex>n</ex>na
                                 m<ex>u</ex>l<ex>ie</ex>r ma<choice>
                                 <corr><ex>n</ex></corr>
                                 <sic/>
@@ -2799,7 +2898,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="72">
-                    <head><hi rend="rubrique">Toda m<ex>u</ex>l<ex>ie</ex>r
+                    <head>
+                        <hi rend="rubrique">Toda m<ex>u</ex>l<ex>ie</ex>r
                                 q<ex>ue</ex> marido ouiere a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -2834,8 +2934,11 @@
                         </choice>esca enemigo. </p>
                 </div>
                 <div type="chapitre" n="73">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >73</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">73</add>
+                        </seg>
                         <hi rend="rubrique">Los filios q<ex>ue</ex> ou<hi
                                 rend="superscript">i</hi>ere<ex>n</ex>. o
                                 parie<ex>n</ex>tes +<lb break="yes"/>dela morta.
@@ -2866,7 +2969,8 @@
                         calo<ex>n</ex>nas. </p>
                 </div>
                 <div type="chapitre" n="75">
-                    <head><hi rend="rubrique">⅋ la muger q<ex>ue</ex> so marido
+                    <head>
+                        <hi rend="rubrique">⅋ la muger q<ex>ue</ex> so marido
                             mata-re. +<lb break="yes"/>
                         </hi>
                     </head>
@@ -2884,8 +2988,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="76">
-                    <head><hi rend="rubrique">m<ex>u</ex>l<ex>ie</ex>r
-                            bibda.</hi>
+                    <head>
+                        <hi rend="rubrique">m<ex>u</ex>l<ex>ie</ex>r bibda.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >76</add></seg>
@@ -2894,7 +2998,8 @@
                         />parient. </p>
                 </div>
                 <div type="chapitre" n="77">
-                    <head><hi rend="rubrique">Padre. o madre q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Padre. o madre q<ex>u</ex><hi
                                 rend="superscript">i</hi> filio baro<ex>n</ex>
                                 ouiere<ex>n</ex>.</hi>
                     </head>
@@ -2918,7 +3023,8 @@
                         />entregrense cada uno enla medietad. </p>
                 </div>
                 <div type="chapitre" n="78">
-                    <head><hi rend="rubrique">Padre <lb break="yes"/>o madre
+                    <head>
+                        <hi rend="rubrique">Padre <lb break="yes"/>o madre
                                 q<ex>u</ex><hi rend="superscript">i</hi> filia
                                 casare<ex>n</ex> el assuuar q<ex>ue</ex>l
                                 diere<ex>n</ex> si fore.</hi>
@@ -2966,7 +3072,8 @@
                             />qua<ex>n</ex>to dieren. </p>
                 </div>
                 <div type="chapitre" n="79">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e de alcala. o de
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e de alcala. o de
                             so t<ex>er</ex>mino +<lb break="yes"/>q<ex>u</ex><hi
                                 rend="superscript">i</hi> lide pidiere. </hi>
                     </head>
@@ -3005,7 +3112,8 @@
                             rend="superscript">os</hi>. bezinos. </p>
                 </div>
                 <div type="chapitre" n="80">
-                    <head><hi rend="rubrique">Todo aldeano q<ex>ue</ex> +<lb
+                    <head>
+                        <hi rend="rubrique">Todo aldeano q<ex>ue</ex> +<lb
                                 break="yes"/>fore esc<ex>r</ex><hi
                                 rend="superscript">i</hi>pto p<ex>er</ex><choice>
                                 <corr> </corr>
@@ -3064,9 +3172,12 @@
                         &amp; el pastor que ande co<ex>n</ex>sus oueias. </p>
                 </div>
                 <div type="chapitre" n="81">
-                    <head><lb break="yes"/>
-                        <seg ana="#glose"><add hand="#other">81</add></seg><hi
-                            rend="rubrique">Todo +<lb break="yes"/>o<ex>mn</ex>e
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">81</add>
+                        </seg>
+                        <hi rend="rubrique">Todo +<lb break="yes"/>o<ex>mn</ex>e
                             de uila o de aldeas. excuse so o<ex>mn</ex>e
                                 q<ex>ue</ex> touie-re </hi>
                     </head>
@@ -3088,7 +3199,8 @@
                             break="yes"/>aportelado &amp; escusselo. </p>
                 </div>
                 <div type="chapitre" n="82">
-                    <head><hi rend="rubrique">Ningu<ex>n</ex>no o<ex>mn</ex>e
+                    <head>
+                        <hi rend="rubrique">Ningu<ex>n</ex>no o<ex>mn</ex>e
                             daldea q<ex>ue</ex> +<lb break="yes"/>saluo ouiere a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -3123,7 +3235,8 @@
                         saluelo. </p>
                 </div>
                 <div type="chapitre" n="83">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
                             embibdare &amp; caualo ouiere.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -3186,7 +3299,8 @@
                             break="yes"/>muger. a marido prestel. </p>
                 </div>
                 <div type="chapitre" n="84">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
                             moro. o mora.</hi>
                     </head>
                     <p><pb n="16v"/>
@@ -3210,8 +3324,11 @@
                         hereden lo del co<ex>n</ex>u<ex>er</ex>so </p>
                 </div>
                 <div type="chapitre" n="85">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >85</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">85</add>
+                        </seg>
                         <hi rend="rubrique">Todo om<ex>n</ex>e dalcala
                                 q<ex>ue</ex> parie<ex>n</ex>tes n<ex>on</ex>
                             ouiere</hi>
@@ -3240,14 +3357,16 @@
                     </p>
                 </div>
                 <div type="chapitre" n="86">
-                    <head><hi rend="rubrique">medietad</hi>
+                    <head>
+                        <hi rend="rubrique">medietad</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >86</add></seg>
                         <hi rend="initiale" n="2">T</hi>odo om<ex>n</ex>e </p>
                 </div>
                 <div type="chapitre" n="87">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> meter q<ex>u</ex><hi
                                 rend="superscript">i</hi>siere a su
                                 m<ex>u</ex>l<ex>ie</ex>r en. +<lb break="yes"
@@ -3286,8 +3405,10 @@
                 </div>
                 <div type="chapitre" n="88">
                     <head>
-                        <lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >88</add></seg>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">88</add>
+                        </seg>
                         <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> tomare a m<ex>u</ex>l<ex>ie</ex>r
                             marida-da +<lb break="yes"/>al co<ex>n</ex>no. </hi>
@@ -3304,7 +3425,10 @@
                         <cb type="single-column"/><lb break="yes"/></p>
                 </div>
                 <div type="chapitre" n="89">
-                    <head><seg ana="#glose"><add hand="#other">89</add></seg>
+                    <head>
+                        <seg ana="#glose">
+                            <add hand="#other">89</add>
+                        </seg>
                         <hi rend="rubrique">Qui ala<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -3321,8 +3445,11 @@
                     </p>
                 </div>
                 <div type="chapitre" n="90">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >90</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">90</add>
+                        </seg>
                         <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ala<choice>
                                 <corr> </corr>
@@ -3356,8 +3483,9 @@
                             >os</hi>. bezinos el <lb break="yes"/>otro. </p>
                 </div>
                 <div type="chapitre" n="91">
-                    <head><hi rend="rubrique">Filia emparentada padre &amp;
-                            madre la casen.</hi>
+                    <head>
+                        <hi rend="rubrique">Filia emparentada padre &amp; madre
+                            la casen.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >91</add></seg>
@@ -3400,7 +3528,8 @@
                         fiador &amp; <lb break="yes"/>debdor por elos. </p>
                 </div>
                 <div type="chapitre" n="92">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> fuere iudez. in alcala
                             el</hi>
                     </head>
@@ -3480,7 +3609,8 @@
                             break="yes"/>las calonas. </p>
                 </div>
                 <div type="chapitre" n="93">
-                    <head><hi rend="rubrique">Todo bezino q<ex>ue</ex> fuere
+                    <head>
+                        <hi rend="rubrique">Todo bezino q<ex>ue</ex> fuere
                             pendrar &amp; pe<ex>n</ex>nos.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -3557,8 +3687,9 @@
                         si o<ex>mn</ex>e y muriere. </p>
                 </div>
                 <div type="chapitre" n="94">
-                    <head><hi rend="rubrique">⅋ q<ex>u</ex><hi
-                                rend="superscript">i</hi> a<choice>
+                    <head>
+                        <hi rend="rubrique">⅋ q<ex>u</ex><hi rend="superscript"
+                                >i</hi> a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>maiordomo d<ex>e</ex></hi>
@@ -3575,8 +3706,11 @@
                         pe<ex>n</ex>nos. tal calona aia como el iudez. </p>
                 </div>
                 <div type="chapitre" n="95">
-                    <head><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >95</add></seg>
+                    <head>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">95</add>
+                        </seg>
                         <hi rend="rubrique">Ninguno fiador no<ex>n</ex>
                                 pe<ex>n</ex>dre. +<lb break="yes"/>ni acote.
                         </hi>
@@ -3604,7 +3738,8 @@
                         de isto derecho. </p>
                 </div>
                 <div type="chapitre" n="96">
-                    <head><hi rend="rubrique">Los .iiij. alcaldes. +<lb
+                    <head>
+                        <hi rend="rubrique">Los .iiij. alcaldes. +<lb
                                 break="yes"/>tome<ex>n</ex> .xL<hi
                                 rend="superscript">a</hi>. M<hi
                                 rend="superscript">or</hi><ex>auidis</ex></hi>
@@ -3619,7 +3754,8 @@
                         si no<ex>n</ex> delas cosas conom-bradas. </p>
                 </div>
                 <div type="chapitre" n="97">
-                    <head><hi rend="rubrique">El<choice>
+                    <head>
+                        <hi rend="rubrique">El<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>escriuano tome.</hi>
@@ -3635,7 +3771,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="98">
-                    <head><hi rend="rubrique">⅋ tome iud<ex>ez</ex></hi>
+                    <head>
+                        <hi rend="rubrique">⅋ tome iud<ex>ez</ex></hi>
                     </head>
                     <p><seg ana="#glose"><add hand="#other">98</add></seg>
                         <hi rend="initiale" n="1">E</hi>T tome el iudez <lb
@@ -3643,7 +3780,8 @@
                             >or</hi><ex>auidis</ex> &amp; non pida. </p>
                 </div>
                 <div type="chapitre" n="99">
-                    <head><hi rend="rubrique">El maiordomo.</hi>
+                    <head>
+                        <hi rend="rubrique">El maiordomo.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >99</add></seg>
@@ -3652,7 +3790,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="100">
-                    <head><hi rend="rubrique">⅋ por facer las +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">⅋ por facer las +<lb break="yes"
                             />carreras al<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -3677,7 +3816,8 @@
                         a s<ex>an</ex>ct martin. </p>
                 </div>
                 <div type="chapitre" n="102">
-                    <head><hi rend="rubrique">Ladron q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Ladron q<ex>ue</ex>
                                 aduxiere<ex>n</ex> +<lb break="yes"/>al iudez. o
                             fiadores. </hi>
                     </head>
@@ -3761,7 +3901,8 @@
                         </choice>seteno. </p>
                 </div>
                 <div type="chapitre" n="103">
-                    <head><hi rend="rubrique">Aq<ex>ue</ex>l que a
+                    <head>
+                        <hi rend="rubrique">Aq<ex>ue</ex>l que a
                                 cotare<ex>n</ex> +<lb break="yes"/>fiadores. por
                             fiadores de saluo. </hi>
                     </head>
@@ -3843,7 +3984,8 @@
                         <lb break="yes"/>peche nada ni esca enemigo. </p>
                 </div>
                 <div type="chapitre" n="104">
-                    <head><hi rend="rubrique">Mulier prenada +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Mulier prenada +<lb break="yes"
                                 />no<ex>n</ex> iure in q<ex>u</ex><hi
                                 rend="superscript">a</hi>raesma. </hi>
                     </head>
@@ -3858,8 +4000,10 @@
                 <div type="chapitre" n="105">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">105</add></seg><hi
-                            rend="rubrique">delas setenas q<ex>ue</ex> cogiere
+                        <seg ana="#glose">
+                            <add hand="#other">105</add>
+                        </seg>
+                        <hi rend="rubrique">delas setenas q<ex>ue</ex> cogiere
                             el iudez.</hi>
                     </head>
                     <p><seg ana="#glose"><add hand="#other">att<ex>ende</ex>
@@ -3877,7 +4021,8 @@
                         iudez. so siedmo. </p>
                 </div>
                 <div type="chapitre" n="106">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> firiere co<ex>n</ex> lanza. +<lb
                                 break="yes"/>o co<ex>n</ex> azcona. </hi>
                     </head>
@@ -3927,12 +4072,14 @@
                 <div type="chapitre" n="107">
                     <note resp="#mgl">Les deux titres suivants ont été ajoutés
                         par une main postérieure.</note>
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi>en firiere co<ex>n</ex> +<lb break="yes"
-                            />piedra. o co<ex>n</ex> arma uedada
-                        &amp;</hi></head>
-                    <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >feridas</add>
+                            />piedra. o co<ex>n</ex> arma uedada &amp;</hi>
+                    </head>
+                    <p>
+                        <lb break="yes"/>
+                        <seg ana="#glose"><add hand="#other">feridas</add>
                             <seg ana="#glose"><add hand="#other">107</add></seg>
                             <hi rend="initiale" n="2">Q</hi>vien firiere
                                 co<ex>n</ex>
@@ -3943,12 +4090,15 @@
                             />estos ossos. de .xxx. M<hi rend="superscript"
                                 >or</hi><ex>auidis</ex> ariba no<ex>n</ex>
                             passen. <lb break="yes"/><seg ana="#glose"><add
-                                    hand="#other">108</add></seg></seg></p>
+                                    hand="#other">108</add></seg></seg>
+                    </p>
                 </div>
                 <div type="chapitre" n="108">
-                    <head><seg ana="#glose"><lb break="yes"/>⅋ por +<lb
+                    <head>
+                        <seg ana="#glose"><lb break="yes"/>⅋ por +<lb
                                 break="yes"/>todas plagas q<ex>ue</ex> sangre
-                            exiere.</seg></head>
+                            exiere.</seg>
+                    </head>
                     <p><seg ana="#glose">
                             <hi rend="initiale" n="2">E</hi>T por todas plagas
                                 <lb break="yes"/>que sangre ixiere &amp;
@@ -3962,11 +4112,12 @@
                         </choice>rencuroso.</p>
                 </div>
                 <div type="chapitre" n="109">
-                    <head><hi rend="rubrique">Moro q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Moro q<ex>u</ex><hi
                                 rend="superscript">i</hi> x<ex>r</ex><hi
                                 rend="superscript">i</hi><ex>sti</ex>ano matare
-                                +<lb break="yes"/>et fore catiuo el
-                        moro.</hi></head>
+                                +<lb break="yes"/>et fore catiuo el moro.</hi>
+                    </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >109</add></seg>
                         <hi rend="initiale" n="2">M</hi>oro q<ex>u</ex><hi
@@ -3991,7 +4142,8 @@
                             co<ex>n</ex> .xij. bezinos &amp; partan se del.</p>
                 </div>
                 <div type="chapitre" n="110">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> el +<lb break="yes"
                             />mercado uoluiere &amp; por aq<ex>ue</ex>la uolta.
                         </hi>
@@ -4021,7 +4173,8 @@
                             co<ex>n</ex> bezinos. </p>
                 </div>
                 <div type="chapitre" n="111">
-                    <head><hi rend="rubrique">Todo bezino dalcala q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo bezino dalcala q<ex>u</ex><hi
                                 rend="superscript">i</hi> +<lb break="yes"
                             />firiere ad otro sobre fiadores. </hi>
                     </head>
@@ -4044,7 +4197,8 @@
                         muriere. </p>
                 </div>
                 <div type="chapitre" n="112">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> +<lb break="yes"
                             />firiere ad otro dia de domi<ex>n</ex>go en
                                 co<ex>n</ex>-<choice>
@@ -4065,9 +4219,10 @@
                         garcia. </p>
                 </div>
                 <div type="chapitre" n="113">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e +<lb
-                                break="yes"/>q<ex>u</ex><hi rend="superscript"
-                                >i</hi> dixiere ad otro. Gafo. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e +<lb break="yes"
+                                />q<ex>u</ex><hi rend="superscript">i</hi>
+                            dixiere ad otro. Gafo. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >denuestos</add></seg>
@@ -4092,7 +4247,8 @@
                             rend="superscript">os</hi>. bezinos. </p>
                 </div>
                 <div type="chapitre" n="114">
-                    <head><hi rend="rubrique">M<ex>u</ex>l<ex>ie</ex>r +<lb
+                    <head>
+                        <hi rend="rubrique">M<ex>u</ex>l<ex>ie</ex>r +<lb
                                 break="yes"/>q<ex>u</ex><hi rend="superscript"
                                 >i</hi> dixiere ad otra puta. o rocina. </hi>
                     </head>
@@ -4151,10 +4307,13 @@
                     </p>
                 </div>
                 <div type="chapitre" n="115">
-                    <head><hi rend="rubrique">Null<ex>us</ex> bezino de alcala.
-                            o de so</hi>
-                        <lb break="yes"/><seg ana="#glose"><add hand="#other"
-                                >115</add></seg>
+                    <head>
+                        <hi rend="rubrique">Null<ex>us</ex> bezino de alcala. o
+                            de so</hi>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">115</add>
+                        </seg>
                     </head>
                     <p>
                         <hi rend="initiale" n="2">N</hi>vllus bezino <lb
@@ -4170,7 +4329,8 @@
                         </choice>ninguno aportelado. </p>
                 </div>
                 <div type="chapitre" n="116">
-                    <head><hi rend="rubrique">Mulier malua-za +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Mulier malua-za +<lb break="yes"
                                 />q<ex>u</ex><hi rend="superscript">i</hi> ad
                             otra buena de-<choice>
                                 <corr>nostare</corr>
@@ -4191,7 +4351,8 @@
                         calona. nol recuda por elo. </p>
                 </div>
                 <div type="chapitre" n="117">
-                    <head><hi rend="rubrique">Maiordomo de fia-dores. +<lb
+                    <head>
+                        <hi rend="rubrique">Maiordomo de fia-dores. +<lb
                                 break="yes"/>o iudez. q<ex>u</ex><hi
                                 rend="superscript">i</hi> pe<choice>
                                 <corr><ex>n</ex></corr>
@@ -4231,8 +4392,9 @@
                         derecho. </p>
                 </div>
                 <div type="chapitre" n="118">
-                    <head><hi rend="rubrique">⅋ ningu<ex>n</ex>no delos
-                            fia-dores +<lb break="yes"/>q<ex>ue</ex> bestias. o
+                    <head>
+                        <hi rend="rubrique">⅋ ningu<ex>n</ex>no delos fia-dores
+                                +<lb break="yes"/>q<ex>ue</ex> bestias. o
                             ganado. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -4264,7 +4426,8 @@
                             rend="superscript">os</hi> .bezinos. </p>
                 </div>
                 <div type="chapitre" n="119">
-                    <head><hi rend="rubrique">⅋ otro bezi-no +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">⅋ otro bezi-no +<lb break="yes"
                                 />q<ex>ue</ex> ganado touiere en co-ral. + <lb
                                 break="yes"/>
                         </hi>
@@ -4282,7 +4445,8 @@
                         &amp; y murie<lb break="no"/>re pierdas el ganado. </p>
                 </div>
                 <div type="chapitre" n="120">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> desafiare ad otro +<lb
                                 break="yes"/>in co<ex>n</ex>ceio &amp; fiadores.
                         </hi>
@@ -4302,7 +4466,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="121">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> des<choice>
                                 <sic> </sic>
                                 <corr/>
@@ -4328,7 +4493,8 @@
                         </choice>afiamento al ora. </p>
                 </div>
                 <div type="chapitre" n="122">
-                    <head><hi rend="rubrique">Ad aq<ex>ue</ex>l +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Ad aq<ex>ue</ex>l +<lb break="yes"
                                 />q<ex>u</ex><hi rend="superscript">i</hi>
                                 acotare<ex>n</ex> no<ex>n</ex> baia al<choice>
                                 <corr> </corr>
@@ -4354,7 +4520,8 @@
                         </choice>lo echare. </p>
                 </div>
                 <div type="chapitre" n="123">
-                    <head><hi rend="rubrique">El iudez de q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">El iudez de q<ex>u</ex><hi
                                 rend="superscript">a</hi>ntas q<ex>ue</ex>
                             calonas cogie-re. +<lb break="yes"/>
                         </hi>
@@ -4375,8 +4542,10 @@
                 <div type="chapitre" n="124">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">124</add></seg><hi
-                            rend="rubrique">El iudez p<ex>re</ex>nda el<choice>
+                        <seg ana="#glose">
+                            <add hand="#other">124</add>
+                        </seg>
+                        <hi rend="rubrique">El iudez p<ex>re</ex>nda el<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>setmo.</hi>
@@ -4408,7 +4577,8 @@
                         cotare. o parare senal peche .v. sol<ex>do</ex>s </p>
                 </div>
                 <div type="chapitre" n="125">
-                    <head><hi rend="rubrique">El +<lb break="yes"/>iudez. tenga la<choice>
+                    <head>
+                        <hi rend="rubrique">El +<lb break="yes"/>iudez. tenga la<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>uoz delas + <lb break="yes"/>bibdas. </hi>
@@ -4424,8 +4594,10 @@
                 <div type="chapitre" n="126">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">126</add></seg><hi
-                            rend="rubrique">Maiordomo de fiadores +<lb
+                        <seg ana="#glose">
+                            <add hand="#other">126</add>
+                        </seg>
+                        <hi rend="rubrique">Maiordomo de fiadores +<lb
                                 break="yes"/>tenga la<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -4439,11 +4611,14 @@
                         </choice>uoz delos andadores. </p>
                 </div>
                 <div type="chapitre" n="127">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. si
-                                +<lb break="yes"/>q<ex>u</ex><hi
-                                rend="superscript">i</hi>siere. orno. </hi><lb
-                            break="yes"/><seg ana="#glose"><add hand="#other"
-                                >127</add></seg>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. si +<lb
+                                break="yes"/>q<ex>u</ex><hi rend="superscript"
+                                >i</hi>siere. orno. </hi>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">127</add>
+                        </seg>
                     </head>
                     <p><hi rend="initiale" n="2">T</hi>odo om<ex>n</ex>e
                         dalcala. o de so<choice>
@@ -4455,7 +4630,8 @@
                             break="yes"/>ninguna. </p>
                 </div>
                 <div type="chapitre" n="128">
-                    <head><hi rend="rubrique">Carnicero q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Carnicero q<ex>u</ex><hi
                                 rend="superscript">i</hi> carne q<ex>u</ex><hi
                                 rend="superscript">i</hi>siere far. in<choice>
                                 <corr> </corr>
@@ -4478,7 +4654,8 @@
                         </choice>senor. </p>
                 </div>
                 <div type="chapitre" n="129">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> ad +<lb break="yes"
                             />otro fore fiadore de de-<choice>
                                 <corr>mandamiento</corr>
@@ -4540,7 +4717,8 @@
                         senor. fagas <lb break="yes"/>dueno de uoz. </p>
                 </div>
                 <div type="chapitre" n="130">
-                    <head><hi rend="rubrique">de todas las calonas q<ex>ue</ex> so<choice>
+                    <head>
+                        <hi rend="rubrique">de todas las calonas q<ex>ue</ex> so<choice>
                                 <corr><ex>n</ex></corr>
                                 <sic/>
                             </choice> esc<ex>r</ex><hi rend="superscript"
@@ -4566,7 +4744,8 @@
                         los. v. sol<ex>do</ex>s </p>
                 </div>
                 <div type="chapitre" n="131">
-                    <head><hi rend="rubrique">De todas +<lb break="yes"/>las
+                    <head>
+                        <hi rend="rubrique">De todas +<lb break="yes"/>las
                             rencuras q<ex>ue</ex> a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -4590,7 +4769,8 @@
                             no<ex>n</ex> aian hy los fiadores nada. </p>
                 </div>
                 <div type="chapitre" n="132">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >a</hi>ndo <lb break="yes"/>los alcaldes
                                 entrare<ex>n</ex> en cor<add hand="#self"
                                 >r</add>al a iudgar &amp; alguno.</hi>
@@ -4686,9 +4866,10 @@
                     </p>
                 </div>
                 <div type="chapitre" n="133">
-                    <head><hi rend="rubrique">De +<lb break="yes"/>todas las
-                            cosas q<ex>ue</ex> los alcaldes ouiere<ex>n</ex> +
-                                <lb break="yes"/>re<ex>n</ex>cura </hi>
+                    <head>
+                        <hi rend="rubrique">De +<lb break="yes"/>todas las cosas
+                                q<ex>ue</ex> los alcaldes ouiere<ex>n</ex> + <lb
+                                break="yes"/>re<ex>n</ex>cura </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >133</add></seg>
@@ -4714,8 +4895,10 @@
                 <div type="chapitre" n="134">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">134</add></seg><hi
-                            rend="rubrique">⅋ si algu<ex>n</ex>no bezino dalcala
+                        <seg ana="#glose">
+                            <add hand="#other">134</add>
+                        </seg>
+                        <hi rend="rubrique">⅋ si algu<ex>n</ex>no bezino dalcala
                             ode so +<lb break="yes"/>t<ex>er</ex>mino diere
                                 re<ex>n</ex>cura. </hi>
                     </head>
@@ -4732,7 +4915,8 @@
                         que aian derecho los <lb break="yes"/>rencurosos. </p>
                 </div>
                 <div type="chapitre" n="135">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> entrare en corral delos alcaldes.
                             sin</hi>
                     </head>
@@ -4755,7 +4939,8 @@
                         </choice>firmare<ex>n</ex>. </p>
                 </div>
                 <div type="chapitre" n="136">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >a</hi>ndo los alcal-des +<lb break="yes"
                                 />dixiere<ex>n</ex>. al iudez. iudez. </hi>
                     </head>
@@ -4779,8 +4964,10 @@
                 <div type="chapitre" n="137">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">137</add></seg><hi
-                            rend="rubrique">⅋ si<choice>
+                        <seg ana="#glose">
+                            <add hand="#other">137</add>
+                        </seg>
+                        <hi rend="rubrique">⅋ si<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>los alcaldes ma<ex>n</ex>dare<ex>n</ex>
@@ -4801,7 +4988,8 @@
                         prendan lo al. </p>
                 </div>
                 <div type="chapitre" n="138">
-                    <head><hi rend="rubrique">Si<choice>
+                    <head>
+                        <hi rend="rubrique">Si<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>los +<lb break="yes"/>alcaldes
@@ -4845,8 +5033,10 @@
                 <div type="chapitre" n="139">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">139</add></seg><hi
-                            rend="rubrique">de <ex>sant</ex>i ioh<ex>anne</ex>s.
+                        <seg ana="#glose">
+                            <add hand="#other">139</add>
+                        </seg>
+                        <hi rend="rubrique">de <ex>sant</ex>i ioh<ex>anne</ex>s.
                                 usq<ex>ue</ex> a <ex>santa</ex> M<ex>ari</ex><hi
                                 rend="superscript">a</hi> mediada d<ex>e</ex>
                             agosto haia<ex>n</ex>.</hi>
@@ -4869,7 +5059,8 @@
                         <lb break="yes"/>agua de orto. </p>
                 </div>
                 <div type="chapitre" n="140">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> auer deuiere ad otro
                                 q<ex>u</ex><hi rend="superscript"
                             >a</hi>ndo.</hi>
@@ -4911,7 +5102,8 @@
                         rancare duplelo. </p>
                 </div>
                 <div type="chapitre" n="141">
-                    <head><hi rend="rubrique">Todo andador +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Todo andador +<lb break="yes"
                                 />q<ex>ue</ex> entrare en alcala. de fiador al.
                         </hi>
                     </head>
@@ -4929,7 +5121,8 @@
                             <lb break="yes"/>la una oreia. </p>
                 </div>
                 <div type="chapitre" n="142">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> rencura ouiere bezino. de alcaldes. +<lb
                                 break="yes"/>o de iudez. o de. </hi>
                     </head>
@@ -4951,8 +5144,10 @@
                 <div type="chapitre" n="143">
                     <head>
                         <lb break="yes"/>
-                        <seg ana="#glose"><add hand="#other">143</add></seg><hi
-                            rend="rubrique">El q<ex>u</ex><hi rend="superscript"
+                        <seg ana="#glose">
+                            <add hand="#other">143</add>
+                        </seg>
+                        <hi rend="rubrique">El q<ex>u</ex><hi rend="superscript"
                                 >i</hi> fore p<ex>re</ex>so &amp; aducho ala
                             uila &amp; dixie-re. +<lb break="yes"/>
                         </hi>
@@ -4972,7 +5167,8 @@
                             break="no"/>na ninguna. </p>
                 </div>
                 <div type="chapitre" n="144">
-                    <head><hi rend="rubrique">Todo iuuero q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo iuuero q<ex>u</ex><hi
                                 rend="superscript">i</hi> fuere in alcala. a
                                 q<ex>u</ex><hi rend="superscript"
                             >i</hi>nto.</hi>
@@ -5210,8 +5406,10 @@
                 </div>
                 <div type="chapitre" n="145">
                     <head>
-                        <seg ana="#glose"><add hand="#other">145</add></seg><hi
-                            rend="rubrique">Tod iuuero q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">145</add>
+                        </seg>
+                        <hi rend="rubrique">Tod iuuero q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore in alcala. o in
                             so t<ex>er</ex>mino.</hi>
                     </head>
@@ -5249,7 +5447,8 @@
                         <cb type="single-column"/><lb break="yes"/>mays. </p>
                 </div>
                 <div type="chapitre" n="146">
-                    <head><hi rend="rubrique">Tod pastor q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Tod pastor q<ex>u</ex><hi
                                 rend="superscript">i</hi> oueias tomare
                                 i<ex>n</ex> alcala.</hi>
                     </head>
@@ -5333,7 +5532,8 @@
                         tomara. </p>
                 </div>
                 <div type="chapitre" n="147">
-                    <head><hi rend="rubrique">Tod o<ex>mn</ex>e de al-cala +<lb
+                    <head>
+                        <hi rend="rubrique">Tod o<ex>mn</ex>e de al-cala +<lb
                                 break="yes"/>q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ganado echare a<choice>
                                 <corr> </corr>
@@ -5374,7 +5574,8 @@
                         </choice>q<ex>ue</ex>so. </p>
                 </div>
                 <div type="chapitre" n="148">
-                    <head><hi rend="rubrique">Tod pastor q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Tod pastor q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore in alcala. o +<lb
                                 break="yes"/>insuo t<ex>er</ex>mino &amp; el amo
                             ouiere. </hi>
@@ -5429,9 +5630,9 @@
                         p<ex>re</ex>so sin calu<ex>m</ex>pnia. </p>
                 </div>
                 <div type="chapitre" n="149">
-                    <head><hi rend="rubrique">Tot iuuero. o pastor. o colazo.
-                                +<lb break="yes"/>o todo so o<ex>mn</ex>e. o
-                            todo so apor-<choice>
+                    <head>
+                        <hi rend="rubrique">Tot iuuero. o pastor. o colazo. +<lb
+                                break="yes"/>o todo so o<ex>mn</ex>e. o todo so apor-<choice>
                                 <corr>tellado</corr>
                                 <sic/>
                             </choice>
@@ -5456,7 +5657,8 @@
                         aia derecho. </p>
                 </div>
                 <div type="chapitre" n="150">
-                    <head><hi rend="rubrique">Pastor q<ex>ue</ex> entrare &amp;
+                    <head>
+                        <hi rend="rubrique">Pastor q<ex>ue</ex> entrare &amp;
                             exiere in +<lb break="yes"/>uila. o in aldea
                                 co<ex>n</ex> oueias. o co<ex>n</ex> cabras.
                         </hi>
@@ -5490,7 +5692,8 @@
                         </choice>senor. </p>
                 </div>
                 <div type="chapitre" n="151">
-                    <head><hi rend="rubrique">Tot colazo q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Tot colazo q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore in alcala. +<lb
                                 break="yes"/>o in so t<ex>er</ex>mino &amp; de
                                 ma<ex>n</ex>dare. </hi>
@@ -5514,8 +5717,9 @@
                         rencura que del ouiere. </p>
                 </div>
                 <div type="chapitre" n="152">
-                    <head><hi rend="rubrique">Pastor o +<lb break="yes"/>iuuero.
-                            o colazo. de alcala. o de so. </hi>
+                    <head>
+                        <hi rend="rubrique">Pastor o +<lb break="yes"/>iuuero. o
+                            colazo. de alcala. o de so. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >152</add></seg>
@@ -5530,7 +5734,8 @@
                             break="yes"/>quarto. </p>
                 </div>
                 <div type="chapitre" n="153">
-                    <head><hi rend="rubrique">Tod o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Tod o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore molin<ex>er</ex>o
                             in alcala. o in so.</hi>
                     </head>
@@ -5565,10 +5770,11 @@
                             break="yes"/>et escas dela calu<ex>m</ex>pnia. </p>
                 </div>
                 <div type="chapitre" n="154">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de
-                            so +<lb break="yes"/>t<ex>er</ex>mino q<ex>u</ex><hi
-                                rend="superscript">i</hi> acoto fore por todos
-                            cotos. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o de so
+                                +<lb break="yes"/>t<ex>er</ex>mino
+                                q<ex>u</ex><hi rend="superscript">i</hi> acoto
+                            fore por todos cotos. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >154</add></seg>
@@ -5586,11 +5792,11 @@
                         ninguno. </p>
                 </div>
                 <div type="chapitre" n="155">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala ode
-                                +<lb break="yes"/>so t<ex>er</ex>mino
-                                q<ex>u</ex><hi rend="superscript">i</hi>
-                                no<ex>n</ex> ouiere. xiiij. a<ex>n</ex>nos.
-                        </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala ode +<lb
+                                break="yes"/>so t<ex>er</ex>mino q<ex>u</ex><hi
+                                rend="superscript">i</hi> no<ex>n</ex> ouiere.
+                            xiiij. a<ex>n</ex>nos. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >155</add></seg>
@@ -5612,8 +5818,10 @@
                 <div type="chapitre" n="156">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">156</add></seg><hi
-                            rend="rubrique">Todo orfano q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">156</add>
+                        </seg>
+                        <hi rend="rubrique">Todo orfano q<ex>u</ex><hi
                                 rend="superscript">i</hi> no<ex>n</ex> de
                                 ma<ex>n</ex>dare su h<ex>er</ex>edad.</hi>
                     </head>
@@ -5629,8 +5837,10 @@
                 <div type="chapitre" n="157">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">157</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">157</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> habuerit sempnado.
                                 +<lb break="yes"/>aut baruechado. </hi>
                     </head>
@@ -5653,7 +5863,8 @@
                         />dad. </p>
                 </div>
                 <div type="chapitre" n="158">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
                                 q<ex>u</ex><hi rend="superscript">i</hi> fore
                             bezino. pechero &amp;</hi>
                     </head>
@@ -5670,8 +5881,10 @@
                 <div type="chapitre" n="159">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">159</add></seg><hi
-                            rend="rubrique">Todo atemplant q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">159</add>
+                        </seg>
+                        <hi rend="rubrique">Todo atemplant q<ex>u</ex><hi
                                 rend="superscript">i</hi> calona de
                             ma<ex>n</ex>dare.</hi>
                     </head>
@@ -5684,8 +5897,8 @@
                         responda. </p>
                 </div>
                 <div type="chapitre" n="160">
-                    <head><hi rend="rubrique">Todo barra<ex>n</ex>no
-                                q<ex>ue</ex> al<choice>
+                    <head>
+                        <hi rend="rubrique">Todo barra<ex>n</ex>no q<ex>ue</ex> al<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>bezi-no +<lb break="yes"/>matare. peche las
@@ -5708,7 +5921,8 @@
                         </choice>ma<ex>n</ex>no diestra uaias por enemigo. </p>
                 </div>
                 <div type="chapitre" n="161">
-                    <head><hi rend="rubrique">Todo barra<ex>n</ex>no<lb
+                    <head>
+                        <hi rend="rubrique">Todo barra<ex>n</ex>no<lb
                                 break="yes"/>q<ex>ue</ex> matare. a otro
                                 barra<ex>n</ex>no peche.</hi>
                     </head>
@@ -5720,7 +5934,8 @@
                             break="yes"/>siniestra &amp; uaias por enemigo </p>
                 </div>
                 <div type="chapitre" n="162">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala. o +<lb
                                 break="yes"/>de su t<ex>er</ex>mino.
                                 q<ex>u</ex><hi rend="superscript">i</hi> a otro
                             firiere. aguijo<ex>n</ex>. </hi>
@@ -5747,7 +5962,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="163">
-                    <head><hi rend="rubrique">Barra<ex>n</ex>no +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Barra<ex>n</ex>no +<lb break="yes"
                             />que a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -5777,7 +5993,8 @@
                         a<ex>n</ex>no </p>
                 </div>
                 <div type="chapitre" n="164">
-                    <head><hi rend="rubrique">Barra<ex>n</ex>no q<ex>ue</ex> a<choice>
+                    <head>
+                        <hi rend="rubrique">Barra<ex>n</ex>no q<ex>ue</ex> a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>uizino firiere +<lb break="yes"/>peche las
@@ -5799,8 +6016,9 @@
                         </choice>mano siniestra &amp; uayas dela uila. </p>
                 </div>
                 <div type="chapitre" n="165">
-                    <head><hi rend="rubrique">Barra<ex>n</ex>-no +<lb
-                                break="yes"/>q<ex>ue</ex> a<choice>
+                    <head>
+                        <hi rend="rubrique">Barra<ex>n</ex>-no +<lb break="yes"
+                                />q<ex>ue</ex> a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>barra<ex>n</ex>no + <lb break="yes"
@@ -5820,8 +6038,10 @@
                 <div type="chapitre" n="166">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">166</add></seg><hi
-                            rend="rubrique">Todo bezino q<ex>ue</ex> matare a<choice>
+                        <seg ana="#glose">
+                            <add hand="#other">166</add>
+                        </seg>
+                        <hi rend="rubrique">Todo bezino q<ex>ue</ex> matare a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>barra<ex>n</ex>no.</hi>
@@ -5867,7 +6087,8 @@
                             p<ex>er</ex> su chabeza. </p>
                 </div>
                 <div type="chapitre" n="167">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dal-cala +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dal-cala +<lb
                                 break="yes"/>q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ouiere la ualia de .XL<hi
                                 rend="superscript">a</hi>. M<hi
@@ -5900,8 +6121,10 @@
                     <cb type="single-column"/>
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">168</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">168</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> de foras uinie-re.
                                 +<lb break="yes"/>
                         </hi>
@@ -5916,7 +6139,8 @@
                             a<ex>n</ex>no. </p>
                 </div>
                 <div type="chapitre" n="169">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
                                 q<ex>ue</ex> sus ca-sas +<lb break="yes"
                                 />q<ex>ue</ex>mare<ex>n</ex>. </hi>
                     </head>
@@ -5932,7 +6156,8 @@
                         peche <lb break="yes"/>por. un. a<ex>n</ex>no. </p>
                 </div>
                 <div type="chapitre" n="170">
-                    <head><hi rend="rubrique">Todo ferrero q<ex>ue</ex> en<choice>
+                    <head>
+                        <hi rend="rubrique">Todo ferrero q<ex>ue</ex> en<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>alcala morare.</hi>
@@ -5946,7 +6171,8 @@
                             />no<ex>n</ex> peche &amp; aguze. a meaia. </p>
                 </div>
                 <div type="chapitre" n="171">
-                    <head><hi rend="rubrique">Ninguno ui<ex>n</ex>-nadero +<lb
+                    <head>
+                        <hi rend="rubrique">Ninguno ui<ex>n</ex>-nadero +<lb
                                 break="yes"/>dalcala. o de so. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -5978,7 +6204,8 @@
                             break="yes"/>si io dexare. </p>
                 </div>
                 <div type="chapitre" n="172">
-                    <head><hi rend="rubrique">Todos caualeros dalcala. o
+                    <head>
+                        <hi rend="rubrique">Todos caualeros dalcala. o
                                 d<ex>e</ex> so t<ex>er</ex>mino. +<lb
                                 break="yes"/>q<ex>ue</ex> a<choice>
                                 <corr> </corr>
@@ -6030,7 +6257,8 @@
                         </choice>danador. </p>
                 </div>
                 <div type="chapitre" n="173">
-                    <head><hi rend="rubrique">Todo x<ex>r</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo x<ex>r</ex><hi
                                 rend="superscript">i</hi><ex>sti</ex>ano bezino
                                 q<ex>ue</ex> matare. +<lb break="yes"/>o
                             firiere. a iudeo. atal calona. </hi>
@@ -6088,10 +6316,10 @@
                         el iudez los iudgue. </p>
                 </div>
                 <div type="chapitre" n="174">
-                    <head><hi rend="rubrique">Esto uio el
-                            archiep<ex>iscop</ex>o. +<lb break="yes"
-                                />do<ex>n</ex> martin. por bie<ex>n</ex>.
-                                co<ex>n</ex> bonos. </hi>
+                    <head>
+                        <hi rend="rubrique">Esto uio el archiep<ex>iscop</ex>o.
+                                +<lb break="yes"/>do<ex>n</ex> martin. por
+                                bie<ex>n</ex>. co<ex>n</ex> bonos. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >174</add></seg>
@@ -6119,7 +6347,8 @@
                             >or</hi><ex>auidis</ex> &amp; sea escusado. </p>
                 </div>
                 <div type="chapitre" n="175">
-                    <head><hi rend="rubrique">Esto plogo al<choice>
+                    <head>
+                        <hi rend="rubrique">Esto plogo al<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>co<ex>n</ex>ceio &amp; +<lb break="yes"
@@ -6197,10 +6426,13 @@
                 <div type="chapitre" n="176">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other"
-                            >Regateria</add></seg>
-                        <seg ana="#glose"><add hand="#other">176</add></seg><hi
-                            rend="rubrique">de todas cosas q<ex>ue</ex>
+                        <seg ana="#glose">
+                            <add hand="#other">Regateria</add>
+                        </seg>
+                        <seg ana="#glose">
+                            <add hand="#other">176</add>
+                        </seg>
+                        <hi rend="rubrique">de todas cosas q<ex>ue</ex>
                                 aduxiere<ex>n</ex>.</hi>
                     </head>
                     <p><hi rend="initiale" n="2">D</hi>e todas cosas que. <lb
@@ -6213,7 +6445,8 @@
                         fiadores. </p>
                 </div>
                 <div type="chapitre" n="177">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> uezino mata-re +<lb
                                 break="yes"/>dalcala. in co<ex>n</ex>ceio a
                                 p<ex>re</ex>gon. </hi>
@@ -6234,10 +6467,11 @@
                         </choice>poder del co<ex>n</ex>ceio. </p>
                 </div>
                 <div type="chapitre" n="178">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e +<lb
-                                break="yes"/>q<ex>u</ex><hi rend="superscript"
-                                >i</hi> in co<ex>n</ex>ceio plegado. firiere. o
-                            messare. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e +<lb break="yes"
+                                />q<ex>u</ex><hi rend="superscript">i</hi> in
+                                co<ex>n</ex>ceio plegado. firiere. o messare.
+                        </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >178</add></seg>
@@ -6262,7 +6496,8 @@
                         <lb break="yes"/>firmar non peche. </p>
                 </div>
                 <div type="chapitre" n="179">
-                    <head><hi rend="rubrique">Iu<del hand="#self">e</del>dez et
+                    <head>
+                        <hi rend="rubrique">Iu<del hand="#self">e</del>dez et
                             alcaldes &amp; fiadores.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -6274,7 +6509,8 @@
                         o so portiello to<lb break="no"/>uiere. </p>
                 </div>
                 <div type="chapitre" n="180">
-                    <head><hi rend="rubrique">Todo omne que uiniere a morar a
+                    <head>
+                        <hi rend="rubrique">Todo omne que uiniere a morar a
                             al-cala. +<lb break="yes"/>hata que. </hi>
                     </head>
                     <p><seg ana="#glose"><add hand="#other">no<ex>t</ex><hi
@@ -6292,9 +6528,10 @@
                         </choice>bila. non aya portiello ninguno en bila. </p>
                 </div>
                 <div type="chapitre" n="181">
-                    <head><hi rend="rubrique">Todo <lb break="yes"/>omne
-                            dalcala. o de su t<ex>er</ex>mino. que a otro
-                                o<ex>mn</ex>e.</hi>
+                    <head>
+                        <hi rend="rubrique">Todo <lb break="yes"/>omne dalcala.
+                            o de su t<ex>er</ex>mino. que a otro
+                            o<ex>mn</ex>e.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >181</add></seg>
@@ -6310,7 +6547,8 @@
                             break="yes"/>el seteno </p>
                 </div>
                 <div type="chapitre" n="182">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e que alguna cosa
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e que alguna cosa
                                 testig<ex>u</ex><hi rend="superscript"
                             >a</hi>re.</hi>
                     </head>
@@ -6339,7 +6577,8 @@
                         </choice>lo perdio. </p>
                 </div>
                 <div type="chapitre" n="183">
-                    <head><hi rend="rubrique">Todo omne dalca<lb break="no"/>la
+                    <head>
+                        <hi rend="rubrique">Todo omne dalca<lb break="no"/>la
                             que contrario uiniere contra so uezino
                             co<ex>n</ex>.</hi>
                     </head>
@@ -6365,7 +6604,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="184">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
                                 manq<ex>u</ex><hi rend="superscript">a</hi>dra
                             fiziere iurar a so</hi>
                     </head>
@@ -6378,7 +6618,8 @@
                             peti<lb break="no"/>cion. </p>
                 </div>
                 <div type="chapitre" n="185">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
                                 q<ex>ue</ex> co<ex>m</ex>prare iudgado. o
                             alcaldia.</hi>
                     </head>
@@ -6414,7 +6655,8 @@
                         </choice>alcala. </p>
                 </div>
                 <div type="chapitre" n="186">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> diere .M<hi
                                 rend="superscript">or</hi><ex>auidis</ex> o
                             dineros.</hi>
@@ -6435,10 +6677,10 @@
                     </p>
                 </div>
                 <div type="chapitre" n="187">
-                    <head><hi rend="rubrique">Todo +<lb break="yes"
-                                />o<ex>mn</ex>e q<ex>u</ex><hi
-                                rend="superscript">i</hi> pan mudado diere &amp;
-                            nol. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo +<lb break="yes"/>o<ex>mn</ex>e
+                                q<ex>u</ex><hi rend="superscript">i</hi> pan
+                            mudado diere &amp; nol. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                     >no<ex>t</ex><hi rend="superscript">a</hi>
@@ -6455,8 +6697,10 @@
                 <div type="chapitre" n="188">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">188</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">188</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> alguna cosa
                             habuerit.</hi>
                     </head>
@@ -6477,7 +6721,8 @@
                             break="yes"/>fiadores. </p>
                 </div>
                 <div type="chapitre" n="189">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> dema<ex>n</ex>dare. a
                             otro om<ex>n</ex>e. dad me u<ex>uest</ex>ro +<lb
                                 break="yes"/>o<ex>mn</ex>e. </hi>
@@ -6509,8 +6754,10 @@
                 <div type="chapitre" n="190">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">190</add></seg><hi
-                            rend="rubrique">Toda muger maridada +<lb break="yes"
+                        <seg ana="#glose">
+                            <add hand="#other">190</add>
+                        </seg>
+                        <hi rend="rubrique">Toda muger maridada +<lb break="yes"
                                 />no<ex>n</ex> ue<ex>n</ex>ga. </hi>
                     </head>
                     <p><hi rend="initiale" n="2">T</hi>oda muger maridada <seg
@@ -6525,8 +6772,10 @@
                 <div type="chapitre" n="191">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">191</add></seg><hi
-                            rend="rubrique">Todos cotos q<ex>ue</ex><choice>
+                        <seg ana="#glose">
+                            <add hand="#other">191</add>
+                        </seg>
+                        <hi rend="rubrique">Todos cotos q<ex>ue</ex><choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>los alcaldes +<lb break="yes"
@@ -6547,8 +6796,10 @@
                 <div type="chapitre" n="192">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">192</add></seg><hi
-                            rend="rubrique">Todos cotos q<ex>ue</ex><choice>
+                        <seg ana="#glose">
+                            <add hand="#other">192</add>
+                        </seg>
+                        <hi rend="rubrique">Todos cotos q<ex>ue</ex><choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>los alcaldes pusieren &amp; fiadores.</hi>
@@ -6577,10 +6828,14 @@
                         </choice>cabo. </p>
                 </div>
                 <div type="chapitre" n="193">
-                    <head><hi rend="rubrique">Iudez. o fiadores . o alcaldes.
+                    <head>
+                        <hi rend="rubrique">Iudez. o fiadores . o alcaldes.
                                 q<ex>ue</ex> co-tos. +<lb break="yes"/>
-                        </hi><lb break="yes"/><seg ana="#glose"><add
-                                hand="#other">193</add></seg>
+                        </hi>
+                        <lb break="yes"/>
+                        <seg ana="#glose">
+                            <add hand="#other">193</add>
+                        </seg>
                     </head>
                     <p><hi rend="initiale" n="1">I</hi>Vdez. o fiadores. <lb
                             break="yes"/>o alcaldes. q<ex>ue</ex> cotos
@@ -6588,7 +6843,8 @@
                         />calona dupplada. </p>
                 </div>
                 <div type="chapitre" n="194">
-                    <head><hi rend="rubrique">Todos cotos q<ex>ue</ex> lo<choice>
+                    <head>
+                        <hi rend="rubrique">Todos cotos q<ex>ue</ex> lo<choice>
                                 <corr>s</corr>
                                 <sic/>
                             </choice> alcaldes pusiere<ex>n</ex>.</hi>
@@ -6606,8 +6862,10 @@
                 <div type="chapitre" n="195">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">195</add></seg><hi
-                            rend="rubrique">Si por abentura el<choice>
+                        <seg ana="#glose">
+                            <add hand="#other">195</add>
+                        </seg>
+                        <hi rend="rubrique">Si por abentura el<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>senor de-tardare +<lb break="yes"/>de po-<choice>
@@ -6634,7 +6892,8 @@
                         </choice>uila. </p>
                 </div>
                 <div type="chapitre" n="196">
-                    <head><hi rend="rubrique">Iudez. o fiadores si<choice>
+                    <head>
+                        <hi rend="rubrique">Iudez. o fiadores si<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>les ui-niere +<lb break="yes"
@@ -6673,8 +6932,10 @@
                     <cb type="single-column"/>
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">197</add></seg><hi
-                            rend="rubrique">Soldar de colazo q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">197</add>
+                        </seg>
+                        <hi rend="rubrique">Soldar de colazo q<ex>u</ex><hi
                                 rend="superscript">i</hi> no<ex>n</ex>
                             ouiere.</hi>
                     </head>
@@ -6692,10 +6953,13 @@
                         saque. </p>
                 </div>
                 <div type="chapitre" n="198">
-                    <head><seg ana="#glose"><add hand="#other"
-                            >198</add></seg><hi rend="rubrique">Labrador<lb
-                                break="yes"/>q<ex>ue</ex> labrare por
-                                p<ex>re</ex>cio &amp; nol pagare<ex>n</ex>.</hi>
+                    <head>
+                        <seg ana="#glose">
+                            <add hand="#other">198</add>
+                        </seg>
+                        <hi rend="rubrique">Labrador<lb break="yes"
+                                />q<ex>ue</ex> labrare por p<ex>re</ex>cio &amp;
+                            nol pagare<ex>n</ex>.</hi>
                     </head>
                     <p><hi rend="initiale" n="2">L</hi>abrador que <lb
                             break="yes"/>labrare por p<ex>re</ex>cio &amp; nol
@@ -6714,8 +6978,9 @@
                             ten<lb break="no"/>ga su uoz del labrador. </p>
                 </div>
                 <div type="chapitre" n="199">
-                    <head><hi rend="rubrique">Iudez. o alcaldes. o fia-dores.
-                                +<lb break="yes"/>o plegadores. </hi>
+                    <head>
+                        <hi rend="rubrique">Iudez. o alcaldes. o fia-dores. +<lb
+                                break="yes"/>o plegadores. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >199</add></seg>
@@ -6736,8 +7001,10 @@
                 <div type="chapitre" n="200">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">200</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">200</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> ouiere lauor de<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -6773,7 +7040,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="201">
-                    <head><hi rend="rubrique">Caualo q<ex>ue</ex> muriere en
+                    <head>
+                        <hi rend="rubrique">Caualo q<ex>ue</ex> muriere en
                             a-pelido. +<lb break="yes"/>en. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -6798,7 +7066,8 @@
                         hi metio. </p>
                 </div>
                 <div type="chapitre" n="202">
-                    <head><hi rend="rubrique">⅋ si bonos om<ex>ne</ex>s +<lb
+                    <head>
+                        <hi rend="rubrique">⅋ si bonos om<ex>ne</ex>s +<lb
                                 break="yes"/>fore<ex>n</ex>. p<ex>er</ex>
                                 ma<ex>n</ex>dado del<choice>
                                 <corr> </corr>
@@ -6828,7 +7097,8 @@
                             .ij<hi rend="superscript">os</hi>. partes. </p>
                 </div>
                 <div type="chapitre" n="203">
-                    <head><hi rend="rubrique">Tessedores +<lb break="yes"/>dal<choice>
+                    <head>
+                        <hi rend="rubrique">Tessedores +<lb break="yes"/>dal<choice>
                                 <sic> </sic>
                                 <corr/>
                             </choice>cala. o de so t<ex>er</ex>mino.
@@ -6880,9 +7150,9 @@
                         faga <lb break="yes"/>la lauor. </p>
                 </div>
                 <div type="chapitre" n="204">
-                    <head><hi rend="rubrique">Todo zapat<ex>er</ex>o.
-                                q<ex>ue</ex> leuare<ex>n</ex> solas. sole
-                            las.</hi>
+                    <head>
+                        <hi rend="rubrique">Todo zapat<ex>er</ex>o. q<ex>ue</ex>
+                                leuare<ex>n</ex> solas. sole las.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >204</add></seg>
@@ -6895,7 +7165,8 @@
                         fiadores. </p>
                 </div>
                 <div type="chapitre" n="205">
-                    <head><hi rend="rubrique">Tessedor. o mer-chant. +<lb
+                    <head>
+                        <hi rend="rubrique">Tessedor. o mer-chant. +<lb
                                 break="yes"/>o bezino de alcala. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -6912,7 +7183,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="206">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e de +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e de +<lb
                                 break="yes"/>alcala. o de so t<ex>er</ex>mi-no.
                             + <lb break="yes"/>
                         </hi>
@@ -6935,7 +7207,8 @@
                         alos fiadores. </p>
                 </div>
                 <div type="chapitre" n="207">
-                    <head><hi rend="rubrique">Auarq<ex>ue</ex>ro<hi
+                    <head>
+                        <hi rend="rubrique">Auarq<ex>ue</ex>ro<hi
                                 rend="superscript">s</hi> no<ex>n</ex> +<lb
                                 break="yes"/>cantehen. </hi>
                     </head>
@@ -6956,7 +7229,8 @@
                         </choice>qui lo comprare. </p>
                 </div>
                 <div type="chapitre" n="208">
-                    <head><hi rend="rubrique">Panade-ra +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Panade-ra +<lb break="yes"
                                 />q<ex>ue</ex> pa<ex>n</ex> touiere. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -6967,7 +7241,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="209">
-                    <head><hi rend="rubrique">Los alcaldes aian +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Los alcaldes aian +<lb break="yes"
                             />poder. de dar. </hi>
                     </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">L</hi>os
@@ -6994,10 +7269,12 @@
                 <div type="chapitre" n="210">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">209</add></seg>
+                        <seg ana="#glose">
+                            <add hand="#other">209</add>
+                        </seg>
                         <note resp="#mgl">La personne qui appose les gloses se
-                            trompe ici; il s'agit bien du titre 210.</note><hi
-                            rend="rubrique">El pescado de ryo ue<ex>n</ex>dan
+                            trompe ici; il s'agit bien du titre 210.</note>
+                        <hi rend="rubrique">El pescado de ryo ue<ex>n</ex>dan
                             enla q<ex>u</ex><hi rend="superscript">a</hi>res-ma.
                                 +<lb break="yes"/>
                         </hi>
@@ -7039,7 +7316,8 @@
                             >os</hi>. bezinos. </p>
                 </div>
                 <div type="chapitre" n="211">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e de +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e de +<lb
                                 break="yes"/>foras teng<subst hand="#self">
                                 <del>o</del>
                                 <add>a</add>
@@ -7065,8 +7343,10 @@
                 </div>
                 <div type="chapitre" n="212">
                     <head>
-                        <seg ana="#glose"><add hand="#other">211</add></seg><hi
-                            rend="rubrique">Todo esto sup<ex>er</ex> dicho
+                        <seg ana="#glose">
+                            <add hand="#other">211</add>
+                        </seg>
+                        <hi rend="rubrique">Todo esto sup<ex>er</ex> dicho
                                 exc<ex>r</ex><hi rend="superscript">i</hi>pto
                                 q<ex>ue</ex> es aq<ex>u</ex><hi
                                 rend="superscript">i</hi> de Medi-das. +<lb
@@ -7104,10 +7384,14 @@
                     <lb break="yes"/>
 
                     <head>
-                        <seg ana="#glose"><add hand="#other">buey desco<hi
-                                    rend="superscript">r</hi>nado</add></seg>
-                        <seg ana="#glose"><add hand="#other">212</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e de alcala ode so
+                        <seg ana="#glose">
+                            <add hand="#other">buey desco<hi rend="superscript"
+                                    >r</hi>nado</add>
+                        </seg>
+                        <seg ana="#glose">
+                            <add hand="#other">212</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e de alcala ode so
                                 t<ex>er</ex>mino q<ex>u</ex><hi
                                 rend="superscript">i</hi> boie +<lb break="yes"
                             />descornare. </hi>
@@ -7126,8 +7410,10 @@
                 <div type="chapitre" n="214">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">213</add></seg><hi
-                            rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                        <seg ana="#glose">
+                            <add hand="#other">213</add>
+                        </seg>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -7151,8 +7437,9 @@
                             break="no"/>ciamiento. </p>
                 </div>
                 <div type="chapitre" n="215">
-                    <head><hi rend="rubrique">⅋ q<ex>u</ex><hi
-                                rend="superscript">i</hi> a<choice>
+                    <head>
+                        <hi rend="rubrique">⅋ q<ex>u</ex><hi rend="superscript"
+                                >i</hi> a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>boie crebantare oio. o a mula.</hi>
@@ -7168,7 +7455,8 @@
                             similit<ex>er</ex> peche. </p>
                 </div>
                 <div type="chapitre" n="216">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ferida +<lb break="yes"/>feriere . a
                             caualo. </hi>
                     </head>
@@ -7190,8 +7478,10 @@
                 <div type="chapitre" n="217">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">216</add></seg><hi
-                            rend="rubrique">⅋ q<ex>u</ex><hi rend="superscript"
+                        <seg ana="#glose">
+                            <add hand="#other">216</add>
+                        </seg>
+                        <hi rend="rubrique">⅋ q<ex>u</ex><hi rend="superscript"
                                 >i</hi> a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -7231,7 +7521,8 @@
                         tantos. soldos. peche. </p>
                 </div>
                 <div type="chapitre" n="218">
-                    <head><hi rend="rubrique">Bestia. o todo ganado +<lb
+                    <head>
+                        <hi rend="rubrique">Bestia. o todo ganado +<lb
                                 break="yes"/>q<ex>u</ex><hi rend="superscript"
                                 >i</hi> a otra matare. </hi>
                     </head>
@@ -7257,7 +7548,8 @@
                             ap<ex>re</ex>ciado. </p>
                 </div>
                 <div type="chapitre" n="219">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> pode<ex>n</ex>co matare peche .i. M<hi
                                 rend="superscript">or</hi><ex>auidi</ex></hi>
                     </head>
@@ -7292,9 +7584,10 @@
                         Mencal </p>
                 </div>
                 <div type="chapitre" n="220">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e +<lb
-                                break="yes"/>q<ex>u</ex><hi rend="superscript"
-                                >i</hi> perro matare. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e +<lb break="yes"
+                                />q<ex>u</ex><hi rend="superscript">i</hi> perro
+                            matare. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >219</add></seg>
@@ -7303,7 +7596,8 @@
                         quil matare firiendo <lb break="yes"/>pechelo. </p>
                 </div>
                 <div type="chapitre" n="221">
-                    <head><hi rend="rubrique">Todo pastor q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo pastor q<ex>u</ex><hi
                                 rend="superscript">i</hi> oueias curriare &amp;
                             caualero.</hi>
                     </head>
@@ -7335,7 +7629,8 @@
                         />dan<ex>n</ex>aren. </p>
                 </div>
                 <div type="chapitre" n="222">
-                    <head><hi rend="rubrique">Perro de oueias q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Perro de oueias q<ex>u</ex><hi
                                 rend="superscript">i</hi> entrare i<ex>n</ex>
                                 ui<ex>n</ex>na peche.</hi>
                     </head>
@@ -7379,7 +7674,8 @@
                             rend="superscript">a</hi>dra. <lb break="yes"/></p>
                 </div>
                 <div type="chapitre" n="223">
-                    <head><hi rend="rubrique">Todo ui<ex>n</ex>nadero
+                    <head>
+                        <hi rend="rubrique">Todo ui<ex>n</ex>nadero
                                 q<ex>u</ex><hi rend="superscript">i</hi>
                             quisiere ui<ex>n</ex>nas curiar. in alcala.</hi>
                     </head>
@@ -7438,7 +7734,8 @@
                             rend="superscript">a</hi>dra. </p>
                 </div>
                 <div type="chapitre" n="224">
-                    <head><hi rend="rubrique">Boes +<lb break="yes"/>o bestias
+                    <head>
+                        <hi rend="rubrique">Boes +<lb break="yes"/>o bestias
                                 q<ex>u</ex><hi rend="superscript">i</hi> in
                                 ui<ex>n</ex>na entrare de. </hi>
                     </head>
@@ -7504,8 +7801,10 @@
                 <div type="chapitre" n="225">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">224</add></seg><hi
-                            rend="rubrique">Boes. o bestias. q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">224</add>
+                        </seg>
+                        <hi rend="rubrique">Boes. o bestias. q<ex>u</ex><hi
                                 rend="superscript">i</hi> entrare<choice>
                                 <corr><ex>n</ex></corr>
                                 <sic/>
@@ -7524,7 +7823,8 @@
                         cabeza. <lb break="yes"/>so ganado. </p>
                 </div>
                 <div type="chapitre" n="226">
-                    <head><hi rend="rubrique">Oueias. o cabras. q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Oueias. o cabras. q<ex>u</ex><hi
                                 rend="superscript">i</hi> entrare<ex>n</ex> in
                                 ui<ex>n</ex>na.</hi>
                     </head>
@@ -7554,7 +7854,8 @@
                         pechelo dupplado. </p>
                 </div>
                 <div type="chapitre" n="227">
-                    <head><hi rend="rubrique">de +<lb break="yes"/>entrada de
+                    <head>
+                        <hi rend="rubrique">de +<lb break="yes"/>entrada de
                             marzo ata ui<ex>n</ex>di-mias + <lb break="yes"
                             />cogidas. </hi>
                     </head>
@@ -7583,7 +7884,8 @@
                         </choice>lo <lb break="yes"/>tomare dupplelo. </p>
                 </div>
                 <div type="chapitre" n="228">
-                    <head><hi rend="rubrique">Boe. o uaca. o caualo. o iegua. o
+                    <head>
+                        <hi rend="rubrique">Boe. o uaca. o caualo. o iegua. o
                                 +<lb break="yes"/>mulo . o mula. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -7626,7 +7928,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="229">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
                                 q<ex>u</ex><hi rend="superscript">i</hi> oueias
                             tomare.</hi>
                     </head>
@@ -7672,9 +7975,10 @@
                         dupplados. </p>
                 </div>
                 <div type="chapitre" n="230">
-                    <head><hi rend="rubrique">Binna <lb break="yes"
-                                />q<ex>ue</ex> no<ex>n</ex> fore in pauo. si
-                            fore cerrada de ualadar. o<choice>
+                    <head>
+                        <hi rend="rubrique">Binna <lb break="yes"/>q<ex>ue</ex>
+                                no<ex>n</ex> fore in pauo. si fore cerrada de
+                            ualadar. o<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>d<ex>e</ex>.</hi>
@@ -7694,8 +7998,9 @@
                             rend="superscript">i</hi>go. </p>
                 </div>
                 <div type="chapitre" n="231">
-                    <head><hi rend="rubrique">Qui +<lb break="yes"/>uuas
-                            cogiere. o fructa. </hi>
+                    <head>
+                        <hi rend="rubrique">Qui +<lb break="yes"/>uuas cogiere.
+                            o fructa. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >230</add></seg>
@@ -7733,7 +8038,8 @@
                         &amp; si no<ex>n</ex> salues. como es foro. </p>
                 </div>
                 <div type="chapitre" n="232">
-                    <head><hi rend="rubrique">Orto q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Orto q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore in +<lb
                                 break="yes"/>uila. o in aldea si fore. </hi>
                     </head>
@@ -7777,7 +8083,8 @@
                         />bral tal coto aia como p<ex>er</ex> orto. </p>
                 </div>
                 <div type="chapitre" n="233">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> entrare +<lb
                                 break="yes"/>sobre pared. o sobre. </hi>
                     </head>
@@ -7810,7 +8117,8 @@
                             rend="superscript">a</hi>dra. </p>
                 </div>
                 <div type="chapitre" n="234">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ouiere a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -7836,7 +8144,8 @@
                         </choice>s. </p>
                 </div>
                 <div type="chapitre" n="235">
-                    <head><hi rend="rubrique">Todo pasto<choice>
+                    <head>
+                        <hi rend="rubrique">Todo pasto<choice>
                                 <corr>r</corr>
                                 <sic/>
                             </choice>. o colazo. o iuuero. +<lb break="yes"/>de
@@ -7885,7 +8194,8 @@
                             rend="superscript">os</hi>. bezinos se salue. </p>
                 </div>
                 <div type="chapitre" n="236">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> al andador. o a<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -7923,8 +8233,10 @@
                     <cb type="single-column"/>
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">236</add></seg><hi
-                            rend="rubrique">Todo q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">236</add>
+                        </seg>
+                        <hi rend="rubrique">Todo q<ex>u</ex><hi
                                 rend="superscript">i</hi> pe<ex>n</ex>drare. El
                                 p<ex>r</ex><hi rend="superscript"
                                 >i</hi>m<ex>er</ex>o.</hi>
@@ -7938,7 +8250,8 @@
                             break="yes"/>qui pendrare. </p>
                 </div>
                 <div type="chapitre" n="238">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> furtare madera daradro. peche.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -8004,7 +8317,8 @@
                         />setenas como la calo<ex>n</ex>nia. </p>
                 </div>
                 <div type="chapitre" n="239">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> no<ex>n</ex> semeiare
                                 +<lb break="yes"/>de su colazo. o de su. </hi>
                     </head>
@@ -8021,9 +8335,10 @@
                         uengado &amp; nol tenga apremia. </p>
                 </div>
                 <div type="chapitre" n="240">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e +<lb
-                                break="yes"/>q<ex>ue</ex> ganado ouiere de
-                                q<ex>u</ex><hi rend="superscript">a</hi>l
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e +<lb break="yes"
+                                />q<ex>ue</ex> ganado ouiere de q<ex>u</ex><hi
+                                rend="superscript">a</hi>l
                                 q<ex>ue</ex>sq<ex>u</ex><hi rend="superscript"
                                 >i</hi>ere. </hi>
                     </head>
@@ -8048,7 +8363,8 @@
                         >i</hi>siere. </p>
                 </div>
                 <div type="chapitre" n="241">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> toliere +<lb break="yes"/>penos al
                             iudez. foras dela </hi>
                     </head>
@@ -8098,8 +8414,10 @@
                     <cb type="single-column"/>
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">241</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">241</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> pe<ex>n</ex>drare al
                             otro. dema<ex>n</ex>da-re<ex>n</ex>. +<lb
                                 break="yes"/>
@@ -8133,10 +8451,10 @@
                         </choice>t<ex>er</ex>mino. </p>
                 </div>
                 <div type="chapitre" n="243">
-                    <head><hi rend="rubrique">Todo +<lb break="yes"
-                                />o<ex>mn</ex>e q<ex>u</ex><hi
-                                rend="superscript">i</hi> cortare arbor
-                                ma<ex>n</ex> posto. q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo +<lb break="yes"/>o<ex>mn</ex>e
+                                q<ex>u</ex><hi rend="superscript">i</hi> cortare
+                            arbor ma<ex>n</ex> posto. q<ex>u</ex><hi
                                 rend="superscript">i</hi> fructa + <lb
                                 break="yes"/>leuare. </hi>
                     </head>
@@ -8176,10 +8494,10 @@
                         cortadas. </p>
                 </div>
                 <div type="chapitre" n="244">
-                    <head><hi rend="rubrique">Todo +<lb break="yes"
-                                />o<ex>mn</ex>e q<ex>u</ex><hi
-                                rend="superscript">i</hi> tomare de otro
-                                om<ex>n</ex>e. poco. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo +<lb break="yes"/>o<ex>mn</ex>e
+                                q<ex>u</ex><hi rend="superscript">i</hi> tomare
+                            de otro om<ex>n</ex>e. poco. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >243</add></seg>
@@ -8191,7 +8509,8 @@
                         <lb break="yes"/></p>
                 </div>
                 <div type="chapitre" n="245">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> moro. o mora. firiere. peche las medias
                             calonas.</hi>
                     </head>
@@ -8211,7 +8530,8 @@
                         su cabe<lb break="no"/>za &amp; partan se del. </p>
                 </div>
                 <div type="chapitre" n="246">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> oueias metiere in +<lb
                                 break="yes"/>miesse. o en ui<ex>n</ex>nas. </hi>
                     </head>
@@ -8272,7 +8592,8 @@
                             break="yes"/>su calona. </p>
                 </div>
                 <div type="chapitre" n="247">
-                    <head><hi rend="rubrique">P<ex>er</ex> .iiij. porcos. facta
+                    <head>
+                        <hi rend="rubrique">P<ex>er</ex> .iiij. porcos. facta
                             marzo .M<ex>e</ex>d<ex>ia</ex>. fanega.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -8286,7 +8607,8 @@
                         />ga ala cabeza. </p>
                 </div>
                 <div type="chapitre" n="248">
-                    <head><hi rend="rubrique">ERa q<ex>ue</ex> fore i<ex>n</ex>
+                    <head>
+                        <hi rend="rubrique">ERa q<ex>ue</ex> fore i<ex>n</ex>
                             exido in entrada &amp; in.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -8300,7 +8622,8 @@
                             >o</hi> por miesse &amp; de nocte. duplado. </p>
                 </div>
                 <div type="chapitre" n="249">
-                    <head><hi rend="rubrique">Galinas +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Galinas +<lb break="yes"
                                 />q<ex>ue</ex> dano fiziere<ex>n</ex> in ferren.
                             o in. </hi>
                     </head>
@@ -8326,7 +8649,8 @@
                         </choice>x. Media. fanega de pan. </p>
                 </div>
                 <div type="chapitre" n="250">
-                    <head><hi rend="rubrique">Binnadero q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Binnadero q<ex>u</ex><hi
                                 rend="superscript">i</hi> ui<ex>n</ex>nas +<lb
                                 break="yes"/>curiare. el q<ex>u</ex><hi
                                 rend="superscript">i</hi> ouiere. </hi>
@@ -8352,8 +8676,10 @@
                 <div type="chapitre" n="251">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">250</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">250</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> a otro touiere
                                 pe<ex>n</ex>drado.</hi>
                     </head>
@@ -8365,7 +8691,8 @@
                         />re aforo &amp; si nol quisiere exir. </p>
                 </div>
                 <div type="chapitre" n="252">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> ad otro +<lb
                                 break="yes"/>renouare iudicio &amp; el. </hi>
                     </head>
@@ -8383,8 +8710,10 @@
                     <lb break="yes"/>
 
                     <head>
-                        <seg ana="#glose"><add hand="#other">252</add></seg><hi
-                            rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                        <seg ana="#glose">
+                            <add hand="#other">252</add>
+                        </seg>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> fore a cotado &amp; no<ex>n</ex>
                             uini-ere. +<lb break="yes"/>
                         </hi>
@@ -8397,8 +8726,10 @@
                 <div type="chapitre" n="254">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">253</add></seg><hi
-                            rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                        <seg ana="#glose">
+                            <add hand="#other">253</add>
+                        </seg>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> fore echado al sabba<ex>t</ex>o.</hi>
                     </head>
                     <p>
@@ -8408,7 +8739,8 @@
                         uiniere. </p>
                 </div>
                 <div type="chapitre" n="255">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> pendrare &amp;
                             los.</hi>
                     </head>
@@ -8420,9 +8752,10 @@
                             >a</hi>. sol<ex>do</ex>s </p>
                 </div>
                 <div type="chapitre" n="256">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e +<lb
-                                break="yes"/>q<ex>u</ex><hi rend="superscript"
-                                >i</hi> a otro toliere pe<ex>n</ex>nos. </hi>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e +<lb break="yes"
+                                />q<ex>u</ex><hi rend="superscript">i</hi> a
+                            otro toliere pe<ex>n</ex>nos. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >255</add></seg>
@@ -8437,8 +8770,10 @@
                     <cb type="single-column"/>
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">256</add></seg><hi
-                            rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                        <seg ana="#glose">
+                            <add hand="#other">256</add>
+                        </seg>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> pe<ex>n</ex>drare
                             dia.</hi>
                     </head>
@@ -8449,7 +8784,8 @@
                         torne los penos. </p>
                 </div>
                 <div type="chapitre" n="258">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> pendrare de<choice>
                                 <sic> </sic>
                                 <corr/>
@@ -8465,7 +8801,8 @@
                         penos. </p>
                 </div>
                 <div type="chapitre" n="259">
-                    <head><hi rend="rubrique">Pe<ex>n</ex>nos q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Pe<ex>n</ex>nos q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore<ex>n</ex> soltos
                                 +<lb break="yes"/>p<ex>er</ex> uoca de. </hi>
                     </head>
@@ -8488,7 +8825,8 @@
                             p<ex>er</ex> sua calona. </p>
                 </div>
                 <div type="chapitre" n="260">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> casa touiere +<lb
                                 break="yes"/>poblada in uila. </hi>
                     </head>
@@ -8511,7 +8849,8 @@
                         meior moranza. </p>
                 </div>
                 <div type="chapitre" n="261">
-                    <head><hi rend="rubrique">Pe<ex>n</ex>nos qui fore<ex>n</ex>
+                    <head>
+                        <hi rend="rubrique">Pe<ex>n</ex>nos qui fore<ex>n</ex>
                                 pen<lb break="no"/>drados &amp; so
                             do<ex>n</ex>no los testiguare foras que los.</hi>
                     </head>
@@ -8527,7 +8866,8 @@
                             sol<ex>do</ex>s </p>
                 </div>
                 <div type="chapitre" n="262">
-                    <head><hi rend="rubrique">Penos q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Penos q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore<ex>n</ex>
                             pendrados &amp; ouiere enelos.</hi>
                     </head>
@@ -8539,7 +8879,8 @@
                         pechelos el otro </p>
                 </div>
                 <div type="chapitre" n="263">
-                    <head><hi rend="rubrique">Penos q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Penos q<ex>u</ex><hi
                                 rend="superscript">i</hi> fore<ex>n</ex>
                                 pe<ex>n</ex>drados. +<lb break="yes"/>et el
                                 q<ex>u</ex><hi rend="superscript">i</hi><choice>
@@ -8579,7 +8920,8 @@
                             calo<ex>n</ex>na. </p>
                 </div>
                 <div type="chapitre" n="264">
-                    <head><hi rend="rubrique">Todo iuuero q<ex>ue</ex> el +<lb
+                    <head>
+                        <hi rend="rubrique">Todo iuuero q<ex>ue</ex> el +<lb
                                 break="yes"/>amo q<ex>u</ex><hi
                                 rend="superscript">i</hi>siere emparar. </hi>
                     </head>
@@ -8598,7 +8940,8 @@
                             <lb break="yes"/></p>
                 </div>
                 <div type="chapitre" n="265">
-                    <head><hi rend="rubrique">Hec est memoria delos cotos delas
+                    <head>
+                        <hi rend="rubrique">Hec est memoria delos cotos delas
                             defesas q<ex>ue</ex>.</hi>
                     </head>
                     <p><pb n="47v"/>
@@ -8697,9 +9040,10 @@
                         </choice>seteno. </p>
                 </div>
                 <div type="chapitre" n="266">
-                    <head><hi rend="rubrique">Sepades q<ex>ue</ex>
-                            ma<ex>n</ex>do +<lb break="yes"/>n<ex>uest</ex>ro
-                            senor d<ex>omi</ex>no archiep<ex>iscop</ex>o
+                    <head>
+                        <hi rend="rubrique">Sepades q<ex>ue</ex> ma<ex>n</ex>do
+                                +<lb break="yes"/>n<ex>uest</ex>ro senor
+                                d<ex>omi</ex>no archiep<ex>iscop</ex>o
                                 do<ex>n</ex> rodrigo. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -8724,7 +9068,8 @@
                         &amp; elos lo pechen. </p>
                 </div>
                 <div type="chapitre" n="267">
-                    <head><hi rend="rubrique">⅋ sobresto ma<ex>n</ex>do el
+                    <head>
+                        <hi rend="rubrique">⅋ sobresto ma<ex>n</ex>do el
                                 archiep<ex>iscop</ex>o. +<lb break="yes"
                                 />q<ex>ue</ex> ni<ex>n</ex>guno o<ex>mn</ex>e.
                         </hi>
@@ -8763,7 +9108,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="268">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> trampa q<ex>u</ex><hi rend="superscript"
                                 >i</hi>siere.</hi>
                     </head>
@@ -8779,8 +9125,10 @@
                 <div type="chapitre" n="269">
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">268</add></seg><hi
-                            rend="rubrique">Bibda no<ex>n</ex> baia en fonsado
+                        <seg ana="#glose">
+                            <add hand="#other">268</add>
+                        </seg>
+                        <hi rend="rubrique">Bibda no<ex>n</ex> baia en fonsado
                             ni.</hi>
                     </head>
                     <p><hi rend="initiale" n="2">B</hi>ibda no<ex>n</ex> baia en
@@ -8790,7 +9138,8 @@
                         fonsado. </p>
                 </div>
                 <div type="chapitre" n="270">
-                    <head><hi rend="rubrique">Padre +<lb break="yes"/>o madre
+                    <head>
+                        <hi rend="rubrique">Padre +<lb break="yes"/>o madre
                                 q<ex>u</ex><hi rend="superscript">i</hi>
                                 ma<ex>n</ex>damie<ex>n</ex>to fiziere a filio.
                         </hi>
@@ -8811,7 +9160,8 @@
                         las filias. los h<ex>er</ex>eden. </p>
                 </div>
                 <div type="chapitre" n="271">
-                    <head><hi rend="rubrique">Filio. o filia. q<ex>ue</ex> +<lb
+                    <head>
+                        <hi rend="rubrique">Filio. o filia. q<ex>ue</ex> +<lb
                                 break="yes"/>malos fuere<ex>n</ex>. por al
                             padre. </hi>
                     </head>
@@ -8841,7 +9191,8 @@
                         <lb break="yes"/>partan enso aueR. </p>
                 </div>
                 <div type="chapitre" n="272">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dalcala
                                 q<ex>u</ex><hi rend="superscript">i</hi>
                                 moio<ex>n</ex> ra<ex>n</ex>care.</hi>
                     </head>
@@ -8865,7 +9216,8 @@
                             >os</hi>. bezinos. </p>
                 </div>
                 <div type="chapitre" n="273">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e <lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e <lb break="yes"
                             />dalcala q<ex>u</ex><hi rend="superscript">i</hi>
                                 dema<ex>n</ex>dare. a otro de .iij.
                                 sol<ex>do</ex>s en auiso.</hi>
@@ -8907,7 +9259,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="274">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e dalcala
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e dalcala
                                 q<ex>ue</ex> en<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -8962,8 +9315,10 @@
                     <cb type="single-column"/>
                     <lb break="yes"/>
                     <head>
-                        <seg ana="#glose"><add hand="#other">274</add></seg><hi
-                            rend="rubrique">Todo om<ex>n</ex>e dalcala
+                        <seg ana="#glose">
+                            <add hand="#other">274</add>
+                        </seg>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e dalcala
                                 q<ex>ue</ex> so caualo. +<lb break="yes"
                             />touiere. </hi>
                     </head>
@@ -9005,7 +9360,8 @@
                         >a</hi>dra dueno de caualo. </p>
                 </div>
                 <div type="chapitre" n="276">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e dela +<lb
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e dela +<lb
                                 break="yes"/>uila q<ex>u</ex><hi
                                 rend="superscript">i</hi> aldea ouiere. </hi>
                     </head>
@@ -9038,7 +9394,8 @@
                         />bezinos. </p>
                 </div>
                 <div type="chapitre" n="277">
-                    <head><hi rend="rubrique">Toda aldea de alcala. o .iij.
+                    <head>
+                        <hi rend="rubrique">Toda aldea de alcala. o .iij.
                             bezinos ouiere.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9077,7 +9434,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="278">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> oueias. o porcos. metiere.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9103,8 +9461,10 @@
                 <div type="chapitre" n="279">
                     <head>
                         <lb break="yes"/>
-                        <seg ana="#glose"><add hand="#other">278</add></seg><hi
-                            rend="rubrique">Tot filio malfecho no<ex>n</ex>
+                        <seg ana="#glose">
+                            <add hand="#other">278</add>
+                        </seg>
+                        <hi rend="rubrique">Tot filio malfecho no<ex>n</ex>
                                 h<ex>er</ex>ede.</hi>
                     </head>
                     <p><hi rend="initiale" n="2">T</hi>ot filio malfecho <lb
@@ -9124,9 +9484,10 @@
                     </p>
                 </div>
                 <div type="chapitre" n="280">
-                    <head><hi rend="rubrique">Tot +<lb break="yes"
-                            />o<ex>mn</ex>e q<ex>u</ex><hi rend="superscript"
-                                >i</hi> co<ex>m</ex>prare h<ex>er</ex>edad in<choice>
+                    <head>
+                        <hi rend="rubrique">Tot +<lb break="yes"/>o<ex>mn</ex>e
+                                q<ex>u</ex><hi rend="superscript">i</hi>
+                                co<ex>m</ex>prare h<ex>er</ex>edad in<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>alcala &amp; carta. </hi>
@@ -9188,7 +9549,8 @@
                         h<ex>er</ex>edad toda duplada. </p>
                 </div>
                 <div type="chapitre" n="281">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> ui<ex>n</ex>nas pusiere. o +<lb
                                 break="yes"/>casas fiziere. en h<ex>er</ex>edad
                             de. </hi>
@@ -9210,7 +9572,8 @@
                             rend="superscript">a</hi>rto. </p>
                 </div>
                 <div type="chapitre" n="282">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> h<ex>er</ex>edad co<ex>m</ex>prare ata
                             .ix. dias no<ex>n</ex> ielo.</hi>
                     </head>
@@ -9243,7 +9606,8 @@
                         </choice>aueR. </p>
                 </div>
                 <div type="chapitre" n="283">
-                    <head><hi rend="rubrique">Tod o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Tod o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> alguna cosa
                             testiguare. a<ex>d</ex></hi>
                     </head>
@@ -9273,8 +9637,9 @@
                         </choice>lo p<ex>er</ex>dio. </p>
                 </div>
                 <div type="chapitre" n="284">
-                    <head><hi rend="rubrique">Caualo. o otra bestia.
-                                q<ex>ue</ex> o<ex>mn</ex>e.</hi>
+                    <head>
+                        <hi rend="rubrique">Caualo. o otra bestia. q<ex>ue</ex>
+                                o<ex>mn</ex>e.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >283</add></seg>
@@ -9315,7 +9680,8 @@
                         bezinos &amp; salue so ganado. </p>
                 </div>
                 <div type="chapitre" n="285">
-                    <head><hi rend="rubrique">OM<ex>n</ex>e. o bestia . o +<lb
+                    <head>
+                        <hi rend="rubrique">OM<ex>n</ex>e. o bestia . o +<lb
                                 break="yes"/>ganado. q<ex>u</ex>e caiere en
                             pozo. </hi>
                     </head>
@@ -9352,7 +9718,8 @@
                         />pechelo so dueno. </p>
                 </div>
                 <div type="chapitre" n="286">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> falare. moro. o
                             mora.</hi>
                     </head>
@@ -9397,8 +9764,9 @@
                         baca. medio <lb break="yes"/>mencal. </p>
                 </div>
                 <div type="chapitre" n="287">
-                    <head><hi rend="rubrique">Per dema<ex>n</ex>danza de hata
-                            .ij. M<hi rend="superscript">or</hi><ex>auidis</ex>
+                    <head>
+                        <hi rend="rubrique">Per dema<ex>n</ex>danza de hata .ij.
+                                M<hi rend="superscript">or</hi><ex>auidis</ex>
                                 no<ex>n</ex> se.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9417,7 +9785,8 @@
                         </choice>sennor. </p>
                 </div>
                 <div type="chapitre" n="288">
-                    <head><hi rend="rubrique">Bezino dalcala q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Bezino dalcala q<ex>ue</ex>
                                 ladro<ex>n</ex> toma-re +<lb break="yes"/>&amp;
                         </hi>
                     </head>
@@ -9466,7 +9835,8 @@
                         </choice>p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="chapitre" n="289">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> mie<ex>n</ex>bro corta
                                 .a<ex>d</ex> otro</hi>
                     </head>
@@ -9491,7 +9861,8 @@
                             die<lb break="no"/>re alos fiadores. </p>
                 </div>
                 <div type="chapitre" n="290">
-                    <head><hi rend="rubrique">A<choice>
+                    <head>
+                        <hi rend="rubrique">A<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>ladro<ex>n</ex> q<ex>ue</ex>
@@ -9543,8 +9914,9 @@
                         rencuroso. </p>
                 </div>
                 <div type="chapitre" n="291">
-                    <head><hi rend="rubrique">Co<ex>n</ex>los adobos
-                                q<ex>ue</ex> +<lb break="yes"/>el<choice>
+                    <head>
+                        <hi rend="rubrique">Co<ex>n</ex>los adobos q<ex>ue</ex>
+                                +<lb break="yes"/>el<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>iudez. </hi>
@@ -9562,7 +9934,8 @@
                         </choice>paguen. <lb break="yes"/>los senores. </p>
                 </div>
                 <div type="chapitre" n="292">
-                    <head><hi rend="rubrique">Si el amo ouiere rencura del
+                    <head>
+                        <hi rend="rubrique">Si el amo ouiere rencura del
                             iuuero.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9576,7 +9949,8 @@
                         por otro <lb break="yes"/>pleit ninguno. </p>
                 </div>
                 <div type="chapitre" n="293">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex>
                                 om<ex>n</ex>e matare &amp; se fuere.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9596,7 +9970,8 @@
                         moraR. </p>
                 </div>
                 <div type="chapitre" n="294">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> matare paloma.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9633,7 +10008,8 @@
                         >a</hi>rto. </p>
                 </div>
                 <div type="chapitre" n="295">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi>en metiere oueias. +<lb break="yes"/>en<choice>
                                 <corr> </corr>
                                 <sic/>
@@ -9677,8 +10053,8 @@
                         dupplados. </p>
                 </div>
                 <div type="chapitre" n="296">
-                    <head><hi rend="rubrique">⅋ si puercos
-                            tomare<ex>n</ex>.</hi>
+                    <head>
+                        <hi rend="rubrique">⅋ si puercos tomare<ex>n</ex>.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >295</add></seg>
@@ -9697,7 +10073,8 @@
                         oueias. </p>
                 </div>
                 <div type="chapitre" n="297">
-                    <head><hi rend="rubrique">⅋ +<lb break="yes"/>tome por bacas
+                    <head>
+                        <hi rend="rubrique">⅋ +<lb break="yes"/>tome por bacas
                             &amp; por. </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9723,8 +10100,10 @@
                 <div type="chapitre" n="298">
                     <head>
                         <lb break="yes"/>
-                        <seg ana="#glose"><add hand="#other">297</add></seg><hi
-                            rend="rubrique">⅋ atal fuero aian. Mieses.</hi>
+                        <seg ana="#glose">
+                            <add hand="#other">297</add>
+                        </seg>
+                        <hi rend="rubrique">⅋ atal fuero aian. Mieses.</hi>
                     </head>
                     <p><hi rend="initiale" n="2">E</hi>T atal fuero aian. <lb
                             break="yes"/>Mieses &amp; ui<ex>n</ex>nas &amp;
@@ -9734,7 +10113,8 @@
                         </choice>delos bezinos dalcala. </p>
                 </div>
                 <div type="chapitre" n="299">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>u</ex><hi
                                 rend="superscript">i</hi> iogare dados.</hi>
                     </head>
                     <p><pb n="54v"/>
@@ -9761,7 +10141,8 @@
                             />co<ex>n</ex> .ij. bezinos. dueno de casa. </p>
                 </div>
                 <div type="chapitre" n="300">
-                    <head><hi rend="rubrique">Ganado de fueras.</hi>
+                    <head>
+                        <hi rend="rubrique">Ganado de fueras.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >299</add></seg>
@@ -9781,7 +10162,8 @@
                         &amp; ala uenida no<ex>n</ex> de nada. </p>
                 </div>
                 <div type="chapitre" n="301">
-                    <head><hi rend="rubrique">Por toda madera. +<lb break="yes"
+                    <head>
+                        <hi rend="rubrique">Por toda madera. +<lb break="yes"
                             />et caruo<ex>n</ex>. q<ex>ue</ex> a merca-do + <lb
                                 break="yes"/>
                         </hi>
@@ -9803,7 +10185,8 @@
                     </p>
                 </div>
                 <div type="chapitre" n="302">
-                    <head><hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex> des<choice>
+                    <head>
+                        <hi rend="rubrique">Todo o<ex>mn</ex>e q<ex>ue</ex> des<choice>
                                 <sic> </sic>
                                 <corr/>
                             </choice>afiare a .v. o<ex>mne</ex>s.</hi>
@@ -9848,9 +10231,11 @@
                 </div>
 
                 <div type="chapitre" n="303">
-                    <head><seg ana="#glose"><add hand="#other"
-                            >302</add></seg><hi rend="rubrique">Todo
-                                om<ex>n</ex>e qui<choice>
+                    <head>
+                        <seg ana="#glose">
+                            <add hand="#other">302</add>
+                        </seg>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e qui<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>uiniere. a morar.</hi>
@@ -9866,7 +10251,8 @@
                         </choice>bila. </p>
                 </div>
                 <div type="chapitre" n="304">
-                    <head><hi rend="rubrique">Todo om<ex>n</ex>e dal-cala +<lb
+                    <head>
+                        <hi rend="rubrique">Todo om<ex>n</ex>e dal-cala +<lb
                                 break="yes"/>o de </hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
@@ -9886,7 +10272,8 @@
                         </choice>seteno. </p>
                 </div>
                 <div type="chapitre" n="305">
-                    <head><hi rend="rubrique">Todo uezino.</hi>
+                    <head>
+                        <hi rend="rubrique">Todo uezino.</hi>
                     </head>
                     <p><lb break="yes"/><seg ana="#glose"><add hand="#other"
                                 >304</add></seg>
@@ -9901,7 +10288,8 @@
         </body>
         <back>
             <div type="epilogue">
-                <p><foreign xml:lang="lat">Nos Rod<ex>er</ex>ic<ex>us</ex> dei
+                <p>
+                    <foreign xml:lang="lat">Nos Rod<ex>er</ex>ic<ex>us</ex> dei
                             gr<ex>ati</ex>a. Toletane <lb break="yes"/>Sedis.
                             Archiep<ex>iscopu</ex>s hispania<ex>rum</ex>
                         <supplied>p<ex>r</ex><hi rend="superscript"
@@ -9959,28 +10347,30 @@
                         <lb break="yes"/><add hand="#self">Ego
                                 t<ex>o</ex>letan<ex>us</ex>
                             canonic<ex>us</ex></add></foreign>
-                    <lb break="yes"/><add hand="#self">No<ex>t</ex><hi
-                            rend="superscript">a</hi> q<ex>ue</ex> el
-                            m<ex>a</ex>r<ex>a</ex>ved<ex>i</ex> d<ex>e</ex>los
-                            b<supplied>ue</supplied>nos mo<ex>n</ex>ta vj <lb
-                            break="yes"/>m<ex>a</ex>r<ex>avedi</ex>s
-                        d<ex>e</ex>los q<ex>ue</ex> agora corre<ex>n</ex> ⅋ <choice>
+                    <lb break="yes"/>
+                    <add hand="#self">No<ex>t</ex><hi rend="superscript">a</hi>
+                            q<ex>ue</ex> el m<ex>a</ex>r<ex>a</ex>ved<ex>i</ex>
+                            d<ex>e</ex>los b<supplied>ue</supplied>nos
+                            mo<ex>n</ex>ta vj <lb break="yes"
+                            />m<ex>a</ex>r<ex>avedi</ex>s d<ex>e</ex>los
+                            q<ex>ue</ex> agora corre<ex>n</ex> ⅋ <choice>
                             <corr><gap reason="illegible" extent="words"
                                 /></corr>
                             <sic/>
                         </choice>
                         <lb break="yes"/>mencal monta .xxi.</add>
                     <pb n="55v"/>
-                    <cb type="single-column"/><lb break="yes"/><del hand="#self"
-                        >Nos don G<ex>onzal</ex><hi rend="superscript">o</hi>.
-                        por la gr<ex>aci</ex>a de dios Arçob<ex>is</ex>po de
-                        Toledo <lb break="yes"/>p<ex>r</ex><hi
-                            rend="superscript">i</hi>mado de las espannas.
-                            chancell<ex>er</ex> de castiella. otor<lb break="no"
-                        />gamos &amp; co<ex>n</ex>firmamos este fuero en
-                            q<ex>u</ex><hi rend="superscript">a</hi>nto nos <del
-                            hand="#self">cae</del> cae se<lb break="no"/>gund
-                            n<ex>uest</ex>ra orden. saluos los p<ex>r</ex><hi
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <del hand="#self">Nos don G<ex>onzal</ex><hi
+                            rend="superscript">o</hi>. por la gr<ex>aci</ex>a de
+                        dios Arçob<ex>is</ex>po de Toledo <lb break="yes"
+                            />p<ex>r</ex><hi rend="superscript">i</hi>mado de
+                        las espannas. chancell<ex>er</ex> de castiella. otor<lb
+                            break="no"/>gamos &amp; co<ex>n</ex>firmamos este
+                        fuero en q<ex>u</ex><hi rend="superscript">a</hi>nto nos
+                            <del hand="#self">cae</del> cae se<lb break="no"
+                        />gund n<ex>uest</ex>ra orden. saluos los p<ex>r</ex><hi
                             rend="superscript">i</hi>uilegios &amp; las cartas
                         &amp; las co<ex>n</ex><lb break="no"/>positiones.
                             q<ex>ue</ex> son ent<ex>r</ex><hi rend="superscript"
@@ -9993,7 +10383,9 @@
                             ca<ex>n</ex>cellamoslo &amp; esc<ex>r</ex><hi
                             rend="superscript">i</hi>uemos este <lb break="yes"
                         />desta p<ex>ar</ex>te</del>
-                    <lb break="yes"/><seg ana="#glose"><add hand="#other"><choice>
+                    <lb break="yes"/>
+                    <seg ana="#glose">
+                        <add hand="#other"><choice>
                                 <corr><gap reason="illegible" extent="words"
                                     /></corr>
                                 <sic/>
@@ -10007,28 +10399,30 @@
                                 <corr><gap reason="illegible" extent="words"
                                     /></corr>
                                 <sic/>
-                            </choice></add></seg></p>
+                            </choice></add>
+                    </seg>
+                </p>
                 <p>
-                    <lb break="yes"/><add hand="#other">Nos don
-                            G<ex>onzal</ex><hi rend="superscript">o</hi>. por la
-                            gr<ex>aci</ex>a de dios Arçob<ex>is</ex>po de Toledo
-                            <lb break="yes"/>p<ex>r</ex><hi rend="superscript"
-                            >i</hi>mado de las espannas &amp;
-                            chancell<ex>er</ex> de castiella. otor<lb break="no"
-                        />gamos &amp; co<ex>n</ex>firmamos este fuero en
-                            q<ex>u</ex><hi rend="superscript">a</hi>nto nos cae
-                            <lb break="yes"/>segu<ex>n</ex>d n<ex>uest</ex>ra
-                        orden. p<ex>er</ex>o q<ex>ue</ex> sean guardadas las
-                            <ex>con</ex>posici<lb break="no"/>ones &amp; las
-                        cartas &amp; los p<ex>r</ex><hi rend="superscript"
-                            >i</hi>uilegios seellados co<ex>n</ex> los seellos
-                        de <lb break="yes"/>los Arçob<ex>isp</ex>os
-                            n<ex>uest</ex>ros Antecessores &amp; del cabildo. e
-                            co<ex>n</ex> el <lb break="yes"/>n<ex>uest</ex>ro
-                        &amp; del cabildo. q<ex>ue</ex> son entre los
-                            Arçob<ex>is</ex>pos &amp; el co<ex>n</ex><lb
-                            break="no"/>ceio de alcala tan bien de villa como de
-                        aldeas <lb break="yes"/>q<ex>ue</ex>
+                    <lb break="yes"/>
+                    <add hand="#other">Nos don G<ex>onzal</ex><hi
+                            rend="superscript">o</hi>. por la gr<ex>aci</ex>a de
+                        dios Arçob<ex>is</ex>po de Toledo <lb break="yes"
+                            />p<ex>r</ex><hi rend="superscript">i</hi>mado de
+                        las espannas &amp; chancell<ex>er</ex> de castiella.
+                            otor<lb break="no"/>gamos &amp; co<ex>n</ex>firmamos
+                        este fuero en q<ex>u</ex><hi rend="superscript"
+                        >a</hi>nto nos cae <lb break="yes"/>segu<ex>n</ex>d
+                            n<ex>uest</ex>ra orden. p<ex>er</ex>o q<ex>ue</ex>
+                        sean guardadas las <ex>con</ex>posici<lb break="no"
+                        />ones &amp; las cartas &amp; los p<ex>r</ex><hi
+                            rend="superscript">i</hi>uilegios seellados
+                            co<ex>n</ex> los seellos de <lb break="yes"/>los
+                            Arçob<ex>isp</ex>os n<ex>uest</ex>ros Antecessores
+                        &amp; del cabildo. e co<ex>n</ex> el <lb break="yes"
+                            />n<ex>uest</ex>ro &amp; del cabildo. q<ex>ue</ex>
+                        son entre los Arçob<ex>is</ex>pos &amp; el
+                            co<ex>n</ex><lb break="no"/>ceio de alcala tan bien
+                        de villa como de aldeas <lb break="yes"/>q<ex>ue</ex>
                         <choice>
                             <sic>sean</sic>
                             <corr/>
@@ -10042,11 +10436,13 @@
                         <lb break="yes"/>eran bien declarados
                         ca<ex>n</ex>cellamosllos &amp; esc<ex>r</ex><hi
                             rend="superscript">i</hi>uiemos <lb break="yes"
-                        />esta c<ex>on</ex> n<ex>uest</ex>ra mano</add></p>
+                        />esta c<ex>on</ex> n<ex>uest</ex>ra mano</add>
+                </p>
                 <p>
                     <pb n="56r"/>
-                    <cb type="single-column"/><lb break="yes"/><add
-                        hand="#other">nos don G<ex>onzal</ex><hi
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <add hand="#other">nos don G<ex>onzal</ex><hi
                             rend="superscript">o</hi> por la gr<ex>aci</ex>a de
                         dios arçob<ex>is</ex>po de Toledo p<ex>r</ex><hi
                             rend="superscript">i</hi>mado <lb break="yes"/>delas
@@ -10071,15 +10467,16 @@
                         bien q<ex>ue</ex> sean guardadas. &amp; no<ex>n</ex>
                         sean reuocadas nj<ex>n</ex> desfe<lb break="no"/>chas
                         por esta co<ex>n</ex>firmat<ex>i</ex>on</add>
-                    <lb break="yes"/><add hand="#other">Nos don gutierre por la
-                            gr<ex>aci</ex>a de dios arçobispo de Toledo
-                            p<ex>r</ex><hi rend="superscript">i</hi>mado <lb
-                            break="yes"/>delas espan<ex>n</ex>as &amp;
-                        chanceller de castiella otorgamos &amp;
-                        co<ex>n</ex>ffirmamos <lb break="yes"/>este fuero en
-                            q<ex>u</ex><hi rend="superscript">a</hi>nto nos cahe
-                            segu<ex>n</ex>d n<ex>uest</ex>ra orden p<ex>er</ex>o
-                            q<ex>ue</ex> sean guarda<lb break="no"/>das las
+                    <lb break="yes"/>
+                    <add hand="#other">Nos don gutierre por la gr<ex>aci</ex>a
+                        de dios arçobispo de Toledo p<ex>r</ex><hi
+                            rend="superscript">i</hi>mado <lb break="yes"/>delas
+                            espan<ex>n</ex>as &amp; chanceller de castiella
+                        otorgamos &amp; co<ex>n</ex>ffirmamos <lb break="yes"
+                        />este fuero en q<ex>u</ex><hi rend="superscript"
+                        >a</hi>nto nos cahe segu<ex>n</ex>d n<ex>uest</ex>ra
+                        orden p<ex>er</ex>o q<ex>ue</ex> sean guarda<lb
+                            break="no"/>das las
                             co<ex>n</ex>posit<ex>i</ex>o<ex>n</ex>es &amp; las
                         cartas &amp; los p<ex>r</ex><hi rend="superscript"
                             >i</hi>ujlegios seellados co<ex>n</ex> los sellos
@@ -10096,15 +10493,15 @@
                             q<ex>ue</ex> sean guar<lb break="no"/>dadas &amp;
                             no<ex>n</ex> sean reuocadas nj<ex>n</ex> desfechas
                         por esta <ex>con</ex>firmat<ex>i</ex>on.</add>
-                    <lb break="yes"/><add hand="#other">Nos don johan por la
-                            gr<ex>aci</ex>a de dios Arçobispo de Toledo
-                            p<ex>r</ex><hi rend="superscript">i</hi>mado
-                            d<ex>e</ex>las espanyas <lb break="yes"/>e
-                        chanceller de castiella. otorgamos e
-                        <ex>con</ex>firmamos este fuero en q<ex>u</ex><hi
-                            rend="superscript">a</hi>nto nos <lb break="yes"
-                        />cahe segu<ex>n</ex>t n<ex>uest</ex>ra orden.
-                            p<ex>er</ex>o q<ex>ue</ex> sean guardadas las
+                    <lb break="yes"/>
+                    <add hand="#other">Nos don johan por la gr<ex>aci</ex>a de
+                        dios Arçobispo de Toledo p<ex>r</ex><hi
+                            rend="superscript">i</hi>mado d<ex>e</ex>las
+                        espanyas <lb break="yes"/>e chanceller de castiella.
+                        otorgamos e <ex>con</ex>firmamos este fuero en
+                            q<ex>u</ex><hi rend="superscript">a</hi>nto nos <lb
+                            break="yes"/>cahe segu<ex>n</ex>t n<ex>uest</ex>ra
+                        orden. p<ex>er</ex>o q<ex>ue</ex> sean guardadas las
                             <ex>con</ex>posic<ex>i</ex>o<ex>n</ex>es e las
                             car<lb break="no"/>tas e los p<ex>r</ex><hi
                             rend="superscript">i</hi>uilegios seellados
@@ -10120,7 +10517,8 @@
                             <ex>con</ex>firmac<ex>i</ex>o<ex>n</ex> e <lb
                             break="yes"/>por q<ex>ue</ex> esto ssea mas firme
                         mandamos y poner n<ex>uest</ex>ro seello col<lb
-                            break="no"/>gado</add></p>
+                            break="no"/>gado</add>
+                </p>
                 <p>
                     <pb n="56v"/>
                     <cb type="single-column"/><lb break="yes"/><add
@@ -10277,9 +10675,11 @@
                         <lb break="yes"/>elect<ex>us</ex>
                         toletan<ex>us</ex></foreign>
                 </p>
-                <p><pb n="57v"/>
-                    <cb type="single-column"/><lb break="yes"/><add
-                        hand="#other">yo don g<ex>utie</ex>rre electo &amp;
+                <p>
+                    <pb n="57v"/>
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <add hand="#other">yo don g<ex>utie</ex>rre electo &amp;
                         adminjstrador dela egl<ex>es</ex>ia &amp;
                             arçob<ex>is</ex>pado de <lb break="yes"/>toledo
                         otorgo &amp; co<ex>n</ex>firmo este fuero en
@@ -10305,13 +10705,16 @@
                             e<ex>n</ex>la man<ex>er</ex>a q<ex>ue</ex> el
                             arçob<ex>is</ex>po <lb break="yes"/>don pedro lo
                             co<ex>n</ex>firmo</add>
-                    <lb break="yes"/><g>signature.</g>
+                    <lb break="yes"/>
+                    <g>signature.</g>
                     <foreign xml:lang="lat">Gutterri<ex>us</ex></foreign>
                     <pb n="58r"/>
-                    <pb n="58v"/></p>
+                    <pb n="58v"/>
+                </p>
                 <p>
-                    <cb type="single-column"/><lb break="yes"/><add
-                        hand="#other">Yo diego Ramirez de gu<choice>
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <add hand="#other">Yo diego Ramirez de gu<choice>
                             <corr>z</corr>
                             <sic/>
                         </choice>man Arçediano de toledo Cubiculario de
@@ -10395,16 +10798,19 @@
                             q<ex>u</ex><hi rend="superscript"
                             >a</hi>troçie<ex>n</ex><lb break="no"/>tos &amp;
                         siete an<ex>n</ex>os.</add>
-                    <lb break="yes"/><g>signature.</g>
+                    <lb break="yes"/>
+                    <g>signature.</g>
                     <foreign xml:lang="lat">didacus Remigij <lb break="yes"
                             />a<ex>r</ex>chid<ex>iaconus</ex>
                         toletan<ex>us</ex></foreign>
                     <pb n="59r"/>
-                    <cb type="single-column"/><lb break="yes"/><note
-                        resp="#transcriptor">folio without number; illegible
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <note resp="#transcriptor">folio without number; illegible
                         annotations; probatoria <lb break="yes"/>pennae, and
                         what appears to be the index of the fuero,
-                        illegible.</note></p>
+                        illegible.</note>
+                </p>
             </div>
         </back>
     </text>
