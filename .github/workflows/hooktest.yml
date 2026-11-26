@@ -16,7 +16,7 @@ jobs:
 
       # Génère le README (racine) et stats/ avant le test
       - name: Generate README and corpus stats
-        run: python scripts/tei_stats.py data
+        run: python scripts/create_readme.py data
 
       - name: Install HookTest
         run: |
