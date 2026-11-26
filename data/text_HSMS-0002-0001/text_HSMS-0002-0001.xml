@@ -198,7 +198,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
+
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -282,7 +282,7 @@
         </encodingDesc>
     </teiHeader>
     <text>
-        <front>
+        <body>
             <div type="prologue">
                 <pb n="1r"/>
                 <cb type="single-column"/>
@@ -326,9 +326,7 @@
                         confirmo.</foreign>
                 </p>
             </div>
-        </front>
-        <body>
-            <div type="livre">
+            <div type="addendum">
                 <p>
                     <lb break="yes"/>
                     <seg ana="#glose">
@@ -342,6 +340,8 @@
                         <add hand="#other">1</add>
                     </seg>
                 </p>
+            </div>
+            <div type="texte">
                 <div type="chapitre" n="1">
                     <p><hi rend="initiale" n="2">D</hi>einde abeat el<choice>
                             <corr> </corr>
@@ -7272,8 +7272,10 @@
                         <seg ana="#glose">
                             <add hand="#other">209</add>
                         </seg>
-                        <note resp="#mgl">La personne qui appose les gloses se
-                            trompe ici; il s'agit bien du titre 210.</note>
+                        <note resp="#mgl">La personne qui appose les gloses
+                            oublie un chapitre et se trompe ici; il s'agit bien
+                            du titre 210. Toute la numérotation qui suit est
+                            erronée dans les gloses.</note>
                         <hi rend="rubrique">El pescado de ryo ue<ex>n</ex>dan
                             enla q<ex>u</ex><hi rend="superscript">a</hi>res-ma.
                                 +<lb break="yes"/>
@@ -10285,8 +10287,6 @@
                             break="no"/>mo fuero es. </p>
                 </div>
             </div>
-        </body>
-        <back>
             <div type="epilogue">
                 <p>
                     <foreign xml:lang="lat">Nos Rod<ex>er</ex>ic<ex>us</ex> dei
@@ -10812,6 +10812,6 @@
                         illegible.</note>
                 </p>
             </div>
-        </back>
+        </body>
     </text>
 </TEI>
