@@ -1,4 +1,4 @@
-<?xml-model href="../../../Transform/schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -6,32 +6,56 @@
                 <title>Fuero de Alba de Tormes</title>
                 <respStmt>
                     <resp>Transcrit par</resp>
-                    <name><surname>Sánchez</surname><forename>María
-                            Nieves</forename></name>
-                    <name><surname>Herrera</surname><forename>María
-                            Teresa</forename></name>
-                    <name><surname/><forename>María Purificación
-                            Zabía</forename></name>
+                    <name>
+                        <surname>Sánchez</surname>
+                        <forename>María Nieves</forename>
+                    </name>
+                    <name>
+                        <surname>Herrera</surname>
+                        <forename>María Teresa</forename>
+                    </name>
+                    <name>
+                        <surname/>
+                        <forename>María Purificación Zabía</forename>
+                    </name>
                 </respStmt>
                 <respStmt>
                     <resp>Textes édités et rassemblés par </resp>
-                    <name><forename>Francisco</forename><surname>Gago
-                            Jover</surname></name>
-                    <name><forename>Javier</forename><surname>Pueyo
-                            Mena</surname></name>
+                    <name>
+                        <forename>Francisco</forename>
+                        <surname>Gago Jover</surname>
+                    </name>
+                    <name>
+                        <forename>Javier</forename>
+                        <surname>Pueyo Mena</surname>
+                    </name>
                 </respStmt>
                 <respStmt>
                     <resp>Modélisation, encodage et structuration XML-TEI
                         par</resp>
-                    <name><forename>Matthias</forename><surname>Gille
-                            Levenson</surname></name>
+                    <name>
+                        <forename>Matthias</forename>
+                        <surname>Gille Levenson</surname>
+                    </name>
                 </respStmt>
                 <respStmt>
                     <resp>Responsabilité du projet Biblissima-Textes: </resp>
-                    <name><forename>Thibault</forename><surname>Clérice</surname></name>
-                    <name><forename>Olivier</forename><surname>Brisville-Fertin</surname></name>
-                    <name><forename>Ariane</forename><surname>Pinche</surname></name>
-                    <name><forename>Marianne</forename><surname>Reboul</surname></name>
+                    <name>
+                        <forename>Thibault</forename>
+                        <surname>Clérice</surname>
+                    </name>
+                    <name>
+                        <forename>Olivier</forename>
+                        <surname>Brisville-Fertin</surname>
+                    </name>
+                    <name>
+                        <forename>Ariane</forename>
+                        <surname>Pinche</surname>
+                    </name>
+                    <name>
+                        <forename>Marianne</forename>
+                        <surname>Reboul</surname>
+                    </name>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -46,36 +70,51 @@
             </publicationStmt>
             <sourceDesc>
                 <!--La source premi&#232;re: le projet OSTA-->
-                <bibl xml:id="FAL" type="source-transcription"
-                        ><title>TEXT.FAL.txt</title><editor><forename>Francisco</forename><surname>Gago
-                            Jover</surname></editor><editor><forename>Javier</forename><surname>Pueyo
-                            Mena</surname></editor><publisher>Hispanic Seminary
-                        of Medieval Studies</publisher><date when="2026-03-07"
-                        /><availability status="restricted">
+                <bibl xml:id="FAL" type="source-transcription">
+                    <title>TEXT.FAL.txt</title>
+                    <editor>
+                        <forename>Francisco</forename>
+                        <surname>Gago Jover</surname>
+                    </editor>
+                    <editor>
+                        <forename>Javier</forename>
+                        <surname>Pueyo Mena</surname>
+                    </editor>
+                    <publisher>Hispanic Seminary of Medieval Studies</publisher>
+                    <date when="2026-03-07"/>
+                    <availability status="restricted">
                         <licence
                             target="http://creativecommons.org/licenses/by-nc-sa/4.0/"
                             >Creative Commons Attribution Non Commercial Share
                             Alike 4.0 International</licence>
-                    </availability><note>Projet OSTA (Old Spanish Textual
-                        Archive). Source des données: <ptr
+                    </availability>
+                    <note>Projet OSTA (Old Spanish Textual Archive). Source des
+                        données: <ptr
                             target="https://raw.githubusercontent.com/hispanicseminary/OSTA/refs/heads/main/transcriptions/TEXT.FAL.txt"
-                        />, v 1.0.</note></bibl>
+                        />, v 1.0.</note>
+                </bibl>
                 <!--La source premi&#232;re: le projet OSTA-->
                 <!--L'oeuvre abstraite = work-->
                 <!--On va cat&#233;goriser la classe frbr et la forme<-->
-                <bibl ana="#frbr.work" type="work"><title>Fuero de Alba de
-                        Tormes</title><author
-                        corresp="https://database.factgrid.de/entity/Q266835"
-                            ><surname>Alfonso X el
-                        Sabio</surname><forename/></author><date
-                        notBefore-iso="1252" notAfter-iso="1284">1252 a quo-
-                        1284 ad quem</date><idno type="HSMS-WORK"
-                        >HSMS-0001-0001</idno><idno type="beta-texid"
-                        >2418</idno><idno type="factgrid-id"
+                <bibl ana="#frbr.work" type="work">
+                    <title>Fuero de Alba de Tormes</title>
+                    <author
+                        corresp="https://database.factgrid.de/entity/Q266835">
+                        <surname>Alfonso X el Sabio</surname>
+                        <forename/>
+                    </author>
+                    <date notBefore-iso="1252" notAfter-iso="1284">1252 a quo-
+                        1284 ad quem</date>
+                    <idno type="HSMS-WORK">HSMS-0001-0001</idno>
+                    <idno type="beta-texid">2418</idno>
+                    <idno type="factgrid-id"
                         corresp="https://database.factgrid.de/entity/Q1084565"
-                        >Q1084565</idno><idno type="biblissima-id"/><idno
-                        type="BNF-id"/><idno type="BNE-id"/><idno type="VIAF-id"
-                    /></bibl>
+                        >Q1084565</idno>
+                    <idno type="biblissima-id"/>
+                    <idno type="BNF-id"/>
+                    <idno type="BNE-id"/>
+                    <idno type="VIAF-id"/>
+                </bibl>
                 <!--L'oeuvre abstraite-->
                 <!--Exemplaire / manuscrit = frbr.item (imprim&#233;) ou frbr.manifestation_singleton (manuscrit). Attribut ajout&#233; automatiquement.-->
                 <msDesc ana="#frbr.manifestation_singleton">
@@ -107,10 +146,11 @@
                     </msIdentifier>
                     <history>
                         <!--Le corresp permet de lier la date &#224; l'unit&#233; codicologique, dans le cas de recueils organis&#233;s-->
-                        <origin><origDate corresp="#HSMS-0001-0001"
-                                cert="medium" notBefore-iso="1251"
-                                notAfter-iso="1350">1251 ca. - 1350
-                                ca.</origDate></origin>
+                        <origin>
+                            <origDate corresp="#HSMS-0001-0001" cert="medium"
+                                notBefore-iso="1251" notAfter-iso="1350">1251
+                                ca. - 1350 ca.</origDate>
+                        </origin>
                         <!--Le corresp permet de lier la date &#224; l'unit&#233; codicologique -->
                     </history>
                     <msContents>
@@ -158,7 +198,7 @@
                     pas réalisée.</p>
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
-            <refsDecl>
+            <refsDecl n="physical">
                 <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
                 <citeStructure match="/text/body/pb" use="@n"/>
                 <citeStructure unit="page" match="//body//pb" use="@n">
@@ -174,7 +214,9 @@
                 <!--Merci &#224; Morgane PICA pour son aide sur l'adaptation &#224; la mod&#233;lisation FRBR-->
                 <taxonomy xml:id="frbr"
                     sameAs="http://iflastandards.info/ns/fr/frbr/frbroo/">
-                    <bibl><title>Catégories FRBRoo</title></bibl>
+                    <bibl>
+                        <title>Catégories FRBRoo</title>
+                    </bibl>
                     <category xml:id="frbr.work"
                         sameAs="http://iflastandards.info/ns/fr/frbr/frbroo/F1">
                         <catDesc>Work</catDesc>
@@ -197,7 +239,9 @@
                     </category>
                 </taxonomy>
                 <taxonomy xml:id="categorisation_formelle">
-                    <bibl><title>Catégorisation formelle</title></bibl>
+                    <bibl>
+                        <title>Catégorisation formelle</title>
+                    </bibl>
                     <category xml:id="prose">
                         <catDesc xml:lang="es">prosa</catDesc>
                         <catDesc xml:lang="fr">prose</catDesc>
@@ -208,7 +252,9 @@
                     </category>
                 </taxonomy>
                 <taxonomy xml:id="matiere_textuelle">
-                    <bibl><title>Matière textuelle</title></bibl>
+                    <bibl>
+                        <title>Matière textuelle</title>
+                    </bibl>
                     <category xml:id="didactica">
                         <catDesc xml:lang="es">Didáctica</catDesc>
                         <catDesc xml:lang="fr">Didactique</catDesc>
@@ -218,67 +264,71 @@
         </encodingDesc>
     </teiHeader>
     <text>
-        <front>
+        <body>
             <div type="prologue">
-                <p><pb n="1r"/><cb type="single-column"/><lb break="yes"
-                        /><foreign xml:lang="lat">In Dei nomine amen. Ego
-                        Adefonsus Hispanie imp<ex>er</ex>ator &amp; uxor mea <lb
+                <p>
+                    <pb n="1r"/>
+                    <cb type="single-column"/>
+                    <lb break="yes"/>
+                    <foreign xml:lang="lat">In Dei nomine amen. Ego Adefonsus
+                        Hispanie imp<ex>er</ex>ator &amp; uxor mea <lb
                             break="yes"/>Berengaria damus &amp; concedimus istos
                         foros ad concilium de Alba de <lb break="yes"/>Tormes
                         qui sunt p<ex>re</ex>dicti coram nost<ex>ra</ex>
-                            p<ex>re</ex>sencia de u<ex>er</ex>bo ad uerbum
-                            p<ex>re</ex>sentib<ex>us</ex><lb break="yes"
+                        p<ex>re</ex>sencia de u<ex>er</ex>bo ad uerbum
+                        p<ex>re</ex>sentib<ex>us</ex><lb break="yes"
                         />annotati. Si u<ex>ero</ex> aliquis hoc
-                            n<ex>ost</ex>r<ex>u</ex>m factum &amp; hanc
-                            n<ex>ost</ex>ram donacionem &amp; con<lb break="no"
+                        n<ex>ost</ex>r<ex>u</ex>m factum &amp; hanc
+                        n<ex>ost</ex>ram donacionem &amp; con<lb break="no"
                         />cessionem dirup<ex>er</ex>it iram n<ex>ost</ex>ram
                         habeat &amp; regie potestati bis mille pectet <lb
                             break="yes"/>morabitinos &amp; qui hoc
-                            n<ex>ost</ex>r<ex>u</ex>m factum dirup<ex>er</ex>it
+                        n<ex>ost</ex>r<ex>u</ex>m factum dirup<ex>er</ex>it
                         anathemate p<ex>er</ex>cuss<ex>us</ex> aput <lb
                             break="yes"/>inferos cum Iudas p<ex>ro</ex>ditore
                         &amp; Datan &amp; Abiron nisi resipuerit
-                            torme<ex>n</ex>tu<ex>m</ex><lb break="yes"/>&amp;
-                            g<ex>ra</ex>ues penas sustineat. Facta carta
+                        torme<ex>n</ex>tu<ex>m</ex><lb break="yes"/>&amp;
+                        g<ex>ra</ex>ues penas sustineat. Facta carta
                         Salamantice .iiij. nonas julij. Era <lb break="yes"
-                            />.m<hi rend="superscript">a</hi>. .c<hi
+                        />.m<hi rend="superscript">a</hi>. .c<hi
                             rend="superscript">a</hi>. .lxx<hi
-                            rend="superscript">a</hi>. .viij. p<ex>re</ex>dicto
-                            imp<ex>er</ex>atore Adefonso imp<ex>er</ex>ante in
+                                rend="superscript">a</hi>. .viij. p<ex>re</ex>dicto
+                        imp<ex>er</ex>atore Adefonso imp<ex>er</ex>ante in
                         Toleto Legione <lb break="yes"/>Saragozia Naiara
                         Castella Gallecia. <g ref="#calderon1"/> Ego Adefonsus
-                            imp<ex>er</ex>ator hanc <lb break="yes"/>kartam quam
+                        imp<ex>er</ex>ator hanc <lb break="yes"/>kartam quam
                         iussi fieri anno .vi.<hi rend="superscript">o</hi> mei
-                            imp<ex>er</ex>ij confirmo &amp; manu mea <lb
+                        imp<ex>er</ex>ij confirmo &amp; manu mea <lb
                             break="yes"/>roboro. <lb break="yes"/>Berengarius
-                            salamantin<ex>us</ex> ep<ex>is</ex>c<ex>opus</ex>
-                            co<ex>n</ex>firma. Bernaldus
-                            ep<ex>is</ex>c<ex>opus</ex> zemorensis
-                            co<ex>n</ex><lb break="no"/>firma. Enego abulensis
-                            ep<ex>is</ex>c<ex>opus</ex>. Osorius Martinez comes.
+                        salamantin<ex>us</ex> ep<ex>is</ex>c<ex>opus</ex>
+                        co<ex>n</ex>firma. Bernaldus
+                        ep<ex>is</ex>c<ex>opus</ex> zemorensis
+                        co<ex>n</ex><lb break="no"/>firma. Enego abulensis
+                        ep<ex>is</ex>c<ex>opus</ex>. Osorius Martinez comes.
                         Rodericus Go<lb break="no"/>mez comes. Ramiro Frolez
                         comes confirma. Diacus Munioz maior<lb break="no"/>dome
-                            imp<ex>er</ex>atoris. Diac<ex>us</ex> Frolez alferiz
+                        imp<ex>er</ex>atoris. Diac<ex>us</ex> Frolez alferiz
                         confirma. Rod<ex>er</ex>ic<ex>us</ex> Fernandez con<lb
                             break="no"/>firma. Guterr<ex>us</ex> Fernandez
                         confirma. Poncius de Cabrera confirma. Guil<lb
                             break="no"/>lelmus Raimundi tenens
                         Salama<ex>n</ex>ticam. Lop Lopez
-                            c<ex>on</ex>f<ex>irma</ex>. Melendus Bofi<lb
+                        c<ex>on</ex>f<ex>irma</ex>. Melendus Bofi<lb
                             break="no"/>ni c<ex>on</ex>f<ex>irma</ex>. Fernandus
-                            Ioh<ex>an</ex>is c<ex>on</ex>f<ex>irma</ex>.
+                        Ioh<ex>an</ex>is c<ex>on</ex>f<ex>irma</ex>.
                         Vermundus Pedrez c<ex>on</ex>f<ex>irma</ex>. Cidi Belidi
-                            c<ex>on</ex>f<ex>irma</ex>. <lb break="yes"/>Anaya
+                        c<ex>on</ex>f<ex>irma</ex>. <lb break="yes"/>Anaya
                         Giraldus scripsit iussu magistri Hugonis
-                        ca<ex>n</ex>cellarij imp<ex>er</ex>atoris.</foreign><lb
-                        break="yes"/></p>
+                        ca<ex>n</ex>cellarij imp<ex>er</ex>atoris.</foreign>
+                    <lb break="yes"/>
+                </p>
             </div>
-        </front>
-        <body>
-            <div type="main">
+            <div type="texte">
                 <div type="section" n="1">
-                    <head><hi rend="rubrique">Estos son los fueros de Alba et de
-                            suo t<ex>er</ex>mino.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Estos son los fueros de Alba et de
+                            suo t<ex>er</ex>mino.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="3">L</hi>os
                         alcaldes de Alba &amp; el iuez no<ex>n</ex>
                         p<ex>re</ex>ndan a ne<ex>n</ex>gu<ex>n</ex>o
@@ -307,7 +357,9 @@
                         <ex>con</ex>ssientan. </p>
                 </div>
                 <div type="section" n="2">
-                    <head><hi rend="rubrique">Qui ouiere a desafiar.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui ouiere a desafiar.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e de Alua o de su t<ex>er</ex>mino
                             q<ex>ue</ex> q<ex>ue</ex>rela ouiere de suo pariente
@@ -477,7 +529,9 @@
                             m<ex>u</ex>l<ex>e</ex>r de Alba. </p>
                 </div>
                 <div type="section" n="3">
-                    <head><hi rend="rubrique">De muerte de omne.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De muerte de omne.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> derecto <lb break="yes"/>o de su
                             t<ex>er</ex>mino q<ex>ue</ex> matare a o<ex>mn</ex>e
                         o a m<ex>u</ex>l<ex>e</ex>r de Alba o de su
@@ -520,7 +574,9 @@
                             respo<ex>n</ex>da. </p>
                 </div>
                 <div type="section" n="4">
-                    <head><hi rend="rubrique">De muerte de omne.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De muerte de omne.</hi>
+                    </head>
                     <p><add hand="#other">Fuero de om<ex>n</ex>e q<ex>ue</ex>
                             matase a ot<ex>ro</ex> om<ex>n</ex>e.</add><lb
                             break="yes"/><hi rend="initiale" n="2">T</hi>odo
@@ -566,8 +622,10 @@
                         fuero manda. </p>
                 </div>
                 <div type="section" n="5">
-                    <head><hi rend="rubrique">A quien dema<ex>n</ex>daren muerte
-                            de omne.</hi></head>
+                    <head>
+                        <hi rend="rubrique">A quien dema<ex>n</ex>daren muerte
+                            de omne.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         suo t<ex>er</ex>mino a q<ex>u</ex><hi rend="superscript"
@@ -634,8 +692,10 @@
                             t<ex>er</ex>mi<ex>n</ex>o </p>
                 </div>
                 <div type="section" n="6">
-                    <head><hi rend="rubrique">D<ex>e</ex> esq<ex>u</ex><hi
-                                rend="superscript">i</hi>sa.</hi></head>
+                    <head>
+                        <hi rend="rubrique">D<ex>e</ex> esq<ex>u</ex><hi
+                                rend="superscript">i</hi>sa.</hi>
+                    </head>
                     <p><lb break="yes"/>matare en qual lugar lo matare<ex>n</ex>
                         ali sea la esq<ex>ua</ex><hi rend="superscript"
                         >i</hi>sa. E si dixiere <lb break="yes"/>el
@@ -685,9 +745,11 @@
                         parie<ex>n</ex>tes. </p>
                 </div>
                 <div type="section" n="7">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> matar a n<ex>on</ex>
-                            post<ex>er</ex>o.</hi></head>
+                            post<ex>er</ex>o.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         suo t<ex>er</ex>mino morador q<ex>ue</ex> sea uezino o
@@ -709,7 +771,9 @@
                         />todo lo de su pat<ex>ri</ex>monyo. </p>
                 </div>
                 <div type="section" n="8">
-                    <head><hi rend="rubrique">De omne aportellado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De omne aportellado.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         suo t<ex>er</ex>mino morador q<ex>ue</ex> a
@@ -736,7 +800,9 @@
                             enpare<ex>n</ex>tado </p>
                 </div>
                 <div type="section" n="9">
-                    <head><hi rend="rubrique">De filio enparentado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De filio enparentado.</hi>
+                    </head>
                     <p><g ref="#calderon2"/><lb break="yes"/>q<ex>ue</ex>
                             co<ex>n</ex> padre o co<ex>n</ex> madre morare si
                             om<ex>n</ex>e matare adugalo el pa<lb break="no"
@@ -768,8 +834,9 @@
                     </p>
                 </div>
                 <div type="section" n="10">
-                    <head><hi rend="rubrique">F<ex>ue</ex>ro de omne
-                            ualadi.</hi></head>
+                    <head>
+                        <hi rend="rubrique">F<ex>ue</ex>ro de omne ualadi.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> a o<ex>mn</ex>e o a
@@ -787,9 +854,11 @@
                         el amparador no<ex>n</ex> responda. </p>
                 </div>
                 <div type="section" n="11">
-                    <head><hi rend="rubrique">Fuero +<lb break="yes"/>de iudio
+                    <head>
+                        <hi rend="rubrique">Fuero +<lb break="yes"/>de iudio
                                 q<ex>u</ex><hi rend="superscript">i</hi> lo
-                            matar.</hi></head>
+                            matar.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su termino <lb break="yes"/>q<ex>ue</ex> iudio o iudia
@@ -837,8 +906,10 @@
                     </p>
                 </div>
                 <div type="section" n="12">
-                    <head><hi rend="rubrique">Fuero de om<ex>n</ex>e o de
-                                m<ex>u</ex>l<ex>e</ex>r acoyer.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de om<ex>n</ex>e o de
+                                m<ex>u</ex>l<ex>e</ex>r acoyer.</hi>
+                    </head>
                     <p><lb break="yes"/>de su t<ex>er</ex>mino q<ex>ue</ex>
                             o<ex>mn</ex>e de fuera de t<ex>er</ex>mino en su
                         casa acoxiere &amp; o<ex>mn</ex>e o <lb break="yes"
@@ -874,8 +945,10 @@
                             ampa<lb break="no"/>rador nol responda. </p>
                 </div>
                 <div type="section" n="13">
-                    <head><hi rend="rubrique">Fuero de quien demostrar
-                            malquerencia.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de quien demostrar
+                            malquerencia.</hi>
+                    </head>
                     <p><pb n="4v"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><hi rend="initiale" n="2"
                         >T</hi>odo om<ex>n</ex>e de Alba o de su
@@ -987,8 +1060,10 @@
                             break="yes"/>firmare parta<ex>n</ex>se del. </p>
                 </div>
                 <div type="section" n="15">
-                    <head><hi rend="rubrique">De qui se temiere de omne
-                            aportellado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De qui se temiere de omne
+                            aportellado.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> se temiere de
                             om<ex>n</ex>e aportelado pare fiel por saluo a su
@@ -1004,9 +1079,10 @@
                         />morauedis &amp; faganle dar saluo. </p>
                 </div>
                 <div type="section" n="16">
-                    <head><hi rend="rubrique">De q<ex>u</ex><hi
-                                rend="superscript">i</hi>en quebrantar salua
-                            fe.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De q<ex>u</ex><hi rend="superscript"
+                                >i</hi>en quebrantar salua fe.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">Q</hi>ual
                             q<ex>ue</ex> se q<ex>u</ex><hi rend="superscript"
                             >i</hi>ere q<ex>ue</ex> la salua fe aya dada &amp;
@@ -1074,7 +1150,9 @@
                         t<ex>er</ex>mino </p>
                 </div>
                 <div type="section" n="17">
-                    <head><hi rend="rubrique">De rabir manceba.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De rabir manceba.</hi>
+                    </head>
                     <p><lb break="yes"/>q<ex>ue</ex> manceba en cabello rabiere
                         de Alba o de su t<ex>er</ex>mino aq<ex>ue</ex>l
                             q<ex>ue</ex> la ra<lb break="no"/>biere
@@ -1149,8 +1227,9 @@
                         doze &amp; saludenlo. </p>
                 </div>
                 <div type="section" n="18">
-                    <head><hi rend="rubrique">De biuda q<ex>ue</ex>
-                            rabieren.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De biuda q<ex>ue</ex> rabieren.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> a m<ex>u</ex>l<ex>e</ex>r biuda rabiere
@@ -1175,8 +1254,10 @@
                         Alba o de </p>
                 </div>
                 <div type="section" n="19">
-                    <head><hi rend="rubrique">De roxar mugier no<ex>n</ex>
-                            postera.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De roxar mugier no<ex>n</ex>
+                            postera.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> treg<ex>u</ex><hi
                             rend="superscript">a</hi>. <lb break="yes"/>su
                             t<ex>er</ex>mino q<ex>ue</ex> roxar
@@ -1200,9 +1281,11 @@
                             om<ex>n</ex>e de Alba o de su </p>
                 </div>
                 <div type="section" n="20">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de
                                 m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex> fodan a
-                            fuerça.</hi></head>
+                            fuerça.</hi>
+                    </head>
                     <p><lb break="yes"/>t<ex>er</ex>mino q<ex>ue</ex> a
                             m<ex>u</ex>l<ex>e</ex>r de Alba o de su
                         t<ex>er</ex>mino fodiere a forcia q<ex>ue</ex> sea
@@ -1284,7 +1367,9 @@
                             salude<lb break="no"/>lo &amp; del salua fe. </p>
                 </div>
                 <div type="section" n="21">
-                    <head><hi rend="rubrique">Fuero de ladron.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de ladron.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e de Alba o de su t<ex>er</ex>mino o
                             m<ex>u</ex>l<ex>e</ex>r de Alba o de su
@@ -1321,8 +1406,11 @@
                             break="yes"/></p>
                 </div>
                 <div type="section" n="22">
-                    <head><hi rend="rubrique"><add hand="#self">D<ex>e</ex>
-                                furto apuesto.</add></hi></head>
+                    <head>
+                        <hi rend="rubrique">
+                            <add hand="#self">D<ex>e</ex> furto apuesto.</add>
+                        </hi>
+                    </head>
                     <p><hi rend="initiale" n="2">T</hi>odo o<ex>mn</ex>e <del
                             hand="#self">o<ex>mn</ex>e</del> o
                             m<ex>u</ex>l<ex>e</ex>r de Alba o de su
@@ -1388,8 +1476,10 @@
                         t<ex>er</ex>cio al q<ex>ue</ex>reloso. </p>
                 </div>
                 <div type="section" n="23">
-                    <head><hi rend="rubrique">Fuero de +<lb break="yes"
-                            />otoricia.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de +<lb break="yes"
+                            />otoricia.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino a q<ex>u</ex><hi rend="superscript"
@@ -1491,7 +1581,9 @@
                     </p>
                 </div>
                 <div type="section" n="24">
-                    <head><hi rend="rubrique">Ferida de punno.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Ferida de punno.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> respo<ex>n</ex>dan. <lb break="yes"
                         />su t<ex>er</ex>mino q<ex>ue</ex> a o<ex>mn</ex>e o a
                             m<ex>u</ex>l<ex>e</ex>r de Alba o de suo
@@ -1523,9 +1615,11 @@
                             m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex></p>
                 </div>
                 <div type="section" n="25">
-                    <head><hi rend="rubrique">De ferir co<ex>n</ex> armas
-                            uedadas &amp; no<ex>n</ex> p<ex>er</ex>dier
-                                m<ex>en</ex>b<ex>ri</ex>o.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De ferir co<ex>n</ex> armas uedadas
+                            &amp; no<ex>n</ex> p<ex>er</ex>dier
+                                m<ex>en</ex>b<ex>ri</ex>o.</hi>
+                    </head>
                     <p><lb break="yes"/>firiere co<ex>n</ex> armas uedadas &amp;
                         el q<ex>ue</ex>reloso m<ex>en</ex>brio n<ex>on</ex>
                             p<ex>er</ex>diere firme <lb break="yes"/>el
@@ -1543,8 +1637,10 @@
                         fasta q<ex>ue</ex> de derecto </p>
                 </div>
                 <div type="section" n="26">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o del mer-cado. +<lb
-                                break="yes"/></hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o del mer-cado. +<lb
+                                break="yes"/></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">Q</hi>ui
                         firiere en m<ex>er</ex>cado o messare p<ex>eche</ex>
                         .iij. mor<ex>auedi</ex>s si firma ouiere <lb break="yes"
@@ -1553,8 +1649,9 @@
                         />con un uezino. </p>
                 </div>
                 <div type="section" n="27">
-                    <head><hi rend="rubrique">Qui firier con armas
-                        uedadas.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui firier con armas uedadas.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>u</ex><hi rend="superscript"
                             >i</hi>en firiere co<ex>n</ex> armas uedadas a
@@ -1584,8 +1681,9 @@
                             m<ex>o</ex>r<ex>auedis</ex>. </p>
                 </div>
                 <div type="section" n="28">
-                    <head><hi rend="rubrique">De ualadis
-                        aluergueros.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De ualadis aluergueros.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e o m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex>
                             fu<ex>er</ex>en ualadis o morare<ex>n</ex> en
@@ -1602,7 +1700,9 @@
                             <lb break="yes"/>de suo termino. </p>
                 </div>
                 <div type="section" n="29">
-                    <head><hi rend="rubrique">Fuero de messaduras.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de messaduras.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> a o<ex>mn</ex>e o a
@@ -1627,8 +1727,10 @@
                             d<ex>e</ex>l. </p>
                 </div>
                 <div type="section" n="30">
-                    <head><hi rend="rubrique">Qui dixi-ere +<lb break="yes"
-                            />lidiartelo e.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui dixi-ere +<lb break="yes"
+                            />lidiartelo e.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> p<ex>ri</ex>m<ex>er</ex>o
                         dixiere a ot<ex>ro</ex> an<ex>te</ex> .ij.
@@ -1642,8 +1744,10 @@
                             />no<ex>n</ex> firmare parta<ex>n</ex>se del. </p>
                 </div>
                 <div type="section" n="31">
-                    <head><hi rend="rubrique">De ferir co<ex>n</ex> armas
-                            uedadas.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De ferir co<ex>n</ex> armas
+                            uedadas.</hi>
+                    </head>
                     <p><pb n="8v"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><hi rend="initiale" n="2"
                         >T</hi>odo o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de
@@ -1685,7 +1789,9 @@
                         nol responda. </p>
                 </div>
                 <div type="section" n="32">
-                    <head><hi rend="rubrique">Fuero de parar fiel.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de parar fiel.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e o m<ex>u</ex>l<ex>e</ex>r del uilla
                             q<ex>ue</ex> rancura ouier de su uezino q<ex>ue</ex>
@@ -1724,7 +1830,9 @@
                         dobladas. </p>
                 </div>
                 <div type="section" n="33">
-                    <head><hi rend="rubrique">De parar fiel.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De parar fiel.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> ra<ex>n</ex>cura ouier de
                         su uezi<ex>n</ex>o parel fiel &amp; lieuelo
@@ -1771,8 +1879,10 @@
                         uilla </p>
                 </div>
                 <div type="section" n="34">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de aldeano de parar
-                            fiel.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de aldeano de parar
+                            fiel.</hi>
+                    </head>
                     <p><lb break="yes"/>q<ex>ue</ex> q<ex>ue</ex>rela ouier del
                             om<ex>n</ex>e del aldea uaya el o su o<ex>mn</ex>e
                             q<ex>ue</ex> coma su pa<ex>n</ex> &amp; faga <lb
@@ -1794,9 +1904,11 @@
                             ouiere<ex>n</ex> elos </p>
                 </div>
                 <div type="section" n="35">
-                    <head><hi rend="rubrique">D<ex>e</ex> q<ex>ue</ex>rela
+                    <head>
+                        <hi rend="rubrique">D<ex>e</ex> q<ex>ue</ex>rela
                                 d<ex>e</ex> alc<ex>a</ex>ll<ex>e</ex>s o de
-                            iuez.</hi></head>
+                            iuez.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> calomia. <lb break="yes"/>o sus
                             o<ex>mne</ex>s a n<ex>uest</ex>ro fu<ex>er</ex>o
                             p<ex>re</ex>nde<ex>n</ex>. &amp; si assi
@@ -1806,9 +1918,11 @@
                             rend="initiale" n="2">T</hi>odo o<ex>mn</ex>e </p>
                 </div>
                 <div type="section" n="36">
-                    <head><hi rend="rubrique">Qui ouiere a p<ex>re</ex>ndar
+                    <head>
+                        <hi rend="rubrique">Qui ouiere a p<ex>re</ex>ndar
                                 p<ex>or</ex> au<ex>er</ex> iudgado o
-                                p<ex>or</ex> fiel q<ex>ue</ex> pare.</hi></head>
+                                p<ex>or</ex> fiel q<ex>ue</ex> pare.</hi>
+                    </head>
                     <p><g ref="#calderon2"/><lb break="yes"/>o
                             m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex> en la uilla o
                         en la aldea q<ex>u</ex><hi rend="superscript"
@@ -1826,8 +1940,9 @@
                         andador q<ex>ue</ex> ouiere </p>
                 </div>
                 <div type="section" n="37">
-                    <head><hi rend="rubrique">Como deue andador
-                        prendar.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Como deue andador prendar.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> .i. m<ex>o</ex>r<ex>auedi</ex>. <lb
                             break="yes"/>a p<ex>re</ex>ndar en la uilla o en la
                         aldea tome .i. uezi<ex>n</ex>o post<ex>er</ex>o &amp;
@@ -1846,8 +1961,10 @@
                     </p>
                 </div>
                 <div type="section" n="38">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de iu-dio. +<lb
-                                break="yes"/></hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de iu-dio. +<lb
+                                break="yes"/></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             <ex>crist</ex>iano q<ex>ue</ex> re<ex>n</ex>cura
                         ouiere del iudio tome .i. <ex>crist</ex>iano &amp; .i.
@@ -1919,8 +2036,10 @@
                             co<ex>n</ex>cexo. </p>
                 </div>
                 <div type="section" n="39">
-                    <head><hi rend="rubrique">Qui pennos echar a iu-dio. +<lb
-                                break="yes"/></hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui pennos echar a iu-dio. +<lb
+                                break="yes"/></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino morador q<ex>u</ex><hi
@@ -1965,8 +2084,10 @@
                         p<ex>eche</ex>. </p>
                 </div>
                 <div type="section" n="40">
-                    <head><hi rend="rubrique">De armas +<lb break="yes"
-                            />uedadas.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De armas +<lb break="yes"
+                            />uedadas.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> p<ex>ri</ex>m<ex>er</ex>o sacar armas
@@ -1982,17 +2103,22 @@
                             fu<ex>er</ex>e en eccl<ex>es</ex>ia </p>
                 </div>
                 <div type="section" n="41">
-                    <head><hi rend="rubrique">De non fazer torre.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De non fazer torre.</hi>
+                    </head>
                     <p><lb break="yes"/>o en castiello. Todo o<ex>mn</ex>e o
                             m<ex>u</ex>l<ex>e</ex>r de Alba o de su
                         t<ex>er</ex>mino q<ex>ue</ex> o<ex>mn</ex>e o muler de
                         Al-ba </p>
                 </div>
                 <div type="section" n="42">
-                    <head><hi rend="rubrique"><add hand="#self">Del que mata a
-                                    ot<ex>ro</ex> &amp; se e<ex>n</ex>cierra
-                                    e<ex>n</ex>
-                        ygl<ex>es</ex>ia.</add></hi></head>
+                    <head>
+                        <hi rend="rubrique">
+                            <add hand="#self">Del que mata a ot<ex>ro</ex> &amp;
+                                se e<ex>n</ex>cierra e<ex>n</ex>
+                                ygl<ex>es</ex>ia.</add>
+                        </hi>
+                    </head>
                     <p><lb break="yes"/>o de su t<ex>er</ex>mino matare &amp; en
                             eccl<ex>es</ex>ia o en la tore de la
                         egl<ex>es</ex>ia se encerra<lb break="no"/>re sus
@@ -2032,7 +2158,9 @@
                         potestat. </p>
                 </div>
                 <div type="section" n="43">
-                    <head><hi rend="rubrique">De merino.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De merino.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> p<ex>or</ex> m<ex>er</ex>ino
@@ -2067,7 +2195,9 @@
                             t<ex>er</ex>mino q<ex>ue</ex> uoda </p>
                 </div>
                 <div type="section" n="44">
-                    <head><hi rend="rubrique">Fuero de uoda.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de uoda.</hi>
+                    </head>
                     <p><lb break="yes"/>fiziere &amp; a bofordar
                             saliere<ex>n</ex> &amp; lanza troguiere &amp;
                             co<ex>n</ex> ela bofordare p<ex>eche</ex> .vj.
@@ -2084,8 +2214,9 @@
                             p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="45">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                        andador.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de andador.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                         andador q<ex>ue</ex> me<ex>n</ex>tira firmare o falsedat
                         fiziere a o<ex>mn</ex>e o a m<ex>u</ex>l<ex>e</ex>r de
@@ -2098,9 +2229,11 @@
                             p<ex>eche</ex> nada. </p>
                 </div>
                 <div type="section" n="46">
-                    <head><hi rend="rubrique">A q<ex>u</ex><hi
-                                rend="superscript">i</hi>en pre<ex>n</ex>daren
-                            por +<lb break="yes"/>el iuez.</hi></head>
+                    <head>
+                        <hi rend="rubrique">A q<ex>u</ex><hi rend="superscript"
+                                >i</hi>en pre<ex>n</ex>daren por +<lb
+                                break="yes"/>el iuez.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino a q<ex>u</ex><hi rend="superscript"
@@ -2116,9 +2249,10 @@
                         alcaldes no<ex>n</ex> ge lo assie<ex>n</ex>tan. </p>
                 </div>
                 <div type="section" n="47">
-                    <head><hi rend="rubrique">A q<ex>u</ex><hi
-                                rend="superscript">i</hi>en
-                        prendaren.</hi></head>
+                    <head>
+                        <hi rend="rubrique">A q<ex>u</ex><hi rend="superscript"
+                                >i</hi>en prendaren.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex>
                             p<ex>re</ex>ndare<ex>n</ex> por o<ex>mn</ex>e o
@@ -2149,7 +2283,9 @@
                             >i</hi><lb break="yes"/>la tomaro<ex>n</ex>. </p>
                 </div>
                 <div type="section" n="48">
-                    <head><hi rend="rubrique">Fuero de la honor.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de la honor.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e a q<ex>u</ex><hi rend="superscript"
                             >i</hi> la honor de Alba diere<ex>n</ex> la
@@ -2188,7 +2324,9 @@
                         derechuras. </p>
                 </div>
                 <div type="section" n="49">
-                    <head><hi rend="rubrique">Fuero de iuez.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de iuez.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>stas son
                         las calomias de q<ex>ue</ex> deue au<ex>er</ex> el iuez
                         el t<ex>er</ex>cio: de muerte de o<ex>mn</ex>e o <lb
@@ -2211,7 +2349,9 @@
                             a<ex>n</ex>no meta el co<ex>n</ex>cexo su iuez. </p>
                 </div>
                 <div type="section" n="50">
-                    <head><hi rend="rubrique">Fuero de calomias.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de calomias.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi> los
                         alcaldes de estas calomias si fue<ex>re</ex>n
                             ue<ex>n</ex>cidas co<ex>n</ex> q<ex>ue</ex>reloso
@@ -2227,8 +2367,10 @@
                         el t<ex>er</ex>cio. </p>
                 </div>
                 <div type="section" n="51">
-                    <head><hi rend="rubrique">Qui iurar falsedat por auer
-                            co-ndesado. +<lb break="yes"/></hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui iurar falsedat por auer
+                            co-ndesado. +<lb break="yes"/></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de Alba &amp; de su t<ex>er</ex>mino
                             q<ex>u</ex><hi rend="superscript">i</hi>
@@ -2253,7 +2395,9 @@
                     </p>
                 </div>
                 <div type="section" n="52">
-                    <head><hi rend="rubrique">Fuero de enemigo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de enemigo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> enemigo ouiere e depues q<ex>ue</ex> lo
@@ -2271,8 +2415,10 @@
                             p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="53">
-                    <head><hi rend="rubrique">Alcalde q<ex>ue</ex> non tenga
-                            uoz.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Alcalde q<ex>ue</ex> non tenga
+                            uoz.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2"
                             >N</hi>engu<ex>n</ex>o alcalde de Alba n<ex>on</ex>
                             te<ex>n</ex>ga uoz ne<ex>n</ex>guna si n<ex>on</ex>
@@ -2284,9 +2430,10 @@
                         responda. </p>
                 </div>
                 <div type="section" n="54">
-                    <head><hi rend="rubrique">De tener uoz el uozero
-                                q<ex>ue</ex> non iu-re +<lb break="yes"
-                            />manquadra.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De tener uoz el uozero q<ex>ue</ex>
+                            non iu-re +<lb break="yes"/>manquadra.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de Alba q<ex>ue</ex> uoz agena
                         baraiare de m<ex>e</ex>d<ex>i</ex>o
@@ -2320,8 +2467,10 @@
                     </p>
                 </div>
                 <div type="section" n="55">
-                    <head><hi rend="rubrique">La mul<ex>e</ex>r q<ex>ue</ex>
-                            aduga su marido.</hi></head>
+                    <head>
+                        <hi rend="rubrique">La mul<ex>e</ex>r q<ex>ue</ex> aduga
+                            su marido.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>oda
                             m<ex>u</ex>l<ex>e</ex>r de Alba o de su
                         t<ex>er</ex>mino a q<ex>u</ex><hi rend="superscript"
@@ -2367,10 +2516,12 @@
                             break="yes"/>lo aduxiere faga la uoz. </p>
                 </div>
                 <div type="section" n="56">
-                    <head><hi rend="rubrique">Fuero de albe<choice>
+                    <head>
+                        <hi rend="rubrique">Fuero de albe<choice>
                                 <corr>r</corr>
                                 <sic/>
-                            </choice>gueria.</hi></head>
+                            </choice>gueria.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> casa diere a
@@ -2387,8 +2538,10 @@
                             p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="57">
-                    <head><hi rend="rubrique">Fuero de escri-uano. +<lb
-                                break="yes"/></hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de escri-uano. +<lb
+                                break="yes"/></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>l
                             esc<ex>ri</ex>uano aya en soldada .x.
                             mor<ex>auedi</ex>s &amp; q<ex>u</ex><hi
@@ -2405,8 +2558,9 @@
                     </p>
                 </div>
                 <div type="section" n="58">
-                    <head><hi rend="rubrique">Fuero del
-                        p<ex>re</ex>gonero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero del p<ex>re</ex>gonero.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>l
                             p<ex>re</ex>gon<ex>er</ex>o del co<ex>n</ex>cexo aya
                         en soldada .vi. mor<ex>auedi</ex>s e tome la
@@ -2418,8 +2572,10 @@
                             o<ex>mn</ex>e de Alba o de </p>
                 </div>
                 <div type="section" n="59">
-                    <head><hi rend="rubrique">Qui mesturar su uezi<ex>n</ex>o a
-                            su sennor.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui mesturar su uezi<ex>n</ex>o a su
+                            sennor.</hi>
+                    </head>
                     <p><g ref="#calderon2"/><lb break="yes"/>su t<ex>er</ex>mino
                             q<ex>ue</ex> sospecha ouier a su uezino
                         q<ex>ue</ex>l mesturo a senor de t<ex>ie</ex>rra <lb
@@ -2438,8 +2594,10 @@
                         real potestat. </p>
                 </div>
                 <div type="section" n="60">
-                    <head><hi rend="rubrique">Qui q<ex>ue</ex>-rela +<lb
-                                break="yes"/>ouier.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui q<ex>ue</ex>-rela +<lb
+                                break="yes"/>ouier.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> rencura ouiere de su uezi<ex>n</ex>o
@@ -2457,8 +2615,10 @@
                             p<ex>eche</ex> .c. mor<ex>auedi</ex>s. </p>
                 </div>
                 <div type="section" n="61">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"
-                            />de lidiar.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"/>de
+                            lidiar.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">S</hi>i
                             algu<ex>n</ex>os om<ex>ne</ex>s ouiere<ex>n</ex> a
                         lidiar en Alba en estos cotos lidien: <lb break="yes"
@@ -2474,7 +2634,9 @@
                             m<ex>o</ex>r<ex>auedis</ex>. </p>
                 </div>
                 <div type="section" n="62">
-                    <head><hi rend="rubrique">Fuero de uoz.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de uoz.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             om<ex>n</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> uoz touiere an<ex>te</ex> alcalde
@@ -2486,8 +2648,9 @@
                         elos salir cayase de la uoz. </p>
                 </div>
                 <div type="section" n="63">
-                    <head><hi rend="rubrique">Fuero d<ex>e</ex>
-                        oueyas.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero d<ex>e</ex> oueyas.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> ouexas o uacas echare a
@@ -2555,7 +2718,9 @@
                             no<ex>n</ex>. </p>
                 </div>
                 <div type="section" n="64">
-                    <head><hi rend="rubrique">De ouexas quarteras.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De ouexas quarteras.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> ouexas echare a su
@@ -2610,8 +2775,10 @@
                         uelasse todo el a<ex>n</ex>no. </p>
                 </div>
                 <div type="section" n="65">
-                    <head><hi rend="rubrique">D<ex>e</ex> co<ex>n</ex>nocer auer
-                            o ganado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">D<ex>e</ex> co<ex>n</ex>nocer auer o
+                            ganado.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex>
                         conocier auer o ganado de el dia q<ex>ue</ex> lo
@@ -2620,7 +2787,9 @@
                             responda<ex>n</ex> por ello. </p>
                 </div>
                 <div type="section" n="66">
-                    <head><hi rend="rubrique">De alcaldes.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De alcaldes.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1"
                             >A</hi>lc<ex>a</ex>ll<ex>e</ex>s <gap
                             reason="illegible" extent="word"
@@ -2631,8 +2800,10 @@
                         en sua alcaldia. </p>
                 </div>
                 <div type="section" n="67">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex> firma o
-                                d<ex>e</ex> iura o de hotoricia.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex> firma o
+                                d<ex>e</ex> iura o de hotoricia.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> ouyere a firmar o a
@@ -2649,8 +2820,10 @@
                         caya. </p>
                 </div>
                 <div type="section" n="68">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
-                                >i</hi> en mercado prendar.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                                >i</hi> en mercado prendar.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> en m<ex>er</ex>cado
@@ -2661,8 +2834,10 @@
                             p<ex>re</ex>nda a su dueno. </p>
                 </div>
                 <div type="section" n="69">
-                    <head><hi rend="rubrique">De car-ta +<lb break="yes"
-                            />robrada.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De car-ta +<lb break="yes"
+                            />robrada.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>
                             q<ex>u</ex><hi rend="superscript">i</hi>en carta
                         robrare tal<ex>e</ex>s testigos faga q<ex>ue</ex>
@@ -2684,8 +2859,9 @@
                             q<ex>ue</ex> carta fiziere co<ex>n</ex></p>
                 </div>
                 <div type="section" n="70">
-                    <head><hi rend="rubrique">Fuero de cartas de
-                        meetat.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de cartas de meetat.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> la uilla. <lb break="yes"/>sua
                             m<ex>u</ex>l<ex>e</ex>r de meetade como de undade
                         fagala en su collacio<ex>n</ex> dia domi<ex>n</ex>go a
@@ -2697,7 +2873,9 @@
                     </p>
                 </div>
                 <div type="section" n="71">
-                    <head><hi rend="rubrique">Fuero de alcalde.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de alcalde.</hi>
+                    </head>
                     <p><lb break="yes"/>tuerto iudgastes ali o fu<ex>er</ex>e el
                         iuyzio iudgado o la firma fecha fu<ex>er</ex>e &amp; <lb
                             break="yes"/>si negare q<ex>ue</ex> n<ex>on</ex> lo
@@ -2706,9 +2884,10 @@
                             mor<ex>auedi</ex>s. </p>
                 </div>
                 <div type="section" n="72">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
-                                >i</hi> d<ex>e</ex>nostar
-                        alc<ex>a</ex>lle.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                                >i</hi> d<ex>e</ex>nostar alc<ex>a</ex>lle.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1"
                             >Q</hi>uie<ex>n</ex> a alc<ex>a</ex>ll<ex>e</ex>s
                             p<ex>or</ex> d<ex>er</ex>echura de co<ex>n</ex>cexo
@@ -2721,7 +2900,9 @@
                             q<ex>ue</ex> iudgado touiere su au<ex>er</ex></p>
                 </div>
                 <div type="section" n="73">
-                    <head><hi rend="rubrique">De auer iudgado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De auer iudgado.</hi>
+                    </head>
                     <p><lb break="yes"/>de alcalde iurado p<ex>or</ex> darlo a
                         dia de plazo an<ex>te</ex> alc<ex>a</ex>ll<ex>e</ex>s
                         iurados lo pague. <lb break="yes"/>&amp; si depues
@@ -2755,9 +2936,11 @@
                             alc<ex>a</ex>ll<ex>e</ex>s o co<ex>n</ex> bonos </p>
                 </div>
                 <div type="section" n="74">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> a afirmar co<ex>n</ex>
-                                alc<ex>a</ex>ll<ex>e</ex>s.</hi></head>
+                                alc<ex>a</ex>ll<ex>e</ex>s.</hi>
+                    </head>
                     <p><lb break="yes"/>o<ex>mne</ex>s &amp; dixiere el uno
                         delos troguem<ex>us</ex> a los alcall<ex>e</ex>s o a los
                         bonos o<ex>mne</ex>s &amp; <lb break="yes"
@@ -2781,8 +2964,10 @@
                             peticio<ex>n</ex> sin doblo. </p>
                 </div>
                 <div type="section" n="75">
-                    <head><hi rend="rubrique">Fuero de mancebo &amp; de +<lb
-                                break="yes"/>yuguero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de mancebo &amp; de +<lb
+                                break="yes"/>yuguero.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             ma<ex>n</ex>cebo o ma<ex>n</ex>ceba o yuguero o
                         ortolano o pastor <lb break="yes"/>o molin<ex>er</ex>o
@@ -2822,8 +3007,9 @@
                             <lb break="yes"/></p>
                 </div>
                 <div type="section" n="76">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                        yuguero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de yuguero.</hi>
+                    </head>
                     <p><hi rend="initiale" n="1">T</hi>odo yuguero q<ex>ue</ex>
                             co<ex>n</ex> amo ent<ex>ra</ex>re p<ex>or</ex> San
                             Cibria<ex>n</ex> entre &amp; p<ex>or</ex><pb n="14r"
@@ -2891,7 +3077,9 @@
                         la q<ex>ue</ex>xunbre q<ex>ue</ex> a del. </p>
                 </div>
                 <div type="section" n="77">
-                    <head><hi rend="rubrique">De iura.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De iura.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> a iurar ouiere a su
                             uezi<ex>n</ex>o &amp; el ot<ex>ro</ex> dixiere
@@ -2916,7 +3104,9 @@
                         iudgare &amp; de </p>
                 </div>
                 <div type="section" n="78">
-                    <head><hi rend="rubrique">Firma de alcalde.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Firma de alcalde.</hi>
+                    </head>
                     <p><lb break="yes"/>.x. m<ex>o</ex>r<ex>auedis</ex> arriba
                             co<ex>n</ex> .ij. alcaldes firme o co<ex>n</ex> .i.
                         alcalde &amp; .iij. o<ex>mne</ex>s bonos. E
@@ -2925,9 +3115,10 @@
                         el iuyzio q<ex>ue</ex> diere<ex>n</ex>. </p>
                 </div>
                 <div type="section" n="79">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex>
-                                ald<ex>e</ex>ano q<ex>ue</ex> uiere
-                        ouexas.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex>
+                                ald<ex>e</ex>ano q<ex>ue</ex> uiere ouexas.</hi>
+                    </head>
                     <p><pb n="14v"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><add hand="#other">Fuero de prado
                             &amp; de guerto <lb break="yes"/>&amp; de era &amp;
@@ -2953,8 +3144,9 @@
                         uiere oueyas </p>
                 </div>
                 <div type="section" n="80">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de omne
-                            aldeano.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de omne aldeano.</hi>
+                    </head>
                     <p><g ref="#calderon2"/><lb break="yes"/>en sua
                         ui<ex>n</ex>na andar uaya en pos elas &amp;
                         p<ex>re</ex>nda .ij. carneros &amp; .ij. <lb break="yes"
@@ -3001,13 +3193,17 @@
                     </p>
                 </div>
                 <div type="section" n="81">
-                    <head><hi rend="rubrique">Fuero de ui-nna.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de ui-nna.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de la uilla morador q<ex>ue</ex> uiere
                         oueyas o cabras o porcos </p>
                 </div>
                 <div type="section" n="82">
-                    <head><hi rend="rubrique"/></head>
+                    <head>
+                        <hi rend="rubrique"/>
+                    </head>
                     <p><add hand="#other">Fuero de bin<ex>n</ex>as <lb
                                 break="yes"/>de el rey d<ex>on</ex>
                                 Alo<ex>n</ex><lb break="no"/>so llamado el <lb
@@ -3044,8 +3240,10 @@
                             p<ex>ri</ex>siere suo senor faga la iura. </p>
                 </div>
                 <div type="section" n="83">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"
-                            />de p<ex>ra</ex>do.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"/>de
+                                p<ex>ra</ex>do.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">Q</hi>ui
                             p<ex>ra</ex>do ageno paciere de dia co<ex>n</ex> boi
                         o co<ex>n</ex> uaca o co<ex>n</ex> bestia <lb
@@ -3088,7 +3286,9 @@
                             p<ex>ra</ex>dos ouiere </p>
                 </div>
                 <div type="section" n="84">
-                    <head><hi rend="rubrique">Fuero de prado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de prado.</hi>
+                    </head>
                     <p><lb break="yes"/>&amp; tal p<ex>ra</ex>do defese
                             q<ex>ue</ex> sie<ex>m</ex>pre sea p<ex>ra</ex>do
                         &amp; cada março sie<ex>m</ex>pre sea<ex>n</ex>
@@ -3149,7 +3349,9 @@
                             ni<ex>n</ex> de fazendera. </p>
                 </div>
                 <div type="section" n="85">
-                    <head><hi rend="rubrique">Fuero de hortollano.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de hortollano.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de la uilla morador n<ex>on</ex>
                             saq<ex>ue</ex> cada aldea mas de .i. ortolano o <lb
@@ -3182,8 +3384,10 @@
                             n<ex>on</ex> iurar p<ex>eche</ex> el coto. </p>
                 </div>
                 <div type="section" n="86">
-                    <head><hi rend="rubrique">Ganado q<ex>ue</ex> pa-cier +<lb
-                                break="yes"/>uinna.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Ganado q<ex>ue</ex> pa-cier +<lb
+                                break="yes"/>uinna.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">G</hi>anado
                             q<ex>ue</ex> ui<ex>n</ex>a paciere cada uide
                         leuadera p<ex>eche</ex> .i<hi rend="superscript">a</hi>.
@@ -3209,8 +3413,10 @@
                         meaias p<ex>eche</ex>. </p>
                 </div>
                 <div type="section" n="87">
-                    <head><hi rend="rubrique">Danno de mi-esse. +<lb break="yes"
-                            /></hi></head>
+                    <head>
+                        <hi rend="rubrique">Danno de mi-esse. +<lb break="yes"
+                            /></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">P</hi>or
                             da<ex>n</ex>no de miesse respo<ex>n</ex>da fasta San
                             M<ex>a</ex>r<ex>tin</ex> &amp; no<ex>n</ex> mas.
@@ -3218,7 +3424,9 @@
                         responda fasta Natal &amp; non mas. </p>
                 </div>
                 <div type="section" n="88">
-                    <head><hi rend="rubrique">Fuero de uodo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de uodo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>ste es
                         el fu<ex>er</ex>o q<ex>ue</ex> a el co<ex>n</ex>cexo de
                         Alba &amp; suo t<ex>er</ex>mino p<ex>or</ex> el uodo de
@@ -3233,8 +3441,10 @@
                             <lb break="yes"/></p>
                 </div>
                 <div type="section" n="89">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
-                                >i</hi> aruol arrancar.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                                >i</hi> aruol arrancar.</hi>
+                    </head>
                     <p><hi rend="initiale" n="1">T</hi>odo o<ex>mn</ex>e
                             q<ex>u</ex><hi rend="superscript">i</hi> aruol ageno
                             arra<ex>n</ex>car o cortar p<ex>eche</ex> .vi.
@@ -3270,9 +3480,11 @@
                             p<ex>or</ex> aruol q<ex>ue</ex> lieue frucha. </p>
                 </div>
                 <div type="section" n="90">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
                                 >i</hi> moro o mora fur-tare. +<lb break="yes"
-                            /></hi></head>
+                            /></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> moro o mora ouiere <lb
@@ -3306,8 +3518,10 @@
                             no<ex>n</ex> respo<ex>n</ex>da. </p>
                 </div>
                 <div type="section" n="91">
-                    <head><hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
-                                >i</hi> furtar moro de merce.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Q<ex>u</ex><hi rend="superscript"
+                                >i</hi> furtar moro de merce.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> moro o mora ouiere
@@ -3383,8 +3597,10 @@
                         amparador n<ex>on</ex> respo<ex>n</ex>da. </p>
                 </div>
                 <div type="section" n="92">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de moro o de
-                            mora.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de moro o de
+                            mora.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> moro o mora ouiere
@@ -3437,8 +3653,10 @@
                         potestat. </p>
                 </div>
                 <div type="section" n="93">
-                    <head><hi rend="rubrique">Caual<ex>er</ex>o q<ex>ue</ex> se
-                                co<ex>m</ex>batiere.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Caual<ex>er</ex>o q<ex>ue</ex> se
+                                co<ex>m</ex>batiere.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">C</hi>aualero
                             q<ex>ue</ex> se co<ex>m</ex>batiere un p<ex>or</ex>
                         otro de cara si lo derrocare p<ex>re</ex>nda el caualo
@@ -3446,8 +3664,10 @@
                         prenda la siella. </p>
                 </div>
                 <div type="section" n="94">
-                    <head><hi rend="rubrique">De fo<ex>n</ex>ssado o de
-                            azaria.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De fo<ex>n</ex>ssado o de
+                            azaria.</hi>
+                    </head>
                     <p><lb break="yes"/><choice>
                             <corr>...</corr>
                             <sic/>
@@ -3459,8 +3679,10 @@
                         do<ex>n</ex>no de h<ex>er</ex>edat. </p>
                 </div>
                 <div type="section" n="95">
-                    <head><hi rend="rubrique">Qui pidier h<ex>er</ex>e-dade.
-                                +<lb break="yes"/></hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui pidier h<ex>er</ex>e-dade. +<lb
+                                break="yes"/></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex>
                         pidiere h<ex>er</ex>edat en exido de co<ex>n</ex>cexo o
@@ -3472,9 +3694,10 @@
                             m<ex>o</ex>r<ex>auedis</ex>. </p>
                 </div>
                 <div type="section" n="96">
-                    <head><hi rend="rubrique">D<ex>e</ex> ladro<ex>n</ex>
-                                q<ex>ue</ex> morare en
-                        ald<ex>e</ex>a.</hi></head>
+                    <head>
+                        <hi rend="rubrique">D<ex>e</ex> ladro<ex>n</ex>
+                                q<ex>ue</ex> morare en ald<ex>e</ex>a.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             ladro<ex>n</ex> q<ex>ue</ex> morare en aldea los del
                         aldea tome<ex>n</ex> recaudo del &amp; si n<ex>on</ex>
@@ -3488,7 +3711,9 @@
                             />re<ex>n</ex> los del aldea lo pechen. </p>
                 </div>
                 <div type="section" n="97">
-                    <head><hi rend="rubrique">Qui quemar monte.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui quemar monte.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> q<ex>ue</ex>mare
                             mo<ex>n</ex>te ageno o pusier fuego en
@@ -3501,8 +3726,10 @@
                         ouiere. </p>
                 </div>
                 <div type="section" n="98">
-                    <head><hi rend="rubrique">Qui <add hand="#self"
-                            >e</add>ruolare rio.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui <add hand="#self">e</add>ruolare
+                            rio.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> en Alba o en su
                             t<ex>er</ex>mino eruolare rio si p<ex>ro</ex>uado
@@ -3516,8 +3743,10 @@
                             tomare<ex>n</ex> cayales en p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="99">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                            ace<ex>n</ex>na.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de
+                            ace<ex>n</ex>na.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odos los
                         molinos &amp; las ace<ex>n</ex>nas de Alba &amp; de suo
                             t<ex>er</ex>mino muela<ex>n</ex> a .xij. <lb
@@ -3537,7 +3766,9 @@
                             >Q</hi>ui ace<ex>n</ex>na o molino </p>
                 </div>
                 <div type="section" n="100">
-                    <head><hi rend="rubrique">De fazer acenna.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De fazer acenna.</hi>
+                    </head>
                     <p><lb break="yes"/>fiziere no lo faga en h<ex>er</ex>edat
                         agena. &amp; si fiziere aze<ex>n</ex>na o molino <lb
                             break="yes"/>assi lo faga q<ex>ue</ex> n<ex>on</ex>
@@ -3563,7 +3794,9 @@
                             m<ex>o</ex>r<ex>auedis</ex>. </p>
                 </div>
                 <div type="section" n="101">
-                    <head><hi rend="rubrique">Fuero de paret.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de paret.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         suo t<ex>er</ex>mino q<ex>ue</ex> paret fiziere en el
@@ -3598,7 +3831,9 @@
                         p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="102">
-                    <head><hi rend="rubrique">De piellago.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De piellago.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de uilla
                         morador q<ex>ue</ex> su pielago q<ex>u</ex><hi
@@ -3634,7 +3869,9 @@
                         co<ex>n</ex>cexo. </p>
                 </div>
                 <div type="section" n="103">
-                    <head><hi rend="rubrique">Fuero de pescadores.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de pescadores.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odos los
                         pescadores q<ex>ue</ex> pescare<ex>n</ex> ala o
                             pescare<ex>n</ex> alla parta<ex>n</ex> su pescado
@@ -3655,7 +3892,9 @@
                         p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="104">
-                    <head><hi rend="rubrique">Qui conprare algo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Qui conprare algo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> co<ex>m</ex>prare
@@ -3711,9 +3950,10 @@
                         potestat. </p>
                 </div>
                 <div type="section" n="105">
-                    <head><hi rend="rubrique">Fuero de al-caldes +<lb
-                                break="yes"/>de
-                            h<ex>er</ex>ma<ex>n</ex>dat.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de al-caldes +<lb break="yes"
+                            />de h<ex>er</ex>ma<ex>n</ex>dat.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">L</hi>os
                         alcaldes de h<ex>er</ex>ma<ex>n</ex>dat faga<ex>n</ex>
                         todas las iuntas <lb break="yes"/>&amp; las carreras del
@@ -3781,9 +4021,10 @@
                             n<ex>on</ex> adobe<ex>n</ex> sin el iuez. </p>
                 </div>
                 <div type="section" n="106">
-                    <head><hi rend="rubrique">El esc<ex>ri</ex>uano q<ex>ue</ex>
-                                n<ex>on</ex> fu<ex>er</ex>e al
-                        corral.</hi></head>
+                    <head>
+                        <hi rend="rubrique">El esc<ex>ri</ex>uano q<ex>ue</ex>
+                                n<ex>on</ex> fu<ex>er</ex>e al corral.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>l
                             esc<ex>ri</ex>uano q<ex>ue</ex> n<ex>on</ex>
                             fu<ex>er</ex>e al uiernes al corral o al
@@ -3792,7 +4033,9 @@
                         los alcaldes. </p>
                 </div>
                 <div type="section" n="107">
-                    <head><hi rend="rubrique">De coger andadores.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De coger andadores.</hi>
+                    </head>
                     <p><pb n="18v"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><hi rend="initiale" n="2"
                         >L</hi>os alcaldes &amp; el iuez cosga<ex>n</ex> .vi.
@@ -3824,7 +4067,9 @@
                         />uiniere peche un morauedi a los alcaldes. </p>
                 </div>
                 <div type="section" n="108">
-                    <head><hi rend="rubrique">Fuero de fuerza.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de fuerza.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> a o<ex>mn</ex>e o a
@@ -3878,9 +4123,11 @@
                             respo<ex>n</ex>da p<ex>or</ex> forcia. </p>
                 </div>
                 <div type="section" n="109">
-                    <head><hi rend="rubrique">Peticio<ex>n</ex> q<ex>ue</ex>
+                    <head>
+                        <hi rend="rubrique">Peticio<ex>n</ex> q<ex>ue</ex>
                                 dema<ex>n</ex>da-ren +<lb break="yes"/>ante
-                                alcald<ex>e</ex>s.</hi></head>
+                                alcald<ex>e</ex>s.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>oda
                             peticio<ex>n</ex> q<ex>ue</ex> dema<ex>n</ex>dada
                             fu<ex>er</ex>e an<ex>te</ex>
@@ -3896,8 +4143,10 @@
                             q<ex>ue</ex> niego fu<ex>er</ex>e </p>
                 </div>
                 <div type="section" n="110">
-                    <head><hi rend="rubrique">De peticio<ex>n</ex> q<ex>ue</ex>
-                            nyego fuere.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De peticio<ex>n</ex> q<ex>ue</ex>
+                            nyego fuere.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> p<ex>eche</ex> .i. morauedi. <lb
                             break="yes"/>an<ex>te</ex>
                         alc<ex>a</ex>ll<ex>e</ex>s &amp; arra<ex>n</ex>cado
@@ -3906,8 +4155,10 @@
                     </p>
                 </div>
                 <div type="section" n="111">
-                    <head><hi rend="rubrique">Debdo +<lb break="yes"/>de
-                            conceio.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Debdo +<lb break="yes"/>de
+                            conceio.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                         deudo q<ex>ue</ex> ma<ex>n</ex>dare<ex>n</ex> el
                             co<ex>n</ex>cexo sacar a los alcaldes an<ex>te</ex>
@@ -3940,8 +4191,10 @@
                             ui<ex>n</ex>as </p>
                 </div>
                 <div type="section" n="112">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex>
-                                ui<ex>n</ex>naderos.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex>
+                                ui<ex>n</ex>naderos.</hi>
+                    </head>
                     <p><lb break="yes"/>&amp; q<ex>ue</ex> sea<ex>n</ex>
                             post<ex>er</ex>os &amp; sea<ex>n</ex> dados el
                             p<ex>ri</ex>m<ex>er</ex>o dia de agosto &amp; la
@@ -3995,8 +4248,10 @@
                         tome el coto. </p>
                 </div>
                 <div type="section" n="113">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de soldar de
-                            andador.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de soldar de
+                            andador.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2"
                             >N</hi>e<ex>n</ex>gu<ex>n</ex>o
                             alc<ex>a</ex>ll<ex>e</ex> ni iuez ni uoz<ex>er</ex>o
@@ -4011,8 +4266,10 @@
                         castiello. </p>
                 </div>
                 <div type="section" n="114">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"
-                            />de aportellado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"/>de
+                            aportellado.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         su t<ex>er</ex>mino q<ex>ue</ex> aportellado
@@ -4021,8 +4278,9 @@
                         mano. </p>
                 </div>
                 <div type="section" n="115">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                        palomar.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de palomar.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> a palomar aieno tirare
                         &amp; paloma matare p<ex>eche</ex>
@@ -4033,8 +4291,9 @@
                             rend="superscript">a</hi>dra. </p>
                 </div>
                 <div type="section" n="116">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                        saluo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de saluo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1"
                             >Q</hi>uie<ex>n</ex> iudgado touier de dar salua fe
                         o de firmar o de iurar los alc<ex>a</ex>ll<ex>e</ex>s
@@ -4047,8 +4306,9 @@
                     </p>
                 </div>
                 <div type="section" n="117">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                        ferradores.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de ferradores.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> potestat. <lb break="yes"/>a .i.
                             m<ex>o</ex>r<ex>auedi</ex> &amp; n<ex>on</ex> menos.
                         &amp; q<ex>u</ex><hi rend="superscript">i</hi> menos
@@ -4082,8 +4342,10 @@
                             alc<ex>a</ex>ll<ex>e</ex>s. </p>
                 </div>
                 <div type="section" n="118">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex>
-                                cl<ex>er</ex>igo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o d<ex>e</ex>
+                                cl<ex>er</ex>igo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1"
                             >C</hi>l<ex>er</ex>igo q<ex>ue</ex> co<ex>n</ex> su
                         padre o co<ex>n</ex> suo h<ex>er</ex>mano mayor morare e
@@ -4094,7 +4356,9 @@
                             ne<ex>n</ex>gu<ex>n</ex>a. </p>
                 </div>
                 <div type="section" n="119">
-                    <head><hi rend="rubrique">Fuero de tauernero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de tauernero.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">Q</hi>ui uino
                         ageno beuiere de tau<ex>er</ex>na &amp; la
                             tau<ex>er</ex>nera o el tau<ex>er</ex>nero los di<lb
@@ -4126,7 +4390,9 @@
                     </p>
                 </div>
                 <div type="section" n="120">
-                    <head><hi rend="rubrique">Fuero de sacar bestia.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de sacar bestia.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> responda. <lb break="yes"/>suo
                             t<ex>er</ex>mino q<ex>ue</ex> bestia metiere
                             p<ex>or</ex> iuyzio q<ex>ue</ex> haya tomado &amp;
@@ -4139,8 +4405,10 @@
                         luego dela doblada a do<ex>n</ex>no de bestia. </p>
                 </div>
                 <div type="section" n="121">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de bestia de
-                            alquile.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de bestia de
+                            alquile.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de Alba o de
                         suo t<ex>er</ex>mino a q<ex>u</ex><hi rend="superscript"
@@ -4171,8 +4439,10 @@
                         uezi<ex>n</ex>os. <lb break="yes"/></p>
                 </div>
                 <div type="section" n="122">
-                    <head><hi rend="rubrique">Fuero de quien touier uoz ante
-                            alcaldes.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de quien touier uoz ante
+                            alcaldes.</hi>
+                    </head>
                     <p><pb n="20r"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><hi rend="initiale" n="2"
                             >Q</hi>uie<ex>n</ex> touier uoz o aiudar a baraiar a
@@ -4187,8 +4457,10 @@
                         </choice>dade. </p>
                 </div>
                 <div type="section" n="123">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de +<lb break="yes"
-                            />ferrero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de +<lb break="yes"
+                            />ferrero.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>l
                             ferr<ex>er</ex>o q<ex>ue</ex> en la uilla morare
                             te<ex>n</ex>ga fasta .xxv. rexas &amp; si mas <lb
@@ -4220,7 +4492,9 @@
                             p<ex>eche</ex> .vi. morauedis. </p>
                 </div>
                 <div type="section" n="124">
-                    <head><hi rend="rubrique">Fuero de ferrero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de ferrero.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odos los
                         ferreros de las aldeas tome<ex>n</ex> de los moradores
                         de la uilla o bois <lb break="yes"/>ouiere<ex>n</ex> en
@@ -4242,7 +4516,9 @@
                             m<ex>o</ex>r<ex>auedi</ex>s. </p>
                 </div>
                 <div type="section" n="125">
-                    <head><hi rend="rubrique">Fuero de gannado.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de gannado.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex>
                         ganado ouiere a tomar p<ex>or</ex> da<ex>n</ex>no
@@ -4262,8 +4538,9 @@
                         manquadra. </p>
                 </div>
                 <div type="section" n="126">
-                    <head><hi rend="rubrique">Fuero de armas
-                        uedadas.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de armas uedadas.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2"
                             >Q</hi><ex>u</ex><hi rend="superscript">a</hi>ndo el
                             co<ex>n</ex>cexo &amp; los alcaldes
@@ -4287,7 +4564,9 @@
                         sua cabeza &amp; n<ex>on</ex> peche. </p>
                 </div>
                 <div type="section" n="127">
-                    <head><hi rend="rubrique">Fuero de carnicero.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de carnicero.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             carnic<ex>er</ex>o q<ex>ue</ex> boi o uaca matare o
                         porco dessolare o degollare o la<pb n="20v"/><lb
@@ -4305,8 +4584,10 @@
                         .vi. .vi. m<ex>o</ex>r<ex>auedis</ex>. </p>
                 </div>
                 <div type="section" n="128">
-                    <head><hi rend="rubrique">Fuero de mu-erto. +<lb break="yes"
-                            /></hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de mu-erto. +<lb break="yes"
+                            /></hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">T</hi>odo
                             o<ex>mn</ex>e q<ex>ue</ex> en Alba o
                             m<ex>u</ex>l<ex>e</ex>r o en su
@@ -4322,7 +4603,9 @@
                         alcaldes. </p>
                 </div>
                 <div type="section" n="129">
-                    <head><hi rend="rubrique">Fuero de iuez.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de iuez.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">S</hi>i iuez o
                         palacio dixiere a alguno o<ex>mn</ex>e este ganado o
                         esta bestia o al<lb break="no"/>guna cosa me furteste de
@@ -4341,8 +4624,10 @@
                             q<ex>ue</ex> dema<ex>n</ex>dare algu<ex>n</ex>a </p>
                 </div>
                 <div type="section" n="130">
-                    <head><hi rend="rubrique">Fuero de manq<ex>u</ex><hi
-                                rend="superscript">a</hi>dra.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de manq<ex>u</ex><hi
+                                rend="superscript">a</hi>dra.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> la peticion. <lb break="yes"/>cosa
                         a ot<ex>ro</ex> o<ex>mn</ex>e p<ex>ri</ex>m<ex>er</ex>o
                         faga la manq<ex>u</ex><hi rend="superscript">a</hi>dra
@@ -4369,8 +4654,10 @@
                             rend="superscript">a</hi>dra. </p>
                 </div>
                 <div type="section" n="131">
-                    <head><hi rend="rubrique">Fuero de +<lb break="yes"/>los
-                            cotos.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de +<lb break="yes"/>los
+                            cotos.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>stos
                             so<ex>n</ex> los cotos de las ui<ex>n</ex>as asi
                         como cae Crespes en rio <lb break="yes"/>&amp; Crespes
@@ -4399,8 +4686,9 @@
                         Migael. </p>
                 </div>
                 <div type="section" n="132">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o de
-                        diezmo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o de diezmo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                         aldeano q<ex>ue</ex> casas ouiere en la uilla el
                             m<ex>e</ex>d<ex>i</ex>o diezmo de en uilla <lb
@@ -4409,7 +4697,9 @@
                         casas. </p>
                 </div>
                 <div type="section" n="133">
-                    <head><hi rend="rubrique">Fuero de condesixo.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de condesixo.</hi>
+                    </head>
                     <p><pb n="21r"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><hi rend="initiale" n="2"
                         >D</hi>esde el dia q<ex>ue</ex> los alcald<ex>e</ex>s
@@ -4428,7 +4718,9 @@
                     </p>
                 </div>
                 <div type="section" n="134">
-                    <head><hi rend="rubrique">Fuero del iuez.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero del iuez.</hi>
+                    </head>
                     <p><g ref="#calderon2"/> p<ex>or</ex> sua cabeza. <lb
                             break="yes"/>fonssado n<ex>on</ex> coma<ex>n</ex> en
                         las ald<ex>e</ex>as mas de cena o de iantar &amp;
@@ -4438,8 +4730,10 @@
                             n<ex>on</ex> p<ex>er</ex>iurados sean. </p>
                 </div>
                 <div type="section" n="135">
-                    <head><hi rend="rubrique">Fuero de +<lb break="yes"
-                                />ma<ex>m</ex>post<ex>er</ex>o.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de +<lb break="yes"
+                                />ma<ex>m</ex>post<ex>er</ex>o.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2"
                             >A</hi>lcald<ex>e</ex>s de co<ex>n</ex>ceyo ni
                             alcald<ex>e</ex>s de h<ex>er</ex>ma<ex>n</ex>dat ni
@@ -4454,9 +4748,11 @@
                             p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="136">
-                    <head><hi rend="rubrique">De lo que
-                                ma<ex>n</ex>dare<ex>n</ex> +<lb break="yes"/>a
-                            los alc<ex>a</ex>ll<ex>e</ex>s.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De lo que ma<ex>n</ex>dare<ex>n</ex>
+                                +<lb break="yes"/>a los
+                                alc<ex>a</ex>ll<ex>e</ex>s.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="1">D</hi>e toda
                         cosa q<ex>ue</ex> el co<ex>n</ex>ceyo o bonos
                             o<ex>mne</ex>s diere<ex>n</ex> a los
@@ -4468,7 +4764,9 @@
                         pertenez a la real potestat. </p>
                 </div>
                 <div type="section" n="137">
-                    <head><hi rend="rubrique">Fuero de hortolano.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de hortolano.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r de la uila
                         morador q<ex>ue</ex> ortolano ouiere a sacar aya en el
@@ -4497,7 +4795,9 @@
                         suo ma<ex>n</ex>cebo. </p>
                 </div>
                 <div type="section" n="138">
-                    <head><hi rend="rubrique">De segar miesses.</hi></head>
+                    <head>
+                        <hi rend="rubrique">De segar miesses.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                         messeguero q<ex>ue</ex> a segar ouiere en Alba o en su
                             t<ex>er</ex>mino las mies<lb break="no"/>ses a
@@ -4527,7 +4827,9 @@
                         comer. </p>
                 </div>
                 <div type="section" n="139">
-                    <head><hi rend="rubrique">Fuero de la defesa.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de la defesa.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">E</hi>l
                             co<ex>n</ex>ceyo g<ex>u</ex><hi rend="superscript"
                             >a</hi>rde la defesa q<ex>ue</ex> en todo el
@@ -4565,7 +4867,9 @@
                         periuro le caya. </p>
                 </div>
                 <div type="section" n="140">
-                    <head><hi rend="rubrique">Fuero de muradal.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de muradal.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e o m<ex>u</ex>l<ex>e</ex>r q<ex>ue</ex>
                         muradal fiziere a paret agena o a porta agena
@@ -4585,8 +4889,10 @@
                             m<ex>o</ex>r<ex>auedi</ex>. </p>
                 </div>
                 <div type="section" n="141">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"
-                            />de moneda.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"/>de
+                            moneda.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2"
                             >Q</hi><ex>u</ex><hi rend="superscript">a</hi>no la
                         real potestat moneda echare an<ex>te</ex> q<ex>ue</ex>
@@ -4614,7 +4920,9 @@
                         &amp; si la acotaren cayales en p<ex>er</ex>iuro. </p>
                 </div>
                 <div type="section" n="142">
-                    <head><hi rend="rubrique">Fuero de manda.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de manda.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odo
                             o<ex>mn</ex>e de Alba o de su t<ex>er</ex>mino
                             q<ex>ue</ex> fijos ouiere el fixo mayor tome su <lb
@@ -4627,7 +4935,9 @@
                         uestidos. </p>
                 </div>
                 <div type="section" n="143">
-                    <head><hi rend="rubrique">Fuero de iuez.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de iuez.</hi>
+                    </head>
                     <p><pb n="22r"/><lb break="yes"/><cb type="single-column"
                             /><lb break="yes"/><hi rend="initiale" n="1"
                         >T</hi>odo iuez de Alba de .iiij.
@@ -4639,8 +4949,9 @@
                     </p>
                 </div>
                 <div type="section" n="144">
-                    <head><hi rend="rubrique">Fuero de alcaldes de
-                            hermandat.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fuero de alcaldes de hermandat.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">L</hi>os
                         alcaldes de h<ex>er</ex>ma<ex>n</ex>dat iudgue<ex>n</ex>
                         todo derecho a o<ex>mn</ex>e o a m<ex>u</ex>l<ex>e</ex>r
@@ -4683,8 +4994,10 @@
                             meta<ex>n</ex> iurados bonos </p>
                 </div>
                 <div type="section" n="145">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"
-                            />de meter iurados.</hi></head>
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o +<lb break="yes"/>de
+                            meter iurados.</hi>
+                    </head>
                     <p><lb break="yes"/>o<ex>mne</ex>s de las ald<ex>e</ex>as
                             p<ex>or</ex> g<ex>u</ex><hi rend="superscript"
                             >a</hi>rda de ladro<ex>n</ex>es &amp; de
@@ -4701,9 +5014,11 @@
                     </p>
                 </div>
                 <div type="section" n="146">
-                    <head><hi rend="rubrique">Fu<ex>er</ex>o q<ex>u</ex><hi
+                    <head>
+                        <hi rend="rubrique">Fu<ex>er</ex>o q<ex>u</ex><hi
                                 rend="superscript">a</hi>ndo uenga<ex>n</ex> los
-                            aldeanos a plazo.</hi></head>
+                            aldeanos a plazo.</hi>
+                    </head>
                     <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>odos los
                         del pueblo q<ex>ue</ex> en las ald<ex>e</ex>as
                             morare<ex>n</ex> n<ex>on</ex>
