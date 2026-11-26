@@ -22,8 +22,13 @@ jobs:
       - name: Generate README and corpus stats
         run: python scripts/create_readme.py data
 
+
       - name: Install lxml
         run: pip install lxml
+
+      - name: Validate against ODD schema (RelaxNG)
+        run: python scripts/check_schema.py data schemata/out/ODD_gold.rng
+
 
       - name: Check citeStructures
         run: python scripts/check_citestructure.py data
