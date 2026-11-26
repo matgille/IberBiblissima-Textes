@@ -20,27 +20,27 @@ Dossier analysé : `data`
 
 | Indicateur | Valeur |
 |---|---:|
-| Textes | 64 |
-| Traductions | 9 |
+| Textes | 63 |
+| Traductions | 8 |
 | Oeuvres originales | 55 |
-| Folios (`pb`) | 14494 |
-| Tokens | 6 800 876 |
+| Folios (`pb`) | 14437 |
+| Tokens | 6 765 569 |
 
 ## Traductions / oeuvres originales
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
-| Traductions | 9 | 2281 | 963 113 |
+| Traductions | 8 | 2224 | 927 806 |
 | Oeuvres originales | 55 | 12213 | 5 837 763 |
-| **Total** | **64** | **14494** | **6 800 876** |
+| **Total** | **63** | **14437** | **6 765 569** |
 
 ## Manuscrits / imprimés
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
-| Imprimés | 11 | 1826 | 1 265 464 |
+| Imprimés | 10 | 1769 | 1 230 157 |
 | Manuscrits | 53 | 12668 | 5 535 412 |
-| **Total** | **64** | **14494** | **6 800 876** |
+| **Total** | **63** | **14437** | **6 765 569** |
 
 ## Catégorisation formelle
 
@@ -49,16 +49,16 @@ Dossier analysé : `data`
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | vers | 7 | 353 | 105 673 |
-| prose | 57 | 14141 | 6 695 203 |
-| **Total** | **64** | **14494** | **6 800 876** |
+| prose | 56 | 14084 | 6 659 896 |
+| **Total** | **63** | **14437** | **6 765 569** |
 
 ### Détail par classe (toutes classes, sans fusion)
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | vers | 7 | 353 | 105 673 |
-| prose | 57 | 14141 | 6 695 203 |
-| **Total** | **64** | **14494** | **6 800 876** |
+| prose | 56 | 14084 | 6 659 896 |
+| **Total** | **63** | **14437** | **6 765 569** |
 
 ## Sous-genre
 
@@ -69,10 +69,10 @@ Dossier analysé : `data`
 | culta | 5 | 33 | 3 521 |
 | autre | 5 | 712 | 236 516 |
 | ficcion | 5 | 1215 | 410 536 |
-| cientifica | 11 | 1879 | 900 909 |
+| cientifica | 10 | 1822 | 865 602 |
 | historica | 16 | 4561 | 2 353 530 |
 | juridica | 22 | 6094 | 2 895 864 |
-| **Total** | **64** | **14494** | **6 800 876** |
+| **Total** | **63** | **14437** | **6 765 569** |
 
 ### Détail par classe (toutes classes, sans fusion)
 
@@ -84,14 +84,14 @@ Dossier analysé : `data`
 | tragedia | 1 | 280 | 92 042 |
 | clerecia | 1 | 308 | 97 445 |
 | ficcion | 5 | 1215 | 410 536 |
-| cientifica | 11 | 1879 | 900 909 |
+| cientifica | 10 | 1822 | 865 602 |
 | historica | 16 | 4561 | 2 353 530 |
 | juridica | 22 | 6094 | 2 895 864 |
-| **Total** | **64** | **14494** | **6 800 876** |
+| **Total** | **63** | **14437** | **6 765 569** |
 
 ## Classification des oeuvres par catégorisation formelle
 
-### prose (57)
+### prose (56)
 
 - Abreviación del Halconero
 - Apelación de Francisco Vázquez de Coronado
@@ -138,7 +138,6 @@ Dossier analysé : `data`
 - Linajes de España - Libro de los blasones de reyes y
                     grandes señores
 - Lucidario
-- Macer herbolario *(traduction)*
 - Ordenamiento de las tafurerías
 - Ordenanzas de buen gobierno de la villa de
                     Valladolid
@@ -242,7 +241,7 @@ Dossier analysé : `data`
 - Vida de la Madre Juana Inés de la Cruz
 - Vidal Mayor
 
-### Traductions (9)
+### Traductions (8)
 
 - Cirugía *(traduction)*
 - Fuero de Alcaraz *(traduction)*
@@ -250,7 +249,6 @@ Dossier analysé : `data`
 - Libro de Vegecio de la caballería y del arte de las
                     batallas *(traduction)*
 - Libro del tesoro *(traduction)*
-- Macer herbolario *(traduction)*
 - Strategematon - Arte de caballería *(traduction)*
 - Teseida / Historia de las amazonas *(traduction)*
 - Árbol de batallas *(traduction)*
@@ -325,7 +323,7 @@ Dossier analysé : `data`
 - Vida de la Madre Juana Inés de la Cruz
 - Vidal Mayor
 
-### Traductions (9)
+### Traductions (8)
 
 - Cirugía *(traduction)*
 - Fuero de Alcaraz *(traduction)*
@@ -333,14 +331,13 @@ Dossier analysé : `data`
 - Libro de Vegecio de la caballería y del arte de las
                     batallas *(traduction)*
 - Libro del tesoro *(traduction)*
-- Macer herbolario *(traduction)*
 - Strategematon - Arte de caballería *(traduction)*
 - Teseida / Historia de las amazonas *(traduction)*
 - Árbol de batallas *(traduction)*
 
 ## Classification des oeuvres: avant / après 1500
 
-### (sans date) (16)
+### (sans date) (15)
 
 - Apelación de Francisco Vázquez de Coronado
 - Arte nuevo para criar seda
@@ -353,7 +350,6 @@ Dossier analysé : `data`
 - Fuero de Alcaraz *(traduction)*
 - Grant crónica de Espanya I
 - Instrucción y regimiento de guerra
-- Macer herbolario *(traduction)*
 - Ordenanzas de buen gobierno de la villa de
                     Valladolid
 - Relación verdadera de la jornada de Omagua y
