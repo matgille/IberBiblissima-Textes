@@ -10,23 +10,23 @@ Dossier analysé : `data`
 | Traductions | 8 |
 | Oeuvres originales | 55 |
 | Folios (`pb`) | 14437 |
-| Tokens | 6 765 583 |
+| Tokens | 6 765 581 |
 
 ## Traductions / oeuvres originales
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
-| Traductions | 8 | 2224 | 927 806 |
+| Traductions | 8 | 2224 | 927 804 |
 | Oeuvres originales | 55 | 12213 | 5 837 777 |
-| **Total** | **63** | **14437** | **6 765 583** |
+| **Total** | **63** | **14437** | **6 765 581** |
 
 ## Manuscrits / imprimés
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | Imprimés | 10 | 1769 | 1 230 157 |
-| Manuscrits | 53 | 12668 | 5 535 426 |
-| **Total** | **63** | **14437** | **6 765 583** |
+| Manuscrits | 53 | 12668 | 5 535 424 |
+| **Total** | **63** | **14437** | **6 765 581** |
 
 ## Catégorisation formelle
 
@@ -35,16 +35,16 @@ Dossier analysé : `data`
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | vers | 7 | 353 | 105 673 |
-| prose | 56 | 14084 | 6 659 910 |
-| **Total** | **63** | **14437** | **6 765 583** |
+| prose | 56 | 14084 | 6 659 908 |
+| **Total** | **63** | **14437** | **6 765 581** |
 
 ### Détail par classe (toutes classes, sans fusion)
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | vers | 7 | 353 | 105 673 |
-| prose | 56 | 14084 | 6 659 910 |
-| **Total** | **63** | **14437** | **6 765 583** |
+| prose | 56 | 14084 | 6 659 908 |
+| **Total** | **63** | **14437** | **6 765 581** |
 
 ## Sous-genre
 
@@ -55,10 +55,10 @@ Dossier analysé : `data`
 | culta | 5 | 33 | 3 521 |
 | autre | 5 | 712 | 236 516 |
 | ficcion | 5 | 1215 | 410 536 |
-| cientifica | 10 | 1822 | 865 602 |
+| cientifica | 10 | 1822 | 865 600 |
 | historica | 16 | 4561 | 2 353 530 |
 | juridica | 22 | 6094 | 2 895 878 |
-| **Total** | **63** | **14437** | **6 765 583** |
+| **Total** | **63** | **14437** | **6 765 581** |
 
 ### Détail par classe (toutes classes, sans fusion)
 
@@ -70,10 +70,10 @@ Dossier analysé : `data`
 | tragedia | 1 | 280 | 92 042 |
 | clerecia | 1 | 308 | 97 445 |
 | ficcion | 5 | 1215 | 410 536 |
-| cientifica | 10 | 1822 | 865 602 |
+| cientifica | 10 | 1822 | 865 600 |
 | historica | 16 | 4561 | 2 353 530 |
 | juridica | 22 | 6094 | 2 895 878 |
-| **Total** | **63** | **14437** | **6 765 583** |
+| **Total** | **63** | **14437** | **6 765 581** |
 
 ## Classification des oeuvres par catégorisation formelle
 
