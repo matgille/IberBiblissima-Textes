@@ -26,8 +26,15 @@ jobs:
       - name: Install lxml
         run: pip install lxml
 
-      - name: Validate against ODD schema (RelaxNG)
-        run: python scripts/check_schema.py data schemata/out/ODD_gold.rng
+      - name: Install Jing (Java)
+        run: sudo apt-get install -y jing
+
+      - name: Validate with Jing (parité oXygen)
+        run: |
+          for f in data/*/*.xml; do
+            [ "$(basename "$f")" = "metadata.xml" ] && continue
+            jing schemata/out/ODD_gold.rng "$f" || exit 1
+          done
 
 
       - name: Check citeStructures
