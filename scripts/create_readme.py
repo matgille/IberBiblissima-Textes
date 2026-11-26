@@ -38,7 +38,22 @@ NS = {"tei": TEI}
 
 # Intro du README: a remplir manuellement.
 # Son contenu est place au debut du stats/README.md genere.
-INTRO_README = ""
+INTRO_README = """
+# (Iber)Biblissima-Textes: a XML-TEI corpus of medieval an pre-modern Iberian texts
+
+## The corpus
+
+This repo contains the XML-TEI files of structured litterary texts. 
+These texts have been converted and structured to XML-TEI by Matthias Gille Levenson, 
+from the original OSTA (Old Textual Spanish Archive) maintained by 
+Francisco Gago Jover and Javier Pueyo Mena.
+
+## This repository
+
+This repository contains the texts, the scripts used to generate the statistics,
+and the statistics themselves. And ODD and a schema is also provided.
+
+"""
 
 
 def local(tag: str) -> str:
@@ -270,7 +285,7 @@ def main():
         if r["erreur"]:
             continue
         cle = ("Manuscrits" if r["manuscrit"] == "oui"
-               else "Non manuscrits")
+               else "Imprimés")
         vol_msc[cle][0] += 1
         vol_msc[cle][1] += r["pb"]
         vol_msc[cle][2] += r["mots"]
@@ -284,25 +299,25 @@ def main():
     print(f"Nombre total de folios (pb): {total_pb}")
     print(f"Nombre total de tokens     : {total_mots}")
     nb_trad = sum(1 for r in resultats if r["traduction"] == "oui")
-    print(f"Textes traductions        : {nb_trad}")
+    # print(f"Textes traductions        : {nb_trad}")
     print()
 
-    print("Par catégorisation formelle (1re classe du catRef):")
+    print("Par catégorisation formelle:")
     for k, (t, p, m) in par_volume(vol_formelle.items()):
         print(f"  {k:<20} textes: {t:>4}   folios: {p:>6}   mots: {m:>9}")
     print()
 
-    print("Par genre (3e classe du catRef):")
+    print("Par sous-genre:")
     for k, (t, p, m) in par_volume(vol_genre.items()):
         print(f"  {k:<20} textes: {t:>4}   folios: {p:>6}   mots: {m:>9}")
     print()
 
-    print("Traductions / oeuvres originales:")
+    print("Traductions et oeuvres originales:")
     for k, (t, p, m) in par_volume(vol_trad.items()):
         print(f"  {k:<20} textes: {t:>4}   folios: {p:>6}   mots: {m:>9}")
     print()
 
-    print("Manuscrits / non manuscrits:")
+    print("Manuscrits / imprimés:")
     for k, (t, p, m) in par_volume(vol_msc.items()):
         print(f"  {k:<20} textes: {t:>4}   folios: {p:>6}   mots: {m:>9}")
     print()
@@ -373,7 +388,6 @@ def write_latex(path, dossier, nb_textes, total_pb, total_mots,
     lignes.append("  \\begin{tabular}{lr}")
     lignes.append("    \\hline")
     lignes.append("    Textes & %d \\\\" % nb_textes)
-    lignes.append("    Traductions & %d \\\\" % nb_traductions)
     lignes.append("    Folios (\\texttt{pb}) & %d \\\\" % total_pb)
     lignes.append("    Mots & %s \\\\" % f"{total_mots:,}".replace(",", "\\,"))
     lignes.append("    \\hline")
@@ -381,14 +395,13 @@ def write_latex(path, dossier, nb_textes, total_pb, total_mots,
     lignes.append("\\end{table}")
     lignes.append("")
 
-    for titre_tab, table in (("Manuscrits / non manuscrits",
+    for titre_tab, table in (("Manuscrits / imprimés",
                               vol_msc),
                              ("Traductions / oeuvres originales",
                               vol_trad),
-                             ("Catégorisation formelle "
-                              "(1\\up{re} classe du \\texttt{catRef})",
+                             ("Catégorisation formelle ",
                               vol_formelle),
-                             ("Genre (3\\up{e} classe du \\texttt{catRef})",
+                             ("Sous-genre",
                               vol_genre)):
         if not table:
             continue
@@ -456,13 +469,12 @@ def write_markdown(path, dossier, nb_textes, total_pb, total_mots,
     table_md(lignes, vol_trad)
 
     # Manuscrits / non manuscrits
-    lignes.append("## Manuscrits / non manuscrits")
+    lignes.append("## Manuscrits / imprimés")
     lignes.append("")
     table_md(lignes, vol_msc)
 
     # Categorisation formelle
-    lignes.append("## Catégorisation formelle "
-                  "(1re classe du `catRef`)")
+    lignes.append("## Catégorisation formelle")
     lignes.append("")
     lignes.append("### Vue regroupée (classes de plus de 4 textes, "
                   "sinon « autre »)")
@@ -473,7 +485,7 @@ def write_markdown(path, dossier, nb_textes, total_pb, total_mots,
     table_md(lignes, vol_formelle_brut)
 
     # Genre
-    lignes.append("## Genre (3e classe du `catRef`)")
+    lignes.append("## Sous-genre")
     lignes.append("")
     lignes.append("### Vue regroupée (classes de plus de 4 textes, "
                   "sinon « autre »)")
@@ -509,7 +521,7 @@ def write_markdown(path, dossier, nb_textes, total_pb, total_mots,
     for titre_section, analyse in (
             ("Classification des oeuvres par catégorisation formelle",
              "formelle"),
-            ("Classification des oeuvres par genre", "genre"),
+            ("Classification des oeuvres par genre", "sous-genre"),
             ("Classification des oeuvres: traductions et originales",
              "traduction"),
             ("Classification des oeuvres: avant / après 1500",
