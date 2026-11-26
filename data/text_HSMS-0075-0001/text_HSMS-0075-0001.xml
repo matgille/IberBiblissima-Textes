@@ -207,12 +207,11 @@
                             use="@n" delim="."/>
                     </citeStructure>
                 </citeStructure>
-
             </refsDecl>
             <refsDecl n="default">
-                <!--Que fait du front ? Que faire des prologues de partie?-->
-                <citeStructure match="/TEI/text/body/div[@type='livre']"
-                    use="@n" unit="book">
+                <citeStructure
+                    match="/TEI/text/body/div[@type='texte']/div[@type='livre']"
+                    use="@n" unit="livre">
                     <citeStructure match="./descendant::div[@type='chapitre']"
                         use="@n" unit="chapitre" delim="."/>
                 </citeStructure>
