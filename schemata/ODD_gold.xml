@@ -2229,7 +2229,7 @@
                </classSpec>
                <!--Checking module textstructure-->
                <moduleRef key="textstructure"
-                  include="TEI text body div front back argument trailer"/>
+                  include="TEI text body div argument trailer"/>
                <elementSpec ident="TEI" mode="change">
                   <attList>
                      <attDef ident="version" mode="delete"/>
@@ -2365,24 +2365,6 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="argument" mode="change">
-                  <attList>
-                     <attDef ident="ana" mode="delete"/>
-                     <attDef ident="facs" mode="delete"/>
-                     <attDef ident="corresp" mode="delete"/>
-                     <attDef ident="sameAs" mode="delete"/>
-                     <attDef ident="cert" mode="delete"/>
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="front" mode="change">
-                  <attList>
-                     <attDef ident="ana" mode="delete"/>
-                     <attDef ident="facs" mode="delete"/>
-                     <attDef ident="corresp" mode="delete"/>
-                     <attDef ident="sameAs" mode="delete"/>
-                     <attDef ident="cert" mode="delete"/>
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="back" mode="change">
                   <attList>
                      <attDef ident="ana" mode="delete"/>
                      <attDef ident="facs" mode="delete"/>
