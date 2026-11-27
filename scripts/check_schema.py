@@ -27,11 +27,14 @@ Usage:
              - --squelette DOSSIER : dossier des feuilles ISO XSLT 2.0 ;
 - --xml-model : chaque document est validé contre le schéma déclaré
              dans son propre PI <?xml-model?> (comportement oXygen);
-- --skip-metadata : ignore les fichiers metadata.xml (validés sinon,
-             comme les autres).
+- --inclure-metadata : valide aussi les fichiers metadata.xml
+             (ignores par defaut: ce ne sont pas des textes TEI
+             du corpus). --skip-metadata est accepte sans effet
+             (ancien nom de l'inverse).
 
-Par défaut, TOUS les .xml du dossier sont validés, metadata.xml
-compris, avec le validateur RelaxNG de libxml2 (lxml).
+Par défaut, tous les .xml du dossier sont validés SAUF
+metadata.xml (voir --inclure-metadata), avec le validateur
+RelaxNG de libxml2 (lxml).
 
 Codes de retour: 0 si tout est valide, 1 sinon, 2 si le schéma ou
 le dossier est introuvable/invalide.
@@ -305,7 +308,9 @@ def main_jing(dossier: Path, schema_path: Path, skip_metadata: bool,
 
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    skip_metadata = "--skip-metadata" in sys.argv
+    # metadata.xml (non-TEI) est ignore par defaut;
+    # --inclure-metadata les valide aussi.
+    skip_metadata = "--inclure-metadata" not in sys.argv
     use_xml_model = "--xml-model" in sys.argv
     use_jing = "--jing" in sys.argv
     dossier = Path(args[0]) if args else DOSSIER_DEFAUT
