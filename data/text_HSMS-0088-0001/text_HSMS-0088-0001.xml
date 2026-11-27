@@ -1,4 +1,4 @@
-<?xml-model href="/home/mgl/Bureau/Travail/projets/Biblissima-Text/Transform/schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -191,7 +191,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
+
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -199,14 +199,13 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure match="/TEI/text/body/div" use="@n"
+                    unit="chapter">
+                    <citeStructure match=".//milestone[@unit='section']"
+                        use="@n" unit="section" delim="."/>
+                </citeStructure>
             </refsDecl>
             <classDecl>
                 <taxonomy>
@@ -245575,20 +245574,19 @@
                         Puede cobrar <lb break="yes"/></p>
                 </div>
                 <div type="chapitre" n="156">
-                    <head><hi rend="rubrique" type="merged">Mas agora dexa el
-                            cuento de <lb break="yes"/>fablar del e<choice>
+                    <head><hi rend="rubrique">Mas agora dexa el cuento de <lb
+                                break="yes"/>fablar del e<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>torna a<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>lançarote ⇒<pb n="236r"/>
-                        <fw rend="titre-courant">\ 236</fw>
-                        <cb type="single-column"/><lb break="yes"/>E al Rey Artur
-                        </hi>
+                            <fw rend="titre-courant">\ 236</fw>
+                            <cb type="single-column"/><lb break="yes"/>E al Rey
+                            Artur </hi>
                     </head>
-                    <p><lb break="yes"/><lb
-                            break="yes"/>Dize el cuento que<choice>
+                    <p><lb break="yes"/><lb break="yes"/>Dize el cuento que<choice>
                             <corr> </corr>
                             <sic/>
                         </choice>bien ha<choice>
@@ -263737,12 +263735,12 @@
                         </choice>aya <lb break="yes"/></p>
                 </div>
                 <div type="chapitre" n="176">
-                    <head><hi rend="rubrique" type="merged">Como don dinax paso el<choice>
+                    <head><hi rend="rubrique">Como don dinax paso el<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>agua ⇒<pb n="256r"/>
-                        <fw rend="titre-courant">\ 256</fw>
-                        <cb type="single-column"/><lb break="yes"/>e<choice>
+                            <fw rend="titre-courant">\ 256</fw>
+                            <cb type="single-column"/><lb break="yes"/>e<choice>
                                 <corr> </corr>
                                 <sic/>
                             </choice>fue<choice>
@@ -263753,8 +263751,7 @@
                                 <sic/>
                             </choice>prision </hi>
                     </head>
-                    <p><lb break="yes"/><lb
-                            break="yes"/>EN<choice>
+                    <p><lb break="yes"/><lb break="yes"/>EN<choice>
                             <sic> </sic>
                             <corr/>
                         </choice>tonçe<choice>
@@ -382814,25 +382811,25 @@
                         </choice>fuente </p>
                 </div>
             </div>
-            <trailer><lb break="yes"/>Aqui se acaua el segundo y ter<choice>
-                    <corr>ç</corr>
-                    <sic>ç</sic>
-                </choice>ero libro de<choice>
-                    <corr> </corr>
-                    <sic/>
-                </choice>don<choice>
-                    <corr> </corr>
-                    <sic/>
-                </choice>lan<lb break="no"/>çarote de<choice>
-                    <corr> </corr>
-                    <sic/>
-                </choice>lago y<choice>
-                    <corr> </corr>
-                    <sic/>
-                </choice>a se de comenzar el libro de <lb break="yes"/>don
-                tristan</trailer>
-        </body>
-        <back>
+            <div type="epilogue">
+                <p><lb break="yes"/>Aqui se acaua el segundo y ter<choice>
+                        <corr>ç</corr>
+                        <sic>ç</sic>
+                    </choice>ero libro de<choice>
+                        <corr> </corr>
+                        <sic/>
+                    </choice>don<choice>
+                        <corr> </corr>
+                        <sic/>
+                    </choice>lan<lb break="no"/>çarote de<choice>
+                        <corr> </corr>
+                        <sic/>
+                    </choice>lago y<choice>
+                        <corr> </corr>
+                        <sic/>
+                    </choice>a se de comenzar el libro de <lb break="yes"/>don
+                    tristan</p>
+            </div>
             <div type="colophon">
                 <p> y<choice>
                         <corr> </corr>
@@ -382865,6 +382862,6 @@
                         <sic/>
                     </choice>catorze años <lb break="yes"/>finis</p>
             </div>
-        </back>
+        </body>
     </text>
 </TEI>

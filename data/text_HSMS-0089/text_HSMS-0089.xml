@@ -1,4 +1,4 @@
-<?xml-model href="/home/mgl/Bureau/Travail/projets/Biblissima-Text/Transform/schemata/out/ODD_v1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -109,8 +109,8 @@
                 <bibl type="translation" ana="#frbr.expression">
                     <title>Libro de Alexandre</title>
                     <author><surname>desconocido</surname><forename/></author><date
-                        notBefore-iso="1221" notAfter-iso="1223">1221 a quo- 1223 ad
-                        quem</date>
+                        notBefore-iso="1221" notAfter-iso="1223">1221 a quo-
+                        1223 ad quem</date>
                     <idno type="HSMS-WORK">HSMS-0089-0001</idno>
                     <idno type="beta-texid">1221</idno>
                     <idno type="factgrid-id"
@@ -154,9 +154,11 @@
                                 notBefore-iso="1301" notAfter-iso="1400">1301 -
                                 1400</origDate><origDate
                                 corresp="#HSMS-0089-0002" notBefore-iso="1301"
-                                notAfter-iso="1400">1301 - 1400</origDate><origDate
+                                notAfter-iso="1400">1301 -
+                                1400</origDate><origDate
                                 corresp="#HSMS-0089-0003" notBefore-iso="1301"
-                                notAfter-iso="1400">1301 - 1400</origDate></origin>
+                                notAfter-iso="1400">1301 -
+                            1400</origDate></origin>
                         <!--Le corresp permet de lier la date &#224; l'unit&#233; codicologique -->
                     </history>
 
@@ -258,7 +260,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
+
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -266,14 +268,13 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure match="/TEI/text/body/div" use="@n"
+                    unit="chapter">
+                    <citeStructure match=".//milestone[@unit='section']"
+                        use="@n" unit="section" delim="."/>
+                </citeStructure>
             </refsDecl>
             <classDecl>
                 <!--Merci &#224; Morgane PICA pour son aide sur l'adaptation &#224; la mod&#233;lisation FRBR-->
@@ -330,7 +331,7 @@
     </teiHeader>
     <text>
         <body>
-            <div corresp="#HSMS-0089-0001">
+            <div type="texte" corresp="#HSMS-0089-0001">
                 <pb n="1r"/>
                 <cb type="single-column"/>
                 <lg>
@@ -1322,10 +1323,10 @@
                             bie<ex>n</ex> la acabar. </l>
                     <l><lb break="yes"/>Qui q<ex>u</ex><hi rend="superscript"
                             >i</hi>er q<ex>ue</ex> la uestiesse; fuesse siempre
-                        leal. </l>
-                    <seg ana="#glose"><add hand="#self"><lb break="yes"/>esta
-                            camisa creo <lb break="yes"/>mira la
-                        vistio</add></seg>
+                        leal. <seg ana="#glose"><add hand="#self"><lb
+                                    break="yes"/>esta camisa creo <lb
+                                    break="yes"/>mira la vistio</add></seg></l>
+
                     <l><lb break="yes"/>Et numq<ex>u</ex><hi rend="superscript"
                             >a</hi> lo podiesse; luxuria te<ex>m</ex>ptar. </l>
                 </lg>
@@ -3685,11 +3686,11 @@
                     <l><lb break="yes"/>Compeço les la estoria; de troya de
                         fondon. </l>
                     <l><lb break="yes"/>Cuemo fue destroyda; &amp; sobre qual
-                        razon. </l>
-                    <seg ana="#glose"><add hand="#self"><lb break="yes"/>la
-                                co<ex>n</ex>q<ex>u</ex><hi rend="superscript"
-                                >i</hi>sta <lb break="yes"/>de
-                                tro<supplied>ya</supplied></add></seg>
+                        razon. <seg ana="#glose"><add hand="#self"><lb
+                                    break="yes"/>la co<ex>n</ex>q<ex>u</ex><hi
+                                    rend="superscript">i</hi>sta <lb break="yes"
+                                />de tro<supplied>ya</supplied></add></seg></l>
+
                 </lg>
                 <lg>
                     <l><lb break="yes"/><hi rend="initiale" n="2"
@@ -8309,9 +8310,9 @@
                 <lg>
                     <l><lb break="yes"/><g ref="#calderon1"/> Mando fazer unas
                             l<ex>et</ex>ras. q<ex>ue</ex> auie<ex>n</ex> tal
-                        tenor. </l>
-                    <seg ana="#glose"><lb break="yes"/><add hand="#self"
-                            >letras</add></seg>
+                        tenor. <seg ana="#glose"><lb break="yes"/><add
+                                hand="#self">letras</add></seg></l>
+
                     <l><lb break="yes"/>Dario Rey delos Reys. egual del
                             c<ex>r</ex><hi rend="superscript">i</hi>ador. </l>
                     <l><lb break="yes"/>Diz a ti alexandre. no<del hand="#self"
@@ -13719,11 +13720,12 @@
                     <l><lb break="yes"/>Qual oyra de ti; la q<ex>ue</ex> te ouo
                         parido. </l>
                     <l><lb break="yes"/>Nol q<ex>ue</ex>rie el g<ex>r</ex><hi
-                            rend="superscript">i</hi>ego; la cabeça tornar. </l>
-                    <seg ana="#glose"><add hand="#self">
-                            <lb break="yes"/>aq<ex>u</ex><hi rend="superscript"
-                                >i</hi> es la metad <lb break="yes"/>del
-                            libro</add></seg>
+                            rend="superscript">i</hi>ego; la cabeça tornar. <seg
+                            ana="#glose"><add hand="#self">
+                                <lb break="yes"/>aq<ex>u</ex><hi
+                                    rend="superscript">i</hi> es la metad <lb
+                                    break="yes"/>del libro</add></seg></l>
+
                     <pb n="77r"/>
                     <cb type="single-column"/>
                     <l><lb break="yes"/>Veye<ex>n</ex>no en g<ex>r</ex><hi
@@ -14429,11 +14431,12 @@
                         cargados. </l>
                     <l><lb break="yes"/>Compeço a faular; con los oios moiados. </l>
                     <l><lb break="yes"/>Ca entendie q<ex>ue</ex> todos; estauan
-                        desmayados. </l>
-                    <seg ana="#glose">
-                        <lb break="yes"/><add hand="#self">ov<ex>ier</ex>on
-                                marauj<lb break="no"/>llosa q<ex>ue</ex> hizo
-                                da<lb break="no"/>rio alos suyos</add></seg>
+                        desmayados. <seg ana="#glose">
+                            <lb break="yes"/><add hand="#self">ov<ex>ier</ex>on
+                                    marauj<lb break="no"/>llosa q<ex>ue</ex>
+                                hizo da<lb break="no"/>rio alos
+                            suyos</add></seg></l>
+
                 </lg>
                 <lg>
                     <l><lb break="yes"/><hi rend="initiale" n="2">A</hi>migos
@@ -17503,12 +17506,12 @@
                         furan p<ex>r</ex><hi rend="superscript">i</hi>uado. </l>
                     <l><lb break="yes"/>Por q<ex>ue</ex> fuera saliro<ex>n</ex>;
                         teniense por errados. </l>
-                    <seg ana="#glose"><lb break="yes"/><add hand="#self"
-                            >narbaçenes</add></seg>
                 </lg>
                 <lg>
-                    <l><lb break="yes"/><g ref="#calderon1"/> Narbozenes &amp;
-                        besus; fuero<ex>n</ex> luego uenidos </l>
+                    <l><seg ana="#glose"><lb break="yes"/><add hand="#self"
+                                >narbaçenes</add></seg><lb break="yes"/><g
+                            ref="#calderon1"/> Narbozenes &amp; besus;
+                            fuero<ex>n</ex> luego uenidos </l>
                     <l><lb break="yes"/>Espadas sobre manos; de sus armas
                         guarnidos. </l>
                     <l><lb break="yes"/>Fuero<ex>n</ex> todo los otros; delas
@@ -27257,7 +27260,7 @@
                         lexados. </l>
                 </lg>
             </div>
-            <div corresp="#HSMS-0089-0002">
+            <div type="texte" corresp="#HSMS-0089-0002">
                 <head>
                     <lb break="yes"/>
                     <hi rend="rubrique">Esta es el testamento de alexandre.
@@ -27390,7 +27393,7 @@
                     <cb type="single-column"/>
                 </p>
             </div>
-            <div corresp="#HSMS-0089-0003">
+            <div type="texte" corresp="#HSMS-0089-0003">
                 <lb break="yes"/>
                 <head>
                     <hi rend="rubrique">Esta es la otra carta que enuio
@@ -27491,7 +27494,7 @@
                     sabios. &amp; en esperar lo q<ex>ue</ex> dios mando; del
                     otro que <lb break="yes"/>es fincable. </p>
             </div>
-            <div corresp="#HSMS-0089-0001">
+            <div type="texte" corresp="#HSMS-0089-0001">
                 <lg>
                     <l><lb break="yes"/>
                         <g ref="#calderon1"/> Quiero mi firmamie<ex>n</ex>to;
@@ -27923,37 +27926,34 @@
                             p<ex>er</ex>deredes nada. </l>
                 </lg>
             </div>
-            <back>
-                <div type="colophon">
-                    <lg>
-                        <l><lb break="yes"/><g ref="#calderon1"/>
-                            <supplied>Se quisierdes</supplied> saber;
-                                q<ex>u</ex><hi rend="superscript">i</hi>en
-                            escreuio <supplied>este</supplied> ditado. </l>
-                        <l><lb break="yes"/><supplied>Johan lore<ex>n</ex>ço
-                                bon.</supplied> cl<ex>er</ex>igo &amp; ondrado. </l>
-                        <l><lb break="yes"/><supplied>natural de
-                                astorga;</supplied> de ma<ex>n</ex>nas bien
-                            temprado. </l>
-                        <l><lb break="yes"/><supplied>El dia del
-                                iuyzio;</supplied> dios sea mio pagado Amen. </l>
-                        <l>
-                            <lb break="yes"/>
-                            <foreign xml:lang="lat"><supplied>Finito
-                                    libro;</supplied> reddatur
-                                    <supplied>se</supplied>na
-                                magistro.</foreign>
-                            <pb n="154r"/>
-                            <cb type="single-column"/>
-                        </l>
-                        <l>
-                            <lb break="yes"/>
-                            <figure type="illumination"/>
-                            <pb n="154v"/>
-                        </l>
-                    </lg>
-                </div>
-            </back>
+            <div type="colophon">
+                <lg>
+                    <l><lb break="yes"/><g ref="#calderon1"/>
+                        <supplied>Se quisierdes</supplied> saber; q<ex>u</ex><hi
+                            rend="superscript">i</hi>en escreuio
+                            <supplied>este</supplied> ditado. </l>
+                    <l><lb break="yes"/><supplied>Johan lore<ex>n</ex>ço
+                            bon.</supplied> cl<ex>er</ex>igo &amp; ondrado. </l>
+                    <l><lb break="yes"/><supplied>natural de astorga;</supplied>
+                        de ma<ex>n</ex>nas bien temprado. </l>
+                    <l><lb break="yes"/><supplied>El dia del iuyzio;</supplied>
+                        dios sea mio pagado Amen. </l>
+                    <l>
+                        <lb break="yes"/>
+                        <foreign xml:lang="lat"><supplied>Finito
+                                libro;</supplied> reddatur
+                                <supplied>se</supplied>na magistro.</foreign>
+                        <pb n="154r"/>
+                        <cb type="single-column"/>
+                    </l>
+                    <l>
+                        <lb break="yes"/>
+                        <figure type="illumination"/>
+                        <pb n="154v"/>
+                    </l>
+                </lg>
+            </div>
+
         </body>
     </text>
 </TEI>
