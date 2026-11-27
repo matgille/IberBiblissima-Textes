@@ -1,4 +1,4 @@
-<?xml-model href="/home/mgl/Bureau/Travail/projets/Biblissima-Text/Transform/schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -193,7 +193,6 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -201,14 +200,13 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure match="/TEI/text/body/div" use="@n"
+                    unit="chapter">
+                    <citeStructure match=".//milestone[@unit='section']"
+                        use="@n" unit="section" delim="."/>
+                </citeStructure>
             </refsDecl>
             <classDecl>
                 <taxonomy>
@@ -279,7 +277,7 @@
         </encodingDesc>
     </teiHeader>
     <text>
-        <front>
+        <body>
             <div type="sommaire">
                 <p><pb n="51r"/>
                     <fw rend="titre-courant">\ Lj</fw>
@@ -1351,8 +1349,7 @@
                         nj<ex>n</ex>guno no<ex>n</ex> sea osado de uenjr
                         cont<ex>r</ex><hi rend="superscript">a</hi> ello.</p>
             </div>
-        </front>
-        <body n="1">
+
             <div type="section" n="1">
                 <div type="sous-section" subtype="titulo" n="1">
                     <head>
@@ -2402,8 +2399,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>nj<ex>n</ex>guno no<ex>n</ex> sea osado de
+                        <p><!--<wrapper><lb break="yes"/>nj<ex>n</ex>guno no<ex>n</ex> sea osado de
                         co<ex>m</ex>prar. nj<ex>n</ex> de tomar. a
                     pen<ex>n</ex>os cali&#231;es nj<ex>n</ex>
                     <lb break="yes"/>libros. nj<ex>n</ex> cru<choice xmlns="http://www.tei-c.org/ns/1.0">
@@ -3015,8 +3011,7 @@
                         <head><hi rend="rubrique">.Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>desechados por sospechosos d<ex>e</ex>los
+                        <p><!--<wrapper><lb break="yes"/>desechados por sospechosos d<ex>e</ex>los
                     pleytos q<ex>ue</ex> no<ex>n</ex> los judgue<ex>n</ex>. Si
                     el al<lb break="no"/>call<ex>e</ex> ha parte enla
                         dema<ex>n</ex>da sobre q<ex>ue</ex> es <add hand="#self">el</add> pl<ex>e</ex>ito: o si es parient<ex>e</ex> de
@@ -3714,8 +3709,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>ar&#231;ob<ex>is</ex>po o ob<ex>is</ex>po aya
+                        <p><!--<wrapper><lb break="yes"/>ar&#231;ob<ex>is</ex>po o ob<ex>is</ex>po aya
                         pl<ex>e</ex>ito co<ex>n</ex> otro alguno den cada uno
                     dellos q<ex>u</ex><hi rend="superscript">i</hi>
                     <lb break="yes"/>razone por si. ca no<ex>n</ex> es guisado
@@ -3726,10 +3720,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>i acaesçiere
-                                q<ex>ue</ex> Rey o jnfant<ex>e</ex> fijo de Rey
-                            &amp; de Reyna o <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>i acaesçiere q<ex>ue</ex> Rey o
+                                jnfant<ex>e</ex> fijo de Rey &amp; de Reyna o <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -4068,8 +4061,7 @@
                         <head><hi rend="rubrique">Ley .xv<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>responder den todos un
+                        <p><!--<wrapper><lb break="yes"/>responder den todos un
                         p<ex>er</ex>son<ex>er</ex>o. ca no<ex>n</ex> es
                         razo<ex>n</ex> q<ex>ue</ex> un pl<ex>e</ex>ito se ra<lb break="no"/>zone por muchos. </wrapper>--><hi
                                 rend="initiale" n="2">S</hi>i much<ex>o</ex>s an
@@ -4121,8 +4113,7 @@
                         <head><hi rend="rubrique">Ley .xvij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>ganar por aq<ex>ue</ex>llo q<ex>ue</ex> el
+                        <p><!--<wrapper><lb break="yes"/>ganar por aq<ex>ue</ex>llo q<ex>ue</ex> el
                         p<ex>er</ex>son<ex>er</ex>o gana o meiora en su
                         pl<ex>e</ex>ito. assi <lb break="yes"/>mandamos
                         q<ex>ue</ex> sufra el dan<ex>n</ex>o q<ex>ue</ex> por el
@@ -4145,10 +4136,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">O</hi>trossi
-                            ma<ex>n</ex>damos q<ex>ue</ex> assi com<ex>m</ex>o
-                            el duen<ex>n</ex>o d<ex>e</ex>la uoz q<ex>u</ex><hi
+                    </wrapper>--><hi rend="initiale"
+                                n="2">O</hi>trossi ma<ex>n</ex>damos
+                                q<ex>ue</ex> assi com<ex>m</ex>o el
+                                duen<ex>n</ex>o d<ex>e</ex>la uoz q<ex>u</ex><hi
                                 rend="superscript">i</hi>ere <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -4663,8 +4654,7 @@
                         <head><hi rend="rubrique">.Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>Et aq<ex>ue</ex>l q<ex>ue</ex> la toujere:
+                        <p><!--<wrapper><lb break="yes"/>Et aq<ex>ue</ex>l q<ex>ue</ex> la toujere:
                     la enagenare ant<ex>e</ex> q<ex>ue</ex> sea librada por <lb break="yes"/>juyzio. o por abene<ex>n</ex>&#231;ia: en poder
                     del dema<ex>n</ex>dador ssea d<ex>e</ex>la dema<ex>n</ex>dar
                         <lb break="yes"/>a aq<ex>ue</ex>l q<ex>ue</ex> la
@@ -4672,9 +4662,9 @@
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">Libro .ij<hi rend="superscript">o</hi>. .<supplied>T<ex>itul</ex><hi rend="superscript">o</hi> .j<hi rend="superscript">o</hi>.</supplied> \
                                 <supplied>Lxvj<hi rend="superscript">o</hi></supplied></fw>
                     <cb type="single-column"/><lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>j alguna cosa fuere
-                            metida en co<ex>n</ex>tienda de juyzio; <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>j alguna cosa fuere metida en
+                                co<ex>n</ex>tienda de juyzio; <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -5126,8 +5116,7 @@
                         <head><hi rend="rubrique">Ley .viij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>en las baylias no<ex>n</ex> pueden auer sus
+                        <p><!--<wrapper><lb break="yes"/>en las baylias no<ex>n</ex> pueden auer sus
                     mayores p<ex>ar</ex>a dema<ex>n</ex>dar sus <lb break="yes"/>derechos: sobr<ex>e</ex> las cosas q<ex>ue</ex>
                         p<ex>er</ex>tenes&#231;en a sus baylias. Et por q<ex>ue</ex>
                         aqu<supplied>i</supplied> re<supplied>s</supplied><lb break="no"/>&#231;iben dan<ex>n</ex>os &amp; menoscabos las
@@ -5179,9 +5168,9 @@
                         q<ex>u</ex><hi rend="superscript">a</hi>l q<ex>u</ex><hi rend="superscript">i</hi>er sin ma<ex>n</ex>dado special
                     de su mayor. o sin p<ex>er</ex>son<ex>er</ex>ia de su <lb break="yes"/>carta assi com<ex>m</ex>o ma<ex>n</ex>da la
                     ley segu<ex>n</ex>da del titulo delos p<ex>er</ex>soneros.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">P</hi>or q<ex>ue</ex> los
-                                come<ex>n</ex>dadores de q<ex>u</ex><hi
+                        </wrapper>--><hi rend="initiale"
+                                n="2">P</hi>or q<ex>ue</ex> los
+                            come<ex>n</ex>dadores de q<ex>u</ex><hi
                                 rend="superscript">a</hi>l q<choice>
                                 <corr><ex>u</ex><hi rend="superscript"
                                     >i</hi></corr>
@@ -5600,8 +5589,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>algu<ex>n</ex>a cosa o el mismo judgare
+                        <p><!--<wrapper><lb break="yes"/>algu<ex>n</ex>a cosa o el mismo judgare
                         algu<ex>n</ex> juyzio q<ex>ue</ex> no<ex>n</ex> sea
                         afina<lb break="no"/>do pueda lo eme<ex>n</ex>dar: si
                         ente<ex>n</ex>diere q<ex>ue</ex> erro en lo q<ex>ue</ex>
@@ -5616,10 +5604,9 @@
                     judgar. <pb n="69v"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">Libro .ij<hi rend="superscript">o</hi>. .T<ex>itul</ex><hi rend="superscript">o</hi> .iij<hi rend="superscript">o</hi>.</fw>
                     <cb type="single-column"/><lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>vando el
-                                alcall<ex>e</ex> ma<ex>n</ex>dare peyndrar:
-                            testar o embargar <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>vando el alcall<ex>e</ex>
+                                ma<ex>n</ex>dare peyndrar: testar o embargar <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -6194,8 +6181,7 @@
                         <head><hi rend="rubrique">.Ley .vj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>o en su t<ex>er</ex>mjno o en su judgo
+                        <p><!--<wrapper><lb break="yes"/>o en su t<ex>er</ex>mjno o en su judgo
                         fuere<ex>n</ex> y aplazados. al menos <lb break="yes"/>la una uegada. en p<ex>er</ex>sona: desi otras dos uegadas
                     en su morada. <lb break="yes"/>&amp; no<ex>n</ex>
                         quisiere<ex>n</ex> uenir o co<ex>m</ex>plir de
@@ -6337,10 +6323,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">A</hi>q<ex>ue</ex>llos
-                                q<ex>ue</ex> seyendo p<ex>re</ex>sentes en la
-                            villa o en el logar <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">A</hi>q<ex>ue</ex>llos q<ex>ue</ex>
+                            seyendo p<ex>re</ex>sentes en la villa o en el logar <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -6750,8 +6735,7 @@
                         <head><hi rend="rubrique">.Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>ere<ex>n</ex> uenir al plazo: &amp; si
+                        <p><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>ere<ex>n</ex> uenir al plazo: &amp; si
                         ujene<ex>n</ex> no<ex>n</ex> q<ex>u</ex><hi rend="superscript">i</hi>ere<ex>n</ex>
                     dema<ex>n</ex>dar: o ua<ex>n</ex> se de ant<ex>e</ex>
                     <lb break="yes"/>el alcall<ex>e</ex> sin su
@@ -6803,9 +6787,9 @@
                         .m<ex>a</ex>r<ex>avedis</ex>. al alcall<ex>e</ex>. si lo
                         fiziere<ex>n</ex> Et en cabo no<ex>n</ex> sean oydos de
                         dema<ex>n</ex>dar. <lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">P</hi>or q<ex>ue</ex>
-                            acaesçe q<ex>ue</ex> los q<ex>ue</ex> fa<choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">P</hi>or q<ex>ue</ex> acaesçe q<ex>ue</ex>
+                            los q<ex>ue</ex> fa<choice>
                                 <orig>ƽ</orig>
                                 <reg>z</reg>
                             </choice>e<ex>n</ex> apla<choice>
@@ -7901,8 +7885,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> p<ex>re</ex>gu<ex>n</ex>ta. <lb break="yes"/>la fazer en esta man<ex>er</ex>a. el
+                        <p><!--<wrapper><g ref="#calderon2"/> p<ex>re</ex>gu<ex>n</ex>ta. <lb break="yes"/>la fazer en esta man<ex>er</ex>a. el
                         alcall<ex>e</ex>. o el esc<ex>r</ex><hi rend="superscript">i</hi>uan<ex>o</ex>. q<ex>ue</ex> ha
                     de re&#231;ebir la jura <lb break="yes"/>deue tomar al judio o
                     judia por la mano: Et deue assi dezir. juras me tu <lb break="yes"/>fulan judio. por aq<ex>ue</ex>l dio de
@@ -7932,9 +7915,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">I</hi>Vdios aujendo a
-                            jurar la jura d<ex>e</ex>la manq<ex>u</ex><hi
+                    </wrapper>--><hi rend="initiale"
+                                n="2">I</hi>Vdios aujendo a jurar la jura
+                                d<ex>e</ex>la manq<ex>u</ex><hi
                                 rend="superscript">a</hi>dra. deue<ex>n</ex>
                             <choice>
                                 <corr><g ref="#calderon2"/></corr>
@@ -8283,8 +8266,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>o sobre otro ganado q<ex>u</ex><hi rend="superscript">a</hi>l q<ex>u</ex><hi rend="superscript">i</hi>er. aq<ex>ue</ex>l q<ex>ue</ex>
+                        <p><!--<wrapper><lb break="yes"/>o sobre otro ganado q<ex>u</ex><hi rend="superscript">a</hi>l q<ex>u</ex><hi rend="superscript">i</hi>er. aq<ex>ue</ex>l q<ex>ue</ex>
                     toujere la bestia o el ganado <lb break="yes"/>lo deue
                     tener. mje<ex>n</ex>tre q<ex>ue</ex> andudiere<ex>n</ex> en
                         pl<ex>e</ex>ito. Et si este tenedor dixiere q<ex>ue</ex>
@@ -8626,8 +8608,7 @@
                                     <sic/>
                                 </choice>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> la firiere. <lb break="yes"/>con<ex>n</ex>osciere la debda. Et dixiere
+                        <p><!--<wrapper><g ref="#calderon2"/> la firiere. <lb break="yes"/>con<ex>n</ex>osciere la debda. Et dixiere
                             q<supplied xmlns="http://www.tei-c.org/ns/1.0"><ex>ue</ex></supplied> g<ex>e</ex>la ha
                     pagada o g<ex>e</ex>la q<ex>u</ex><hi rend="superscript">i</hi>to pon<lb break="no"/>gal el alcall<ex>e</ex>
                     plazo a q<ex>ue</ex> g<ex>e</ex>lo prueue. assi
@@ -8808,8 +8789,7 @@
                         <head><hi rend="rubrique">Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>de om<ex>ne</ex>s q<ex>ue</ex> sean
+                        <p><!--<wrapper><lb break="yes"/>de om<ex>ne</ex>s q<ex>ue</ex> sean
                     dolientes de guisa q<ex>ue</ex> no<ex>n</ex> puedan uenir
                     testimo-niar <pb n="81r"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">Libro .ij<hi rend="superscript">o</hi>. .T<ex>itul</ex><supplied><hi rend="superscript">o</hi></supplied>
@@ -9103,8 +9083,7 @@
                         <head><hi rend="rubrique">Ley .xvj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>contra el en algun pl<ex>e</ex>ito: luego
+                        <p><!--<wrapper><lb break="yes"/>contra el en algun pl<ex>e</ex>ito: luego
                         q<ex>ue</ex> las testimonias se abriere<ex>n</ex> di<lb break="no"/>ga lo q<ex>ue</ex> q<ex>u</ex><hi rend="superscript">i</hi>siere contra ellas. Et desi el
                         alcall<ex>e</ex>. del plazo. qual ujere guisa<lb break="no"/>do. pora dezir lo q<ex>ue</ex>
                         q<ex>u</ex><hi rend="superscript">i</hi>siere contra
@@ -9418,8 +9397,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>aq<ex>ue</ex>llo q<ex>ue</ex>
+                        <p><!--<wrapper><lb break="yes"/>aq<ex>ue</ex>llo q<ex>ue</ex>
                         dema<ex>n</ex>da muestre la al su co<ex>n</ex>tendedor
                     antel alcall<ex>e</ex>. &amp; del <lb break="yes"/>el
                     traslado della. Et el alcall<ex>e</ex> del plazo
@@ -9553,8 +9531,7 @@
                         <head><hi rend="rubrique">.Ley .vjj<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>su dema<ex>n</ex>da. Et las cartas se
+                        <p><!--<wrapper><lb break="yes"/>su dema<ex>n</ex>da. Et las cartas se
                         contradixiere<ex>n</ex> la una a la otra.
                         nj<ex>n</ex><lb break="no"/>guna dellas no<ex>n</ex>
                     uala. Ca en su poder era de demostrar aq<ex>ue</ex>lla carta
@@ -9579,10 +9556,9 @@
                         embiare<ex>n</ex> carta seellada co<ex>n</ex> su Seello
                     del Rey. q<ex>ue</ex>
                     <lb break="yes"/>no<ex>n</ex> fagan nj<ex>n</ex>guna cosa.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>vien aduxiere cartas
-                            algunas antel alcall<ex>e</ex>. p<ex>ar</ex>a
-                                p<ex>ro</ex>uar <choice>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>vien aduxiere cartas algunas antel
+                                alcall<ex>e</ex>. p<ex>ar</ex>a p<ex>ro</ex>uar <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -10046,8 +10022,7 @@
                         <head><hi rend="rubrique">Ley .iij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>l<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
+                        <p><!--<wrapper><lb break="yes"/>l<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
                         <del>o</del>
                         <add>e</add>
                     </subst> touiere for&#231;ado de algu<ex>n</ex>a cosa
@@ -10137,8 +10112,7 @@
                         <head><hi rend="rubrique">.Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>o de pagar algu<ex>n</ex> debdo a plazo
+                        <p><!--<wrapper><lb break="yes"/>o de pagar algu<ex>n</ex> debdo a plazo
                         sen<ex>n</ex>alado si aq<ex>ue</ex>l a q<ex>u</ex><hi rend="superscript">i</hi> es tenudo ante <lb break="yes"/>del plazo le dema<ex>n</ex>dare no<ex>n</ex> sea tenido de
                     le responder. Et el alcall<ex>e</ex> del otro
                         ta<ex>n</ex><lb break="no"/>to de plazo adelante
@@ -10190,8 +10164,7 @@
                         <head><hi rend="rubrique">.Ley .vij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> no<ex>n</ex> deuie. <lb break="yes"/>dema<ex>n</ex>da q<ex>ue</ex>l faze su
+                        <p><!--<wrapper><g ref="#calderon2"/> no<ex>n</ex> deuie. <lb break="yes"/>dema<ex>n</ex>da q<ex>ue</ex>l faze su
                     conte<ex>n</ex>dedor si la defenssion rem<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
                         <del>e</del>
                         <add>a</add>
@@ -10232,8 +10205,8 @@
                         no<ex>n</ex> lo pueda fazer si no<ex>n</ex> se
                     acaes&#231;iere despues dela <lb break="yes"/>respuesta. ca
                         ento<ex>n</ex>&#231;e bie<ex>n</ex> la puede poner ante si.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>vien q<ex>u</ex><hi
+                        </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>vien q<ex>u</ex><hi
                                 rend="superscript">i</hi>er q<ex>ue</ex> aya
                             defenssion sobre la <choice>
                                 <corr><g ref="#calderon2"/></corr>
@@ -10439,8 +10412,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> demandare. <lb break="yes"/>en
+                        <p><!--<wrapper><g ref="#calderon2"/> demandare. <lb break="yes"/>en
                         p<ex>r</ex><hi rend="superscript">i</hi>sion o sandio
                         no<ex>n</ex> pierda su heredat por t<ex>iem</ex>po
                         nj<ex>n</ex> otra cosa. Ca la <lb break="yes"/>pena del
@@ -10498,8 +10470,7 @@
                         <head><hi rend="rubrique">Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>njngu<ex>n</ex> t<ex>iem</ex>po. mas
+                        <p><!--<wrapper><lb break="yes"/>njngu<ex>n</ex> t<ex>iem</ex>po. mas
                         q<ex>u</ex><hi rend="superscript">a</hi>ndo
                         q<ex>u</ex><hi rend="superscript">i</hi>er q<ex>ue</ex>
                     el o su voz la dema<ex>n</ex>dare cobre la. Ot<ex>r</ex><hi rend="superscript">o</hi>ssi <lb break="yes"/>ma<ex>n</ex>damos q<ex>ue</ex> las cosas de
@@ -10561,8 +10532,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>pierde om<ex>n</ex>e su derecho. Por ende
+                        <p><!--<wrapper><lb break="yes"/>pierde om<ex>n</ex>e su derecho. Por ende
                         q<ex>ue</ex>remos dar conseio a aq<ex>ue</ex>llos
                         q<ex>ue</ex>
                     <lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>siere<ex>n</ex> dema<ex>n</ex>dar su derecho.
@@ -10677,8 +10647,7 @@
                         <head><hi rend="rubrique">Ley .ix<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>por an<ex>n</ex>o &amp; dia com<ex>m</ex>o
+                        <p><!--<wrapper><lb break="yes"/>por an<ex>n</ex>o &amp; dia com<ex>m</ex>o
                     el cl<ex>er</ex>igo se defienda del lego. Et esto sea <lb break="yes"/>enlas cosas del cl<ex>er</ex>igo &amp;
                         no<ex>n</ex> enlas dela Eg<ex>es</ex>ia. </wrapper>--><hi
                                 rend="initiale" n="2">T</hi>Enemos por bien
@@ -10767,8 +10736,7 @@
                         <head><hi rend="rubrique">.Ley .xii<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>fu<ex>er</ex>e p<ex>re</ex>sente. &amp;
+                        <p><!--<wrapper><lb break="yes"/>fu<ex>er</ex>e p<ex>re</ex>sente. &amp;
                         aq<ex>ue</ex>l q<ex>ue</ex> dize q<ex>ue</ex> la cosa es
                     suya ujnjere ant<ex>e</ex>l al<lb break="no"/>call<ex>e</ex>
                         q<ex>ue</ex>rellar se del tenedor d<ex>e</ex>la cosa
@@ -10914,8 +10882,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>de Rey. o a dan<ex>n</ex>o de su tierra o
+                        <p><!--<wrapper><lb break="yes"/>de Rey. o a dan<ex>n</ex>o de su tierra o
                     en peligro de su alma asi com<ex>m</ex>o <lb break="yes"/>matar o furtar o for&#231;ar o ot<ex>r</ex><hi rend="superscript">a</hi> cosa desag<ex>u</ex><hi rend="superscript">i</hi>sada semeiante destas: tal
                         iura<lb break="no"/>me<ex>n</ex>to no<ex>n</ex> uala
                         nj<ex>n</ex> lo cu<ex>m</ex>pla. Ca el
@@ -11057,8 +11024,7 @@
                         <head><hi rend="rubrique">.Ley .vj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>co<ex>n</ex>tendedor q<ex>ue</ex> el
+                        <p><!--<wrapper><lb break="yes"/>co<ex>n</ex>tendedor q<ex>ue</ex> el
                         q<ex>u</ex><hi rend="superscript">i</hi>ere dexar
                         aq<ex>ue</ex>lla dema<ex>n</ex>da en su iura &amp; estar
                     por <lb break="yes"/>ella: en su escogen&#231;ia sea de lo iurar
@@ -11068,11 +11034,10 @@
                         uergue<ex>n</ex>&#231;a de iurar ante q<ex>u</ex><hi rend="superscript">i</hi>e<lb break="no"/>ren pagar lo
                         q<ex>ue</ex> no<ex>n</ex> deuen q<ex>ue</ex> iurar por
                     ello. <lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi><ex>u</ex><hi
-                                rend="superscript">a</hi>Ndo el q<ex>ue</ex>
-                                dema<ex>n</ex>da algu<ex>n</ex>a cosa en iuyzio
-                            dixiere a su <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi><ex>u</ex><hi rend="superscript"
+                                >a</hi>Ndo el q<ex>ue</ex> dema<ex>n</ex>da
+                                algu<ex>n</ex>a cosa en iuyzio dixiere a su <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -11164,7 +11129,7 @@
                         <head><hi rend="rubrique">.Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"><!--<wrapper><pb n="88v"/>
+                        <p><!--<wrapper><pb n="88v"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">Libro .ij<hi rend="superscript">o</hi>. .T<ex>itulo</ex> .xiiij<hi rend="superscript">o</hi>.</fw>
                     <cb type="single-column"/><lb break="yes"/>puedan dez<hi rend="superscript">i</hi><ex>r</ex> las partes
                         en<ex>e</ex>l iuyzio. el alcall<ex>e</ex> de la
@@ -11353,8 +11318,7 @@
                         <head><hi rend="rubrique">Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>sobre todo el pl<ex>e</ex>ito no<ex>n</ex>
+                        <p><!--<wrapper><lb break="yes"/>sobre todo el pl<ex>e</ex>ito no<ex>n</ex>
                     pueda en<ex>n</ex>ader nj<ex>n</ex> toller nj<ex>n</ex>
                     mudar nj<ex>n</ex>gu<ex>n</ex>a <lb break="yes"/>cosa en la
                         sente<ex>n</ex>cia mas. sob<supplied>re</supplied> las
@@ -11378,9 +11342,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">D</hi>Espues q<ex>ue</ex>
-                            el alcalle diere sente<ex>n</ex>cia o juyzio afinado <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">D</hi>Espues q<ex>ue</ex> el alcalle diere
+                                sente<ex>n</ex>cia o juyzio afinado <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -11768,8 +11732,7 @@
                         <head><hi rend="rubrique">.Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> la al&#231;ada <lb break="yes"/>alc<choice xmlns="http://www.tei-c.org/ns/1.0">
+                        <p><!--<wrapper><g ref="#calderon2"/> la al&#231;ada <lb break="yes"/>alc<choice xmlns="http://www.tei-c.org/ns/1.0">
                         <corr>'</corr>
                         <sic/>
                     </choice>ar al Rey de nj<ex>n</ex>gun juyzio si la
@@ -11794,9 +11757,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">M</hi>Andamos q<ex>ue</ex>
-                                njngu<ex>n</ex>o om<choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">M</hi>Andamos q<ex>ue</ex>
+                            njngu<ex>n</ex>o om<choice>
                                 <corr><ex>n</ex></corr>
                                 <sic/>
                             </choice>e no<ex>n</ex> se pueda <choice>
@@ -11977,8 +11940,7 @@
                         <head><hi rend="rubrique">.Ley .ix<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>al&#231;are. el alcall<ex>e</ex> no<ex>n</ex> le
+                        <p><!--<wrapper><lb break="yes"/>al&#231;are. el alcall<ex>e</ex> no<ex>n</ex> le
                     denueste njn le diga mal. por ello. mas <lb break="yes"/>re&#231;iba el al&#231;ada &amp; faga assi com<ex>m</ex>o
                         ma<ex>n</ex>da la ley. Ot<ex>r</ex><hi rend="superscript">o</hi>ssi ma<ex>n</ex>damos
                         q<ex>ue</ex> aq<ex>ue</ex>llos <lb break="yes"/>q<ex>ue</ex> se al&#231;aren q<ex>ue</ex> no<ex>n</ex> sean
@@ -11998,10 +11960,10 @@
                         <add>i</add>
                     </subst> el alcalle denostare / o abiltare <lb break="yes"/>a aq<ex>ue</ex>l q<ex>ue</ex> se al&#231;a de su iuyzio aya
                     esta pena sobr<ex>e</ex>dicha. <lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>
-                                om<ex>n</ex>e se agrauiare del juyzio
-                                q<ex>ue</ex> el alcall<ex>e</ex> diere &amp; se <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex> om<ex>n</ex>e se
+                            agrauiare del juyzio q<ex>ue</ex> el
+                                alcall<ex>e</ex> diere &amp; se <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -12448,8 +12410,7 @@
                         <head><hi rend="rubrique">.Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>casara<ex>n</ex> vno con otro sean tenidos
+                        <p><!--<wrapper><lb break="yes"/>casara<ex>n</ex> vno con otro sean tenidos
                     de lo complir. P<ex>er</ex>o si ante q<ex>ue</ex> ayan <lb break="yes"/>de veer uno co<ex>n</ex> otro. alguno
                     dellos se otorgare co<ex>n</ex> otro en tal guisa
                         q<ex>ue</ex>
@@ -12642,8 +12603,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>de q<ex>ue</ex> dar arras. Et
+                        <p><!--<wrapper><lb break="yes"/>de q<ex>ue</ex> dar arras. Et
                     p<ex>ro</ex>metiere ala mug<ex>ie</ex>r co<ex>n</ex>
                         q<ex>u</ex><hi rend="superscript">i</hi> casa
                         q<ex>ue</ex> g<ex>e</ex>las dara <lb break="yes"/>daq<ex>ue</ex>llo q<supplied xmlns="http://www.tei-c.org/ns/1.0"><ex>ue</ex></supplied>
@@ -12754,8 +12714,7 @@
                         <head><hi rend="rubrique">.Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>pan<ex>n</ex>os o en ot<ex>r</ex><hi rend="superscript">a</hi>s cosas a su esposa &amp;
+                        <p><!--<wrapper><lb break="yes"/>pan<ex>n</ex>os o en ot<ex>r</ex><hi rend="superscript">a</hi>s cosas a su esposa &amp;
                     muriere el esposo ante q<ex>ue</ex> aya <lb break="yes"/>q<ex>ue</ex> veer con ella &amp; la beso ante
                         q<ex>ue</ex> mur<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
                         <del><gap reason="illegible" extent="subword"/></del>
@@ -12782,9 +12741,9 @@
                         <del><gap reason="illegible" extent="subword"/></del>
                         <add>a</add>
                     </subst> delas do<lb break="no"/>nas q<ex>ue</ex> della ouo.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J el esposo dalguna
-                                mug<ex>ie</ex>r diere algunas donas en <choice>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J el esposo dalguna mug<ex>ie</ex>r
+                            diere algunas donas en <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -12972,8 +12931,7 @@
                         <head><hi rend="rubrique">.Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> amo<choice xmlns="http://www.tei-c.org/ns/1.0">
+                        <p><!--<wrapper><g ref="#calderon2"/> amo<choice xmlns="http://www.tei-c.org/ns/1.0">
                         <corr>s</corr>
                         <sic>s</sic>
                     </choice> a dos. <lb break="yes"/>en uno juras o palabras de
@@ -13041,9 +12999,9 @@
                     muebles comunales: Mas sobre <lb break="yes"/>las rayzes en
                         q<ex>ue</ex> no<ex>n</ex> cae esta dubda pueda cada uno
                     dellos p<ex>ro</ex>uar con <lb break="yes"/>dos testigos.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J ante q<ex>ue</ex>
-                            el marido &amp; la mug<ex>ie</ex>r oujere<ex>n</ex>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J ante q<ex>ue</ex> el marido &amp;
+                            la mug<ex>ie</ex>r oujere<ex>n</ex>
                             <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -13436,8 +13394,7 @@
                         <head><hi rend="rubrique">.Ley .vj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>mug<ex>ie</ex>r o si la mug<ex>ie</ex>r
+                        <p><!--<wrapper><lb break="yes"/>mug<ex>ie</ex>r o si la mug<ex>ie</ex>r
                     ouiere fijos de otro marido &amp; casare con <lb break="yes"/>algun om<ex>n</ex>e. Et q<ex>u</ex><hi rend="superscript">a</hi>l q<ex>u</ex><hi rend="superscript">i</hi>er
                     dellos ante q<ex>ue</ex> ayan partido fiziere alguna ga<lb break="no"/>nancia. o co<ex>m</ex>pra q<ex>u</ex><hi rend="superscript">i</hi>er sea mueble q<ex>u</ex><hi rend="superscript">i</hi>er rayz q<ex>u</ex><hi rend="superscript">i</hi>er vinjendo todos de
                         co<ex>n</ex>so<lb break="no"/>uno
@@ -13735,8 +13692,7 @@
                         <head><hi rend="rubrique">Ley .xj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>cogidos de las heredades muere el marido o
+                        <p><!--<wrapper><lb break="yes"/>cogidos de las heredades muere el marido o
                     finca el marido &amp; <lb break="yes"/>muere la
                         mug<ex>ie</ex>r. Estables&#231;emos q<ex>ue</ex> si los
                     fructos apares&#231;en en la heredat <lb break="yes"/>ala
@@ -13848,7 +13804,7 @@
                                     <sic/>
                                 </choice>.</hi>
                         </head>
-                        <p type="modified"><!--<wrapper><pb n="98r"/>
+                        <p><!--<wrapper><pb n="98r"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">Libro .iij<hi rend="superscript">o</hi>. .T<ex>itul</ex><hi rend="superscript">o</hi> .iiij<hi rend="superscript">o</hi>. \
                             xcviij<hi rend="superscript">o</hi></fw>
                     <cb type="single-column"/><lb break="yes"/>si alguno dellos
@@ -13937,8 +13893,7 @@
                                     <sic/>
                                 </choice>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><choice xmlns="http://www.tei-c.org/ns/1.0">
+                        <p><!--<wrapper><choice xmlns="http://www.tei-c.org/ns/1.0">
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice> dagua. <lb break="yes"/>t<ex>ie</ex>rra de algun
@@ -14251,8 +14206,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>om<ex>n</ex>e q<ex>ue</ex> no<ex>n</ex> sea
+                        <p><!--<wrapper><lb break="yes"/>om<ex>n</ex>e q<ex>ue</ex> no<ex>n</ex> sea
                     de edat de veynt<ex>e</ex> &amp; &#231;inco an<ex>n</ex>os
                         nj<ex>n</ex> loco njn here<lb break="no"/>ge. njn moro
                     njn judio nj<ex>n</ex> mudo nj<ex>n</ex> sordo por natura
@@ -14266,10 +14220,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">M</hi>Andamos q<ex>ue</ex>
-                                njngu<ex>n</ex> sieruo nin religioso
-                                nj<ex>n</ex> mug<ex>ie</ex>r nj<ex>n</ex>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">M</hi>Andamos q<ex>ue</ex> njngu<ex>n</ex>
+                            sieruo nin religioso nj<ex>n</ex> mug<ex>ie</ex>r
+                                nj<ex>n</ex>
                             <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -14461,8 +14415,7 @@
                                     <sic/>
                                 </choice>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>en juyzio para desfaz<ex>er</ex> la &amp;
+                        <p><!--<wrapper><lb break="yes"/>en juyzio para desfaz<ex>er</ex> la &amp;
                     porfiare en desfaz<ex>er</ex> la fasta q<ex>ue</ex> den <lb break="yes"/>el iuyzio pierda q<ex>u</ex><hi rend="superscript">a</hi>nto q<ex>ue</ex>l fue mandado
                     en aq<ex>ue</ex>lla manda: maguer sea <lb break="yes"/>judgado q<supplied xmlns="http://www.tei-c.org/ns/1.0"><ex>ue</ex></supplied> vala la manda.
                         Ot<ex>r</ex><hi rend="superscript">o</hi>ssi mandamos
@@ -14487,11 +14440,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>
-                                om<ex>n</ex>e ouiere parte en algu<ex>n</ex>a
-                            manda &amp; la cont<ex>r</ex><hi rend="superscript"
-                                >a</hi>llare <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex> om<ex>n</ex>e
+                            ouiere parte en algu<ex>n</ex>a manda &amp; la
+                                cont<ex>r</ex><hi rend="superscript">a</hi>llare <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -14815,8 +14767,7 @@
                         <head><hi rend="rubrique">.Ley .vj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>despues casare co<ex>n</ex> ella: estos
+                        <p><!--<wrapper><lb break="yes"/>despues casare co<ex>n</ex> ella: estos
                     fijos sean herederos legitimos: <lb break="yes"/>ta<ex>n</ex> bien en los bienes del padre
                         com<ex>m</ex>o dela madre. </wrapper>--><hi
                                 rend="initiale" n="2">S</hi>J om<ex>n</ex>e
@@ -14886,8 +14837,7 @@
                         <head><hi rend="rubrique">.Ley .viij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> mas p<ex>ro</ex>pinq<ex>u</ex><hi rend="superscript">o</hi>s <lb break="yes"/>co<ex>n</ex>
+                        <p><!--<wrapper><g ref="#calderon2"/> mas p<ex>ro</ex>pinq<ex>u</ex><hi rend="superscript">o</hi>s <lb break="yes"/>co<ex>n</ex>
                     otra &amp; ouiere fijos della: si esta co<ex>n</ex>
                         q<ex>u</ex><hi rend="superscript">i</hi> casa
                         no<ex>n</ex> sopiere q<ex>ue</ex> el era ca<lb break="no"/>sado a ot<choice xmlns="http://www.tei-c.org/ns/1.0">
@@ -14972,8 +14922,7 @@
                         <head><hi rend="rubrique">.Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>cutiano finq<ex>ue</ex> al viuo. Et si se
+                        <p><!--<wrapper><lb break="yes"/>cutiano finq<ex>ue</ex> al viuo. Et si se
                     casare tornelo a parti&#231;io<ex>n</ex> co<ex>n</ex> los <lb break="yes"/>herederos del muerto. Otrossi no<ex>n</ex>
                     sea tenido nj<ex>n</ex>gu<ex>n</ex>o de traher a par<lb break="no"/>ti&#231;io<ex>n</ex> las joyas nj<ex>n</ex> las
                     donas q<ex>ue</ex> traxo co<ex>n</ex>sigo en
@@ -15128,9 +15077,8 @@
                             mjente. </p>
                     </div>
                     <div type="sous-sous-section" n="15" subtype="ley">
-                        <head><hi rend="rubrique" type="merged">Ley +<lb
-                                    break="yes"/>.xv<hi rend="superscript"
-                                    >a</hi>. </hi>
+                        <head><hi rend="rubrique">Ley +<lb break="yes"/>.xv<hi
+                                    rend="superscript">a</hi>. </hi>
                         </head>
                         <p><lb break="yes"/><hi rend="initiale" n="2">T</hi>Odo
                                 om<ex>n</ex>e o toda mug<ex>ie</ex>r <choice>
@@ -15158,8 +15106,7 @@
                         <head><hi rend="rubrique">.Ley .xvj<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>co<ex>n</ex> ot<ex>r</ex><hi rend="superscript">a</hi> q<ex>ue</ex> ouiere fijos de
+                        <p><!--<wrapper><lb break="yes"/>co<ex>n</ex> ot<ex>r</ex><hi rend="superscript">a</hi> q<ex>ue</ex> ouiere fijos de
                     otro marido. Et amos ouieren fijos de <lb break="yes"/>co<ex>n</ex>souno. Si el marido o la mug<ex>ie</ex>r
                     muriere los fijos q<ex>ue</ex> fuere<ex>n</ex>
                         daq<ex>ue</ex>l muer<lb break="no"/>to parta<ex>n</ex>
@@ -15268,8 +15215,7 @@
                         <head><hi rend="rubrique">.Ley .xviij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>de sus fijos en casamje<ex>n</ex>to: sea
+                        <p><!--<wrapper><lb break="yes"/>de sus fijos en casamje<ex>n</ex>to: sea
                     tenudo el fijo de lo aduzir a par<lb break="no"/>ti&#231;io<ex>n</ex>
                     <supplied xmlns="http://www.tei-c.org/ns/1.0">co<ex>n</ex></supplied> los
                             <supplied xmlns="http://www.tei-c.org/ns/1.0">ot<ex>r</ex><hi rend="superscript">o</hi>s
@@ -15295,10 +15241,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">T</hi>Oda cosa
-                                    q<supplied><ex>ue</ex></supplied> el padre o
-                            la madre diere<ex>n</ex> a algu<ex>n</ex>o <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">T</hi>Oda cosa
+                                q<supplied><ex>ue</ex></supplied> el padre o la
+                            madre diere<ex>n</ex> a algu<ex>n</ex>o <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -15388,8 +15334,7 @@
                         <head><hi rend="rubrique">Ley .xxj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>natural no<ex>n</ex> deue heredar
+                        <p><!--<wrapper><lb break="yes"/>natural no<ex>n</ex> deue heredar
                         segu<ex>n</ex>d q<ex>ue</ex> dicho es. P<ex>er</ex>o si
                     el Rey lo q<ex>u</ex><hi rend="superscript">i</hi>sie<lb break="no"/>re faz<ex>er</ex> m<ex>er</ex>&#231;et puedal
                         faz<ex>er</ex> legitimo &amp; sea heredero ta<ex>n</ex>
@@ -15400,9 +15345,9 @@
                         aq<ex>ue</ex>l q<ex>ue</ex> no<ex>n</ex> es legitimo
                         p<ex>ar</ex>a auer ordenes &amp; benefi&#231;io. assi lo <lb break="yes"/>pueda legitimar el Rey p<ex>ar</ex>a
                     heredar &amp; p<ex>ar</ex>a las ot<ex>r</ex><hi rend="superscript">a</hi>s cosas temporales. <lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">M</hi>Aguer q<ex>ue</ex>
-                            el fijo q<ex>ue</ex> no<ex>n</ex> es de
+                    </wrapper>--><hi rend="initiale"
+                                n="2">M</hi>Aguer q<ex>ue</ex> el fijo
+                                q<ex>ue</ex> no<ex>n</ex> es de
                                 bendiçio<ex>n</ex> o q<ex>ue</ex> no<ex>n</ex>
                             es fijo <choice>
                                 <corr><g ref="#calderon2"/></corr>
@@ -15521,8 +15466,7 @@
                         <head><hi rend="rubrique">Ley .iij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>complidos fagales el alcalle desembargar
+                        <p><!--<wrapper><lb break="yes"/>complidos fagales el alcalle desembargar
                     sus bien<ex>n</ex>es si ente<ex>n</ex><lb break="no"/>dieren
                         q<ex>ue</ex> sabra<ex>n</ex> dellos bien vsar. Et si
                     ouiere y alguno dellos de mal <lb break="yes"/>recabdo o de
@@ -15550,8 +15494,8 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>vando los huerfanos
+                    </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>vando los huerfanos
                                 vinjere<ex>n</ex> a edat de seze an<ex>n</ex>os <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -16060,8 +16004,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>a su padre o auuelo tuelle de
+                        <p><!--<wrapper><lb break="yes"/>a su padre o auuelo tuelle de
                         faz<ex>er</ex> la manda q<ex>ue</ex> q<ex>ue</ex>rria
                     fazer. <lb break="yes"/>Et faze g<ex>e</ex>la fazer
                         dot<ex>r</ex><hi rend="superscript">a</hi>
@@ -16306,8 +16249,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>q<ex>ue</ex> el esc<ex>r</ex><hi rend="superscript">i</hi>pto fuere fecho mas ante
+                        <p><!--<wrapper><lb break="yes"/>q<ex>ue</ex> el esc<ex>r</ex><hi rend="superscript">i</hi>pto fuere fecho mas ante
                         q<ex>ue</ex> el esc<ex>r</ex><hi rend="superscript">i</hi>pto sea fecho: q<ex>u</ex><hi rend="superscript">a</hi>l <lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>er de las partes pueda lo
                     desfazer. mas si no<ex>n</ex> fuere fecho por es<lb break="no"/>c<ex>r</ex><hi rend="superscript">i</hi>pto
                     pueda la desfazer ante q<ex>ue</ex> el p<ex>re</ex>cio sea
@@ -16394,8 +16336,7 @@
                         <head><hi rend="rubrique">.Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>dez<hi rend="superscript">i</hi><ex>r</ex>
+                        <p><!--<wrapper><lb break="yes"/>dez<hi rend="superscript">i</hi><ex>r</ex>
                         q<ex>ue</ex> uendio mal su cosa mag<ex>uer</ex>
                         q<ex>ue</ex> sea uerdat fueras ende si la <lb break="yes"/>cosa ualia q<ex>u</ex><hi rend="superscript">a</hi>ndo la uendio mas dos
                         ta<ex>n</ex>to de por q<ex>u</ex><hi rend="superscript">a</hi>nto la el uendio. co<lb break="no"/>m<ex>m</ex>o
@@ -16503,8 +16444,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>en tene<ex>n</ex>&#231;ia della sea tenjdo delo
+                        <p><!--<wrapper><lb break="yes"/>en tene<ex>n</ex>&#231;ia della sea tenjdo delo
                     defender co<ex>n</ex> ella a derecho. <lb break="yes"/>q<ex>u</ex><hi rend="superscript">a</hi>ndo
                         q<ex>u</ex><hi rend="superscript">i</hi>er q<ex>ue</ex>
                         algu<ex>n</ex>o g<ex>e</ex>lo dema<ex>n</ex>dare por
@@ -16671,8 +16611,7 @@
                         <head><hi rend="rubrique">Ley .ix<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>P<ex>er</ex>o si el se consentiere uender
+                        <p><!--<wrapper><lb break="yes"/>P<ex>er</ex>o si el se consentiere uender
                     por auer parte del p<ex>re</ex>&#231;io. si des<lb break="no"/>pues el otro por el q<ex>u</ex><hi rend="superscript">i</hi>siere desfazer la uendida por tal razo<ex>n</ex>
                         no<ex>n</ex> pueda. <lb break="yes"/>Et si el despues o
                         ot<ex>r</ex><hi rend="superscript">o</hi> por el
@@ -16775,8 +16714,7 @@
                         <head><hi rend="rubrique">Ley xj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>el cont<ex>r</ex><hi rend="superscript">a</hi> aq<ex>ue</ex>l q<ex>ue</ex> fue su
+                        <p><!--<wrapper><lb break="yes"/>el cont<ex>r</ex><hi rend="superscript">a</hi> aq<ex>ue</ex>l q<ex>ue</ex> fue su
                     sen<ex>n</ex>or se leua<ex>n</ex>tare soberuiosa
                         mjent<ex>e</ex>
                     <lb break="yes"/>&amp; le apusiere algu<ex>n</ex> mal. de el
@@ -16853,8 +16791,7 @@
                         <head><hi rend="rubrique">Ley .xiiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>siere uender. si om<ex>n</ex>e daq<ex>ue</ex>l
+                        <p><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>siere uender. si om<ex>n</ex>e daq<ex>ue</ex>l
                     auuelengo onde ujn<gap reason="illegible" extent="subword"/>
                     la rayz. <lb break="yes"/>la q<ex>u</ex><hi rend="superscript">i</hi>siere comp<ex>r</ex><hi rend="superscript">a</hi>r tanto por tanto ayala ante
                         q<ex>ue</ex> ot<ex>r</ex><hi rend="superscript">o</hi>
@@ -16912,10 +16849,10 @@
                     heredat q<ex>ue</ex> ouo por heren&#231;ia de padre o de madre. o
                     de <lb break="yes"/>auuelo o de visauuelo o de
                         ot<ex>r</ex><hi rend="superscript">o</hi> de su linage.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">T</hi>Odo om<ex>n</ex>e
-                                q<ex>ue</ex> heredare de pat<ex>r</ex><hi
-                                rend="superscript">i</hi>monio / o de auuelengo <choice>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">T</hi>Odo om<ex>n</ex>e q<ex>ue</ex>
+                            heredare de pat<ex>r</ex><hi rend="superscript"
+                                >i</hi>monio / o de auuelengo <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -17090,8 +17027,7 @@
                         <head><hi rend="rubrique">.Ley .xviij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>costu<ex>m</ex>bre de antigo
+                        <p><!--<wrapper><lb break="yes"/>costu<ex>m</ex>bre de antigo
                     t<ex>iem</ex>po g<ex>u</ex><hi rend="superscript">a</hi>rdado siempre fasta aq<ex>u</ex><hi rend="superscript">i</hi> q<ex>ue</ex> nj<ex>n</ex>gun
                         <supplied>fi</supplied><lb break="no"/>dalgo
                         om<ex>n</ex>e nj<ex>n</ex> mugier no<ex>n</ex>
@@ -17275,16 +17211,15 @@
                                 rend="superscript">s</hi> ca<ex>m</ex>bios.</hi>
                     </head>
                     <div type="prologue" n="335">
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>se entie<ex>n</ex>de<ex>n</ex> en
+                        <p><!--<wrapper><lb break="yes"/>se entie<ex>n</ex>de<ex>n</ex> en
                         much<ex>o</ex>s de logares si es ue<ex>n</ex>dida o si
                     es cambio. Et <choice xmlns="http://www.tei-c.org/ns/1.0">
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">L</hi>Os cambios son tan
-                            allegados alas uendidas q<ex>ue</ex> adur <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">L</hi>Os cambios son tan allegados alas
+                            uendidas q<ex>ue</ex> adur <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -17441,8 +17376,7 @@
                         <head><hi rend="rubrique">Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>d<ex>e</ex>las t<ex>em</ex>porales:
+                        <p><!--<wrapper><lb break="yes"/>d<ex>e</ex>las t<ex>em</ex>porales:
                         q<ex>ue</ex> la no<ex>n</ex> ca<ex>m</ex>bie si
                         no<ex>n</ex> co<ex>n</ex> otra egl<ex>es</ex>ia. fuera
                     si fu<ex>er</ex>e <lb break="yes"/>y g<ex>r</ex><hi rend="superscript">a</hi>nt su
@@ -17457,12 +17391,12 @@
                         ot<ex>r</ex><hi rend="superscript">o</hi> la
                         egl<ex>es</ex>ia no<ex>n</ex> faga el cambio si
                         no<ex>n</ex> q<ex>u</ex><hi rend="superscript">i</hi>siere. <lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">M</hi>Andamos q<ex>ue</ex>
-                                q<ex>u</ex><hi rend="superscript"
-                                >a</hi>n<ex>d</ex>o la egl<ex>es</ex>ia
-                                q<ex>u</ex><hi rend="superscript">i</hi>siere
-                            cambiar algu<ex>n</ex>a cosa. <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">M</hi>Andamos q<ex>ue</ex> q<ex>u</ex><hi
+                                rend="superscript">a</hi>n<ex>d</ex>o la
+                                egl<ex>es</ex>ia q<ex>u</ex><hi
+                                rend="superscript">i</hi>siere cambiar
+                                algu<ex>n</ex>a cosa. <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -17578,8 +17512,7 @@
                         <head><hi rend="rubrique">Ley .iij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>al marido no<ex>n</ex>
+                        <p><!--<wrapper><lb break="yes"/>al marido no<ex>n</ex>
                         auien<supplied>do</supplied> fijo puede lo fazer despues
                         q<ex>ue</ex> fuere <lb break="yes"/>el an<ex>n</ex>o
                     passado desq<ex>ue</ex> casare &amp; no<ex>n</ex> ante. Et
@@ -17607,10 +17540,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J el marido
-                                q<ex>u</ex><hi rend="superscript">i</hi>siere
-                            dar algo ala mug<ex>ie</ex>r o la mug<ex>ie</ex>r <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J el marido q<ex>u</ex><hi
+                                rend="superscript">i</hi>siere dar algo ala
+                                mug<ex>ie</ex>r o la mug<ex>ie</ex>r <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -17741,8 +17674,7 @@
                                     <sic/>
                                 </choice>vij<hi rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>razo<ex>n</ex> de muerte. Et en sanidat sin
+                        <p><!--<wrapper><lb break="yes"/>razo<ex>n</ex> de muerte. Et en sanidat sin
                     manda. la dona&#231;io<ex>n</ex> q<ex>ue</ex> es fecha <lb break="yes"/>por manda. pueda la aq<ex>ue</ex>l
                         q<ex>ue</ex> la fizo dar a otro o retener la
                         p<ex>ar</ex>a si si q<ex>u</ex><hi rend="superscript">i</hi>siere. Et <lb break="yes"/>la q<ex>ue</ex> es
@@ -17758,10 +17690,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">D</hi>Onaciones
-                                q<ex>ue</ex> se faze<ex>n</ex> en dos
-                                man<ex>er</ex>as en manda por <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">D</hi>Onaciones q<ex>ue</ex> se
+                                faze<ex>n</ex> en dos man<ex>er</ex>as en manda
+                            por <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -18587,8 +18519,7 @@
                         <head><hi rend="rubrique">Ley .viij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>p<ex>ar</ex>a matar el fuego
+                        <p><!--<wrapper><lb break="yes"/>p<ex>ar</ex>a matar el fuego
                     algu<ex>n</ex>a cosa d<ex>e</ex>las suyas o delas
                         q<ex>ue</ex> tenie <lb break="yes"/>en g<ex>u</ex><hi rend="superscript">a</hi>rda robaren o
                     furtare<ex>n</ex>: el q<ex>ue</ex> lo robo peche la a
@@ -18612,10 +18543,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J casa dalguno se
-                            ençendiere: &amp; los q<ex>ue</ex> ua<ex>n</ex>
-                            ayudar <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J casa dalguno se ençendiere: &amp;
+                            los q<ex>ue</ex> ua<ex>n</ex> ayudar <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -18741,8 +18671,7 @@
                         <head><hi rend="rubrique">Ley .xj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>comje<ex>n</ex>da no<ex>n</ex> la de al uno
+                        <p><!--<wrapper><lb break="yes"/>comje<ex>n</ex>da no<ex>n</ex> la de al uno
                     menos del ot<ex>r</ex><hi rend="superscript">o</hi>. saluo
                     si fuesse puesto. Et si <lb break="yes"/>la diere a
                         q<ex>u</ex><hi rend="superscript">a</hi>l q<ex>u</ex><hi rend="superscript">i</hi>er dellos sin mandado
@@ -18759,10 +18688,10 @@
                     fiziere peche el dan<ex>n</ex>o doblado q<ex>ue</ex> por
                     ende le ujniere <lb break="yes"/>a aq<ex>ue</ex>l
                         q<ex>ue</ex> no<ex>n</ex> dio la carta. <g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>o
-                            touiere algu<ex>n</ex>a cosa de dos om<ex>n</ex>es o
-                            de mas en <g ref="#calderon2"/>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex>o touiere
+                                algu<ex>n</ex>a cosa de dos om<ex>n</ex>es o de
+                            mas en <g ref="#calderon2"/>
                             <lb break="yes"/><lb break="yes"/>comje<ex>n</ex>da
                                 no<ex>n</ex> la de al uno menos del
                                 ot<ex>r</ex><hi rend="superscript">o</hi>. saluo
@@ -19103,8 +19032,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>toller fasta el plazo: fueras si
+                        <p><!--<wrapper><lb break="yes"/>toller fasta el plazo: fueras si
                         q<ex>u</ex><hi rend="superscript">i</hi>siere refazerla
                     aujendo lo <lb break="yes"/>mester la casa: o si
                         en<ex>e</ex>lla fiziere dan<ex>n</ex>o taiando la madera
@@ -19126,10 +19054,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>o
-                            lugare su casa a ot<ex>r</ex><hi rend="superscript"
-                                >o</hi> a plazo: no<ex>n</ex> gela pueda <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex>o lugare su casa a
+                                ot<ex>r</ex><hi rend="superscript">o</hi> a
+                            plazo: no<ex>n</ex> gela pueda <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -19272,8 +19200,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>o p<ex>ar</ex>a siempr<ex>e</ex>. Et si el
+                        <p><!--<wrapper><lb break="yes"/>o p<ex>ar</ex>a siempr<ex>e</ex>. Et si el
                         q<ex>u</ex><hi rend="superscript">i</hi> las diere o el
                         q<ex>u</ex><hi rend="superscript">i</hi> las tomare
                     muriere <lb break="yes"/>ante del plazo sus herederos
@@ -19448,8 +19375,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>er
+                        <p><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>er
                     diga cada uno por todo q<ex>u</ex><hi rend="superscript">i</hi>er no<ex>n</ex>: en su uoluntad sea de
                         dema<ex>n</ex>dar <lb break="yes"/>a todos de so uno o a
                         q<ex>u</ex><hi rend="superscript">a</hi>l q<ex>u</ex><hi rend="superscript">i</hi>er dellos. Et si al uno
@@ -19668,8 +19594,7 @@
                         <head><hi rend="rubrique">Ley .xj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> enfio <lb break="yes"/>del plazo
+                        <p><!--<wrapper><g ref="#calderon2"/> enfio <lb break="yes"/>del plazo
                         q<ex>ue</ex> co<ex>n</ex> el puso o al plazo
                         q<ex>ue</ex> el alcalle pusiere. si la fiadu<lb break="no"/>ra no<ex>n</ex> fue fecha a plazo pechel
                         q<ex>u</ex><hi rend="superscript">a</hi>nto por el pecho
@@ -19686,9 +19611,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J el fiador pechare
-                            por aq<ex>ue</ex>l a q<ex>u</ex><hi
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J el fiador pechare por
+                                aq<ex>ue</ex>l a q<ex>u</ex><hi
                                 rend="superscript">i</hi> fio. despues <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -20106,8 +20031,7 @@
                         <head><hi rend="rubrique">.Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>por njngu<ex>n</ex>a cosa sin mandado del
+                        <p><!--<wrapper><lb break="yes"/>por njngu<ex>n</ex>a cosa sin mandado del
                     alcalle o del merino si en<ex>e</ex>l pl<ex>e</ex>ito <lb break="yes"/><supplied xmlns="http://www.tei-c.org/ns/1.0">no<ex>n</ex></supplied> fuere
                     puesto q<ex>ue</ex> peyndre por si q<ex>u</ex><hi rend="superscript">a</hi>ndo q<ex>u</ex><hi rend="superscript">i</hi>siere sin a<choice xmlns="http://www.tei-c.org/ns/1.0">
                         <corr>l</corr>
@@ -20173,8 +20097,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>pen<ex>n</ex>os o la peyndra manifiesta
+                        <p><!--<wrapper><lb break="yes"/>pen<ex>n</ex>os o la peyndra manifiesta
                         mjent<ex>e</ex>. Et si los ascondiere o los <lb break="yes"/>negare. ayan la pena q<ex>ue</ex> manda la
                     ley delos furtos. </wrapper>--><hi
                                 rend="initiale" n="2">Q</hi>Vi pen<ex>n</ex>os
@@ -20283,15 +20206,13 @@
                         <head><hi rend="rubrique">Ley .viij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>deffendemos q<ex>ue</ex> se no<ex>n</ex>
+                        <p><!--<wrapper><lb break="yes"/>deffendemos q<ex>ue</ex> se no<ex>n</ex>
                     pueda empen<ex>n</ex>ar. Et aq<ex>ue</ex>llas cosas
                         q<ex>ue</ex> se pue<lb break="no"/>den uender
                         aq<ex>ue</ex>llas se puede<ex>n</ex> empen<ex>n</ex>ar.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">T</hi>Oda cosa
-                                q<ex>ue</ex> es defendida por la ley
-                                q<ex>ue</ex> no<ex>n</ex> se pueda
+                        </wrapper>--><hi rend="initiale"
+                                n="2">T</hi>Oda cosa q<ex>ue</ex> es defendida
+                            por la ley q<ex>ue</ex> no<ex>n</ex> se pueda
                                     ue<supplied><ex>n</ex></supplied>der. <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -20343,13 +20264,12 @@
                         <head><hi rend="rubrique">Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>assi com<ex>m</ex>o ma<ex>n</ex>da la ley.
+                        <p><!--<wrapper><lb break="yes"/>assi com<ex>m</ex>o ma<ex>n</ex>da la ley.
                     Et por el p<ex>re</ex>cio delos pen<ex>n</ex>os no<ex>n</ex>
                     fuere <lb break="yes"/>ent<ex>er</ex>gado de su debdo pueda
                         dema<ex>n</ex>dar lo q<ex>ue</ex> fincare del debdo. <lb break="yes"/><g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>vis q<ex>u</ex><hi
+                    </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>vis q<ex>u</ex><hi
                                 rend="superscript">i</hi>er q<ex>ue</ex>
                                 pen<ex>n</ex>os tomare por su debdo. si los
                                 ue<ex>n</ex>diere <choice>
@@ -20577,8 +20497,7 @@
                         <head><hi rend="rubrique">Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>ot<ex>r</ex><hi rend="superscript">a</hi>
+                        <p><!--<wrapper><lb break="yes"/>ot<ex>r</ex><hi rend="superscript">a</hi>
                         c<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
                         <del>a</del>
                         <add>o</add>
@@ -20615,10 +20534,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>Vando
-                            algu<ex>n</ex>o es debdor por emp<ex>re</ex>stido o
-                            por uendida o por <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>Vando algu<ex>n</ex>o es debdor por
+                                emp<ex>re</ex>stido o por uendida o por <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -20893,8 +20811,7 @@
                         <head><hi rend="rubrique">Ley .xiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>de pagar los debdos q<ex>ue</ex>
+                        <p><!--<wrapper><lb break="yes"/>de pagar los debdos q<ex>ue</ex>
                         fiziero<ex>n</ex> sus antecessores a pro de la
                         egl<ex>es</ex>ia. <lb break="yes"/>mas las debdas
                         q<ex>ue</ex> no<ex>n</ex> fuero<ex>n</ex> fechas a pro
@@ -20981,8 +20898,7 @@
                         <head><hi rend="rubrique">Ley .xvj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>al plazo. el fiador pueda pagar el debdo
+                        <p><!--<wrapper><lb break="yes"/>al plazo. el fiador pueda pagar el debdo
                     maguer q<ex>ue</ex> g<ex>e</ex>lo defie<ex>n</ex>da <lb break="yes"/>el debdor. Et pueda despues
                     dema<ex>n</ex>dar a aq<ex>ue</ex>l q<ex>ue</ex>l metio por
                     fiador todo lo <lb break="yes"/>q<ex>ue</ex> el pagare por
@@ -21091,8 +21007,7 @@
                         <head><hi rend="rubrique">Ley .xix<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> el alcall<ex>e</ex>. <lb break="yes"/>fiar nj<ex>n</ex><choice xmlns="http://www.tei-c.org/ns/1.0">
+                        <p><!--<wrapper><g ref="#calderon2"/> el alcall<ex>e</ex>. <lb break="yes"/>fiar nj<ex>n</ex><choice xmlns="http://www.tei-c.org/ns/1.0">
                         <sic>n</sic>
                         <corr/>
                     </choice> fazer debda nj<ex>n</ex> estar en juyzio: mjentra
@@ -21227,8 +21142,7 @@
                         <head><hi rend="rubrique">Ley .xxij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>bestia o ot<ex>r</ex><hi rend="superscript">a</hi> cosa de q<ex>ue</ex> el ot<ex>r</ex><hi rend="superscript">o</hi> sea pagado: vala tal paga. Et
+                        <p><!--<wrapper><lb break="yes"/>bestia o ot<ex>r</ex><hi rend="superscript">a</hi> cosa de q<ex>ue</ex> el ot<ex>r</ex><hi rend="superscript">o</hi> sea pagado: vala tal paga. Et
                     mas no<ex>n</ex> gela pue<lb break="no"/>da
                     dema<ex>n</ex>dar. Ot<ex>r</ex><hi rend="superscript">o</hi>ssi si el diere otro su debdor: por mano
                     q<ex>ue</ex>l pague aq<ex>ue</ex>l debdo &amp; el
@@ -21443,8 +21357,7 @@
                         <head><hi rend="rubrique">Ley .j<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/><seg xmlns="http://www.tei-c.org/ns/1.0" ana="#glose"><add hand="#self"><g ref="#calderon1"/> e<supplied>n q<ex>ue</ex> ay
+                        <p><!--<wrapper><lb break="yes"/><seg xmlns="http://www.tei-c.org/ns/1.0" ana="#glose"><add hand="#self"><g ref="#calderon1"/> e<supplied>n q<ex>ue</ex> ay
                                 j <lb break="yes"/>ley</supplied></add></seg>
                     <lb break="yes"/>nj<ex>n</ex> sea osado de faz<ex>er</ex> su
                     fijo moro nj<ex>n</ex> iudio. Et si algu<ex>n</ex>o lo <lb break="yes"/>fiziere muera por ello. Et la muerte deste
@@ -21605,8 +21518,7 @@
                         <head><hi rend="rubrique">Ley .iij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/><ex>santa</ex> maria o cont<ex>r</ex><hi rend="superscript">a</hi> ot<ex>r</ex><hi rend="superscript">o</hi>
+                        <p><!--<wrapper><lb break="yes"/><ex>santa</ex> maria o cont<ex>r</ex><hi rend="superscript">a</hi> ot<ex>r</ex><hi rend="superscript">o</hi>
                     <ex>santo</ex> peche &#199;ient<ex>o</ex>
                         m<ex>a</ex>r<ex>avedis</ex> al Rey por cada <pb n="125v"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">.Libro .iiij<hi rend="superscript">o</hi>. .T<ex>itul</ex><hi rend="superscript">o</hi> .ij<hi rend="superscript">o</hi>.</fw>
@@ -21689,8 +21601,7 @@
                         <head><hi rend="rubrique">.Ley .vj<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> no<ex>n</ex> vala. <lb break="yes"/>osado de dar mas caro de dar tres por q<ex>u</ex><hi rend="superscript">a</hi>tro por todo el an<ex>n</ex>o.
+                        <p><!--<wrapper><g ref="#calderon2"/> no<ex>n</ex> vala. <lb break="yes"/>osado de dar mas caro de dar tres por q<ex>u</ex><hi rend="superscript">a</hi>tro por todo el an<ex>n</ex>o.
                     Et si mas <lb break="yes"/>caro lo diere no<ex>n</ex> vala.
                     Et si demas tomare tornelo doblado a aq<ex>ue</ex>l de
                         q<ex>u</ex><hi rend="superscript">i</hi> lo tomo. <lb break="yes"/>Et pl<ex>e</ex>ito
@@ -22044,8 +21955,7 @@
                         <head><hi rend="rubrique">.Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> a su duen<ex>n</ex>o. <lb break="yes"/>algu<ex>n</ex>a cosa q<ex>ue</ex> otro te<ex>n</ex>ga
+                        <p><!--<wrapper><g ref="#calderon2"/> a su duen<ex>n</ex>o. <lb break="yes"/>algu<ex>n</ex>a cosa q<ex>ue</ex> otro te<ex>n</ex>ga
                     en jur &amp; en poder &amp; en paz si el for&#231;a<lb break="no"/>dor algu<ex>n</ex> derecho y auie: pierda lo: Et si
                     derecho no<ex>n</ex> y auie ent<ex>er</ex>guelo co<ex>n</ex>
                     <lb break="yes"/>otro ta<ex>n</ex>to delo suyo <subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
@@ -22061,10 +21971,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>o
-                                ent<ex>r</ex><hi rend="superscript">a</hi>re o
-                            tomare por fuerça <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex>o ent<ex>r</ex><hi
+                                rend="superscript">a</hi>re o tomare por fuerça <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -22213,8 +22122,7 @@
                         <head><hi rend="rubrique">Ley .x<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>al merino o alos alcall<ex>e</ex>s: maguer
+                        <p><!--<wrapper><lb break="yes"/>al merino o alos alcall<ex>e</ex>s: maguer
                         q<ex>ue</ex> se abenga co<ex>n</ex> aq<ex>ue</ex>l
                         q<ex>ue</ex>l <lb break="yes"/>firio por los fieles o
                     por si o por ot<ex>r</ex><hi rend="superscript">o</hi>
@@ -22430,8 +22338,7 @@
                                     <sic/>
                                 </choice>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>rrobaren pechen q<ex>u</ex><hi rend="superscript">a</hi>tro a ta<ex>n</ex>to a
+                        <p><!--<wrapper><lb break="yes"/>rrobaren pechen q<ex>u</ex><hi rend="superscript">a</hi>tro a ta<ex>n</ex>to a
                         aq<ex>ue</ex>llos a q<ex>u</ex><hi rend="superscript">i</hi> lo robaro<ex>n</ex> contando <lb break="yes"/>aq<ex>ue</ex>llo q<ex>ue</ex> tomaro<ex>n</ex>. Et si
                         no<ex>n</ex> ouiere<supplied xmlns="http://www.tei-c.org/ns/1.0"><ex>n</ex></supplied> de
                         q<ex>ue</ex> lo pechar peche<ex>n</ex> lo q<ex>ue</ex>
@@ -22442,10 +22349,9 @@
                         robare<supplied xmlns="http://www.tei-c.org/ns/1.0"><ex>n</ex></supplied> o mataren
                         algu<ex>n</ex>a cosa: si oujeren de q<ex>ue</ex> lo <lb break="yes"/>pechar pechen la pena
                         s<supplied>obredicha</supplied>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">A</hi>Q<ex>ue</ex>llos
-                                q<ex>ue</ex> uan en hueste si algu<ex>n</ex>a
-                            cosa forçare<ex>n</ex> o <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">A</hi>Q<ex>ue</ex>llos q<ex>ue</ex> uan en
+                            hueste si algu<ex>n</ex>a cosa forçare<ex>n</ex> o <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -22513,8 +22419,7 @@
                         <head><hi rend="rubrique">Ley .xvij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>de aq<ex>ue</ex>llo q<ex>ue</ex> fuere
+                        <p><!--<wrapper><lb break="yes"/>de aq<ex>ue</ex>llo q<ex>ue</ex> fuere
                     robado por su demostramje<ex>n</ex>to &amp; el robador aya
                         <lb break="yes"/><supplied>la</supplied> pena
                         q<ex>ue</ex> manda la ley sobredicha. </wrapper>--><hi
@@ -22561,8 +22466,7 @@
                         <head><hi rend="rubrique">Ley .xix<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>vienda<ex>n</ex>t nj<ex>n</ex> a
+                        <p><!--<wrapper><lb break="yes"/>vienda<ex>n</ex>t nj<ex>n</ex> a
                         ot<ex>r</ex><hi rend="superscript">o</hi> om<ex>n</ex>e
                         q<ex>ue</ex> este en lauor de bueyes o en otra lauor
                         q<ex>ue</ex>
@@ -22763,18 +22667,16 @@
                         <head><hi rend="rubrique">Ley .xxv<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>Et si el duen<ex>n</ex>o le diere fiadores.
+                        <p><!--<wrapper><lb break="yes"/>Et si el duen<ex>n</ex>o le diere fiadores.
                     sobre la peyndra p<ex>ar</ex>a complir <lb break="yes"/>de
                     derecho &amp; la leuare o la t<ex>r</ex><hi rend="superscript">a</hi>snochare sin ma<ex>n</ex>dado
                     del alcalle o del meri<lb break="no"/><choice xmlns="http://www.tei-c.org/ns/1.0">
                         <corr>no</corr>
                         <sic/>
                     </choice> pechela com<ex>m</ex>o si fuesse de rrobo. <g ref="#calderon1"/>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">E</hi>L q<ex>ue</ex>
-                            peyndra fiziere tengala manjfiesta &amp;
-                                co<ex>n</ex>çeiera mjente <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">E</hi>L q<ex>ue</ex> peyndra fiziere
+                            tengala manjfiesta &amp; co<ex>n</ex>çeiera mjente <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -23058,8 +22960,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>muera por ello maguer q<ex>ue</ex>
+                        <p><!--<wrapper><lb break="yes"/>muera por ello maguer q<ex>ue</ex>
                         no<ex>n</ex> furte y nada. Et si algu<ex>n</ex>o furtare
                         al<lb break="no"/>guna cosa q<ex>ue</ex> vala
                         q<ex>u</ex><hi rend="superscript">a</hi>renta
@@ -23086,10 +22987,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">T</hi>Odo om<ex>n</ex>e
-                                q<ex>ue</ex> foradare casa o egl<ex>es</ex>ia
-                                q<ex>ue</ex>brantare para furtar <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">T</hi>Odo om<ex>n</ex>e q<ex>ue</ex>
+                            foradare casa o egl<ex>es</ex>ia
+                            q<ex>ue</ex>brantare para furtar <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -23246,8 +23147,7 @@
                         <head><hi rend="rubrique">Ley .xiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>su boda peche sesaent<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
+                        <p><!--<wrapper><lb break="yes"/>su boda peche sesaent<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
                         <del>e</del>
                         <add>a</add>
                     </subst> .m<ex>a</ex>r<ex>avedis</ex>. Et si los
@@ -23441,8 +23341,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> desfaga lo q<ex>ue</ex> fizo. <lb break="yes"/>sus bestias &amp; sus ganados meter a
+                        <p><!--<wrapper><g ref="#calderon2"/> desfaga lo q<ex>ue</ex> fizo. <lb break="yes"/>sus bestias &amp; sus ganados meter a
                     pas&#231;er en los logares q<ex>ue</ex> no<ex>n</ex>
                         sea<ex>n</ex>
                     <lb break="yes"/><supplied>&#231;</supplied>errados nj<ex>n</ex>
@@ -23455,8 +23354,8 @@
                         nj<ex>n</ex> de cortar arboles q<ex>ue</ex> lieuen
                     fructo o otros gra<ex>n</ex><lb break="no"/>des q<ex>ue</ex>
                     son para lauores q<ex>ue</ex> no<ex>n</ex> son de cortar.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">L</hi>Os ujandantes puedan <choice>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">L</hi>Os ujandantes puedan <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -23586,8 +23485,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>era desposada o fiziere adulterio: el &amp;
+                        <p><!--<wrapper><lb break="yes"/>era desposada o fiziere adulterio: el &amp;
                     ella co<ex>n</ex> sus bienes sean me<lb break="no"/>tidos en
                     poder del esposo assi q<ex>ue</ex> sean sus sieruos. mas
                         q<ex>ue</ex> no<ex>n</ex> los pueda <lb break="yes"/>matar nj<ex>n</ex> lisiar. Et otrossi dessus cosas dellos
@@ -24101,8 +23999,7 @@
                         <head><hi rend="rubrique">Ley iiij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>si todos yoguieren con ella muere<ex>n</ex>
+                        <p><!--<wrapper><lb break="yes"/>si todos yoguieren con ella muere<ex>n</ex>
                     por ello Et si por aue<ex>n</ex>tura uno <lb break="yes"/>fuere el for&#231;ador &amp; yoguiere co<ex>n</ex> ella
                         muer<subst xmlns="http://www.tei-c.org/ns/1.0" hand="#self">
                         <del>e</del>
@@ -24123,10 +24020,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi><ex>u</ex><hi
-                                rend="superscript">a</hi>Ndo muchos se ayuntan
-                            &amp; l<subst hand="#self">
+                    </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi><ex>u</ex><hi rend="superscript"
+                                >a</hi>Ndo muchos se ayuntan &amp; l<subst
+                                hand="#self">
                                 <del>o</del>
                                 <add>i</add>
                             </subst>euan algu<ex>n</ex>a mug<ex>ie</ex>r por
@@ -24238,8 +24135,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>o consintiere<ex>n</ex> com<ex>m</ex>o
+                        <p><!--<wrapper><lb break="yes"/>o consintiere<ex>n</ex> com<ex>m</ex>o
                         algu<ex>n</ex>a mug<ex>ie</ex>r sea leuada por fuer&#231;a
                         q<ex>u</ex><hi rend="superscript">i</hi>er <lb break="yes"/>sean h<ex>er</ex>manos q<ex>u</ex><hi rend="superscript">i</hi>er otros ayan la pena
                         q<ex>ue</ex> es puesta contra los q<ex>ue</ex> lie<lb break="no"/>uan las mug<ex>ie</ex>res por fuer&#231;a fueras
@@ -24256,10 +24152,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J los parientes de
-                            mjentre q<ex>ue</ex> el padre viue
-                                conseiare<ex>n</ex>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J los parientes de mjentre
+                                q<ex>ue</ex> el padre viue conseiare<ex>n</ex>
                             <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
@@ -24476,8 +24371,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>del sen<ex>n</ex>or dela sierua: los fijos
+                        <p><!--<wrapper><lb break="yes"/>del sen<ex>n</ex>or dela sierua: los fijos
                         q<ex>ue</ex> fizieren en vno: sea<ex>n</ex>
                     <pb n="135v"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">.Libro .iiij<hi rend="superscript">o</hi>. .T<ex>itul</ex><hi rend="superscript">o</hi> .xij<hi rend="superscript">o</hi>.</fw>
@@ -24700,8 +24594,7 @@
                         <head><hi rend="rubrique">.Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>donadio o sobre ma<ex>n</ex>da de
+                        <p><!--<wrapper><lb break="yes"/>donadio o sobre ma<ex>n</ex>da de
                         om<ex>n</ex>e muerto o de otro pl<ex>e</ex>ito
                         q<ex>u</ex><hi rend="superscript">a</hi>l <lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>er
                         p<ex>ar</ex>a toller a algu<ex>n</ex>o su derecho: o
@@ -24773,8 +24666,7 @@
                         <head><hi rend="rubrique">Ley .vij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>assi com<ex>m</ex>o los q<ex>ue</ex>
+                        <p><!--<wrapper><lb break="yes"/>assi com<ex>m</ex>o los q<ex>ue</ex>
                         faze<ex>n</ex> falsa moneda. Et q<ex>u</ex><hi rend="superscript">i</hi> los rayere co<ex>n</ex> luna
                         <lb break="yes"/>o con ot<ex>r</ex><hi rend="superscript">a</hi> cosa: o los ser&#231;enare pierda
                     la meytad de todo q<ex>u</ex><hi rend="superscript">a</hi>nto ouiere <pb n="136v"/>
@@ -24789,8 +24681,8 @@
                         q<ex>u</ex><hi rend="superscript">a</hi>nto q<ex>ue</ex>
                     ouiere &amp; sea dado <lb break="yes"/>por sieruo del Rey /
                     o de q<ex>u</ex><hi rend="superscript">i</hi> el mandare.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">Q</hi>Vien fiziere
+                        </wrapper>--><hi rend="initiale"
+                                n="2">Q</hi>Vien fiziere
                                 m<ex>a</ex>r<ex>avedi</ex>s en oro falsos: muera
                             por ello. <choice>
                                 <corr><g ref="#calderon2"/></corr>
@@ -24896,10 +24788,10 @@
                     </div>
                 </div>
                 <div type="sous-section" subtype="titulo" n="13">
-                    <head><hi rend="rubrique" type="merged">Titulo .xiij<hi
-                                rend="superscript">o</hi>. d<ex>e</ex>los furtos
-                            &amp; d<ex>e</ex>las cosa<hi rend="superscript"
-                                >s</hi> +<lb break="yes"/>encubierta<hi
+                    <head><hi rend="rubrique">Titulo .xiij<hi rend="superscript"
+                                >o</hi>. d<ex>e</ex>los furtos &amp;
+                            d<ex>e</ex>las cosa<hi rend="superscript">s</hi>
+                                +<lb break="yes"/>encubierta<hi
                                 rend="superscript">s</hi>. </hi>
                     </head>
                     <div type="prologue" n="555">
@@ -25121,8 +25013,7 @@
                         <head><hi rend="rubrique">.Ley .viij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>q<ex>ue</ex> no<ex>n</ex>
+                        <p><!--<wrapper><lb break="yes"/>q<ex>ue</ex> no<ex>n</ex>
                     con<ex>n</ex>osca: fueras si tomare bue<ex>n</ex> fiador. Et
                     si dot<ex>r</ex><hi rend="superscript">a</hi> g<ex>u</ex><hi rend="superscript">i</hi>sa lo <lb break="yes"/>comp<ex>r</ex><hi rend="superscript">a</hi>re de otor
                     al plazo: q<ex>ue</ex>l pusiere el alcalle. Et si
@@ -25381,8 +25272,8 @@
                     </div>
                 </div>
                 <div type="sous-section" subtype="titulo" n="15">
-                    <head><hi rend="rubrique" type="merged">Tit<ex>u</ex>lo
-                                .xv<hi rend="superscript">o</hi>. d<ex>e</ex>los
+                    <head><hi rend="rubrique">Tit<ex>u</ex>lo .xv<hi
+                                rend="superscript">o</hi>. d<ex>e</ex>los
                             sieruos foydos &amp; d<ex>e</ex>los +<lb break="yes"
                                 />q<ex>ue</ex> los asconde<ex>n</ex> o los
                                 faze<ex>n</ex> foyr </hi>
@@ -25466,8 +25357,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>sopo q<ex>ue</ex> querie foyr. sil dio
+                        <p><!--<wrapper><lb break="yes"/>sopo q<ex>ue</ex> querie foyr. sil dio
                     talegas ol dessemeio ol dio otra <lb break="yes"/>ayuda
                         algu<ex>n</ex>a co<ex>n</ex> q<ex>ue</ex> se fue. o lo
                     ascondio q<ex>u</ex><hi rend="superscript">a</hi>ndo fuxo:
@@ -25479,10 +25369,10 @@
                         ta<ex>n</ex> buen<ex>n</ex>os com<ex>m</ex>o
                         aq<ex>ue</ex>l <lb break="yes"/>a su duen<ex>n</ex>o. Et
                     esto mismo mandamos q<ex>ue</ex> sea d<ex>e</ex>las sieruas.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>o
-                            conseiare a sieruo ageno q<ex>ue</ex> fuya o
-                                q<ex>u</ex><hi rend="superscript">a</hi>ndo <choice>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex>o conseiare a sieruo
+                            ageno q<ex>ue</ex> fuya o q<ex>u</ex><hi
+                                rend="superscript">a</hi>ndo <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -25654,9 +25544,9 @@
                     </div>
                 </div>
                 <div type="sous-section" subtype="titulo" n="17">
-                    <head><hi rend="rubrique" type="merged">Titulo +<lb
-                                break="yes"/>xvij<hi rend="superscript">o</hi>.
-                            delos homeziellos </hi>
+                    <head><hi rend="rubrique">Titulo +<lb break="yes"/>xvij<hi
+                                rend="superscript">o</hi>. delos homeziellos
+                        </hi>
                     </head>
                     <div type="prologue" n="588">
                         <p><lb break="yes"/><seg ana="#glose"><add hand="#self"
@@ -25767,8 +25657,7 @@
                         <head><hi rend="rubrique">.Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>pudieren auer p<ex>ar</ex>a faz<ex>er</ex>
+                        <p><!--<wrapper><lb break="yes"/>pudieren auer p<ex>ar</ex>a faz<ex>er</ex>
                     justi&#231;ia del. los alcalles o las otras justi<lb break="no"/>cias del Rey. tome<ex>n</ex> de sus bienes sesaenta <seg xmlns="http://www.tei-c.org/ns/1.0" ana="#glose"><add hand="#self">dize en ot<ex>r</ex><hi rend="superscript">o</hi>s <lb break="yes"/>fueros quj<lb break="no"/>njentos fu<lb break="no"/>eldos</add></seg> .m<ex>a</ex>r<ex>avedis</ex>.
                     por el homeziello. Et q<ex>u</ex><hi rend="superscript">a</hi>n<lb break="no"/>do lo pudieren auer fagan
                     iusticia del. Et <supplied>todo</supplied> ot<ex>r</ex><hi rend="superscript">o</hi> om<ex>n</ex>e q<ex>ue</ex>
@@ -26098,8 +25987,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>tomare sin grado de su duen<ex>n</ex>o. Et
+                        <p><!--<wrapper><lb break="yes"/>tomare sin grado de su duen<ex>n</ex>o. Et
                     soterrare y q<ex>u</ex><hi rend="superscript">i</hi>er
                     pariente q<ex>u</ex><hi rend="superscript">i</hi>er <lb break="yes"/>otro amjgo ent<ex>er</ex>gue la fuessa
                     libre a cuya era o a sus herederos. Et por la o<lb break="no"/>sadia peche treze <choice xmlns="http://www.tei-c.org/ns/1.0">
@@ -26116,11 +26004,10 @@
                     adelante no<ex>n</ex> sea tenjdo de <lb break="yes"/>meter y
                         ot<ex>r</ex><hi rend="superscript">o</hi> sin grado
                         daq<ex>ue</ex>l cuya es la fuessa o de sus herederos.
-                        </wrapper>--><hi
-                                rend="initiale" n="2">T</hi>Odo om<ex>n</ex>e
-                                q<ex>ue</ex> fuessa agena en q<ex>ue</ex>
-                                no<ex>n</ex> fue njngu<ex>n</ex> om<ex>n</ex>e
-                            soterrado <choice>
+                        </wrapper>--><hi rend="initiale"
+                                n="2">T</hi>Odo om<ex>n</ex>e q<ex>ue</ex>
+                            fuessa agena en q<ex>ue</ex> no<ex>n</ex> fue
+                                njngu<ex>n</ex> om<ex>n</ex>e soterrado <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -26194,8 +26081,7 @@
                         <head><hi rend="rubrique">Ley .iiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> ta<ex>n</ex> buen<ex>n</ex>as. <lb break="yes"/>seglar nj<ex>n</ex> religioso no<ex>n</ex>
+                        <p><!--<wrapper><g ref="#calderon2"/> ta<ex>n</ex> buen<ex>n</ex>as. <lb break="yes"/>seglar nj<ex>n</ex> religioso no<ex>n</ex>
                     sea osado de uender nj<ex>n</ex> p<ex>re</ex>cio
                         nj<ex>n</ex>gu<ex>n</ex>o tomar. <lb break="yes"/>p<ex>ar</ex>a dar fuessas o logar en q<ex>ue</ex> las
                     fagan. Et si algu<ex>n</ex>o lo fiziere peche lo <lb break="yes"/>todo doblado a aq<ex>ue</ex>l de
@@ -26370,8 +26256,7 @@
                         <head><hi rend="rubrique">Ley .ij<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>er
+                        <p><!--<wrapper><lb break="yes"/>q<ex>u</ex><hi rend="superscript">i</hi>er
                     con x<ex>r</ex><hi rend="superscript">i</hi><ex>sti</ex>anos
                     o con otros quales q<ex>u</ex><hi rend="superscript">i</hi>er en q<ex>ue</ex> el aya de seer / o ot<ex>r</ex><hi rend="superscript">o</hi>
                     <lb break="yes"/>en su logar por su mandado. Et ric
@@ -26396,10 +26281,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J el Rey oujere
-                            batalla enplazada q<ex>u</ex><hi rend="superscript"
-                                >i</hi>er co<ex>n</ex> moros <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J el Rey oujere batalla enplazada
+                                q<ex>u</ex><hi rend="superscript">i</hi>er
+                                co<ex>n</ex> moros <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -26701,8 +26586,7 @@
                                         rend="superscript"
                                 >a</hi>.</supplied></hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>acusar otro: por si nj<ex>n</ex> por
+                        <p><!--<wrapper><lb break="yes"/>acusar otro: por si nj<ex>n</ex> por
                         ot<ex>r</ex><hi rend="superscript">o</hi>. Otrossi
                         cl<ex>er</ex>igo de orden sagrada <lb break="yes"/>no<ex>n</ex> pueda acusar por si nj<ex>n</ex> por
                         ot<ex>r</ex><hi rend="superscript">o</hi>. P<ex>er</ex>o
@@ -26748,10 +26632,10 @@
                         mag<ex>uer</ex> q<ex>ue</ex> no<ex>n</ex> prueue lo
                         q<ex>ue</ex> p<ex>ro</ex>metio a <add xmlns="http://www.tei-c.org/ns/1.0" hand="#other">p<ex>ro</ex>uar mas</add> pague las <lb break="yes"/>costas. Et los dan<ex>n</ex>os al acusado q<ex>ue</ex>
                     re&#231;ibio por razo<ex>n</ex> d<ex>e</ex>la acusa&#231;i<add hand="#other">on</add>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">N</hi>Jngu<ex>n</ex>
-                                om<ex>n</ex>e desmemoriado nj<ex>n</ex>
-                                descom<ex>u</ex>lgado no<ex>n</ex> pueda <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">N</hi>Jngu<ex>n</ex> om<ex>n</ex>e
+                            desmemoriado nj<ex>n</ex> descom<ex>u</ex>lgado
+                                no<ex>n</ex> pueda <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -27047,8 +26931,7 @@
                                         rend="superscript"
                                 >a</hi>.</supplied></hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>o sobre estado dela uilla o de la
+                        <p><!--<wrapper><lb break="yes"/>o sobre estado dela uilla o de la
                         t<ex>ie</ex>rra. los dichos &amp; las pesq<ex>u</ex><hi rend="superscript">i</hi>sas <add hand="#other">uealas</add>
                     <lb break="yes"/>el Rey o q<ex>u</ex><hi rend="superscript">i</hi> el mandare. &amp; no<ex>n</ex> sea tenjdo de
                     mostrar las a ot<ex>r</ex><hi rend="superscript">o</hi>
@@ -27079,11 +26962,10 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J el Rey de su
-                            offiçio fiziere pesq<ex>u</ex><hi rend="superscript"
-                                >i</hi>sa gen<ex>er</ex>al en uilla o en
-                                t<ex>ie</ex>rra <choice>
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J el Rey de su offiçio fiziere
+                                pesq<ex>u</ex><hi rend="superscript">i</hi>sa
+                                gen<ex>er</ex>al en uilla o en t<ex>ie</ex>rra <choice>
                                 <corr><g ref="#calderon2"/></corr>
                                 <sic/>
                             </choice>
@@ -27666,7 +27548,7 @@
                         <head><hi rend="rubrique">.Ley .xiij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"><!--<wrapper><pb n="146v"/>
+                        <p><!--<wrapper><pb n="146v"/>
                     <fw xmlns="http://www.tei-c.org/ns/1.0" rend="titre-courant">Libro .iiij<supplied><hi rend="superscript">o</hi></supplied>.
                             .T<ex>itul</ex><supplied><hi rend="superscript">o</hi></supplied> .xxj<supplied><hi rend="superscript">o</hi></supplied>.</fw>
                     <cb type="single-column"/><lb break="yes"/>por
@@ -27816,7 +27698,7 @@
                         <head><hi rend="rubrique">.Ley .xvij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"><!--<wrapper><pb n="147r"/>
+                        <p><!--<wrapper><pb n="147r"/>
                     <fw rend="titre-courant">Libro .iiijo. .Titulo .xxjo.
                         </fw><fw rend="numerotation-ancienne">cxlvij</fw>
                     <cb type="single-column"/><lb break="yes"/>los reptados
@@ -27924,8 +27806,7 @@
                                     <sic/>
                                 </choice>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>reptado al reptador; el viuo no<ex>n</ex>
+                        <p><!--<wrapper><lb break="yes"/>reptado al reptador; el viuo no<ex>n</ex>
                         finq<ex>ue</ex> enemjgo delos parie<ex>n</ex><lb break="no"/>tes del muerto por razo<ex>n</ex>
                         daq<ex>ue</ex>lla muerte. Et el Rey fagalo
                         p<ex>er</ex>do<lb break="no"/>nar &amp; asegurar delos
@@ -28293,8 +28174,7 @@
                             palacio nj<ex>n</ex> en cortes. </p>
                     </div>
                     <div type="sous-sous-section" n="30" subtype="ley">
-                        <head><hi rend="rubrique" type="merged">Ley. +<lb
-                                    break="yes"/>.xx<choice>
+                        <head><hi rend="rubrique">Ley. +<lb break="yes"/>.xx<choice>
                                     <sic>j</sic>
                                     <corr/>
                                 </choice>x<hi rend="superscript">a</hi>. </hi>
@@ -28387,8 +28267,7 @@
                         <head><hi rend="rubrique">.Ley .iij<hi
                                     rend="superscript">a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> ante o despues. <lb break="yes"/>castrado no<ex>n</ex> pueda re&#231;ebir
+                        <p><!--<wrapper><g ref="#calderon2"/> ante o despues. <lb break="yes"/>castrado no<ex>n</ex> pueda re&#231;ebir
                         nj<ex>n</ex>gu<ex>n</ex>o por fijo si no<ex>n</ex> por
                         ma<ex>n</ex>dado <lb break="yes"/>o por otorgamjento de
                     Rey. </wrapper>--><hi
@@ -28440,8 +28319,7 @@
                         <head><hi rend="rubrique">Ley .v<hi rend="superscript"
                                     >a</hi>.</hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><lb break="yes"/>ante q<ex>ue</ex> aq<ex>ue</ex>l
+                        <p><!--<wrapper><lb break="yes"/>ante q<ex>ue</ex> aq<ex>ue</ex>l
                         q<ex>ue</ex> lo re&#231;ibio por fijo. los sus
                         parie<ex>n</ex>tes mas p<ex>ro</ex>pinq<ex>u</ex><hi rend="superscript">o</hi>s <lb break="yes"/>hereden lo
                     suyo: &amp; no<ex>n</ex> aq<ex>ue</ex>l q<ex>ue</ex> lo
@@ -28459,9 +28337,9 @@
                         <corr><g ref="#calderon2"/></corr>
                         <sic/>
                     </choice>
-                    </wrapper>--><hi
-                                rend="initiale" n="2">S</hi>J algu<ex>n</ex>o
-                                q<ex>ue</ex> fu<ex>er</ex>e reçebido por fijo
+                    </wrapper>--><hi rend="initiale"
+                                n="2">S</hi>J algu<ex>n</ex>o q<ex>ue</ex>
+                                fu<ex>er</ex>e reçebido por fijo
                                 dot<ex>r</ex><hi rend="superscript">o</hi>
                             muriere sin ma<ex>n</ex>da: <choice>
                                 <corr><g ref="#calderon2"/></corr>
@@ -28985,8 +28863,7 @@
                                         rend="superscript"
                                 >a</hi>.</supplied></hi>
                         </head>
-                        <p type="modified"
-                                ><!--<wrapper><g ref="#calderon2"/> tenjdos de dar nada. <lb break="yes"/>com<ex>m</ex>o todas las ot<ex>r</ex><hi rend="superscript">a</hi>s penas &amp; calon<ex>n</ex>as
+                        <p><!--<wrapper><g ref="#calderon2"/> tenjdos de dar nada. <lb break="yes"/>com<ex>m</ex>o todas las ot<ex>r</ex><hi rend="superscript">a</hi>s penas &amp; calon<ex>n</ex>as
                         q<ex>u</ex><hi rend="superscript">a</hi>les
                         q<ex>u</ex><hi rend="superscript">i</hi>er se
                         deue<ex>n</ex> coger <lb break="yes"/>al seys
@@ -29026,8 +28903,6 @@
                     </div>
                 </div>
             </div>
-        </body>
-        <back>
             <div type="epilogue">
                 <head><hi rend="rubrique">Ley .iiij<hi rend="superscript"
                         >a</hi>.</hi>
@@ -29067,6 +28942,6 @@
                             tresçie<ex>n</ex>tos et çinq<ex>uen</ex>ta Et</add>
                     <lb break="yes"/><supplied>vn an<ex>n</ex>os.</supplied></p>
             </div>
-        </back>
+        </body>
     </text>
 </TEI>
