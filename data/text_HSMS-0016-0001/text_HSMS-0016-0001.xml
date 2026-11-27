@@ -6,7 +6,8 @@
                 <title>Cirugía</title>
                 <respStmt>
                     <resp>Transcrit par</resp>
-                    <name><surname>Herrera</surname><forename>María
+                    <name xml:id="transcriber"
+                            ><surname>Herrera</surname><forename>María
                             Teresa</forename></name>
                 </respStmt>
                 <respStmt>
@@ -10442,9 +10443,9 @@
                             <g ref="#calderon1"/> E esta carta es p<ex>ar</ex>a
                                 <lb break="yes"/>la calentura <g/> in nomjne
                                 p<ex>at</ex>ris et filij sp<ex>iritu</ex>s santi
-                            amen. <note>sigue una oracion con solo iniciales de
-                                cada palabra.</note> j <abbr><unclear/></abbr>
-                                n<abbr><unclear/></abbr>
+                            amen. <note resp="#transcriber">sigue una oracion
+                                con solo iniciales de cada palabra.</note> j
+                                <abbr><unclear/></abbr> n<abbr><unclear/></abbr>
                             <lb break="yes"/>m<abbr><unclear/></abbr>
                                 c<abbr><unclear/></abbr>
                                 e<abbr><unclear/></abbr>

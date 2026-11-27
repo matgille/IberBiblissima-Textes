@@ -206,7 +206,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
+                
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -214,7 +214,7 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+                
             </refsDecl>
             <refsDecl n="default">
                 <citeStructure match="/TEI/text/body/div" use="@n"

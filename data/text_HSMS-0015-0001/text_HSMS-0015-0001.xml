@@ -35742,12 +35742,12 @@
                         <head><hi rend="rubrique">Justicia q<ex>ue</ex> es la
                                     q<ex>u</ex><hi rend="superscript">a</hi>rta
                                 virtut</hi>
-                            <note>Selon l'éditeur de la version française
-                                (Baldwin 2003, note n°288, p. 251), seul un
-                                manuscrit français marque un début de chapitre
-                                ici. Le manuscrit de Gérone est donc de la même
-                                famille que le manuscrit L-II-3 de l'Escurial
-                                utilisé comme manuscrit-base de
+                            <note resp="#mgl">Selon l'éditeur de la version
+                                française (Baldwin 2003, note n°288, p. 251),
+                                seul un manuscrit français marque un début de
+                                chapitre ici. Le manuscrit de Gérone est donc de
+                                la même famille que le manuscrit L-II-3 de
+                                l'Escurial utilisé comme manuscrit-base de
                                 l'édition.</note>
                         </head>
                         <p><lb break="yes"/><hi rend="initiale" n="2"
@@ -43511,9 +43511,9 @@
                             Res <lb break="yes"/>este libro // </p>
                     </div>
                     <div type="chapitre" n="12" corresp="#11">
-                        <note>Le manuscrit F et le manuscrit base de l'Escurial
-                            (L.II.3) seuls proposent cette division dans le
-                            texte français.</note>
+                        <note resp="#mgl">Le manuscrit F et le manuscrit base de
+                            l'Escurial (L.II.3) seuls proposent cette division
+                            dans le texte français.</note>
                         <head><hi rend="rubrique">de la orden del
                                     faula<ex>r</ex>
                                 <lb break="yes"/>artifiçial me<ex>n</ex>t</hi>

@@ -1,4 +1,4 @@
-<?xml-model href="/home/mgl/Bureau/Travail/projets/Biblissima-Text/Transform/schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../schemata/out/ODD_gold.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -198,7 +198,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document, &#224; reprendre-->
+                
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="colonne" match=".//cb" use="@n"
                         delim=".">
@@ -206,7 +206,7 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+                
             </refsDecl>
             <classDecl>
                 <!--Merci &#224; Morgane PICA pour son aide sur l'adaptation &#224; la mod&#233;lisation FRBR-->

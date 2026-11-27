@@ -6,7 +6,8 @@
                 <title>Fernando del Pulgar, Cartas</title>
                 <respStmt>
                     <resp>Transcrit par</resp>
-                    <name><surname>Dangerfield</surname><forename>Michael
+                    <name xml:id="transcriber"
+                            ><surname>Dangerfield</surname><forename>Michael
                             L.</forename></name>
                 </respStmt>
                 <respStmt>
@@ -78,8 +79,8 @@
                             >Creative Commons Attribution Non Commercial Share
                             Alike 4.0 International</licence>
                     </availability>
-                    <note>Projet OSTA (Old Spanish Textual Archive). Source des
-                        données: <ptr
+                    <note resp="#transcriber">Projet OSTA (Old Spanish Textual
+                        Archive). Source des données: <ptr
                             target="https://raw.githubusercontent.com/hispanicseminary/OSTA/refs/heads/main/transcriptions/TEXT.CLV.txt"
                         />, v 1.0. Notes (codex): <quote>Claros varones ocupa,
                             según Philobiblon, 1r-43v, el resto son cartas de
@@ -782,8 +783,8 @@
         <body>
             <div type="livre">
                 <div xml:id="HSMS-0122-0002" type="section" n="2">
-                    <note>HSMS-0122-0002: Letra contra los males de la
-                        vejez.</note>
+                    <note resp="#transcriber">HSMS-0122-0002: Letra contra los
+                        males de la vejez.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .j. de
                             fernando del pul<lb break="no"/>gar contra los males
                             dela vejez.</hi></head>
@@ -1067,8 +1068,8 @@
                             <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0003" type="section" n="3">
-                    <note>HSMS-0122-0003: Letra para un caballero que fue
-                        desterrado del reino.</note>
+                    <note resp="#transcriber">HSMS-0122-0003: Letra para un
+                        caballero que fue desterrado del reino.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .ij.
                             para vn cauallero q<ex>ue</ex>
                             <lb break="yes"/>fue desterrado del
@@ -1280,8 +1281,8 @@
                         Ualete. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0004" type="section" n="4">
-                    <note>HSMS-0122-0004: Letra para don Alfonso Carrillo,
-                        arzobispo de Toledo.</note>
+                    <note resp="#transcriber">HSMS-0122-0004: Letra para don
+                        Alfonso Carrillo, arzobispo de Toledo.</note>
                     <head><hi rend="rubrique">Le<ex>tra</ex> .iij. p<ex>ar</ex>a
                             el arçob<ex>is</ex>po de toledo.</hi></head>
                     <p>
@@ -1496,8 +1497,8 @@
                             <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0005" type="section" n="5">
-                    <note>HSMS-0122-0005: Letra para un caballero su amigo de
-                        Toledo.</note>
+                    <note resp="#transcriber">HSMS-0122-0005: Letra para un
+                        caballero su amigo de Toledo.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .iiij.
                             para vn cauallero <lb break="yes"/>su amigo de
                             Toledo.</hi></head>
@@ -1609,7 +1610,8 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0006" type="section" n="6">
-                    <note>HSMS-0122-0006: Letra para el obispo de Osma.</note>
+                    <note resp="#transcriber">HSMS-0122-0006: Letra para el
+                        obispo de Osma.</note>
                     <head><hi rend="rubrique">Letra .v. para el obispo
                                 d<ex>e</ex> osma.</hi></head>
                     <p>
@@ -1722,8 +1724,8 @@
                         veen. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0007" type="section" n="7">
-                    <note>HSMS-0122-0007: Letra para un caballero criado del
-                        arzobispo de Toledo.</note>
+                    <note resp="#transcriber">HSMS-0122-0007: Letra para un
+                        caballero criado del arzobispo de Toledo.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .vj.
                                 p<ex>ar</ex>a vn cauallero cri<lb break="no"
                             />ado d<choice>
@@ -1998,7 +2000,8 @@
                         y es<lb break="no"/>tar bullendo. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0008" type="section" n="8">
-                    <note>HSMS-0122-0008: Letra para el rey de Portugal.</note>
+                    <note resp="#transcriber">HSMS-0122-0008: Letra para el rey
+                        de Portugal.</note>
                     <head><hi rend="rubrique">Letra .vij. p<ex>ar</ex>a el rey
                                 d<ex>e</ex> portogal.</hi></head>
                     <p>
@@ -2421,8 +2424,8 @@
                         <cb type="single-column"/><lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0009" type="section" n="9">
-                    <note>HSMS-0122-0009: Letra para el obispo de Tuy que estaba
-                        preso en Portugal.</note>
+                    <note resp="#transcriber">HSMS-0122-0009: Letra para el
+                        obispo de Tuy que estaba preso en Portugal.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .viij.
                                 d<ex>e</ex>l obispo de tuy q<ex>ue</ex>
                             <lb break="yes"/>estaua p<ex>re</ex>so en portogal:
@@ -2542,8 +2545,8 @@
                         /></p>
                 </div>
                 <div xml:id="HSMS-0122-0010" type="section" n="10">
-                    <note>HSMS-0122-0010: Letra para el doctor de
-                        Talavera.</note>
+                    <note resp="#transcriber">HSMS-0122-0010: Letra para el
+                        doctor de Talavera.</note>
                     <head><hi rend="rubrique">Let<ex>ra</ex> .ix. p<ex>ar</ex>a
                             el doctor de talauera.</hi></head>
                     <p>
@@ -2611,8 +2614,9 @@
                         para le dar larga vida. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0011" type="section" n="11">
-                    <note>HSMS-0122-0011: Letra para don Enrique, tío del rey,
-                        cuando le hirieron en Tajara.</note>
+                    <note resp="#transcriber">HSMS-0122-0011: Letra para don
+                        Enrique, tío del rey, cuando le hirieron en
+                        Tajara.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .x.
                             para don enrrique. <lb break="yes"/>tio del
                             Rey.</hi></head>
@@ -2650,8 +2654,8 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0012" type="section" n="12">
-                    <note>HSMS-0122-0012: Letra para la reina nuestra
-                        señora.</note>
+                    <note resp="#transcriber">HSMS-0122-0012: Letra para la
+                        reina nuestra señora.</note>
                     <head><hi rend="rubrique">Letra .xj. p<ex>ar</ex>a la
                             reyna.</hi></head>
                     <p>
@@ -2743,8 +2747,8 @@
                         aveys fecho otros lenguajes. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0013" type="section" n="13">
-                    <note>HSMS-0122-0013: Letra para don Pedro de Toledo,
-                        canónigo de Sevilla.</note>
+                    <note resp="#transcriber">HSMS-0122-0013: Letra para don
+                        Pedro de Toledo, canónigo de Sevilla.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xij.
                             para pedro de tole<lb break="no"/>do canonigo de
                             Seuilla.</hi></head>
@@ -2838,7 +2842,8 @@
                         <cb type="single-column"/><lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0014" type="section" n="14">
-                    <note>HSMS-0122-0014: Letra para el condestable.</note>
+                    <note resp="#transcriber">HSMS-0122-0014: Letra para el
+                        condestable.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xiij.
                             para el co<ex>n</ex>destable</hi></head>
                     <p>
@@ -2989,8 +2994,8 @@
                             d<ex>e</ex>los romanos. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0015" type="section" n="15">
-                    <note>HSMS-0122-0015: Letra para un su amigo de
-                        Toledo.</note>
+                    <note resp="#transcriber">HSMS-0122-0015: Letra para un su
+                        amigo de Toledo.</note>
                     <head><hi rend="rubrique">Le<ex>tra</ex> .xiiij. d<ex>e</ex>
                             vn su amigo d<ex>e</ex> toledo</hi></head>
                     <p>
@@ -3245,7 +3250,8 @@
                         encomiendo. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0016" type="section" n="16">
-                    <note>HSMS-0122-0016: Letra para el cardenal.</note>
+                    <note resp="#transcriber">HSMS-0122-0016: Letra para el
+                        cardenal.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xv.
                             para el cardenal.</hi></head>
                     <p>
@@ -3273,8 +3279,9 @@
                         />da ora pensare enla suya. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0017" type="section" n="17">
-                    <note>HSMS-0122-0017: Letra del razonamiento hecho a la
-                        reina cuando hizo perdón general en Sevilla.</note>
+                    <note resp="#transcriber">HSMS-0122-0017: Letra del
+                        razonamiento hecho a la reina cuando hizo perdón general
+                        en Sevilla.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xvj.
                             del razonamiento<pb n="66r"/>
                             <fw rend="titre-courant">lxvj</fw>
@@ -3584,8 +3591,8 @@
                             cleme<ex>n</ex>cia. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0018" type="section" n="18">
-                    <note>HSMS-0122-0018: Letra para el señor don
-                        Enrique.</note>
+                    <note resp="#transcriber">HSMS-0122-0018: Letra para el
+                        señor don Enrique.</note>
                     <head><hi rend="rubrique">Le<ex>tra</ex> .xvij.
                             p<ex>ar</ex>a el señor don
                         enrriq<ex>ue</ex>.</hi></head>
@@ -3661,7 +3668,8 @@
                             q<ex>ue</ex> teneys enel pie. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0019" type="section" n="19">
-                    <note>HSMS-0122-0019: Letra para el prior del Paso.</note>
+                    <note resp="#transcriber">HSMS-0122-0019: Letra para el
+                        prior del Paso.</note>
                     <head><hi rend="rubrique">Letra .xviij. p<ex>ar</ex>a el
                             prior del paso.</hi></head>
                     <p>
@@ -3697,8 +3705,8 @@
                         librado. valete. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0020" type="section" n="20">
-                    <note>HSMS-0122-0020: Letra para el conde de Cifuentes que
-                        estaba preso en Granada.</note>
+                    <note resp="#transcriber">HSMS-0122-0020: Letra para el
+                        conde de Cifuentes que estaba preso en Granada.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xix.
                             del conde de cifue<ex>n</ex><lb break="no"/>tes que
                             estaua preso en granada.</hi></head>
@@ -3750,8 +3758,8 @@
                             <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0021" type="section" n="21">
-                    <note>HSMS-0122-0021: Letra para don Iñigo de Mendoza, conde
-                        de Tendilla.</note>
+                    <note resp="#transcriber">HSMS-0122-0021: Letra para don
+                        Iñigo de Mendoza, conde de Tendilla.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xx.
                             para don yñigo de <lb break="yes"/>mendoça conde de
                             tendilla.</hi></head>
@@ -3823,8 +3831,8 @@
                         <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0022" type="section" n="22">
-                    <note>HSMS-0122-0022: Letra para un su amigo
-                        encubierto.</note>
+                    <note resp="#transcriber">HSMS-0122-0022: Letra para un su
+                        amigo encubierto.</note>
                     <head><hi rend="rubrique">Le<ex>tra</ex> .xxj. p<ex>ar</ex>a
                             vn su amigo encubi-erto.</hi></head>
                     <p>
@@ -4029,8 +4037,8 @@
                             break="yes"/>del pecado della. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0023" type="section" n="23">
-                    <note>HSMS-0122-0023: Letra para don Gabriel de
-                        Mendoza.</note>
+                    <note resp="#transcriber">HSMS-0122-0023: Letra para don
+                        Gabriel de Mendoza.</note>
                     <head><hi rend="rubrique">Le<ex>tra</ex> .xxij.
                             p<ex>ar</ex>a do<ex>n</ex> grauiel d<ex>e</ex>
                                 mendo<lb break="no"/>ça.</hi></head>
@@ -4091,7 +4099,8 @@
                         <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0024" type="section" n="24">
-                    <note>HSMS-0122-0024: Letra para su hija monja.</note>
+                    <note resp="#transcriber">HSMS-0122-0024: Letra para su hija
+                        monja.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra
                             .xxiij. para su fija mo<ex>n</ex>ja</hi></head>
                     <p>
@@ -5025,8 +5034,8 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0025" type="section" n="25">
-                    <note>HSMS-0122-0025: Letra aconsejando a un señor en el
-                        casamiento de su sobrino.</note>
+                    <note resp="#transcriber">HSMS-0122-0025: Letra aconsejando
+                        a un señor en el casamiento de su sobrino.</note>
                     <p><hi rend="initiale" n="5">S</hi>Eñor mandays q<ex>ue</ex>
                         os escriua mi pare<lb break="no"/>cer cerca d<ex>e</ex>l
                             casamie<ex>n</ex>to q<ex>ue</ex> se trata de
@@ -5159,8 +5168,8 @@
                         /></p>
                 </div>
                 <div xml:id="HSMS-0122-0026" type="section" n="26">
-                    <note>HSMS-0122-0026: Letra para el obispo de Coria, deán de
-                        Toledo.</note>
+                    <note resp="#transcriber">HSMS-0122-0026: Letra para el
+                        obispo de Coria, deán de Toledo.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra
                             .xxiiij. para el obispo d<ex>e</ex>
                             <lb break="yes"/>coria dean de toledo.</hi></head>
@@ -5548,8 +5557,8 @@
                         />destas sacareys las otras. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0027" type="section" n="27">
-                    <note>HSMS-0122-0027: Letra para Fernán Álvarez, tesorero de
-                        la reina.</note>
+                    <note resp="#transcriber">HSMS-0122-0027: Letra para Fernán
+                        Álvarez, tesorero de la reina.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xxv.
                             para fernan alua<lb break="no"/>rez secretario dela
                             reyna.</hi></head>
@@ -5676,8 +5685,8 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0028" type="section" n="28">
-                    <note>HSMS-0122-0028: Letra para el maestro de la capilla
-                        del rey de Portugal.</note>
+                    <note resp="#transcriber">HSMS-0122-0028: Letra para el
+                        maestro de la capilla del rey de Portugal.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xxvj.
                             para el maestro <lb break="yes"/>dela capilla del
                             rey de portogal.</hi></head>
@@ -5742,7 +5751,8 @@
                         madre: dictum puta. valete. <lb break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0029" type="section" n="29">
-                    <note>HSMS-0122-0029: Letra para el prior del Paso.</note>
+                    <note resp="#transcriber">HSMS-0122-0029: Letra para el
+                        prior del Paso.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/>
                                 Le<ex>tra</ex> .xxvij. p<ex>ar</ex>a el prior
                             del paso.</hi></head>
@@ -5860,8 +5870,9 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0030" type="section" n="30">
-                    <note>HSMS-0122-0030: Letra para mosén Alfonso de Olivares,
-                        que estaba en la compañía del duque de Plasencia.</note>
+                    <note resp="#transcriber">HSMS-0122-0030: Letra para mosén
+                        Alfonso de Olivares, que estaba en la compañía del duque
+                        de Plasencia.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra
                             .xxviij. para mosse<ex>n</ex> also<ex>n</ex>-so ⇒
                                 <pb n="87r"/>
@@ -5913,8 +5924,8 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0031" type="section" n="31">
-                    <note>HSMS-0122-0031: Letra para Puertocarrero, el señor de
-                        Palma.</note>
+                    <note resp="#transcriber">HSMS-0122-0031: Letra para
+                        Puertocarrero, el señor de Palma.</note>
                     <head><hi rend="rubrique"><g ref="#calderon1"/> Letra .xxix.
                             para puerto car<lb break="no"/>rero señor de
                             Palma.</hi></head>
@@ -5980,8 +5991,8 @@
                         /></p>
                 </div>
                 <div xml:id="HSMS-0122-0032" type="section" n="32">
-                    <note>HSMS-0122-0032: Letra para el cardenal de
-                        España.</note>
+                    <note resp="#transcriber">HSMS-0122-0032: Letra para el
+                        cardenal de España.</note>
                     <head><hi rend="rubrique">Le<ex>tra</ex> .xxx. p<ex>ar</ex>a
                             el cardenal d<ex>e</ex>spaña.</hi></head>
                     <p>
@@ -6077,8 +6088,8 @@
                             break="yes"/></p>
                 </div>
                 <div xml:id="HSMS-0122-0033" type="section" n="33">
-                    <note>HSMS-0122-0033: Letra para el señor don
-                        Enrique.</note>
+                    <note resp="#transcriber">HSMS-0122-0033: Letra para el
+                        señor don Enrique.</note>
                     <head><hi rend="rubrique">Let<ex>ra</ex> .xxxj.
                             p<ex>ar</ex>a el señor do<ex>n</ex>
                                 enrriq<ex>ue</ex>.</hi></head>
@@ -6164,7 +6175,8 @@
                 </div>
             </div>
             <div xml:id="HSMS-0122-0034" type="sommaire">
-                <note>HSMS-0122-0034: Tabla de los Claros varones.</note>
+                <note resp="#transcriber">HSMS-0122-0034: Tabla de los Claros
+                    varones.</note>
                 <cb type="single-column"/>
                 <lb break="yes"/>
                 <head><hi rend="rubrique"><g ref="#calderon1"/> Comiença la
@@ -6339,7 +6351,8 @@
                     <cb type="double-column"/><lb break="yes"/></p>
             </div>
             <div xml:id="HSMS-0122-0035" type="epilogue">
-                <note>HSMS-0122-0035: A la reina nuestra señora.</note>
+                <note resp="#transcriber">HSMS-0122-0035: A la reina nuestra
+                    señora.</note>
                 <head><hi rend="rubrique"><g ref="#calderon1"/> Ala reyna nue<lb
                             break="no"/>stra señora.</hi></head>
                 <p>

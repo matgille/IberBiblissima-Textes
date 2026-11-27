@@ -6,7 +6,7 @@
                 <title>Fuero de Alcalá de Henares</title>
                 <respStmt>
                     <resp>Transcrit par</resp>
-                    <name>
+                    <name xml:id="transcriber">
                         <surname>Morrás</surname>
                         <forename>María</forename>
                     </name>
@@ -206,7 +206,7 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <!--Doit &#234;tre adapt&#233; &#224; chaque structure de document-->
+
             </refsDecl>
             <refsDecl n="default">
                 <citeStructure
@@ -10224,8 +10224,8 @@
                                     <corr> </corr>
                                     <sic/>
                                 </choice>alcala.</hi><corr/></sic>
-                        <note>Le titre est répété après le changement de
-                            feuillet.</note>
+                        <note resp="#mgl">Le titre est répété après le
+                            changement de feuillet.</note>
                         <fw type="réclame">Todo om<ex>n</ex>e qui uiniere</fw>
                         <pb n="55r"/>
                         <cb type="single-column"/>
@@ -10806,7 +10806,7 @@
                     <pb n="59r"/>
                     <cb type="single-column"/>
                     <lb break="yes"/>
-                    <note resp="#transcriptor">folio without number; illegible
+                    <note resp="#transcriber">folio without number; illegible
                         annotations; probatoria <lb break="yes"/>pennae, and
                         what appears to be the index of the fuero,
                         illegible.</note>
