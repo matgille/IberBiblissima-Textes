@@ -196,7 +196,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                
+
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -204,14 +204,13 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
-                
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure match="/TEI/text/body/div" use="@n"
+                    unit="chapter">
+                    <citeStructure match=".//milestone[@unit='section']"
+                        use="@n" unit="section" delim="."/>
+                </citeStructure>
             </refsDecl>
             <classDecl>
                 <taxonomy>
@@ -282,7 +281,8 @@
         </encodingDesc>
     </teiHeader>
     <text>
-        <front>
+        <front> </front>
+        <body n="1">
             <div type="sommaire">
                 <p><list>
                         <pb n="77r"/>
@@ -745,9 +745,8 @@
                     />mero de todos los sac<ex>ra</ex>mje<ex>n</ex>tos en comun
                         desp<lb break="no"/>ues de cada vno por sy.</p>
             </div>
-        </front>
-        <body n="1">
-            <div type="livre">
+
+            <div type="texte">
                 <div type="section" subtype="titre" n="2">
                     <head><hi rend="rubrique"><g ref="#calderon1"/>
                                 T<ex>itulo</ex> .ij. q<ex>ue</ex> q<ex>u</ex><hi
