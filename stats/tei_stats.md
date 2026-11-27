@@ -10,23 +10,23 @@ Dossier analysé : `data`
 | Traductions | 8 |
 | Oeuvres originales | 55 |
 | Folios (`pb`) | 14437 |
-| Tokens | 6 765 581 |
+| Tokens | 6 765 580 |
 
 ## Traductions / oeuvres originales
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | Traductions | 8 | 2224 | 927 804 |
-| Oeuvres originales | 55 | 12213 | 5 837 777 |
-| **Total** | **63** | **14437** | **6 765 581** |
+| Oeuvres originales | 55 | 12213 | 5 837 776 |
+| **Total** | **63** | **14437** | **6 765 580** |
 
 ## Manuscrits / imprimés
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | Imprimés | 10 | 1769 | 1 230 157 |
-| Manuscrits | 53 | 12668 | 5 535 424 |
-| **Total** | **63** | **14437** | **6 765 581** |
+| Manuscrits | 53 | 12668 | 5 535 423 |
+| **Total** | **63** | **14437** | **6 765 580** |
 
 ## Catégorisation formelle
 
@@ -35,16 +35,16 @@ Dossier analysé : `data`
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | vers | 7 | 353 | 105 673 |
-| prose | 56 | 14084 | 6 659 908 |
-| **Total** | **63** | **14437** | **6 765 581** |
+| prose | 56 | 14084 | 6 659 907 |
+| **Total** | **63** | **14437** | **6 765 580** |
 
 ### Détail par classe (toutes classes, sans fusion)
 
 | Catégorie | Textes | Folios | Tokens |
 |---|---:|---:|---:|
 | vers | 7 | 353 | 105 673 |
-| prose | 56 | 14084 | 6 659 908 |
-| **Total** | **63** | **14437** | **6 765 581** |
+| prose | 56 | 14084 | 6 659 907 |
+| **Total** | **63** | **14437** | **6 765 580** |
 
 ## Sous-genre
 
@@ -56,9 +56,9 @@ Dossier analysé : `data`
 | autre | 5 | 712 | 236 516 |
 | ficcion | 5 | 1215 | 410 536 |
 | cientifica | 10 | 1822 | 865 600 |
-| historica | 16 | 4561 | 2 353 530 |
+| historica | 16 | 4561 | 2 353 529 |
 | juridica | 22 | 6094 | 2 895 878 |
-| **Total** | **63** | **14437** | **6 765 581** |
+| **Total** | **63** | **14437** | **6 765 580** |
 
 ### Détail par classe (toutes classes, sans fusion)
 
@@ -71,9 +71,9 @@ Dossier analysé : `data`
 | clerecia | 1 | 308 | 97 445 |
 | ficcion | 5 | 1215 | 410 536 |
 | cientifica | 10 | 1822 | 865 600 |
-| historica | 16 | 4561 | 2 353 530 |
+| historica | 16 | 4561 | 2 353 529 |
 | juridica | 22 | 6094 | 2 895 878 |
-| **Total** | **63** | **14437** | **6 765 581** |
+| **Total** | **63** | **14437** | **6 765 580** |
 
 ## Classification des oeuvres par catégorisation formelle
 
