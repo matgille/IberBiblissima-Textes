@@ -27,7 +27,7 @@ jobs:
       # 1. Génération du README (racine) et des statistiques (stats/)
       # ------------------------------------------------------------------
       - name: Generate README and corpus stats
-        run: python scripts/tei_stats.py data
+        run: python scripts/create_readme.py data
 
       # ------------------------------------------------------------------
       # 2. Dépendances de validation
