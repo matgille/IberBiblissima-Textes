@@ -195,7 +195,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                
+
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -203,14 +203,13 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
-                
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure match="/TEI/text/body/div" use="@n"
+                    unit="chapter">
+                    <citeStructure match=".//milestone[@unit='section']"
+                        use="@n" unit="section" delim="."/>
+                </citeStructure>
             </refsDecl>
             <classDecl>
                 <taxonomy>
@@ -282,139 +281,146 @@
     </teiHeader>
     <text>
         <body>
-            <head><hi rend="rubrique">Coplas del Marques de S<ex>an</ex><hi
-                        rend="superscript">ta</hi> ll<choice>
-                        <corr>a</corr>
-                        <sic>a</sic>
-                    </choice>na <lb break="yes"/>al Rey de portugal</hi></head>
-            <div type="section" n="1">
-                <lg n="1">
-                    <l><lb break="yes"/>Rey Alphonso cuyo no<ex>n</ex>bre </l>
-                    <l><lb break="yes"/>es y fuy de Reyes buenos </l>
-                    <l><lb break="yes"/>Lea si quiera todo ho<ex>n</ex>bre </l>
-                    <l><lb break="yes"/>y vera de todos genos </l>
-                </lg>
-                <lg n="2">
-                    <l><lb break="yes"/>Asy v<ex>uest</ex>ros como ajenos </l>
-                    <l><lb break="yes"/>synepre fuero<ex>n</ex> virtuosos </l>
-                    <l><lb break="yes"/>guerreros y venturosos </l>
-                    <l><lb break="yes"/>qual mas / o / qual menos <pb n="88r"/>
-                        <cb type="single-column"/></l>
-                </lg>
-                <lg n="3">
-                    <l><lb break="yes"/>Pues asy Rey y varon </l>
-                    <l><lb break="yes"/>por mano de dios vngido </l>
-                    <l><lb break="yes"/>de p<ex>er</ex>feta discrecion </l>
-                    <l><lb break="yes"/>de gran seso y bue<ex>n</ex> sentido
-                    </l>
-                </lg>
-                <lg n="4">
-                    <l><lb break="yes"/>pues se muestra fauorido </l>
-                    <l><lb break="yes"/>fuestes sidos de dios </l>
-                    <l><lb break="yes"/>buen Rey no tardes vos </l>
-                    <l><lb break="yes"/>en pagar lo bien deuido </l>
-                </lg>
-                <lg n="5">
-                    <l><lb break="yes"/>Deuen los eletos Reyes </l>
-                    <l><lb break="yes"/>a dios pues los eligio </l>
-                    <l><lb break="yes"/>q<ex>ue</ex> guarden sus santas leyes </l>
-                    <l><lb break="yes"/>pues gelas enconme<ex>n</ex>d<subst
-                            hand="#self">
-                            <del><gap reason="illegible" extent="subword"
-                                /></del>
-                            <add>o</add>
-                        </subst>
-                    </l>
-                </lg>
-                <lg n="6">
-                    <l><lb break="yes"/>amor lo pues los amo </l>
-                    <l><lb break="yes"/>sobre todas otras cosas </l>
-                    <l><lb break="yes"/>Obrar obras v<ex>ir</ex>tuosas </l>
-                    <l><lb break="yes"/>tales quales el mando </l>
-                </lg>
-                <lg n="7">
-                    <l><lb break="yes"/>Deuen los Reyes prude<ex>n</ex>tes </l>
-                    <l><lb break="yes"/>ser fuertes y justicieros </l>
-                    <l><lb break="yes"/>tenplados dotos scientes </l>
-                    <l><lb break="yes"/>Caritatiuos no fyeros <pb n="88v"/>
-                        <cb type="single-column"/></l>
-                </lg>
-                <lg n="8">
-                    <l><lb break="yes"/>ser xp<ex>ist</ex>ianos
-                        v<ex>er</ex>daderos </l>
-                    <l><lb break="yes"/>brauos alos ynfieles </l>
-                    <l><lb break="yes"/>a los suyos no crueles </l>
-                    <l><lb break="yes"/>en las <del hand="#self">di</del> lides
-                        caualleros </l>
-                </lg>
-                <lg n="9">
-                    <l><lb break="yes"/>Deuen ser de su co<ex>n</ex>sejo </l>
-                    <l><lb break="yes"/>las diuinas escrituras </l>
-                    <l><lb break="yes"/>testame<ex>n</ex>to nuevo y vejo </l>
-                    <l><lb break="yes"/>e las senblantes leturas </l>
-                </lg>
-                <lg n="10">
-                    <l><lb break="yes"/>Lyeualos co<ex>n</ex> las escuras </l>
-                    <l><lb break="yes"/>sy pregu<ex>n</ex>ta que
-                        respo<ex>n</ex>da </l>
-                    <l><lb break="yes"/>por que no se les asco<ex>n</ex>da </l>
-                    <l><lb break="yes"/>el tercer de sus clausuras </l>
-                </lg>
-                <lg n="11">
-                    <l><lb break="yes"/>Ca vso faze maestro </l>
-                    <l><lb break="yes"/>y v<ex>ir</ex>tudes exercicio </l>
-                    <l><lb break="yes"/>al signestro faze desto </l>
-                    <l><lb break="yes"/>el deleyte de l<choice>
-                            <corr> </corr>
-                            <sic/>
-                        </choice>oficio </l>
-                </lg>
-                <lg n="12">
-                    <l><lb break="yes"/>natural co<ex>n</ex> arteficio </l>
-                    <l><lb break="yes"/>quando son juntos a vna </l>
-                    <l><lb break="yes"/>sy desastre no repuna </l>
-                    <l><lb break="yes"/>fazen vtil beneficio <pb n="89r"/>
-                        <cb type="single-column"/></l>
-                </lg>
-                <lg n="13">
-                    <l><lb break="yes"/>Estos nobles Reyes Rey </l>
-                    <l><lb break="yes"/>quales digo tales fueron </l>
-                    <l><lb break="yes"/>obedientes ala Ley </l>
-                    <l><lb break="yes"/>paga<ex>n</ex>do lo que deuieron </l>
-                </lg>
-                <lg n="14">
-                    <l><lb break="yes"/>ganaron y defendieron </l>
-                    <l><lb break="yes"/>todo lo mas de lo n<ex>uest</ex>ro </l>
-                    <l><lb break="yes"/>co<ex>n</ex> gran parte de lo
-                            v<ex>uest</ex>ro </l>
-                    <l><lb break="yes"/>Cuyas famas no muerieron </l>
-                </lg>
-                <lg n="15">
-                    <l><lb break="yes"/>Al que paga lo prestado </l>
-                    <l><lb break="yes"/>prestanle de buenamente </l>
-                    <l><lb break="yes"/>no es pu<ex>n</ex>to hauer ganado </l>
-                    <l><lb break="yes"/>nin es blasmo de la gente </l>
-                </lg>
-                <lg n="16">
-                    <l><lb break="yes"/>Rey pues sed vos d<subst hand="#self">
-                            <del>e</del>
-                            <add>i</add>
-                        </subst>ligente </l>
-                    <l><lb break="yes"/>en pagar y referir </l>
-                    <l><lb break="yes"/>pues vos vemos rezebir </l>
-                    <l><lb break="yes"/>liberal y francamente /</l>
-                </lg>
-            </div>
-            <div type="section" n="2">
-                <head>Fyn </head>
-                <p>
-                    <l><lb break="yes"/>Mas que humanidad
-                            co<ex>n</ex>sie<ex>n</ex>te</l>
-                    <l><lb break="yes"/>Rey vos dexe dios beuir</l>
-                    <l><lb break="yes"/>por q<ex>ue</ex> podades seguir</l>
-                    <l><lb break="yes"/>el bien q<ex>ue</ex> de vos se
-                        syente</l>
-                </p>
+            <div type="texte">
+                <head><hi rend="rubrique">Coplas del Marques de S<ex>an</ex><hi
+                            rend="superscript">ta</hi> ll<choice>
+                            <corr>a</corr>
+                            <sic>a</sic>
+                        </choice>na <lb break="yes"/>al Rey de
+                    portugal</hi></head>
+                <div type="section" n="1">
+                    <lg n="1">
+                        <l><lb break="yes"/>Rey Alphonso cuyo no<ex>n</ex>bre </l>
+                        <l><lb break="yes"/>es y fuy de Reyes buenos </l>
+                        <l><lb break="yes"/>Lea si quiera todo ho<ex>n</ex>bre </l>
+                        <l><lb break="yes"/>y vera de todos genos </l>
+                    </lg>
+                    <lg n="2">
+                        <l><lb break="yes"/>Asy v<ex>uest</ex>ros como ajenos </l>
+                        <l><lb break="yes"/>synepre fuero<ex>n</ex> virtuosos </l>
+                        <l><lb break="yes"/>guerreros y venturosos </l>
+                        <l><lb break="yes"/>qual mas / o / qual menos <pb
+                                n="88r"/>
+                            <cb type="single-column"/></l>
+                    </lg>
+                    <lg n="3">
+                        <l><lb break="yes"/>Pues asy Rey y varon </l>
+                        <l><lb break="yes"/>por mano de dios vngido </l>
+                        <l><lb break="yes"/>de p<ex>er</ex>feta discrecion </l>
+                        <l><lb break="yes"/>de gran seso y bue<ex>n</ex> sentido
+                        </l>
+                    </lg>
+                    <lg n="4">
+                        <l><lb break="yes"/>pues se muestra fauorido </l>
+                        <l><lb break="yes"/>fuestes sidos de dios </l>
+                        <l><lb break="yes"/>buen Rey no tardes vos </l>
+                        <l><lb break="yes"/>en pagar lo bien deuido </l>
+                    </lg>
+                    <lg n="5">
+                        <l><lb break="yes"/>Deuen los eletos Reyes </l>
+                        <l><lb break="yes"/>a dios pues los eligio </l>
+                        <l><lb break="yes"/>q<ex>ue</ex> guarden sus santas
+                            leyes </l>
+                        <l><lb break="yes"/>pues gelas enconme<ex>n</ex>d<subst
+                                hand="#self">
+                                <del><gap reason="illegible" extent="subword"
+                                    /></del>
+                                <add>o</add>
+                            </subst>
+                        </l>
+                    </lg>
+                    <lg n="6">
+                        <l><lb break="yes"/>amor lo pues los amo </l>
+                        <l><lb break="yes"/>sobre todas otras cosas </l>
+                        <l><lb break="yes"/>Obrar obras v<ex>ir</ex>tuosas </l>
+                        <l><lb break="yes"/>tales quales el mando </l>
+                    </lg>
+                    <lg n="7">
+                        <l><lb break="yes"/>Deuen los Reyes prude<ex>n</ex>tes </l>
+                        <l><lb break="yes"/>ser fuertes y justicieros </l>
+                        <l><lb break="yes"/>tenplados dotos scientes </l>
+                        <l><lb break="yes"/>Caritatiuos no fyeros <pb n="88v"/>
+                            <cb type="single-column"/></l>
+                    </lg>
+                    <lg n="8">
+                        <l><lb break="yes"/>ser xp<ex>ist</ex>ianos
+                            v<ex>er</ex>daderos </l>
+                        <l><lb break="yes"/>brauos alos ynfieles </l>
+                        <l><lb break="yes"/>a los suyos no crueles </l>
+                        <l><lb break="yes"/>en las <del hand="#self">di</del>
+                            lides caualleros </l>
+                    </lg>
+                    <lg n="9">
+                        <l><lb break="yes"/>Deuen ser de su co<ex>n</ex>sejo </l>
+                        <l><lb break="yes"/>las diuinas escrituras </l>
+                        <l><lb break="yes"/>testame<ex>n</ex>to nuevo y vejo </l>
+                        <l><lb break="yes"/>e las senblantes leturas </l>
+                    </lg>
+                    <lg n="10">
+                        <l><lb break="yes"/>Lyeualos co<ex>n</ex> las escuras </l>
+                        <l><lb break="yes"/>sy pregu<ex>n</ex>ta que
+                                respo<ex>n</ex>da </l>
+                        <l><lb break="yes"/>por que no se les asco<ex>n</ex>da </l>
+                        <l><lb break="yes"/>el tercer de sus clausuras </l>
+                    </lg>
+                    <lg n="11">
+                        <l><lb break="yes"/>Ca vso faze maestro </l>
+                        <l><lb break="yes"/>y v<ex>ir</ex>tudes exercicio </l>
+                        <l><lb break="yes"/>al signestro faze desto </l>
+                        <l><lb break="yes"/>el deleyte de l<choice>
+                                <corr> </corr>
+                                <sic/>
+                            </choice>oficio </l>
+                    </lg>
+                    <lg n="12">
+                        <l><lb break="yes"/>natural co<ex>n</ex> arteficio </l>
+                        <l><lb break="yes"/>quando son juntos a vna </l>
+                        <l><lb break="yes"/>sy desastre no repuna </l>
+                        <l><lb break="yes"/>fazen vtil beneficio <pb n="89r"/>
+                            <cb type="single-column"/></l>
+                    </lg>
+                    <lg n="13">
+                        <l><lb break="yes"/>Estos nobles Reyes Rey </l>
+                        <l><lb break="yes"/>quales digo tales fueron </l>
+                        <l><lb break="yes"/>obedientes ala Ley </l>
+                        <l><lb break="yes"/>paga<ex>n</ex>do lo que deuieron
+                        </l>
+                    </lg>
+                    <lg n="14">
+                        <l><lb break="yes"/>ganaron y defendieron </l>
+                        <l><lb break="yes"/>todo lo mas de lo n<ex>uest</ex>ro </l>
+                        <l><lb break="yes"/>co<ex>n</ex> gran parte de lo
+                                v<ex>uest</ex>ro </l>
+                        <l><lb break="yes"/>Cuyas famas no muerieron </l>
+                    </lg>
+                    <lg n="15">
+                        <l><lb break="yes"/>Al que paga lo prestado </l>
+                        <l><lb break="yes"/>prestanle de buenamente </l>
+                        <l><lb break="yes"/>no es pu<ex>n</ex>to hauer ganado </l>
+                        <l><lb break="yes"/>nin es blasmo de la gente </l>
+                    </lg>
+                    <lg n="16">
+                        <l><lb break="yes"/>Rey pues sed vos d<subst
+                                hand="#self">
+                                <del>e</del>
+                                <add>i</add>
+                            </subst>ligente </l>
+                        <l><lb break="yes"/>en pagar y referir </l>
+                        <l><lb break="yes"/>pues vos vemos rezebir </l>
+                        <l><lb break="yes"/>liberal y francamente /</l>
+                    </lg>
+                </div>
+                <div type="section" n="2">
+                    <head>Fyn </head>
+                    <p>
+                        <l><lb break="yes"/>Mas que humanidad
+                                co<ex>n</ex>sie<ex>n</ex>te</l>
+                        <l><lb break="yes"/>Rey vos dexe dios beuir</l>
+                        <l><lb break="yes"/>por q<ex>ue</ex> podades seguir</l>
+                        <l><lb break="yes"/>el bien q<ex>ue</ex> de vos se
+                            syente</l>
+                    </p>
+                </div>
             </div>
         </body>
     </text>

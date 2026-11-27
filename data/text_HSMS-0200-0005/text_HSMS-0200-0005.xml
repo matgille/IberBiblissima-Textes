@@ -192,7 +192,7 @@
                 <p>Pour plus d'informations, voir l'ODD.</p>
             </editorialDecl>
             <refsDecl n="physical">
-                
+
                 <citeStructure unit="page" match="//body//pb" use="@n">
                     <citeStructure unit="column" match=".//cb" use="@n"
                         delim=".">
@@ -200,14 +200,13 @@
                             delim="."/>
                     </citeStructure>
                 </citeStructure>
-                <refsDecl n="default">
-                    <citeStructure match="/TEI/text/body/div" use="@n"
-                        unit="chapter">
-                        <citeStructure match=".//milestone[@unit='section']"
-                            use="@n" unit="section" delim="."/>
-                    </citeStructure>
-                </refsDecl>
-                
+            </refsDecl>
+            <refsDecl n="default">
+                <citeStructure match="/TEI/text/body/div" use="@n"
+                    unit="chapter">
+                    <citeStructure match=".//milestone[@unit='section']"
+                        use="@n" unit="section" delim="."/>
+                </citeStructure>
             </refsDecl>
             <classDecl>
                 <taxonomy>
@@ -279,168 +278,174 @@
     </teiHeader>
     <text>
         <body>
-            <head><cb type="single-column"/>
-                <hi rend="rubrique">Gozos fechos a n<ex>uest</ex>re señora la
-                        virge<ex>n</ex>
-                    <lb break="yes"/>Maria por el Marq<ex>ue</ex>s de
-                        sa<ex>n</ex>tillana</hi></head>
-            <lg n="1">
-                <l><lb break="yes"/>Gozate gozate madre </l>
-                <l><lb break="yes"/>gozo de la humandidad </l>
-                <l><lb break="yes"/>tenplo de la trenidad </l>
-                <l><lb break="yes"/>elegida por dios padre </l>
-                <l><lb break="yes"/>virgen que por el oydo </l>
-                <l><lb break="yes"/>Conzebisti </l>
-                <l><lb break="yes"/>grande virgo Mater xp<ex>ist</ex>i </l>
-                <l><lb break="yes"/>y n<ex>uest</ex>ro gozo ynfinido <pb n="90r"/>
-                    <cb type="single-column"/></l>
-            </lg>
-            <lg n="2">
-                <l><lb break="yes"/>Gozate ya reparida </l>
-                <l><lb break="yes"/>segu<ex>n</ex>d el euangelista </l>
-                <l><lb break="yes"/>por la muerte del bautista </l>
-                <l><lb break="yes"/>anu<ex>n</ex>ciando la venida </l>
-                <l><lb break="yes"/>de v<ex>uest</ex>ro gozo señora </l>
-                <l><lb break="yes"/>que trayas </l>
-                <l><lb break="yes"/>vaso de n<ex>uest</ex>ro mesias </l>
-                <l><lb break="yes"/>gozate pura y cora </l>
-            </lg>
-            <lg n="3">
-                <l><lb break="yes"/>Gozate por q<ex>ue</ex> pariste </l>
-                <l><lb break="yes"/>dios y ho<ex>n</ex>bre por misterio </l>
-                <l><lb break="yes"/>nuestro bie<ex>n</ex> y refrigerio </l>
-                <l><lb break="yes"/>ynuiolada p<ex>er</ex>mansiste </l>
-                <l><lb break="yes"/>syn ni<ex>n</ex>gun dolor y pena </l>
-                <l><lb break="yes"/>pues gozosa </l>
-                <l><lb break="yes"/>gozate Candida rosa </l>
-                <l><lb break="yes"/>Señora de gracia plena </l>
-            </lg>
-            <lg n="4">
-                <l><lb break="yes"/>Gozate ca p<ex>re</ex>stamente </l>
-                <l><lb break="yes"/>de Rabbes sin mas tardar </l>
-                <l><lb break="yes"/>Lo vinieron adorar<del hand="#self">e</del>
-                </l>
-                <l><lb break="yes"/>Los tres Reyes de oriente <pb n="90v"/>
-                    <cb type="single-column"/></l>
-                <l><lb break="yes"/>Oro y mirra le ofrecieron </l>
-                <l><lb break="yes"/>con encienso </l>
-                <l><lb break="yes"/>pues gozate n<ex>uest</ex>ro acenso </l>
-                <l><lb break="yes"/>por los gozos q<ex>ue</ex> le dieron </l>
-            </lg>
-            <lg n="5">
-                <l><lb break="yes"/>Gozate n<ex>uest</ex>ro dulzor </l>
-                <l><lb break="yes"/>por aquel gozo ynfinito </l>
-                <l><lb break="yes"/>q<ex>ue</ex> te revelo en egito </l>
-                <l><lb break="yes"/>el celeste enperador </l>
-                <l><lb break="yes"/>y la nueva deseada </l>
-                <l><lb break="yes"/>de la paz </l>
-                <l><lb break="yes"/>gozate batalla y haz </l>
-                <l><lb break="yes"/>de hueste bie<ex>n</ex> ordenada </l>
-            </lg>
-            <lg n="6">
-                <l><lb break="yes"/>Gozate n<ex>uest</ex>ro clamor </l>
-                <l><lb break="yes"/>por aq<ex>ue</ex>l alto diuino </l>
-                <l><lb break="yes"/>q<ex>ue</ex> por tu ruego te vino </l>
-                <l><lb break="yes"/>el tu fijo fazedor </l>
-                <l><lb break="yes"/>fizo qua<ex>n</ex>do el agua vino </l>
-                <l><lb break="yes"/>conuertyo </l>
-                <l><lb break="yes"/>y hartando consola </l>
-                <l><lb break="yes"/>Las bodas de Artecheclino <pb n="91r"/>
-                    <cb type="single-column"/></l>
-            </lg>
-            <lg n="7">
-                <l><lb break="yes"/>Gozate flor de las flores </l>
-                <l><lb break="yes"/>por el gozo q<ex>ue</ex> sentiste </l>
-                <l><lb break="yes"/>qua<ex>n</ex>do al santo niño viste </l>
-                <l><lb break="yes"/>entre los sabios dotores </l>
-                <l><lb break="yes"/>y disputando e<choice>
-                        <sic> </sic>
-                        <corr/>
-                    </choice>nel tenplo </l>
-                <l><lb break="yes"/>Los venzia </l>
-                <l><lb break="yes"/>gozate virgen maria </l>
-                <l><lb break="yes"/>vna sola por enxenplo </l>
-            </lg>
-            <lg n="8">
-                <l><lb break="yes"/>Gozate de dios ma<ex>n</ex>sion </l>
-                <l><lb break="yes"/>del cielo felize puerta </l>
-                <l><lb break="yes"/>por aq<ex>ue</ex>lla santa oferta </l>
-                <l><lb break="yes"/>que al sacerdote Symeon </l>
-                <l><lb break="yes"/>graciosame<ex>n</ex>te venia </l>
-                <l><lb break="yes"/>ofreciste </l>
-                <l><lb break="yes"/>gozate pues meresciste </l>
-                <l><lb break="yes"/>ser dicha Reyna diuina </l>
-            </lg>
-            <lg n="9">
-                <l><lb break="yes"/>Gozate n<ex>uest</ex>ra esperanza </l>
-                <l><lb break="yes"/>fontana de saluacion </l>
-                <l><lb break="yes"/>por la su resurecion </l>
-                <l><lb break="yes"/><del hand="#self">y de tus dolores
-                        Calma</del>
-                    <add hand="#self">reposo suyo y folganza</add>
-                    <pb n="91v"/>
-                    <cb type="single-column"/></l>
-                <l><lb break="yes"/><del hand="#self">resposo suyo y
-                        folganza</del>
-                    <add hand="#self">y de tus dolores Calma</add>
-                </l>
-                <l><lb break="yes"/>perdurable </l>
-                <l><lb break="yes"/>gozo n<ex>uest</ex>ro i<ex>n</ex>estimable </l>
-                <l><lb break="yes"/>grande virgo mater alma </l>
-            </lg>
-            <lg n="10">
-                <l><lb break="yes"/>Gozate <del hand="#self">vna</del>
-                    <add hand="#self">strella</add> serena </l>
-                <l><lb break="yes"/>bendita por elecion </l>
-                <l><lb break="yes"/>por la santa a<del hand="#self"
-                        >s</del>ce<ex>n</ex>sion </l>
-                <l><lb break="yes"/>entre los santos </l>
-                <l><lb break="yes"/>gozate por la nobleza </l>
-                <l><lb break="yes"/>Mater dei </l>
-                <l><lb break="yes"/>principio de n<ex>uest</ex>re ley </l>
-                <l><lb break="yes"/>gozate por tu gra<ex>n</ex>deza </l>
-            </lg>
-            <lg n="11">
-                <l><lb break="yes"/>Gozate virgen de espanto </l>
-                <l><lb break="yes"/>y cometa de l<choice>
-                        <corr> </corr>
-                        <sic/>
-                    </choice>infierno </l>
-                <l><lb break="yes"/>g<subst hand="#self">
-                        <del>a</del>
-                        <add>o</add>
-                    </subst>zate santa en eterno </l>
-                <l><lb break="yes"/>por aquel resplendor santo </l>
-                <l><lb break="yes"/>de q<ex>u</ex><hi rend="superscript"
-                    >i</hi>en fuyste co<ex>n</ex>solada </l>
-                <l><lb break="yes"/>y fauoryda </l>
-                <l><lb break="yes"/>gozate daflytos vyda </l>
-                <l><lb break="yes"/>desde ab Inicio criada <pb n="92r"/>
-                    <cb type="single-column"/></l>
-            </lg>
-            <lg n="12">
-                <l><lb break="yes"/>Gozate santa patrona </l>
-                <l><lb break="yes"/>por gracia de dios asunta </l>
-                <l><lb break="yes"/>no dyu<subst hand="#self">
-                        <del>a</del>
-                        <add>i</add>
-                    </subst>dida mas junta </l>
-                <l><lb break="yes"/>fue la tu diña persona </l>
-                <l><lb break="yes"/>en los cielos asentada </l>
-                <l><lb break="yes"/>a la diestra </l>
-                <l><lb break="yes"/>de dios vos Reyna n<ex>uest</ex>ra </l>
-                <l><lb break="yes"/>y de strellas coronada </l>
-            </lg>
-            <lg n="13">
-                <l><lb break="yes"/>Por los quales gozos doze </l>
-                <l><lb break="yes"/>donzella de sol vestida </l>
-                <l><lb break="yes"/>y por tu gl<ex>o</ex>ria ynfenida </l>
-                <l><lb break="yes"/>me faz señora q<ex>ue</ex> goze </l>
-                <l><lb break="yes"/>de los gozos y plazeres </l>
-                <l><lb break="yes"/>otorgados </l>
-                <l><lb break="yes"/>a los bienave<ex>n</ex>turados </l>
-                <l><lb break="yes"/>Señora entre las mujeres</l>
-            </lg>
+            <div type="texte">
+                <head><cb type="single-column"/>
+                    <hi rend="rubrique">Gozos fechos a n<ex>uest</ex>re señora
+                        la virge<ex>n</ex>
+                        <lb break="yes"/>Maria por el Marq<ex>ue</ex>s de
+                            sa<ex>n</ex>tillana</hi></head>
+                <lg n="1">
+                    <l><lb break="yes"/>Gozate gozate madre </l>
+                    <l><lb break="yes"/>gozo de la humandidad </l>
+                    <l><lb break="yes"/>tenplo de la trenidad </l>
+                    <l><lb break="yes"/>elegida por dios padre </l>
+                    <l><lb break="yes"/>virgen que por el oydo </l>
+                    <l><lb break="yes"/>Conzebisti </l>
+                    <l><lb break="yes"/>grande virgo Mater xp<ex>ist</ex>i </l>
+                    <l><lb break="yes"/>y n<ex>uest</ex>ro gozo ynfinido <pb
+                            n="90r"/>
+                        <cb type="single-column"/></l>
+                </lg>
+                <lg n="2">
+                    <l><lb break="yes"/>Gozate ya reparida </l>
+                    <l><lb break="yes"/>segu<ex>n</ex>d el euangelista </l>
+                    <l><lb break="yes"/>por la muerte del bautista </l>
+                    <l><lb break="yes"/>anu<ex>n</ex>ciando la venida </l>
+                    <l><lb break="yes"/>de v<ex>uest</ex>ro gozo señora </l>
+                    <l><lb break="yes"/>que trayas </l>
+                    <l><lb break="yes"/>vaso de n<ex>uest</ex>ro mesias </l>
+                    <l><lb break="yes"/>gozate pura y cora </l>
+                </lg>
+                <lg n="3">
+                    <l><lb break="yes"/>Gozate por q<ex>ue</ex> pariste </l>
+                    <l><lb break="yes"/>dios y ho<ex>n</ex>bre por misterio </l>
+                    <l><lb break="yes"/>nuestro bie<ex>n</ex> y refrigerio </l>
+                    <l><lb break="yes"/>ynuiolada p<ex>er</ex>mansiste </l>
+                    <l><lb break="yes"/>syn ni<ex>n</ex>gun dolor y pena </l>
+                    <l><lb break="yes"/>pues gozosa </l>
+                    <l><lb break="yes"/>gozate Candida rosa </l>
+                    <l><lb break="yes"/>Señora de gracia plena </l>
+                </lg>
+                <lg n="4">
+                    <l><lb break="yes"/>Gozate ca p<ex>re</ex>stamente </l>
+                    <l><lb break="yes"/>de Rabbes sin mas tardar </l>
+                    <l><lb break="yes"/>Lo vinieron adorar<del hand="#self"
+                            >e</del>
+                    </l>
+                    <l><lb break="yes"/>Los tres Reyes de oriente <pb n="90v"/>
+                        <cb type="single-column"/></l>
+                    <l><lb break="yes"/>Oro y mirra le ofrecieron </l>
+                    <l><lb break="yes"/>con encienso </l>
+                    <l><lb break="yes"/>pues gozate n<ex>uest</ex>ro acenso </l>
+                    <l><lb break="yes"/>por los gozos q<ex>ue</ex> le dieron
+                    </l>
+                </lg>
+                <lg n="5">
+                    <l><lb break="yes"/>Gozate n<ex>uest</ex>ro dulzor </l>
+                    <l><lb break="yes"/>por aquel gozo ynfinito </l>
+                    <l><lb break="yes"/>q<ex>ue</ex> te revelo en egito </l>
+                    <l><lb break="yes"/>el celeste enperador </l>
+                    <l><lb break="yes"/>y la nueva deseada </l>
+                    <l><lb break="yes"/>de la paz </l>
+                    <l><lb break="yes"/>gozate batalla y haz </l>
+                    <l><lb break="yes"/>de hueste bie<ex>n</ex> ordenada </l>
+                </lg>
+                <lg n="6">
+                    <l><lb break="yes"/>Gozate n<ex>uest</ex>ro clamor </l>
+                    <l><lb break="yes"/>por aq<ex>ue</ex>l alto diuino </l>
+                    <l><lb break="yes"/>q<ex>ue</ex> por tu ruego te vino </l>
+                    <l><lb break="yes"/>el tu fijo fazedor </l>
+                    <l><lb break="yes"/>fizo qua<ex>n</ex>do el agua vino </l>
+                    <l><lb break="yes"/>conuertyo </l>
+                    <l><lb break="yes"/>y hartando consola </l>
+                    <l><lb break="yes"/>Las bodas de Artecheclino <pb n="91r"/>
+                        <cb type="single-column"/></l>
+                </lg>
+                <lg n="7">
+                    <l><lb break="yes"/>Gozate flor de las flores </l>
+                    <l><lb break="yes"/>por el gozo q<ex>ue</ex> sentiste </l>
+                    <l><lb break="yes"/>qua<ex>n</ex>do al santo niño viste </l>
+                    <l><lb break="yes"/>entre los sabios dotores </l>
+                    <l><lb break="yes"/>y disputando e<choice>
+                            <sic> </sic>
+                            <corr/>
+                        </choice>nel tenplo </l>
+                    <l><lb break="yes"/>Los venzia </l>
+                    <l><lb break="yes"/>gozate virgen maria </l>
+                    <l><lb break="yes"/>vna sola por enxenplo </l>
+                </lg>
+                <lg n="8">
+                    <l><lb break="yes"/>Gozate de dios ma<ex>n</ex>sion </l>
+                    <l><lb break="yes"/>del cielo felize puerta </l>
+                    <l><lb break="yes"/>por aq<ex>ue</ex>lla santa oferta </l>
+                    <l><lb break="yes"/>que al sacerdote Symeon </l>
+                    <l><lb break="yes"/>graciosame<ex>n</ex>te venia </l>
+                    <l><lb break="yes"/>ofreciste </l>
+                    <l><lb break="yes"/>gozate pues meresciste </l>
+                    <l><lb break="yes"/>ser dicha Reyna diuina </l>
+                </lg>
+                <lg n="9">
+                    <l><lb break="yes"/>Gozate n<ex>uest</ex>ra esperanza </l>
+                    <l><lb break="yes"/>fontana de saluacion </l>
+                    <l><lb break="yes"/>por la su resurecion </l>
+                    <l><lb break="yes"/><del hand="#self">y de tus dolores
+                            Calma</del>
+                        <add hand="#self">reposo suyo y folganza</add>
+                        <pb n="91v"/>
+                        <cb type="single-column"/></l>
+                    <l><lb break="yes"/><del hand="#self">resposo suyo y
+                            folganza</del>
+                        <add hand="#self">y de tus dolores Calma</add>
+                    </l>
+                    <l><lb break="yes"/>perdurable </l>
+                    <l><lb break="yes"/>gozo n<ex>uest</ex>ro
+                        i<ex>n</ex>estimable </l>
+                    <l><lb break="yes"/>grande virgo mater alma </l>
+                </lg>
+                <lg n="10">
+                    <l><lb break="yes"/>Gozate <del hand="#self">vna</del>
+                        <add hand="#self">strella</add> serena </l>
+                    <l><lb break="yes"/>bendita por elecion </l>
+                    <l><lb break="yes"/>por la santa a<del hand="#self"
+                            >s</del>ce<ex>n</ex>sion </l>
+                    <l><lb break="yes"/>entre los santos </l>
+                    <l><lb break="yes"/>gozate por la nobleza </l>
+                    <l><lb break="yes"/>Mater dei </l>
+                    <l><lb break="yes"/>principio de n<ex>uest</ex>re ley </l>
+                    <l><lb break="yes"/>gozate por tu gra<ex>n</ex>deza </l>
+                </lg>
+                <lg n="11">
+                    <l><lb break="yes"/>Gozate virgen de espanto </l>
+                    <l><lb break="yes"/>y cometa de l<choice>
+                            <corr> </corr>
+                            <sic/>
+                        </choice>infierno </l>
+                    <l><lb break="yes"/>g<subst hand="#self">
+                            <del>a</del>
+                            <add>o</add>
+                        </subst>zate santa en eterno </l>
+                    <l><lb break="yes"/>por aquel resplendor santo </l>
+                    <l><lb break="yes"/>de q<ex>u</ex><hi rend="superscript"
+                            >i</hi>en fuyste co<ex>n</ex>solada </l>
+                    <l><lb break="yes"/>y fauoryda </l>
+                    <l><lb break="yes"/>gozate daflytos vyda </l>
+                    <l><lb break="yes"/>desde ab Inicio criada <pb n="92r"/>
+                        <cb type="single-column"/></l>
+                </lg>
+                <lg n="12">
+                    <l><lb break="yes"/>Gozate santa patrona </l>
+                    <l><lb break="yes"/>por gracia de dios asunta </l>
+                    <l><lb break="yes"/>no dyu<subst hand="#self">
+                            <del>a</del>
+                            <add>i</add>
+                        </subst>dida mas junta </l>
+                    <l><lb break="yes"/>fue la tu diña persona </l>
+                    <l><lb break="yes"/>en los cielos asentada </l>
+                    <l><lb break="yes"/>a la diestra </l>
+                    <l><lb break="yes"/>de dios vos Reyna n<ex>uest</ex>ra </l>
+                    <l><lb break="yes"/>y de strellas coronada </l>
+                </lg>
+                <lg n="13">
+                    <l><lb break="yes"/>Por los quales gozos doze </l>
+                    <l><lb break="yes"/>donzella de sol vestida </l>
+                    <l><lb break="yes"/>y por tu gl<ex>o</ex>ria ynfenida </l>
+                    <l><lb break="yes"/>me faz señora q<ex>ue</ex> goze </l>
+                    <l><lb break="yes"/>de los gozos y plazeres </l>
+                    <l><lb break="yes"/>otorgados </l>
+                    <l><lb break="yes"/>a los bienave<ex>n</ex>turados </l>
+                    <l><lb break="yes"/>Señora entre las mujeres</l>
+                </lg>
+            </div>
         </body>
     </text>
 </TEI>
