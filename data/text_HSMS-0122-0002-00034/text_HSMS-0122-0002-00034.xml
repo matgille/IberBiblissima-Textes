@@ -781,6 +781,7 @@
     </teiHeader>
     <text>
         <body>
+
             <div type="livre">
                 <div xml:id="HSMS-0122-0002" type="section" n="2">
                     <note resp="#transcriber">HSMS-0122-0002: Letra contra los
@@ -6324,8 +6325,7 @@
                     para el señor don enrriq<ex>ue</ex>. fo<ex>lio</ex>.
                     lxxxviij. <lb break="yes"/></p>
             </div>
-            <div type="colophon">
-
+            <div type="epilogue">
                 <p><hi rend="rubrique"><g ref="#calderon1"/> Aqui se acaba el
                         libro delos</hi>
                     <lb break="yes"/>claros varones de España. Compuesto por <lb
@@ -6350,7 +6350,7 @@
                         <pb n="91r"/>
                     <cb type="double-column"/><lb break="yes"/></p>
             </div>
-            <div xml:id="HSMS-0122-0035" type="epilogue">
+            <div xml:id="HSMS-0122-0035" type="autre">
                 <note resp="#transcriber">HSMS-0122-0035: A la reina nuestra
                     señora.</note>
                 <head><hi rend="rubrique"><g ref="#calderon1"/> Ala reyna nue<lb
