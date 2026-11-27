@@ -630,15 +630,9 @@
                                     </figure>
                                     <pb n="3r"/></p>
                               </div></egXML></item>
+                        <item><val>diagramme</val></item>
                      </list>
                   </p>
-               </div3>
-               <div3>
-                  <head>Diagrammes</head>
-                  <p>Les diagrammes (figures contenant une représentation
-                     schématique d'un objet, et pouvant contenir du texte) sont
-                     représentées par des éléments <gi>div</gi> de type
-                        <val>diagramme</val></p>
                </div3>
             </div2>
             <div2>
@@ -654,8 +648,9 @@
                <div3>
                   <head>Texte principal et paratextes</head>
                   <p>Les éléments <gi>front</gi>, <gi>body</gi> et <gi>back</gi>
-                     sont utilisés pour marquer les différents éléments du
-                     texte.</p>
+                     ne sont pas utilisés pour marquer les différents éléments
+                     du texte. Le corps du texte doit être encodé dans une
+                     division de type <val>texte</val>.</p>
                </div3>
                <div3>
                   <head>Structure logique. Divisions et sections</head>
@@ -674,7 +669,7 @@
                         <item>colophon</item>
                         <item>epilogue</item>
                         <item>prologue</item>
-                        <item><val>main</val>: utilisé dans le <gi>body</gi>,
+                        <item><val>texte</val>: utilisé dans le <gi>body</gi>,
                            permet d'indiquer que le texte est le texte principal
                            en cas de présence d'un texte annexe qui n'appartient
                            pas sémantiquement au <gi>back</gi>. Il sera utilisé
@@ -1194,7 +1189,7 @@
                </classSpec>
                <!--Checking module core-->
                <moduleRef key="core"
-                  include="p foreign hi quote unclear abbr sic corr choice reg emph orig gap add del name date list item ptr head note pb lb cb monogr author editor respStmt resp title imprint publisher pubPlace bibl biblStruct l lg sp speaker stage"/>
+                  include="p foreign hi quote unclear abbr sic corr desc choice reg emph orig gap add del name date list item ptr head note pb lb cb monogr author editor respStmt resp title imprint publisher pubPlace bibl biblStruct l lg sp speaker stage"/>
                <elementSpec ident="p" mode="change">
                   <attList>
                      <attDef ident="ana" mode="delete"/>
@@ -1728,6 +1723,7 @@
                         <valList mode="add" type="closed">
                            <valItem ident="illumination"/>
                            <valItem ident="miniature"/>
+                           <valItem ident="diagramme"/>
                         </valList>
                      </attDef>
                      <attDef ident="subtype" mode="delete"/>
@@ -2259,6 +2255,25 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="body" mode="change">
+                  <constraintSpec ident="warn-un-div-texte" scheme="schematron"
+                     mode="add">
+                     <desc>Avertit si le tei:body ne contient pas exactement un
+                        tei:div[@type='texte'].</desc>
+                     <constraint>
+                        <sch:pattern
+                           xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                           <sch:rule context="tei:body">
+                              <sch:assert
+                                 test="count(tei:div[@type='texte']) = 1"
+                                 role="warn">Le tei:body doit contenir
+                                 exactement un tei:div[@type='texte'] (trouvé :
+                                    <sch:value-of
+                                    select="count(tei:div[@type='texte'])"/>).
+                              </sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="ana" mode="delete"/>
                      <attDef ident="facs" mode="delete"/>
@@ -2280,12 +2295,12 @@
                      </attDef>
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="add" type="closed">
-                           <valItem ident="main">
-                              <desc>La division correspond à la partie
-                                 principale de l'oeuvre, quand des parties
-                                 annexes qui ne sont pas propre à l'épilogue ou
-                                 au prologue (addenda par exemple)
-                                 existent.</desc>
+                           <valItem ident="texte">
+                              <desc>La division est le corps du texte. Elle
+                                 correspond à la partie principale de l'oeuvre,
+                                 quand des parties annexes qui ne sont pas
+                                 propre à l'épilogue ou au prologue (addenda par
+                                 exemple) existent.</desc>
                            </valItem>
                            <valItem ident="sommaire">
                               <desc>La division est un sommaire.</desc>
@@ -2313,9 +2328,6 @@
                            </valItem>
                            <valItem ident="livre">
                               <desc>La division est un livre.</desc>
-                           </valItem>
-                           <valItem ident="texte">
-                              <desc>La division est le corps du texte.</desc>
                            </valItem>
                            <valItem ident="partie">
                               <desc>La division est une partie.</desc>
