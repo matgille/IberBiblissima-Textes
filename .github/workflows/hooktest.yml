@@ -20,15 +20,16 @@ jobs:
 
 
 
-      - name: Install lxml
-        run: pip install lxml
 
-      - name: Install Jing
-        run: sudo apt-get install -y jing
+      - name: Validate with Jing (boucle inchangée)
+        run: |
+          for f in data/*/*.xml; do
+            [ "$(basename "$f")" = "metadata.xml" ] && continue
+            jing schemata/out/ODD_gold.rng "$f" || exit 1
+          done
 
-      - name: Validate against ODD schema (Jing, parité oXygen)
-        run: python scripts/check_schema.py data schemata/out/ODD_gold.rng --jing
-
+      - name: Check Schematron (règles embarquées de l'ODD)
+        run: pip install lxml && python scripts/check_schema.py data schemata/out/ODD_gold.rng --jing --schematron --skip-metadata
 
       - name: Check citeStructures
         run: python scripts/check_citestructure.py data

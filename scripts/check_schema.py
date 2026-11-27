@@ -12,6 +12,12 @@ Usage:
 - --jing   : valide avec Jing (même moteur RelaxNG qu'oXygen;
              recommandé si l'ODD contient des patterns XSD exotiques
              comme \\p{...} que libxml2 ne supporte pas) ;
+- --schematron [CHEMIN] : exécute en plus les règles Schematron
+             embarquées dans le .rng (par défaut le même schéma),
+             ou un .sch autonome si un chemin est fourni. Jing
+             n'exécute pas le Schematron embarqué: cette option le
+             complète. Les asserts role="warn" sont des
+             avertissements non bloquants, les autres échouent ;
 - --xml-model : chaque document est validé contre le schéma déclaré
              dans son propre PI <?xml-model?> (comportement oXygen);
 - --skip-metadata : ignore les fichiers metadata.xml (validés sinon,
@@ -70,6 +76,71 @@ def iterer_fichiers(dossier: Path, skip_metadata: bool):
             yield f
 
 
+TEI_NS = "http://www.tei-c.org/ns/1.0"
+SCH_NS = "http://purl.oclc.org/dsdl/schematron"
+SVRL_NS = "http://purl.oclc.org/dsdl/svrl"
+
+
+def extraire_schematron(schéma_arbre):
+    """Extrait les patterns Schematron embarqués dans un .rng généré
+    par l'ODD et renvoie un <sch:schema> autonome, ou None. Accepte
+    aussi un .sch déjà autonome."""
+    import copy
+    racine = schéma_arbre.getroot()
+    if isinstance(racine.tag, str) and racine.tag == "{%s}schema" % SCH_NS:
+        return schéma_arbre
+    patterns = [el for el in racine.iter()
+                if isinstance(el.tag, str)
+                and el.tag == "{%s}pattern" % SCH_NS]
+    if not patterns:
+        return None
+    schema = etree.Element("{%s}schema" % SCH_NS,
+                           nsmap={"sch": SCH_NS})
+    prefixes_vus = set()
+    for p in patterns:
+        for el in p.iter():
+            for attr in ("context", "test"):
+                v = el.get(attr)
+                if not v:
+                    continue
+                for m in re.finditer(r"\b([A-Za-z_][\w\-]*):", v):
+                    prefixes_vus.add(m.group(1))
+    uris = {"tei": TEI_NS}
+    for pre in sorted(prefixes_vus):
+        if pre in uris:
+            el = etree.SubElement(schema, "{%s}ns" % SCH_NS)
+            el.set("prefix", pre)
+            el.set("uri", uris[pre])
+    for p in patterns:
+        schema.append(copy.deepcopy(p))
+    return etree.ElementTree(schema)
+
+
+def compiler_schematron(schéma_arbre):
+    """Compile le schéma Schematron. Renvoie (validateur, erreur)."""
+    from lxml import isoschematron
+    try:
+        return isoschematron.Schematron(schéma_arbre), None
+    except Exception as err:
+        return None, str(err)
+
+
+def vérifier_schematron(doc, validateur):
+    """Renvoie la liste des asserts échoués: (message, role)."""
+    echecs = []
+    try:
+        validateur.validate(doc)
+    except Exception as err:
+        return [(f"erreur d'exécution Schematron: {err}", None)]
+    rapport = validateur.validation_report
+    if rapport is None:
+        return echecs
+    for fa in rapport.iter("{%s}failed-assert" % SVRL_NS):
+        message = " ".join(" ".join(fa.itertext()).split())
+        echecs.append((message, fa.get("role")))
+    return echecs
+
+
 def valider_avec_jing(fichiers, schéma, cwd):
     """Valide les fichiers avec Jing (même moteur RelaxNG qu'oXygen).
 
@@ -96,9 +167,11 @@ def valider_avec_jing(fichiers, schéma, cwd):
     return par_fichier, proc.returncode
 
 
-def main_jing(dossier: Path, schema_path: Path, skip_metadata: bool):
-    """Validation via Jing (parité exacte avec oXygen)."""
-    fichiers = list(iterer_fichiers(dossier, skip_metadata=True))
+def main_jing(dossier: Path, schema_path: Path, skip_metadata: bool,
+             validateur_sch=None):
+    """Validation via Jing (parité exacte avec oXygen) + Schematron
+    en complément (Jing n'exécute pas le Schematron embarqué)."""
+    fichiers = list(iterer_fichiers(dossier, skip_metadata))
     if not fichiers:
         sys.exit(f"Aucun XML trouvé dans «{dossier}».")
     total = len(fichiers)
@@ -109,14 +182,29 @@ def main_jing(dossier: Path, schema_path: Path, skip_metadata: bool):
                  "est invalide.")
     invalides = 0
     for f in fichiers:
-        erreurs = par_fichier.get(f.name, [])
+        erreurs = list(par_fichier.get(f.name, []))
+        avert = []
+        if validateur_sch is not None:
+            try:
+                doc = etree.parse(str(f))
+            except Exception as err:
+                erreurs.append(f"XML illisible pour Schematron ({err})")
+            else:
+                for message, role in vérifier_schematron(doc,
+                                                        validateur_sch):
+                    if role == "warn":
+                        avert.append(message)
+                    else:
+                        erreurs.append(f"[Schematron] {message}")
         if erreurs:
             invalides += 1
             print(f"✗ {f}:")
             for e in erreurs:
                 print(f"    {e}")
         else:
-            print(f"✓ {f}")
+            for a in avert:
+                print(f"⚠ {f}: [Schemotron/warn] {a}")
+            print(f"✓ {f}" + (" (avertissements)" if avert else ""))
     print()
     print(f"Documents validés : {total}")
     print(f"Valides           : {total - invalides}")
@@ -133,6 +221,37 @@ def main():
     dossier = Path(args[0]) if args else DOSSIER_DEFAUT
     schema_path = Path(args[1]) if len(args) > 1 else SCHEMA_DEFAUT
 
+    # --schematron [CHEMIN]: règles embarquées dans le .rng (par
+    # défaut le même schéma), ou un .sch autonome
+    validateur_sch = None
+    if "--schematron" in sys.argv:
+        i = sys.argv.index("--schematron")
+        if i + 1 < len(sys.argv) and not sys.argv[i + 1].startswith("--"):
+            sch_path = Path(sys.argv[i + 1])
+            args = [a for a in args if a != str(sch_path)]
+        else:
+            sch_path = schema_path
+        if etree is None:
+            print("Attention: --schematron requiert lxml; "
+                  "validation Schematron ignorée.")
+        else:
+            if not sch_path.is_file():
+                sys.exit(f"Erreur: le fichier de règles "
+                         f"«{sch_path}» est introuvable.")
+            try:
+                arbre_règles = etree.parse(str(sch_path))
+            except etree.XMLSyntaxError as err:
+                sys.exit(f"Erreur: {sch_path} n'est pas un XML "
+                         f"valide ({err}).")
+            règles = extraire_schematron(arbre_règles)
+            if règles is None:
+                sys.exit(f"Erreur: aucune règle Schematron trouvée "
+                         f"dans «{sch_path}».")
+            validateur_sch, err = compiler_schematron(règles)
+            if validateur_sch is None:
+                sys.exit(f"Erreur: Schematron invalide "
+                         f"({sch_path}): {err}")
+
     if not dossier.is_dir():
         sys.exit(f"Erreur: le dossier «{dossier}» n'existe pas.")
 
@@ -145,7 +264,8 @@ def main():
         if not schema_path.is_file():
             sys.exit(f"Erreur: le schéma «{schema_path}» est "
                      f"introuvable.")
-        return main_jing(dossier, schema_path, skip_metadata)
+        return main_jing(dossier, schema_path, skip_metadata,
+                        validateur_sch)
 
     if etree is None:
         sys.exit("Erreur: lxml est requis hors du mode --jing "
@@ -211,14 +331,30 @@ def main():
         else:
             relaxng = schemas[str(schema_path)]
 
-        if relaxng.validate(doc):
+        ok_rng = relaxng.validate(doc)
+        avert, err_sch = [], []
+        if validateur_sch is not None:
+            for message, role in vérifier_schematron(doc, validateur_sch):
+                if role == "warn":
+                    avert.append(message)
+                else:
+                    err_sch.append(message)
+
+        if ok_rng and not err_sch:
             valides += 1
+            for a in avert:
+                print(f"⚠ {fichier}: [Schematron/warn] {a}")
+            print(f"✓ {fichier}"
+                  + (" (avertissements)" if avert else ""))
             continue
 
         invalides += 1
         print(f"✗ {fichier}:")
-        for entree in relaxng.error_log:
-            print(f"    ligne {entree.line}: {entree.message}")
+        if not ok_rng:
+            for entree in relaxng.error_log:
+                print(f"    ligne {entree.line}: {entree.message}")
+        for m in err_sch:
+            print(f"    [Schematron] {m}")
 
     print()
     print(f"Documents validés : {total}")
