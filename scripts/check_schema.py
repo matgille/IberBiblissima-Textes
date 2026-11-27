@@ -148,6 +148,8 @@ class Schematron:
                 "  - jar Saxon: SAXON_JAR=/chemin/vers/saxon.jar, "
                 "ou saxon.jar dans le dossier du script "
                 f"({SCRIPT_DIR})\n"
+                "  - Saxon-HE 11+/12 exige aussi xmlresolver.jar "
+                "posé à côté de saxon.jar (classpath auto)\n"
                 "  - squelette ISO XSLT 2.0 dans schematron-xslt2/ "
                 "(dossier du script), ou --squelette DOSSIER")
         for feuille in self.ETAPES_XSLT2:
@@ -156,6 +158,12 @@ class Schematron:
                     f"feuille XSLT absente: "
                     f"{Path(squelette) / feuille}")
         self.saxon_jar = Path(saxon_jar)
+        # Saxon-HE 12.x exige xmlresolver sur le classpath: on y
+        # met saxon.jar + tous les autres .jar du meme dossier.
+        jars = [Path(saxon_jar)]
+        jars += sorted(p for p in Path(saxon_jar).parent.glob("*.jar")
+                      if p != Path(saxon_jar))
+        self.classpath = ":".join(str(j) for j in jars)
 
         # .sch autonome ou .rng (extraction necessaire)?
         racine = ET.parse(str(fichier_règles)).getroot()
@@ -167,7 +175,7 @@ class Schematron:
         """Une transformation Saxon; raise en cas d'erreur."""
         import subprocess
         r = subprocess.run(
-            ["java", "-cp", str(self.saxon_jar),
+            ["java", "-cp", self.classpath,
              "net.sf.saxon.Transform",
              f"-s:{source}", f"-xsl:{feuille_xsl}",
              f"-o:{sortie}"],
