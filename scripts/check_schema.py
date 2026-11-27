@@ -125,6 +125,9 @@ class Schematron:
 
     ETAPES_XSLT2 = ("iso_dsdl_include.xsl", "iso_abstract_expand.xsl",
                     "iso_svrl_for_xslt2.xsl")
+    # iso_svrl_for_xslt2.xsl importe ce squelette (dependance
+    # statique): il doit etre present dans le meme dossier.
+    DEPENDANCES_XSLT2 = ("iso_schematron_skeleton_for_saxon.xsl",)
 
     def __init__(self, fichier_règles: Path, squelette: Path = None,
                  saxon_jar: Path = None):
@@ -152,17 +155,21 @@ class Schematron:
                 "posé à côté de saxon.jar (classpath auto)\n"
                 "  - squelette ISO XSLT 2.0 dans schematron-xslt2/ "
                 "(dossier du script), ou --squelette DOSSIER")
-        for feuille in self.ETAPES_XSLT2:
+        for feuille in (self.ETAPES_XSLT2
+                        + self.DEPENDANCES_XSLT2):
             if not (Path(squelette) / feuille).is_file():
                 raise RuntimeError(
                     f"feuille XSLT absente: "
                     f"{Path(squelette) / feuille}")
         self.saxon_jar = Path(saxon_jar)
-        # Saxon-HE 12.x exige xmlresolver sur le classpath: on y
-        # met saxon.jar + tous les autres .jar du meme dossier.
+        # Saxon-HE 11+/12 exige xmlresolver sur le classpath: on y
+        # met saxon.jar + tous les autres .jar du meme dossier,
+        # plus ceux du dossier du script (au cas ou SAXON_JAR
+        # pointerait ailleurs).
         jars = [Path(saxon_jar)]
-        jars += sorted(p for p in Path(saxon_jar).parent.glob("*.jar")
-                      if p != Path(saxon_jar))
+        for dossier in (Path(saxon_jar).parent, SCRIPT_DIR):
+            jars += sorted(p for p in dossier.glob("*.jar")
+                          if p not in jars)
         self.classpath = ":".join(str(j) for j in jars)
 
         # .sch autonome ou .rng (extraction necessaire)?
@@ -181,9 +188,15 @@ class Schematron:
              f"-o:{sortie}"],
             capture_output=True, text=True)
         if r.returncode != 0:
+            msg = (r.stderr or "")[:400]
+            if "NoClassDefFoundError" in msg:
+                msg += ("\n>>> il manque un jar sur le classpath "
+                        "(xmlresolver.jar pour Saxon-HE 11+/12): "
+                        "posez-le a cote de saxon.jar, dans le "
+                        "dossier du script.\nClasspath utilise: "
+                        + self.classpath)
             raise RuntimeError(
-                f"erreur Saxon ({feuille_xsl}): "
-                f"{(r.stderr or '')[:400]}")
+                f"erreur Saxon ({feuille_xsl}): {msg}")
         return sortie
 
     def _compiler_saxon(self, source, squelette, est_sch):
@@ -232,8 +245,9 @@ def valider_avec_jing(fichiers, schéma, cwd):
     """
     import subprocess
     cmd = ["jing", str(schéma)] + [str(f) for f in fichiers]
+    kwargs = {"cwd": str(cwd)} if cwd is not None else {}
     proc = subprocess.run(cmd, capture_output=True, text=True,
-                          cwd=str(cwd))
+                          **kwargs)
     sortie = (proc.stderr or "") + (proc.stdout or "")
     par_fichier = {f.name: [] for f in fichiers}
     for ligne in sortie.splitlines():
