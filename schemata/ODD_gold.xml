@@ -2264,9 +2264,9 @@
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                            <sch:rule context="tei:body">
                               <sch:assert
-                                 test="count(tei:div[@type='texte']) = 1"
-                                 role="warn">Le tei:body doit contenir
-                                 exactement un tei:div[@type='texte'] (trouvé :
+                                 test="count(tei:div[@type='texte']) != 0"
+                                 role="warn">Le tei:body doit contenir au moins
+                                 un tei:div[@type='texte'] (trouvé :
                                     <sch:value-of
                                     select="count(tei:div[@type='texte'])"/>).
                               </sch:assert>
@@ -2283,6 +2283,20 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="div" mode="change">
+                  <constraintSpec ident="warn-un-div-texte" scheme="schematron"
+                     mode="add">
+                     <desc>Avertit si le tei:div[@type='texte'] contient un
+                        unique élément tei:div qui est donc redondant.</desc>
+                     <constraint>
+                        <sch:pattern
+                           xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                           <sch:rule context="tei:div[@type='texte']">
+                              <sch:assert test="count(tei:div) != 1" role="warn"
+                                 >Le tei:div semble redondant. </sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="ana" mode="delete"/>
                      <attDef ident="facs" mode="delete"/>

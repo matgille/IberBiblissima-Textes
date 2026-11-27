@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-11-27T10:05:48Z. . 
+Schema generated from ODD source 2026-11-27T14:01:37Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -5623,8 +5623,8 @@ Sample values include: 1] book; 2] chapter; 3] entry; 4] poem; 5] letter; 6] lin
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <sch:rule context="tei:body">
-               <sch:assert test="count(tei:div[@type='texte']) = 1" role="warn">Le tei:body doit contenir
-                                 exactement un tei:div[@type='texte'] (trouvé :
+               <sch:assert test="count(tei:div[@type='texte']) != 0" role="warn">Le tei:body doit contenir au moins
+                                 un tei:div[@type='texte'] (trouvé :
                                     <sch:value-of select="count(tei:div[@type='texte'])"/>).
                               </sch:assert>
             </sch:rule>
@@ -5693,9 +5693,16 @@ Sample values include: 1] book; 2] chapter; 3] entry; 4] poem; 5] letter; 6] lin
                </rng:group>
             </rng:optional>
          </group>
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:rule context="tei:div[@type='texte']">
+               <sch:assert test="count(tei:div) != 1" role="warn">Le tei:div semble redondant. </sch:assert>
+            </sch:rule>
+         </sch:pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="oddbyexample-div-abstractModel-structure-div-in-l-constraint-rule-28">
+                  id="oddbyexample-div-abstractModel-structure-div-in-l-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l//tei:div">
@@ -5706,7 +5713,7 @@ Sample values include: 1] book; 2] chapter; 3] entry; 4] poem; 5] letter; 6] lin
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="oddbyexample-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-29">
+                  id="oddbyexample-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:div">
