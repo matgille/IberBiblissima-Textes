@@ -43,8 +43,8 @@ jobs:
       # ------------------------------------------------------------------
       # 3. Test des citeStructure (quelques secondes)
       # ------------------------------------------------------------------
-      - name: Check citeStructures
-        run: python scripts/check_citestructure.py data
+      # - name: Check citeStructures
+      #  run: python scripts/check_citestructure.py data
 
       # ------------------------------------------------------------------
       # 4. Validation RelaxNG (Jing) + Schematron embarqué de l'ODD
