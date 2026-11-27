@@ -18,27 +18,25 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Génère le README (racine) et stats/ avant le test
-      - name: Generate README and corpus stats
-        run: python scripts/create_readme.py data
 
 
       - name: Install lxml
         run: pip install lxml
 
-      - name: Install Jing (Java)
+      - name: Install Jing
         run: sudo apt-get install -y jing
 
-      - name: Validate with Jing (parité oXygen)
-        run: |
-          for f in data/*/*.xml; do
-            [ "$(basename "$f")" = "metadata.xml" ] && continue
-            jing schemata/out/ODD_gold.rng "$f" || exit 1
-          done
+      - name: Validate against ODD schema (Jing, parité oXygen)
+        run: python scripts/check_schema.py data schemata/out/ODD_gold.rng --jing
 
 
       - name: Check citeStructures
         run: python scripts/check_citestructure.py data
+
+
+      # Génère le README (racine) et stats/ après le test
+      - name: Generate README and corpus stats
+        run: python scripts/create_readme.py data
 
       - name: Install HookTest
         run: |
@@ -50,7 +48,6 @@ jobs:
 
       # Commit et push, même si HookTest échoue
       - name: Commit README and stats
-        if: always() && github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
