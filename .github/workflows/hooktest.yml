@@ -4,13 +4,18 @@ on:
   push:
   pull_request:
 
-# Droit d'écriture pour pousser le README et les stats
 permissions:
   contents: write
 
+# Annule les runs obsolètes si plusieurs pushes arrivent à la suite
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  hooktest:
+  tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
 
@@ -18,37 +23,52 @@ jobs:
         with:
           python-version: "3.12"
 
+      # ------------------------------------------------------------------
+      # 1. Génération du README (racine) et des statistiques (stats/)
+      # ------------------------------------------------------------------
+      - name: Generate README and corpus stats
+        run: python scripts/tei_stats.py data
 
-
-
-      - name: Validate with Jing (boucle inchangée)
+      # ------------------------------------------------------------------
+      # 2. Dépendances de validation
+      # ------------------------------------------------------------------
+      - name: Install lxml
         run: |
-          for f in data/*/*.xml; do
-            [ "$(basename "$f")" = "metadata.xml" ] && continue
-            jing schemata/out/ODD_gold.rng "$f" || exit 1
-          done
+          python -m pip install --upgrade pip
+          pip install lxml
 
-      - name: Check Schematron (règles embarquées de l'ODD)
-        run: pip install lxml && python scripts/check_schema.py data schemata/out/ODD_gold.rng --jing --schematron --skip-metadata
+      - name: Install Jing (RelaxNG, parité oXygen)
+        run: sudo apt-get install -y jing
 
+      # ------------------------------------------------------------------
+      # 3. Test des citeStructure (quelques secondes)
+      # ------------------------------------------------------------------
       - name: Check citeStructures
         run: python scripts/check_citestructure.py data
 
+      # ------------------------------------------------------------------
+      # 4. Validation RelaxNG (Jing) + Schematron embarqué de l'ODD
+      # ------------------------------------------------------------------
+      - name: Validate against ODD schema (Jing + Schematron)
+        run: >
+          python scripts/check_schema.py data
+          schemata/out/ODD_gold.rng --jing --schematron
 
-      # Génère le README (racine) et stats/ après le test
-      - name: Generate README and corpus stats
-        run: python scripts/create_readme.py data
-
+      # ------------------------------------------------------------------
+      # 5. HookTest (long)
+      # ------------------------------------------------------------------
       - name: Install HookTest
-        run: |
-          python -m pip install --upgrade pip
-          pip install git+https://github.com/cllg-project/hooktest.git
+        run: pip install git+https://github.com/cllg-project/hooktest.git
 
       - name: Run HookTest
-        run: hooktest collection.xml -v verbose
+        run: hooktest collection.xml -v normal
 
-      # Commit et push, même si HookTest échoue
+      # ------------------------------------------------------------------
+      # 6. Commit du README et des stats (même si HookTest échoue,
+      #    et seulement sur push, pas sur les PR)
+      # ------------------------------------------------------------------
       - name: Commit README and stats
+        if: always() && github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
